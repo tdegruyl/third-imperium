@@ -1,0 +1,856 @@
+{
+	"version": 5,
+	"id": "BhHzz4Id18c0E6Tpu",
+	"traits": [
+		{
+			"id": "TbwMuidB5pB_JMrDh",
+			"name": "Belter",
+			"children": [
+				{
+					"id": "TB4jLJ0W9RnUv3SvS",
+					"name": "Advantages",
+					"children": [
+						{
+							"id": "ttqhxDoy8VE1oH_iA",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tM6z7Mx6e2V4VvUR4"
+							},
+							"name": "Absolute Direction",
+							"reference": "B34",
+							"tags": [
+								"Advantage",
+								"Mental",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mCRt8eO3OxLhUTDEb",
+									"name": "Requires signal",
+									"reference": "B34",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "mTPgtf36E83vSqbNJ",
+									"name": "3D Spatial Sense",
+									"reference": "B34",
+									"cost": 5,
+									"cost_type": "points",
+									"features": [
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "starts_with",
+												"qualifier": "piloting"
+											},
+											"amount": 1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "aerobatics"
+											},
+											"amount": 2
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "free fall"
+											},
+											"amount": 2
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "navigation"
+											},
+											"specialization": {
+												"compare": "is",
+												"qualifier": "hyperspace"
+											},
+											"amount": 2
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "navigation"
+											},
+											"specialization": {
+												"compare": "is",
+												"qualifier": "space"
+											},
+											"amount": 2
+										}
+									]
+								}
+							],
+							"base_points": 5,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "body sense"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "air"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "land"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "sea"
+									},
+									"amount": 3
+								}
+							],
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "tuTdtx4PTd_JLBEST",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "txREhxV6L1SKixwe_"
+							},
+							"name": "Improved G-tolerance",
+							"reference": "B60",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mXT6CJobWtBMPG4If",
+									"name": "0.3G",
+									"reference": "B60",
+									"cost": 5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mTCKd4R3wZOBJBDUR",
+									"name": "0.5G",
+									"reference": "B60",
+									"cost": 10,
+									"cost_type": "points"
+								},
+								{
+									"id": "mXkENQjW9ARS1kXto",
+									"name": "1G",
+									"reference": "B60",
+									"cost": 15,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mAVaU4QSLp9vzKTm1",
+									"name": "5G",
+									"reference": "B60",
+									"cost": 20,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mE1QaqBhDZbusVkv7",
+									"name": "10G",
+									"reference": "B60",
+									"cost": 25,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "tissuCDIEGh2e1FaQ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Power Ups\\Power Ups Traits.adq",
+								"id": "t3msobZZ06J7dZ8xu"
+							},
+							"name": "Talent (Born Spacer)",
+							"reference": "PU3:7",
+							"tags": [
+								"Advantage",
+								"Mental",
+								"Talent"
+							],
+							"modifiers": [
+								{
+									"id": "m-wjdYmHP0YH_IEJ-",
+									"name": "Alternative Cost",
+									"cost": 1,
+									"affects": "levels_only",
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"levels": 2,
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Aerobatics"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Free Fall"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Space"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Piloting"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "High-Performance Spacecraft"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Piloting"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Low-Performance Spacecraft"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Piloting"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Aerospace"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Spacer"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Vacc Suit"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "reaction_bonus",
+									"situation": "From professional Spacers.",
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "conditional_modifier",
+									"situation": "Bonus to ST for zero G push off.  Reduce penalty for unfamiliar spacecraft.",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 10
+							}
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "TmMWlcMnjHb8-Ap-5",
+					"name": "Attributes",
+					"container_type": "attributes",
+					"children": [
+						{
+							"id": "ts5uPWKKiuacTJv83",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t1w1RFcFceKR2T9_e"
+							},
+							"name": "Increased Intelligence",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental"
+							],
+							"levels": 1,
+							"points_per_level": 20,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "iq",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 20
+							}
+						}
+					],
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "Taic0AsfSXN1q5-TB",
+					"name": "Disadvantages",
+					"template_picker": {
+						"type": "points",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": -10
+						}
+					},
+					"children": [
+						{
+							"id": "tvZW7fmD5tmjtfN3o",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tnrtPQ0mWF4k75plo"
+							},
+							"name": "Bad Temper",
+							"reference": "B124",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr": 12,
+							"base_points": -10,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tT_VT_FYqIyghd3WZ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tNe543pbMl1IkZxSo"
+							},
+							"name": "Callous",
+							"reference": "B125",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -5,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "psychology"
+									},
+									"amount": -3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "teaching"
+									},
+									"amount": -3
+								},
+								{
+									"type": "reaction_bonus",
+									"situation": "from past victims and anyone with Empathy",
+									"amount": -1
+								},
+								{
+									"type": "conditional_modifier",
+									"situation": "to Interrogation and Intimidation rolls when you use threats or torture",
+									"amount": 1
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tfw7Lk-0jANKSQy5R",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tBo2ze1N-AhjfZpqW"
+							},
+							"name": "Confused",
+							"reference": "B129",
+							"notes": "In a strange place, or when there’s a commotion going on, you must make a self-control roll",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"cr": 12,
+							"base_points": -10,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tyQiisounmRPLSp7v",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tYHaB3nA17KP6h1DZ"
+							},
+							"name": "Gluttony",
+							"reference": "B137",
+							"notes": "Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr": 12,
+							"base_points": -5,
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tfzLzXAUlRKeLcfHW",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tnD52D6dhwXRMkPs5"
+							},
+							"name": "Loner",
+							"reference": "B142",
+							"notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr": 12,
+							"cr_adj": "reaction_penalty",
+							"base_points": -5,
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tfqJUpdixJfr6Q0Zq",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tM_NtrhGdt7J7oETM"
+							},
+							"name": "No Sense of Smell/Taste",
+							"reference": "B146",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"base_points": -5,
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "twLvYAXMpaa2RV8nc",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tYdqy1uPSGI8VqvLV"
+							},
+							"name": "Selfish",
+							"reference": "B153",
+							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr": 12,
+							"base_points": -5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from others when your Selfishness surfaces",
+									"amount": -3
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tSJp1733yjTba7O7I",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t04cLZ44QvEYdsP3F"
+							},
+							"name": "Sense of Duty",
+							"reference": "B153",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "m8COOAAlkL79xkzRH",
+									"name": "Friends and Companions",
+									"reference": "B153",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mn12h-ObrD8UHWRYS",
+									"name": "@Small Group@",
+									"reference": "B153",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mC5pLorP870TKl_TB",
+									"name": "@Individual@",
+									"reference": "B153",
+									"cost": -2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mQzkluBuSQdKdZCRk",
+									"name": "Spacers",
+									"reference": "B153",
+									"cost": -10,
+									"cost_type": "points"
+								},
+								{
+									"id": "mB0rAb1ECPAJKwmWT",
+									"name": "@Entire Race@",
+									"reference": "B153",
+									"cost": -15,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mDDO-0Fxenf32dtqG",
+									"name": "Every Living Being",
+									"reference": "B153",
+									"cost": -20,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -10
+							}
+						}
+					],
+					"calc": {
+						"points": -55
+					}
+				}
+			],
+			"calc": {
+				"points": -5
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SPvFZmBf7P3rALKB4",
+			"name": "Belter",
+			"children": [
+				{
+					"id": "sREEDgEaHf9ZZw6ph",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "s3bpod4WniDn1A0Sf"
+					},
+					"name": "Area Knowledge",
+					"reference": "B176",
+					"notes": "Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 7+; and a general understanding of the economic and political situation",
+					"tags": [
+						"Everyman",
+						"Knowledge"
+					],
+					"specialization": "@Specific Asteroid Belt@; Lived there",
+					"difficulty": "iq/e",
+					"points": 4,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "@Specialty@",
+							"modifier": -3
+						}
+					]
+				},
+				{
+					"id": "sbH0NX7t5IGs5pyeR",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "s7kVwKFERTuMYO3O8"
+					},
+					"name": "Free Fall",
+					"reference": "B197",
+					"tags": [
+						"Athletic"
+					],
+					"difficulty": "dx/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -5
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "sPsbPNoMBrp2ZXDp9",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "smA7Ihmr-JXza-sai"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Rock Worlds",
+					"tech_level": "11",
+					"difficulty": "iq/h",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Rock Worlds",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "sdm7TYnCGWPP4Usqw",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sZZ8IZK6yPuxwffjd"
+					},
+					"name": "Navigation",
+					"reference": "B211",
+					"tags": [
+						"Exploration",
+						"Outdoor",
+						"Technical",
+						"Vehicle"
+					],
+					"specialization": "Space",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Astronomy",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Applied",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Hyperspace",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "saVSyxpWTD5HPnzIH",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sOImlSqhRUrHhr-rZ"
+					},
+					"name": "Piloting",
+					"reference": "B214",
+					"tags": [
+						"Vehicle"
+					],
+					"specialization": "High-Performance Spacecraft",
+					"tech_level": "11",
+					"difficulty": "dx/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Piloting",
+							"specialization": "Aerospace",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Piloting",
+							"specialization": "Low-Performance Spacecraft",
+							"modifier": -2
+						}
+					]
+				},
+				{
+					"id": "sHX16Nl-ld7udUt_n",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "ssj5Oq-3-vH-bQ1AL"
+					},
+					"name": "Prospecting",
+					"reference": "B216",
+					"tags": [
+						"Exploration",
+						"Outdoor"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Geology",
+							"modifier": -4
+						}
+					]
+				}
+			]
+		}
+	]
+}

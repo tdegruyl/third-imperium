@@ -1,0 +1,680 @@
+{
+	"version": 5,
+	"id": "BchqdhbhElTqLOfYs",
+	"traits": [
+		{
+			"id": "TPn4-zjrwAsFMzFC_",
+			"name": "Con Artist",
+			"children": [
+				{
+					"id": "T1KKUCBIq6lAzUGnD",
+					"name": "Advantages",
+					"template_picker": {
+						"type": "count",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": 1
+						}
+					},
+					"children": [
+						{
+							"id": "t8hht8iKT-i_Gt2Id",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tgjE-yMzESTjq695x"
+							},
+							"name": "Danger Sense",
+							"reference": "B47,P46",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"base_points": 15,
+							"calc": {
+								"points": 15
+							}
+						},
+						{
+							"id": "tK8zu_yCM3pY3ctGc",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tO0G2kcresS1YZ_KE"
+							},
+							"name": "Daredevil",
+							"reference": "B47",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"base_points": 15,
+							"features": [
+								{
+									"type": "conditional_modifier",
+									"situation": "to skill rolls any time you take an unnecessary risk (in the GM’s opinion)",
+									"amount": 1
+								}
+							],
+							"calc": {
+								"points": 15
+							}
+						},
+						{
+							"id": "tX0UrqYeH5Ce9Nd_Q",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tz-USDL9B_KrrVqDi"
+							},
+							"name": "Luck",
+							"reference": "B66,P59",
+							"notes": "Usable once per hour of play",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mKKaEom4qsnVpeGHL",
+									"name": "Active",
+									"reference": "B66",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "mg75jckxcEugj5gbC",
+									"name": "Aspected",
+									"reference": "B66",
+									"notes": "@Aspect@",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "mPFsXhtnXdUHj7EcF",
+									"name": "Defensive",
+									"reference": "B66",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "ml-UIqmbEhq9nPWp3",
+									"name": "Wishing",
+									"reference": "P59",
+									"cost": 100,
+									"disabled": true
+								},
+								{
+									"id": "mK3BhHLShiCM9Y_5v",
+									"name": "Game Time",
+									"reference": "P108",
+									"notes": "Uses per game day equal to its maximum possible uses per real hour",
+									"disabled": true
+								}
+							],
+							"base_points": 15,
+							"calc": {
+								"points": 15
+							}
+						},
+						{
+							"id": "t4mwp8akCIqUpFvRz",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tkiJQ7nfyi9aAdGHK"
+							},
+							"name": "Serendipity",
+							"reference": "B83,P73",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mG0OaE5O4hX4in0Mn",
+									"name": "Wishing",
+									"reference": "P73",
+									"cost": 100,
+									"disabled": true
+								},
+								{
+									"id": "mkJ14EvLBF5PIZKNc",
+									"name": "Wishing",
+									"reference": "P73",
+									"notes": "For others only",
+									"disabled": true
+								},
+								{
+									"id": "mhg_EuFKVlWxNRG2S",
+									"name": "Game Time",
+									"reference": "P108",
+									"notes": "Uses per game week equal to its maximum possible uses per session",
+									"disabled": true
+								}
+							],
+							"levels": 1,
+							"points_per_level": 15,
+							"can_level": true,
+							"calc": {
+								"points": 15
+							}
+						}
+					],
+					"calc": {
+						"points": 60
+					}
+				},
+				{
+					"id": "T6TzI5WPME_f7N1yU",
+					"name": "Attributes",
+					"container_type": "attributes",
+					"children": [
+						{
+							"id": "twSYJUr3NF3u-wdEr",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tVt3SvdGWNchJ8z4o"
+							},
+							"name": "Increased Health",
+							"reference": "B14",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"levels": 1,
+							"points_per_level": 10,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "ht",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "tNhCJXjACzVM87ZWt",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t1w1RFcFceKR2T9_e"
+							},
+							"name": "Increased Intelligence",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental"
+							],
+							"levels": 1,
+							"points_per_level": 20,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "iq",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 20
+							}
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "Tw4olVhTBmX-V3H6p",
+					"name": "Disadvantages",
+					"template_picker": {
+						"type": "points",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": -10
+						}
+					},
+					"children": [
+						{
+							"id": "tZWzbqdrHcATQt0aB",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tNe543pbMl1IkZxSo"
+							},
+							"name": "Callous",
+							"reference": "B125",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -5,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "psychology"
+									},
+									"amount": -3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "teaching"
+									},
+									"amount": -3
+								},
+								{
+									"type": "reaction_bonus",
+									"situation": "from past victims and anyone with Empathy",
+									"amount": -1
+								},
+								{
+									"type": "conditional_modifier",
+									"situation": "to Interrogation and Intimidation rolls when you use threats or torture",
+									"amount": 1
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "t-CFKfC1sYfwXQUuC",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tOW5XqmChX0NBm1AP"
+							},
+							"name": "Light Sleeper",
+							"reference": "B142",
+							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"base_points": -5,
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tHVZepb3d3UXdk_ZK",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tPbL1_rekOzkM86wz"
+							},
+							"name": "Overconfidence",
+							"reference": "B148",
+							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr": 12,
+							"base_points": -5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from young or naive individuals who believe you are as good as you say you are",
+									"amount": 2
+								},
+								{
+									"type": "reaction_bonus",
+									"situation": "from experienced NPCs",
+									"amount": -2
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tgFvFYlL9wUmjIm0i",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tYdqy1uPSGI8VqvLV"
+							},
+							"name": "Selfish",
+							"reference": "B153",
+							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr": 12,
+							"base_points": -5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from others when your Selfishness surfaces",
+									"amount": -3
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tGsiky800jpsllpTG",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t4gqkFmqABx7dLjkS"
+							},
+							"name": "Stubbornness",
+							"reference": "B157",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from others",
+									"amount": -1
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						}
+					],
+					"calc": {
+						"points": -25
+					}
+				}
+			],
+			"calc": {
+				"points": 65
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SlkhK1mWR4ITlpJSv",
+			"name": "Con Artist",
+			"children": [
+				{
+					"id": "SmPBGaw14livgPAgH",
+					"name": "2 points in Combat Skills"
+				},
+				{
+					"id": "s7-_89u8NQ7ncENSH",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sQ7hn7pW3tIPfsU8Z"
+					},
+					"name": "Acting",
+					"reference": "B174",
+					"tags": [
+						"Social",
+						"Spy"
+					],
+					"difficulty": "iq/a",
+					"points": 4,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Performance",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Public Speaking",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "s4qP9gscI3iqi3z9c",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "slXlqD4FNReNHmsov"
+					},
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Criminal",
+						"Spy",
+						"Street",
+						"Technical"
+					],
+					"specialization": "Security",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Security",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "s_XzdHQopqtR-i6YW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "s7zUqAO5PEC5JKk_W"
+					},
+					"name": "Fast-Talk",
+					"reference": "B195",
+					"tags": [
+						"Criminal",
+						"Social",
+						"Spy",
+						"Street"
+					],
+					"difficulty": "iq/a",
+					"points": 4,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Acting",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "SJtMrNhvEuYn3fem9",
+					"name": "Pick One",
+					"template_picker": {
+						"type": "count",
+						"qualifier": {
+							"compare": "is",
+							"qualifier": 1
+						}
+					},
+					"children": [
+						{
+							"id": "sI6Vme7R3zTLxAQzS",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Skills.skl",
+								"id": "si-upI7A5RgdO0cjC"
+							},
+							"name": "Carousing",
+							"reference": "B183",
+							"tags": [
+								"Criminal",
+								"Social",
+								"Street"
+							],
+							"difficulty": "ht/e",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "ht",
+									"modifier": -4
+								}
+							]
+						},
+						{
+							"id": "sXKFTVvot_JQmpfib",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Skills.skl",
+								"id": "sLAU6vDBL4XaQNS0z"
+							},
+							"name": "Sex Appeal",
+							"reference": "B219",
+							"tags": [
+								"Social"
+							],
+							"difficulty": "ht/a",
+							"points": 2,
+							"defaults": [
+								{
+									"type": "ht",
+									"modifier": -3
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "sO08R0HUKaf-emo21",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "stFawUEv8gxldDoiC"
+					},
+					"name": "Research",
+					"reference": "B217",
+					"tags": [
+						"Scholarly",
+						"Spy"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Writing",
+							"modifier": -3
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "prereq_list",
+								"all": true,
+								"when_tl": {
+									"compare": "at_least",
+									"qualifier": 8
+								},
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Computer Operation"
+										}
+									}
+								]
+							},
+							{
+								"type": "prereq_list",
+								"all": false,
+								"when_tl": {
+									"compare": "at_most",
+									"qualifier": 4
+								},
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Native"
+										}
+									},
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Accented)"
+										}
+									},
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Broken)"
+										}
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}

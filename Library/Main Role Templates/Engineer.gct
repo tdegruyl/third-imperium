@@ -1,0 +1,1540 @@
+{
+	"version": 5,
+	"id": "BWxHz5i05zlpgEA5O",
+	"traits": [
+		{
+			"id": "TN5IE1PVVuIBuqFw1",
+			"name": "Engineer",
+			"children": [
+				{
+					"id": "ThzaTlMi-1y6xN7Yo",
+					"name": "Advantages",
+					"children": [
+						{
+							"id": "t9pjctBihYmgp1AL1",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "toP7FUj_JHBeVzWWO"
+							},
+							"name": "Talent (Artificer)",
+							"reference": "B90",
+							"tags": [
+								"Advantage",
+								"Mental",
+								"Talent"
+							],
+							"levels": 1,
+							"points_per_level": 10,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "armoury"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Carpentry"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Electrician"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Electronics Repair"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Engineer"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Machinist"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Masonry"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Mechanic"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Smith"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "reaction_bonus",
+									"situation": "from any employer",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "ttW21RxonrfU0jniV",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Power Ups\\Power Ups Traits.adq",
+								"id": "t3msobZZ06J7dZ8xu"
+							},
+							"name": "Talent (Born Spacer)",
+							"reference": "PU3:7",
+							"tags": [
+								"Advantage",
+								"Mental",
+								"Talent"
+							],
+							"modifiers": [
+								{
+									"id": "mMRiqBuqJso9KruaO",
+									"name": "Alternative Cost",
+									"cost": 1,
+									"affects": "levels_only",
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"levels": 2,
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Aerobatics"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Free Fall"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Space"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Piloting"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "High-Performance Spacecraft"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Piloting"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Low-Performance Spacecraft"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Piloting"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Aerospace"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Spacer"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Vacc Suit"
+									},
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "reaction_bonus",
+									"situation": "From professional Spacers.",
+									"amount": 1,
+									"per_level": true
+								},
+								{
+									"type": "conditional_modifier",
+									"situation": "Bonus to ST for zero G push off.  Reduce penalty for unfamiliar spacecraft.",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 10
+							}
+						}
+					],
+					"calc": {
+						"points": 20
+					}
+				},
+				{
+					"id": "TO5JCtYn7BfzSMazA",
+					"name": "Attributes",
+					"container_type": "attributes",
+					"children": [
+						{
+							"id": "tizcp7CcE3RwttQ--",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tVt3SvdGWNchJ8z4o"
+							},
+							"name": "Increased Health",
+							"reference": "B14",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"levels": 1,
+							"points_per_level": 10,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "ht",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "tmrtWCUiWM_WNxRPP",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t1w1RFcFceKR2T9_e"
+							},
+							"name": "Increased Intelligence",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental"
+							],
+							"levels": 3,
+							"points_per_level": 20,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "iq",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"calc": {
+								"points": 60
+							}
+						}
+					],
+					"calc": {
+						"points": 70
+					}
+				},
+				{
+					"id": "TzFQAdbmSVJDXbDUb",
+					"name": "Disadvantages",
+					"children": [
+						{
+							"id": "TqXpgBZFshNw15B4G",
+							"name": "Choose",
+							"template_picker": {
+								"type": "points",
+								"qualifier": {
+									"compare": "is",
+									"qualifier": -15
+								}
+							},
+							"children": [
+								{
+									"id": "tyvDDGImwwX4Isrdb",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tzBDG0xUlT_dh7FuY"
+									},
+									"name": "Chummy",
+									"reference": "B126",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"features": [
+										{
+											"type": "reaction_bonus",
+											"situation": "to others",
+											"amount": 2
+										},
+										{
+											"type": "conditional_modifier",
+											"situation": "to IQ-based skills when alone",
+											"amount": -1
+										}
+									],
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tZh74wmBwU6sy8KlE",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tzVv8jJIuoUiVT_80"
+									},
+									"name": "Easy to Read",
+									"reference": "B134",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -10,
+									"features": [
+										{
+											"type": "conditional_modifier",
+											"situation": "to others on all Empathy, Body Language, and Psychology rolls to discern your intentions or the truth of your words",
+											"amount": 4
+										},
+										{
+											"type": "conditional_modifier",
+											"situation": "to others on IQ, Detect Lies, and Gambling rolls in any Quick Contest with your Acting, Fast-Talk, or Gambling skill when you try to lie or bluff",
+											"amount": 4
+										}
+									],
+									"calc": {
+										"points": -10
+									}
+								},
+								{
+									"id": "tLuFpKrXXkfcssZ66",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tzk8xRWG-00Yzdsjm"
+									},
+									"name": "Flashbacks",
+									"reference": "B136",
+									"notes": "In any situation that the GM feels is stressful, he will roll 3d. On a 6 or less, you have a flashback. The GM will roll whenever you miss a Fright Check or make the roll exactly, and whenever you fail a self-control roll for another stress-related disadvantage.",
+									"tags": [
+										"Disadvantage",
+										"Physical"
+									],
+									"modifiers": [
+										{
+											"id": "mD6-KqdQrdlutntym",
+											"name": "Mild",
+											"reference": "B136",
+											"notes": "Duration: 2d seconds; -2 on all skill rolls",
+											"cost": -5,
+											"cost_type": "points"
+										},
+										{
+											"id": "maVAGhYqtll-vkxj5",
+											"name": "Severe",
+											"reference": "B136",
+											"notes": "Duration: 1d minutes; -5 on all skill rolls",
+											"cost": -10,
+											"cost_type": "points",
+											"disabled": true
+										},
+										{
+											"id": "mTD_8lUVZy6xs7Nkt",
+											"name": "Crippling",
+											"notes": "Duration: 3d minutes; Precludes all skill use",
+											"cost": -20,
+											"cost_type": "points",
+											"disabled": true
+										}
+									],
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tUUx9aXzchgl0T-8R",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "t4KGpV0KBExr-fEb2"
+									},
+									"name": "Gregarious",
+									"reference": "B126",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -10,
+									"features": [
+										{
+											"type": "reaction_bonus",
+											"situation": "to others",
+											"amount": 4
+										},
+										{
+											"type": "conditional_modifier",
+											"situation": "to IQ-based skills when alone, or only -1 if in a group of 4 or less",
+											"amount": -2
+										}
+									],
+									"calc": {
+										"points": -10
+									}
+								},
+								{
+									"id": "trxTKiGlGS4iI8aSR",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tV06LED8bg9xJGF3c"
+									},
+									"name": "Impulsiveness",
+									"reference": "B139",
+									"notes": "Make a self-control roll whenever it would be wise to wait and ponder. If you fail, you must act",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -10,
+									"calc": {
+										"points": -10
+									}
+								},
+								{
+									"id": "tOqLzMoLX4TKieO2D",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tSiOKuvTJkqJhuRrI"
+									},
+									"name": "Lecherousness",
+									"reference": "B142",
+									"notes": "Make a self-control roll whenever you have more than the briefest contact with an appealing member of the sex you find attractive, at -5 if this person is Handsome/Beautiful, or at -10 if Very Handsome/Very Beautiful. If you fail, you must make a “pass” using whatever wiles and skills you can bring to bear.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -15,
+									"calc": {
+										"points": -15
+									}
+								},
+								{
+									"id": "tpFjFr5lYdXyQgXyS",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tfujsOp4WL4ZholTv"
+									},
+									"name": "Mild Shyness",
+									"reference": "B154",
+									"notes": "You are uneasy with strangers, especially assertive or attractive ones.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"features": [
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Acting"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Carousing"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Diplomacy"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Fast-Talk"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Intimidation"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Leadership"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Merchant"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Panhandling"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Performance"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Politics"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Public Speaking"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Savoir-Faire"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Sex Appeal"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Streetwise"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "Teaching"
+											},
+											"amount": -1
+										}
+									],
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tT2pmzohpRltmXufv",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tzWQ90ARlX5DcAAu7"
+									},
+									"name": "Nightmares",
+									"reference": "B144",
+									"notes": "Make a self-control roll each morning upon awakening. If you fail, you suffered nightmares; this costs you 1 FP that you can only recover through sleep. On a roll of 17 or 18, you are left shaking, and are at -1 to all skill and Perception rolls for the entire day.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tRDY4e8iKkVji3ZV0",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tYNyLy2IqVVc5zHut"
+									},
+									"name": "Oblivious",
+									"reference": "B146",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"base_points": -5,
+									"features": [
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "diplomacy"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "fast-talk"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "intimidation"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "starts_with",
+												"qualifier": "savoir-faire"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "sex appeal"
+											},
+											"amount": -1
+										},
+										{
+											"type": "skill_bonus",
+											"selection_type": "skills_with_name",
+											"name": {
+												"compare": "is",
+												"qualifier": "streetwise"
+											},
+											"amount": -1
+										},
+										{
+											"type": "reaction_bonus",
+											"situation": "to resist Influence skills: Diplomacy, Fast-Talk, Intimidation, Savoir-Faire, Sex Appeal, and Streetwise",
+											"amount": -1
+										}
+									],
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tv1AcsbOz_SU6RdH4",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tPbL1_rekOzkM86wz"
+									},
+									"name": "Overconfidence",
+									"reference": "B148",
+									"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -5,
+									"features": [
+										{
+											"type": "reaction_bonus",
+											"situation": "from young or naive individuals who believe you are as good as you say you are",
+											"amount": 2
+										},
+										{
+											"type": "reaction_bonus",
+											"situation": "from experienced NPCs",
+											"amount": -2
+										}
+									],
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tjlOxLPpYYvashMwb",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tV_f_75HmwzWOPhuu"
+									},
+									"name": "Pacifism: Reluctant Killer",
+									"reference": "B148",
+									"notes": "You are psychologically unprepared to kill people. Whenever you make a deadly attack (e.g., with a knife or a gun) against an obvious person whose face is visible to you, you are at -4 to hit and may not Aim. If you cannot see the foe’s face (due to a mask, darkness, or distance, or because you attacked from behind), the penalty is only -2, save in close combat. You have no penalty to attack a vehicle (even an occupied one), an opponent you do not believe is a person (including things with Horrific or Monstrous appearance), or a target you can’t actually see (e.g., a set of map coordinates or a blip on a radar screen). If you kill a recognizable person, the effect on you is the same as for Pacifism: Cannot Kill. You have no problem with your allies killing; you may even supply ammo, loaded weapons, and encouragement! You just can’t do the killing yourself.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"modifiers": [
+										{
+											"id": "mZrZn1pLy8fLhINlG",
+											"name": "Species-Specific",
+											"reference": "UT32",
+											"cost": -80,
+											"disabled": true
+										}
+									],
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "to6u8LGvxrJm0gsgH",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tK3S6AFjeQgu4gPRi"
+									},
+									"name": "Pyrophobia (Fire)",
+									"reference": "B150",
+									"notes": "Even a burning cigarette bothers you if it comes within five yards.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"cr_adj": "action_penalty",
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "t4CVyc41iT9xveY4b",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tYdqy1uPSGI8VqvLV"
+									},
+									"name": "Selfish",
+									"reference": "B153",
+									"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -5,
+									"features": [
+										{
+											"type": "reaction_bonus",
+											"situation": "from others when your Selfishness surfaces",
+											"amount": -3
+										}
+									],
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tgLl-BSlHxGX-4AxG",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tw81RysAzky-yjNYN"
+									},
+									"name": "Selfless",
+									"reference": "B153",
+									"notes": "You must make a self-control roll to put your needs – even survival – before those of someone else.",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -5,
+									"calc": {
+										"points": -5
+									}
+								},
+								{
+									"id": "tNEGiyBAXq_UTOL9f",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "trz9QJbCgpzx7SYZt"
+									},
+									"name": "Squeamish",
+									"reference": "B156",
+									"tags": [
+										"Disadvantage",
+										"Physical"
+									],
+									"cr": 12,
+									"base_points": -10,
+									"calc": {
+										"points": -10
+									}
+								},
+								{
+									"id": "t164yUOAZ9GP08uMz",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tX9XXLPFBvyQSpA4k"
+									},
+									"name": "Xenophilia",
+									"reference": "B162",
+									"tags": [
+										"Disadvantage",
+										"Mental"
+									],
+									"cr": 12,
+									"base_points": -10,
+									"calc": {
+										"points": -10
+									}
+								}
+							],
+							"calc": {
+								"points": -115
+							}
+						},
+						{
+							"id": "tN8c08kzzi4KZ2A53",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t04cLZ44QvEYdsP3F"
+							},
+							"name": "Sense of Duty",
+							"reference": "B153",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mVYTHB4R3ZY3OqU37",
+									"name": "Friends and Companions",
+									"reference": "B153",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m97YcHpvdWdsjXYWa",
+									"name": "Crew",
+									"reference": "B153",
+									"cost": -5,
+									"cost_type": "points"
+								},
+								{
+									"id": "mPgeJMfPKjtIDN3rV",
+									"name": "@Individual@",
+									"reference": "B153",
+									"cost": -2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m9quxukqYFZ-2sDJv",
+									"name": "@Large Group@",
+									"reference": "B153",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mpK4PuQEtHQfvHE0R",
+									"name": "@Entire Race@",
+									"reference": "B153",
+									"cost": -15,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mpvsNfIO3z1ZZ_8LL",
+									"name": "Every Living Being",
+									"reference": "B153",
+									"cost": -20,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						}
+					],
+					"calc": {
+						"points": -120
+					}
+				}
+			],
+			"calc": {
+				"points": -30
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "S5hAu2t9A4_LMnU5N",
+			"name": "Engineer",
+			"children": [
+				{
+					"id": "sKDByyy8qQzV6v0Yt",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "siSKgRr1MizPF9IrU"
+					},
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Heavy Weapons",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Heavy Weapons",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "ss-ikqijSpH7F7nrZ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sF2gsndOW8j3EX1CG"
+					},
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Vehicular Armor",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Vehicular Armor",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "s9bCgVuHyaxSty09p",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "ssHhRG7LH-Ma3YDnH"
+					},
+					"name": "Computer Operation",
+					"reference": "B184",
+					"tags": [
+						"Everyman",
+						"Scholarly",
+						"Technical"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/e",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "shM2wFHo8Mg7z6c9Q",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sBY-R7Xmf64T7WzZ4"
+					},
+					"name": "Computer Programming",
+					"reference": "B184",
+					"tags": [
+						"Design",
+						"Invention"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/h",
+					"points": 2
+				},
+				{
+					"id": "sG9MN3zFyVc1AVI3S",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "scAysIf1hcMnIL0Ca"
+					},
+					"name": "Electrician",
+					"reference": "B189",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electrical",
+							"modifier": -3
+						}
+					]
+				},
+				{
+					"id": "sS1DVqNiwqfb6Vqhi",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sqH7X8s6knQ9FmK-F"
+					},
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Computer",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Computer Operation",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "se7-J9abMTtnJo3qi",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "st53T_P4vw5xhO7Rp"
+					},
+					"name": "Environment Suit",
+					"reference": "B192",
+					"tags": [
+						"Technical"
+					],
+					"specialization": "Vacc Suit",
+					"tech_level": "11",
+					"difficulty": "dx/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "s7Huddy6VtE0fHTo8",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "s9mV--3lpIfXO7N6Z"
+					},
+					"name": "First Aid",
+					"reference": "B195",
+					"tags": [
+						"Everyman",
+						"Medical"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/e",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Esoteric Medicine"
+						},
+						{
+							"type": "skill",
+							"name": "Physician"
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "sezIGvjDJSsJ9fOuh",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "s7kVwKFERTuMYO3O8"
+					},
+					"name": "Free Fall",
+					"reference": "B197",
+					"tags": [
+						"Athletic"
+					],
+					"difficulty": "dx/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -5
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "s4m1I_HETcW2e1eUz",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sVspKJvpEaYNHFmRo"
+					},
+					"name": "Freight Handling",
+					"reference": "B197",
+					"tags": [
+						"Technical",
+						"Vehicle"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					]
+				},
+				{
+					"id": "sQBfd7KuDjhVpLKTl",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sjiPOdZOS0Ve3xMhr"
+					},
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Jump Drive",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Aerospace",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "sbbuE3CYi-BhULO7l",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sjiPOdZOS0Ve3xMhr"
+					},
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Life Support",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 4,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Aerospace",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "siflOMQ0LbJGJ78DW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sjiPOdZOS0Ve3xMhr"
+					},
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Reactionless Drive",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Aerospace",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "sd-xYIj_xsxRACniW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sjiPOdZOS0Ve3xMhr"
+					},
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Starship",
+					"tech_level": "11",
+					"difficulty": "iq/a",
+					"points": 4,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Aerospace",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "szKN6rbxrrsftACzn",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "shHyf3H441PtZMBlJ"
+					},
+					"name": "Merchant",
+					"reference": "B209",
+					"tags": [
+						"Business",
+						"Social"
+					],
+					"difficulty": "iq/a",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Finance",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Market Analysis",
+							"modifier": -4
+						}
+					]
+				},
+				{
+					"id": "sM7d2bVk5rxkUeN2U",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "s9IHT34mK8yfSB7d_"
+					},
+					"name": "Spacer",
+					"reference": "B185",
+					"tags": [
+						"Vehicle"
+					],
+					"tech_level": "11",
+					"difficulty": "iq/e",
+					"points": 2,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					]
+				}
+			]
+		}
+	]
+}
