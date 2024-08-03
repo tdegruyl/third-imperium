@@ -24,7 +24,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 2,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -35,6 +34,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 40
 							}
@@ -64,24 +64,6 @@
 								"Mental",
 								"Talent"
 							],
-							"modifiers": [
-								{
-									"id": "mq5Ul7PYw3yhIC0u3",
-									"name": "Alternate Benefit",
-									"notes": "Bonus to HT rolls for a specific patient and condition if treated full time.",
-									"disabled": true
-								},
-								{
-									"id": "mbOVKvjhpRH-EMCVY",
-									"name": "Alternative Cost",
-									"cost": 1,
-									"affects": "levels_only",
-									"cost_type": "points",
-									"disabled": true
-								}
-							],
-							"levels": 1,
-							"points_per_level": 10,
 							"prereqs": {
 								"type": "prereq_list",
 								"all": true,
@@ -104,6 +86,23 @@
 									}
 								]
 							},
+							"modifiers": [
+								{
+									"id": "mq5Ul7PYw3yhIC0u3",
+									"name": "Alternate Benefit",
+									"notes": "Bonus to HT rolls for a specific patient and condition if treated full time.",
+									"disabled": true
+								},
+								{
+									"id": "mbOVKvjhpRH-EMCVY",
+									"name": "Alternative Cost",
+									"cost": 1,
+									"cost_type": "points",
+									"affects": "levels_only",
+									"disabled": true
+								}
+							],
+							"points_per_level": 10,
 							"features": [
 								{
 									"type": "skill_bonus",
@@ -231,6 +230,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -590,9 +590,7 @@
 					"tags": [
 						"Medical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/h",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -613,7 +611,9 @@
 							"name": "Veterinary",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sZTsovoqi3aeDqaKO",
@@ -629,9 +629,7 @@
 						"Technical"
 					],
 					"specialization": "Medical",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -654,7 +652,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sGsMTU3kgPjmd-R1p",
@@ -668,9 +668,7 @@
 					"tags": [
 						"Medical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/h",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -686,7 +684,9 @@
 							"name": "Veterinary",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "sbXrv1KakCDUYjLw5",
@@ -700,9 +700,7 @@
 					"tags": [
 						"Medical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/vh",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "skill",
@@ -746,7 +744,9 @@
 								}
 							}
 						]
-					}
+					},
+					"tech_level": "10",
+					"points": 2
 				}
 			]
 		}

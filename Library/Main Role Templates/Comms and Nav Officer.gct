@@ -23,7 +23,6 @@
 								"Advantage",
 								"Mental"
 							],
-							"levels": 2,
 							"points_per_level": 5,
 							"features": [
 								{
@@ -80,6 +79,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 10
 							}
@@ -103,12 +103,11 @@
 									"id": "mBWNCpZOXy3o6AJSs",
 									"name": "Alternative Cost",
 									"cost": 1,
-									"affects": "levels_only",
 									"cost_type": "points",
+									"affects": "levels_only",
 									"disabled": true
 								}
 							],
-							"levels": 2,
 							"points_per_level": 5,
 							"features": [
 								{
@@ -221,6 +220,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 10
 							}
@@ -257,7 +257,6 @@
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -268,6 +267,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 20
 							}
@@ -286,7 +286,6 @@
 								"Attribute",
 								"Physical"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -297,6 +296,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -315,7 +315,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 2,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -326,6 +325,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 40
 							}
@@ -364,8 +364,8 @@
 										"Disadvantage",
 										"Mental"
 									],
-									"cr": 12,
 									"cr_adj": "action_penalty",
+									"cr": 12,
 									"base_points": -10,
 									"calc": {
 										"points": -10
@@ -575,8 +575,8 @@
 										"Disadvantage",
 										"Mental"
 									],
-									"cr": 12,
 									"cr_adj": "action_penalty",
+									"cr": 12,
 									"base_points": -5,
 									"calc": {
 										"points": -5
@@ -768,15 +768,15 @@
 						"Scholarly",
 						"Technical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sCgrbGZ8f4slfVVv4",
@@ -791,9 +791,7 @@
 						"Technical"
 					],
 					"specialization": "Communications",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -816,7 +814,9 @@
 							"specialization": "Electronics",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "si0a9dq5UvsJwnsgb",
@@ -832,9 +832,7 @@
 						"Technical"
 					],
 					"specialization": "Medical",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -857,7 +855,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sEmEXnTmmq0aGtG2d",
@@ -872,9 +872,7 @@
 						"Technical"
 					],
 					"specialization": "Sensors",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -897,7 +895,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "s4exsw0aSgOiagI6A",
@@ -912,15 +912,15 @@
 						"Technical"
 					],
 					"specialization": "Vacc Suit",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sCfot1wToeAmse_hv",
@@ -935,9 +935,7 @@
 						"Everyman",
 						"Medical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -956,7 +954,9 @@
 							"name": "Veterinary",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "s-WKVl4gNdZd13Oq0",
@@ -971,7 +971,6 @@
 						"Athletic"
 					],
 					"difficulty": "dx/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "ht",
@@ -981,7 +980,8 @@
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 1
 				},
 				{
 					"id": "sz3YnmnnkrPtxapvg",
@@ -996,15 +996,15 @@
 						"Technical",
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sjK3L5ws46zxKBQkS",
@@ -1020,13 +1020,13 @@
 						"Social"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "s3G8-ekjir4aE1AaT",
@@ -1042,7 +1042,6 @@
 						"Social"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1058,7 +1057,8 @@
 							"name": "Market Analysis",
 							"modifier": -4
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "sgr0awgaLSI8d2lGB",
@@ -1076,9 +1076,7 @@
 						"Vehicle"
 					],
 					"specialization": "Hyperspace",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "skill",
@@ -1097,7 +1095,9 @@
 							"specialization": "Space",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "sActur4qwCkA7ci7e",
@@ -1115,9 +1115,7 @@
 						"Vehicle"
 					],
 					"specialization": "Space",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "skill",
@@ -1136,7 +1134,9 @@
 							"specialization": "Hyperspace",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "sQlMKL7V_D95tu4uS",
@@ -1151,9 +1151,7 @@
 						"Vehicle"
 					],
 					"specialization": "High-Performance Spacecraft",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1171,7 +1169,9 @@
 							"specialization": "Low-Performance Spacecraft",
 							"modifier": -2
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sCEFmnoBxVkyqiykT",
@@ -1188,9 +1188,7 @@
 						"Social",
 						"Spy"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1206,7 +1204,9 @@
 							"name": "Psychology",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sy2Za6cjXEzcYblZ6",
@@ -1221,9 +1221,7 @@
 						"Vehicle"
 					],
 					"specialization": "Starship",
-					"tech_level": "11",
 					"difficulty": "iq/h",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1280,7 +1278,9 @@
 								}
 							}
 						]
-					}
+					},
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sB9Y8X0C2v_LLjyOA",
@@ -1294,15 +1294,15 @@
 					"tags": [
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				}
 			]
 		}

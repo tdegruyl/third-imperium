@@ -24,7 +24,6 @@
 								"Mental",
 								"Talent"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -125,6 +124,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -148,12 +148,11 @@
 									"id": "mMRiqBuqJso9KruaO",
 									"name": "Alternative Cost",
 									"cost": 1,
-									"affects": "levels_only",
 									"cost_type": "points",
+									"affects": "levels_only",
 									"disabled": true
 								}
 							],
-							"levels": 2,
 							"points_per_level": 5,
 							"features": [
 								{
@@ -266,6 +265,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 10
 							}
@@ -294,7 +294,6 @@
 								"Attribute",
 								"Physical"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -305,6 +304,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -323,7 +323,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 3,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -334,6 +333,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 3,
 							"calc": {
 								"points": 60
 							}
@@ -862,8 +862,8 @@
 										"Disadvantage",
 										"Mental"
 									],
-									"cr": 12,
 									"cr_adj": "action_penalty",
+									"cr": 12,
 									"base_points": -5,
 									"calc": {
 										"points": -5
@@ -1056,9 +1056,7 @@
 						"Repair"
 					],
 					"specialization": "Heavy Weapons",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1070,7 +1068,9 @@
 							"specialization": "Heavy Weapons",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "ss-ikqijSpH7F7nrZ",
@@ -1087,9 +1087,7 @@
 						"Repair"
 					],
 					"specialization": "Vehicular Armor",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1101,7 +1099,9 @@
 							"specialization": "Vehicular Armor",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "s9bCgVuHyaxSty09p",
@@ -1117,15 +1117,15 @@
 						"Scholarly",
 						"Technical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "shM2wFHo8Mg7z6c9Q",
@@ -1140,8 +1140,8 @@
 						"Design",
 						"Invention"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/h",
+					"tech_level": "10",
 					"points": 2
 				},
 				{
@@ -1157,9 +1157,7 @@
 						"Maintenance",
 						"Repair"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1171,7 +1169,9 @@
 							"specialization": "Electrical",
 							"modifier": -3
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sS1DVqNiwqfb6Vqhi",
@@ -1187,9 +1187,7 @@
 						"Repair"
 					],
 					"specialization": "Computer",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1211,7 +1209,9 @@
 							"name": "Electronics Repair",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "se7-J9abMTtnJo3qi",
@@ -1226,15 +1226,15 @@
 						"Technical"
 					],
 					"specialization": "Vacc Suit",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "s7Huddy6VtE0fHTo8",
@@ -1249,9 +1249,7 @@
 						"Everyman",
 						"Medical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1270,7 +1268,9 @@
 							"name": "Veterinary",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sezIGvjDJSsJ9fOuh",
@@ -1285,7 +1285,6 @@
 						"Athletic"
 					],
 					"difficulty": "dx/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "ht",
@@ -1295,7 +1294,8 @@
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 1
 				},
 				{
 					"id": "s4m1I_HETcW2e1eUz",
@@ -1310,15 +1310,15 @@
 						"Technical",
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sQBfd7KuDjhVpLKTl",
@@ -1334,9 +1334,7 @@
 						"Repair"
 					],
 					"specialization": "Jump Drive",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1358,7 +1356,9 @@
 							"name": "Mechanic",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sbbuE3CYi-BhULO7l",
@@ -1374,9 +1374,7 @@
 						"Repair"
 					],
 					"specialization": "Life Support",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1398,7 +1396,9 @@
 							"name": "Mechanic",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "siflOMQ0LbJGJ78DW",
@@ -1414,9 +1414,7 @@
 						"Repair"
 					],
 					"specialization": "Reactionless Drive",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1438,7 +1436,9 @@
 							"name": "Mechanic",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sd-xYIj_xsxRACniW",
@@ -1454,9 +1454,7 @@
 						"Repair"
 					],
 					"specialization": "Starship",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1478,7 +1476,9 @@
 							"name": "Mechanic",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "szKN6rbxrrsftACzn",
@@ -1494,7 +1494,6 @@
 						"Social"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1510,7 +1509,8 @@
 							"name": "Market Analysis",
 							"modifier": -4
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "sM7d2bVk5rxkUeN2U",
@@ -1524,15 +1524,15 @@
 					"tags": [
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				}
 			]
 		}

@@ -153,9 +153,9 @@
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 15,
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 15
 							}
@@ -184,7 +184,6 @@
 								"Attribute",
 								"Physical"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -195,6 +194,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -232,7 +232,6 @@
 											"disabled": true
 										}
 									],
-									"levels": 1,
 									"points_per_level": 20,
 									"features": [
 										{
@@ -243,6 +242,7 @@
 										}
 									],
 									"can_level": true,
+									"levels": 1,
 									"calc": {
 										"points": 20
 									}
@@ -261,7 +261,6 @@
 										"Attribute",
 										"Mental"
 									],
-									"levels": 1,
 									"points_per_level": 20,
 									"features": [
 										{
@@ -272,6 +271,7 @@
 										}
 									],
 									"can_level": true,
+									"levels": 1,
 									"calc": {
 										"points": 20
 									}
@@ -497,7 +497,6 @@
 						"Spy"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -513,7 +512,8 @@
 							"name": "Public Speaking",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "sEVtNur1Xlr71ocQg",
@@ -530,7 +530,6 @@
 						"Weapon"
 					],
 					"difficulty": "dx/e",
-					"points": 1,
 					"features": [
 						{
 							"type": "weapon_bonus",
@@ -546,7 +545,8 @@
 							"amount": 1,
 							"per_die": true
 						}
-					]
+					],
+					"points": 1
 				},
 				{
 					"id": "sOaSad60fQq9PFkLV",
@@ -564,9 +564,7 @@
 						"Technical"
 					],
 					"specialization": "Security",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -589,7 +587,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sJFtOwICaWi0CATyo",
@@ -607,7 +607,6 @@
 						"Street"
 					],
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -618,7 +617,8 @@
 							"name": "Acting",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 4
 				},
 				{
 					"id": "sjY1NGuErZNeC9MRj",
@@ -635,9 +635,7 @@
 						"Weapon"
 					],
 					"specialization": "Pistol",
-					"tech_level": "11",
 					"difficulty": "dx/e",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "dx",
@@ -697,7 +695,9 @@
 							"specialization": "Submachine Gun",
 							"modifier": -2
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "SiUxhJoMwwb8EMCH2",
@@ -761,8 +761,8 @@
 								"Weapon"
 							],
 							"specialization": "Ammo",
-							"tech_level": "11",
 							"difficulty": "dx/e",
+							"tech_level": "10",
 							"points": 1
 						}
 					]
@@ -782,13 +782,13 @@
 						"Street"
 					],
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 4
 				},
 				{
 					"id": "srO0S0Iqg5KJek9Vc",

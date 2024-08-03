@@ -57,7 +57,6 @@
 								"Mental",
 								"Talent"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -148,6 +147,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -460,7 +460,6 @@
 						"Social"
 					],
 					"difficulty": "iq/h",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -471,7 +470,8 @@
 							"name": "Politics",
 							"modifier": -6
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "s3AALZjYSX18SP0do",
@@ -489,7 +489,6 @@
 						"Street"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -500,7 +499,8 @@
 							"name": "Acting",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "sQz396WPOkoiobdlM",
@@ -515,15 +515,15 @@
 						"Technical",
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "saKDBx4iirVnOODAY",
@@ -539,7 +539,6 @@
 						"Social"
 					],
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -555,7 +554,8 @@
 							"name": "Market Analysis",
 							"modifier": -4
 						}
-					]
+					],
+					"points": 4
 				},
 				{
 					"id": "smhqtQE-hB1RwoALs",
@@ -572,9 +572,7 @@
 						"Social",
 						"Spy"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -590,7 +588,9 @@
 							"name": "Psychology",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				}
 			]
 		}

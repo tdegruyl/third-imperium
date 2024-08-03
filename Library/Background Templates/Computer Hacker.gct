@@ -91,12 +91,11 @@
 									"id": "mcpOxpj5MZX66K89I",
 									"name": "Alternative Cost",
 									"cost": 1,
-									"affects": "levels_only",
 									"cost_type": "points",
+									"affects": "levels_only",
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 5,
 							"features": [
 								{
@@ -173,6 +172,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 5
 							}
@@ -201,7 +201,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -212,6 +211,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 20
 							}
@@ -372,17 +372,6 @@
 								"Disadvantage",
 								"Physical"
 							],
-							"modifiers": [
-								{
-									"id": "my0V9xen4wxLRszsH",
-									"name": "Total",
-									"reference": "B141",
-									"cost": -10,
-									"cost_type": "points",
-									"disabled": true
-								}
-							],
-							"base_points": -5,
 							"prereqs": {
 								"type": "prereq_list",
 								"all": true,
@@ -398,6 +387,17 @@
 									}
 								]
 							},
+							"modifiers": [
+								{
+									"id": "my0V9xen4wxLRszsH",
+									"name": "Total",
+									"reference": "B141",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": -5,
 							"calc": {
 								"points": -5
 							}
@@ -435,8 +435,8 @@
 								"Disadvantage",
 								"Mental"
 							],
-							"cr": 12,
 							"cr_adj": "reaction_penalty",
+							"cr": 12,
 							"base_points": -5,
 							"calc": {
 								"points": -5
@@ -663,9 +663,7 @@
 						"Spy",
 						"Street"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/vh",
-					"points": 4,
 					"prereqs": {
 						"type": "prereq_list",
 						"all": true,
@@ -679,7 +677,9 @@
 								}
 							}
 						]
-					}
+					},
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "sR-55CSgR8zn7Ne2R",
@@ -694,8 +694,8 @@
 						"Design",
 						"Invention"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/h",
+					"tech_level": "10",
 					"points": 4
 				},
 				{
@@ -714,9 +714,7 @@
 						"Technical"
 					],
 					"specialization": "Security",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -739,7 +737,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "s5MDFoYMFCMKGvLwL",
@@ -756,9 +756,7 @@
 						"Technical"
 					],
 					"specialization": "Surveillance",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -781,7 +779,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sRUcMb1nXXH6WwjZY",
@@ -797,9 +797,7 @@
 						"Repair"
 					],
 					"specialization": "Computer",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -821,7 +819,9 @@
 							"name": "Electronics Repair",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "snZcQquxcomI2OyAo",
@@ -836,9 +836,7 @@
 						"Natural Science"
 					],
 					"specialization": "Cryptology",
-					"tech_level": "11",
 					"difficulty": "iq/h",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -849,7 +847,9 @@
 							"name": "Cryptography",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sDAnDFJCMorhvr0VR",
@@ -864,9 +864,7 @@
 						"Scholarly",
 						"Spy"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -947,7 +945,9 @@
 								]
 							}
 						]
-					}
+					},
+					"tech_level": "10",
+					"points": 1
 				}
 			]
 		}

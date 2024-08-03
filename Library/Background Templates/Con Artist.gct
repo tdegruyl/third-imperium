@@ -153,9 +153,9 @@
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 15,
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 15
 							}
@@ -184,7 +184,6 @@
 								"Attribute",
 								"Physical"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -195,6 +194,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -213,7 +213,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -224,6 +223,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 20
 							}
@@ -429,7 +429,6 @@
 						"Spy"
 					],
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -445,7 +444,8 @@
 							"name": "Public Speaking",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 4
 				},
 				{
 					"id": "s4qP9gscI3iqi3z9c",
@@ -463,9 +463,7 @@
 						"Technical"
 					],
 					"specialization": "Security",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -488,7 +486,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "s_XzdHQopqtR-i6YW",
@@ -506,7 +506,6 @@
 						"Street"
 					],
 					"difficulty": "iq/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -517,7 +516,8 @@
 							"name": "Acting",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 4
 				},
 				{
 					"id": "SJtMrNhvEuYn3fem9",
@@ -545,13 +545,13 @@
 								"Street"
 							],
 							"difficulty": "ht/e",
-							"points": 2,
 							"defaults": [
 								{
 									"type": "ht",
 									"modifier": -4
 								}
-							]
+							],
+							"points": 2
 						},
 						{
 							"id": "sXKFTVvot_JQmpfib",
@@ -566,13 +566,13 @@
 								"Social"
 							],
 							"difficulty": "ht/a",
-							"points": 2,
 							"defaults": [
 								{
 									"type": "ht",
 									"modifier": -3
 								}
-							]
+							],
+							"points": 2
 						}
 					]
 				},
@@ -589,9 +589,7 @@
 						"Scholarly",
 						"Spy"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -672,7 +670,9 @@
 								]
 							}
 						]
-					}
+					},
+					"tech_level": "10",
+					"points": 2
 				}
 			]
 		}

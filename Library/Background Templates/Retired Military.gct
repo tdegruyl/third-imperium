@@ -24,7 +24,6 @@
 								"Advantage",
 								"Mental"
 							],
-							"base_points": 15,
 							"prereqs": {
 								"type": "prereq_list",
 								"all": true,
@@ -39,6 +38,7 @@
 									}
 								]
 							},
+							"base_points": 15,
 							"features": [
 								{
 									"type": "skill_bonus",
@@ -116,7 +116,6 @@
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -127,6 +126,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 20
 							}
@@ -157,8 +157,8 @@
 									"id": "mpFIkune2ag9gD2v0",
 									"name": "Size",
 									"reference": "B15",
-									"cost": -10,
 									"levels": 1,
+									"cost": -10,
 									"disabled": true
 								},
 								{
@@ -169,7 +169,6 @@
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -180,6 +179,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -593,7 +593,6 @@
 						"Weapon"
 					],
 					"difficulty": "dx/e",
-					"points": 2,
 					"features": [
 						{
 							"type": "weapon_bonus",
@@ -609,7 +608,8 @@
 							"amount": 1,
 							"per_die": true
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "sK5xhUb4EtT_e_n85",
@@ -626,7 +626,6 @@
 						"Weapon"
 					],
 					"difficulty": "dx/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "skill",
@@ -647,7 +646,8 @@
 							"type": "dx",
 							"modifier": -4
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "Sq7OWakpM3D9dQ2y9",
@@ -672,15 +672,15 @@
 							"tags": [
 								"Military"
 							],
-							"tech_level": "11",
 							"difficulty": "iq/a",
-							"points": 1,
 							"defaults": [
 								{
 									"type": "iq",
 									"modifier": -5
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 1
 						},
 						{
 							"id": "smn2hGYV1VGf48VEk",
@@ -694,15 +694,15 @@
 							"tags": [
 								"Vehicle"
 							],
-							"tech_level": "11",
 							"difficulty": "iq/e",
-							"points": 1,
 							"defaults": [
 								{
 									"type": "iq",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 1
 						}
 					]
 				},
@@ -732,15 +732,15 @@
 								"Weapon"
 							],
 							"specialization": "Beams",
-							"tech_level": "11",
 							"difficulty": "iq/a",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "iq",
 									"modifier": -5
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sagk9hrrCQSDknf3K",
@@ -757,15 +757,15 @@
 								"Weapon"
 							],
 							"specialization": "Cannon",
-							"tech_level": "11",
 							"difficulty": "iq/a",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "iq",
 									"modifier": -5
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sPIkolyw8TsLCxg96",
@@ -782,15 +782,15 @@
 								"Weapon"
 							],
 							"specialization": "Guided Missile",
-							"tech_level": "11",
 							"difficulty": "iq/a",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "iq",
 									"modifier": -5
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sQkfEKq-64REE10pF",
@@ -807,9 +807,7 @@
 								"Weapon"
 							],
 							"specialization": "Pistol",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -826,7 +824,9 @@
 									"specialization": "Pistol",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sIaWZRzT-c-DvGz7i",
@@ -843,9 +843,7 @@
 								"Weapon"
 							],
 							"specialization": "Rifle",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -862,7 +860,9 @@
 									"specialization": "Rifle",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "siA6m9HfLagZpWZsS",
@@ -879,9 +879,7 @@
 								"Weapon"
 							],
 							"specialization": "Beams",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -892,7 +890,9 @@
 									"name": "Gunner",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sR5rHI0hmDFNOvhS8",
@@ -909,9 +909,7 @@
 								"Weapon"
 							],
 							"specialization": "Cannon",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -922,7 +920,9 @@
 									"name": "Gunner",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "skfHv5Wz3hiTb5U9z",
@@ -939,9 +939,7 @@
 								"Weapon"
 							],
 							"specialization": "Machine Gun",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -952,7 +950,9 @@
 									"name": "Gunner",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "s3TaoBsMntAB6pIYn",
@@ -969,9 +969,7 @@
 								"Weapon"
 							],
 							"specialization": "Grenade Launcher",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -982,7 +980,9 @@
 									"name": "Guns",
 									"modifier": -4
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sd6Mcwx1umJamyl-Z",
@@ -999,9 +999,7 @@
 								"Weapon"
 							],
 							"specialization": "Rifle",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -1061,7 +1059,9 @@
 									"specialization": "Submachine Gun",
 									"modifier": -2
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						},
 						{
 							"id": "sUBFWKRVEy6E0gkLw",
@@ -1078,9 +1078,7 @@
 								"Weapon"
 							],
 							"specialization": "Shotgun",
-							"tech_level": "11",
 							"difficulty": "dx/e",
-							"points": 4,
 							"defaults": [
 								{
 									"type": "dx",
@@ -1134,7 +1132,9 @@
 									"specialization": "Submachine Gun",
 									"modifier": -2
 								}
-							]
+							],
+							"tech_level": "10",
+							"points": 4
 						}
 					]
 				},

@@ -169,12 +169,11 @@
 									"id": "mqiwBadKe7HI-unIV",
 									"name": "Alternative Cost",
 									"cost": 1,
-									"affects": "levels_only",
 									"cost_type": "points",
+									"affects": "levels_only",
 									"disabled": true
 								}
 							],
-							"levels": 2,
 							"points_per_level": 5,
 							"features": [
 								{
@@ -287,6 +286,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 10
 							}
@@ -323,7 +323,6 @@
 									"disabled": true
 								}
 							],
-							"levels": 2,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -334,6 +333,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 40
 							}
@@ -352,7 +352,6 @@
 								"Attribute",
 								"Physical"
 							],
-							"levels": 1,
 							"points_per_level": 10,
 							"features": [
 								{
@@ -363,6 +362,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 10
 							}
@@ -381,7 +381,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -392,6 +391,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 20
 							}
@@ -430,8 +430,8 @@
 										"Disadvantage",
 										"Mental"
 									],
-									"cr": 12,
 									"cr_adj": "action_penalty",
+									"cr": 12,
 									"base_points": -10,
 									"calc": {
 										"points": -10
@@ -941,8 +941,8 @@
 										"Disadvantage",
 										"Mental"
 									],
-									"cr": 12,
 									"cr_adj": "action_penalty",
+									"cr": 12,
 									"base_points": -5,
 									"calc": {
 										"points": -5
@@ -1135,15 +1135,15 @@
 						"Weapon"
 					],
 					"specialization": "Cannon",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "se8fqXNU8gSTU1Cef",
@@ -1159,15 +1159,15 @@
 						"Scholarly",
 						"Technical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "szNSNwijsHjVkrLH4",
@@ -1182,9 +1182,7 @@
 						"Technical"
 					],
 					"specialization": "Communications",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1207,7 +1205,9 @@
 							"specialization": "Electronics",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "s3XzWUsBh3jpdfRiy",
@@ -1222,9 +1222,7 @@
 						"Technical"
 					],
 					"specialization": "Sensors",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1247,7 +1245,9 @@
 							"name": "Electronics Operation",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sClnxyIctHFoFlViq",
@@ -1262,15 +1262,15 @@
 						"Technical"
 					],
 					"specialization": "Vacc Suit",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sRB2Kkuo-LvMbOs3N",
@@ -1285,9 +1285,7 @@
 						"Everyman",
 						"Medical"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1306,7 +1304,9 @@
 							"name": "Veterinary",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sd6f5uvQJi6Mj47vT",
@@ -1321,7 +1321,6 @@
 						"Athletic"
 					],
 					"difficulty": "dx/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "ht",
@@ -1331,7 +1330,8 @@
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 1
 				},
 				{
 					"id": "sKQrstTHdJ2V8Jgrl",
@@ -1346,15 +1346,15 @@
 						"Technical",
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sDlUUegPbkdErnzBQ",
@@ -1370,13 +1370,13 @@
 						"Social"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "snq1sH0lcrdx0x5nE",
@@ -1392,7 +1392,6 @@
 						"Social"
 					],
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1408,7 +1407,8 @@
 							"name": "Market Analysis",
 							"modifier": -4
 						}
-					]
+					],
+					"points": 2
 				},
 				{
 					"id": "s1Gh93sN05bxdzkPm",
@@ -1426,9 +1426,7 @@
 						"Vehicle"
 					],
 					"specialization": "Hyperspace",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "skill",
@@ -1447,7 +1445,9 @@
 							"specialization": "Space",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "s_xq3c29XSNQZTYYO",
@@ -1465,9 +1465,7 @@
 						"Vehicle"
 					],
 					"specialization": "Space",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "skill",
@@ -1486,7 +1484,9 @@
 							"specialization": "Hyperspace",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "sYQWFiNPzZ4E0aoOG",
@@ -1501,9 +1501,7 @@
 						"Vehicle"
 					],
 					"specialization": "Aerospace",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1520,7 +1518,9 @@
 							"name": "Piloting",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "srvlMF49V-eL5Zh2W",
@@ -1535,9 +1535,7 @@
 						"Vehicle"
 					],
 					"specialization": "High-Performance Spacecraft",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1555,7 +1553,9 @@
 							"specialization": "Low-Performance Spacecraft",
 							"modifier": -2
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 4
 				},
 				{
 					"id": "s2Ralk2r9etBFw_et",
@@ -1570,9 +1570,7 @@
 						"Vehicle"
 					],
 					"specialization": "Starship",
-					"tech_level": "11",
 					"difficulty": "iq/h",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
@@ -1629,7 +1627,9 @@
 								}
 							}
 						]
-					}
+					},
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "s_aAfDkCJE1cr_s__",
@@ -1643,15 +1643,15 @@
 					"tags": [
 						"Vehicle"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/e",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				}
 			]
 		}

@@ -227,12 +227,11 @@
 									"id": "m-wjdYmHP0YH_IEJ-",
 									"name": "Alternative Cost",
 									"cost": 1,
-									"affects": "levels_only",
 									"cost_type": "points",
+									"affects": "levels_only",
 									"disabled": true
 								}
 							],
-							"levels": 2,
 							"points_per_level": 5,
 							"features": [
 								{
@@ -345,6 +344,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 2,
 							"calc": {
 								"points": 10
 							}
@@ -373,7 +373,6 @@
 								"Attribute",
 								"Mental"
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -384,6 +383,7 @@
 								}
 							],
 							"can_level": true,
+							"levels": 1,
 							"calc": {
 								"points": 20
 							}
@@ -525,8 +525,8 @@
 								"Disadvantage",
 								"Mental"
 							],
-							"cr": 12,
 							"cr_adj": "reaction_penalty",
+							"cr": 12,
 							"base_points": -5,
 							"calc": {
 								"points": -5
@@ -675,7 +675,6 @@
 					],
 					"specialization": "@Specific Asteroid Belt@; Lived there",
 					"difficulty": "iq/e",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "iq",
@@ -687,7 +686,8 @@
 							"specialization": "@Specialty@",
 							"modifier": -3
 						}
-					]
+					],
+					"points": 4
 				},
 				{
 					"id": "sbH0NX7t5IGs5pyeR",
@@ -702,7 +702,6 @@
 						"Athletic"
 					],
 					"difficulty": "dx/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "ht",
@@ -712,7 +711,8 @@
 							"type": "dx",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 1
 				},
 				{
 					"id": "sPsbPNoMBrp2ZXDp9",
@@ -727,9 +727,7 @@
 						"Natural Science"
 					],
 					"specialization": "Rock Worlds",
-					"tech_level": "11",
 					"difficulty": "iq/h",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -746,7 +744,9 @@
 							"name": "Prospecting",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sdm7TYnCGWPP4Usqw",
@@ -764,9 +764,7 @@
 						"Vehicle"
 					],
 					"specialization": "Space",
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 2,
 					"defaults": [
 						{
 							"type": "skill",
@@ -785,7 +783,9 @@
 							"specialization": "Hyperspace",
 							"modifier": -5
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 2
 				},
 				{
 					"id": "saVSyxpWTD5HPnzIH",
@@ -800,9 +800,7 @@
 						"Vehicle"
 					],
 					"specialization": "High-Performance Spacecraft",
-					"tech_level": "11",
 					"difficulty": "dx/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -820,7 +818,9 @@
 							"specialization": "Low-Performance Spacecraft",
 							"modifier": -2
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				},
 				{
 					"id": "sHX16Nl-ld7udUt_n",
@@ -835,9 +835,7 @@
 						"Exploration",
 						"Outdoor"
 					],
-					"tech_level": "11",
 					"difficulty": "iq/a",
-					"points": 1,
 					"defaults": [
 						{
 							"type": "iq",
@@ -848,7 +846,9 @@
 							"name": "Geology",
 							"modifier": -4
 						}
-					]
+					],
+					"tech_level": "10",
+					"points": 1
 				}
 			]
 		}

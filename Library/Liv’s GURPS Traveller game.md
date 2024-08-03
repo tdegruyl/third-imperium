@@ -6,7 +6,7 @@
 
 ### **Concept**
 
-An episodic romp through the Spinward Marches in a tramp freighter. Honestly, anything can happen.
+An episodic, low-combat, roleplay-heavy sci-fi romp through the (Traveller) Spinward Marches in a tramp freighter. Honestly, anything can happen.
 
 ### **Guidelines**
 
@@ -20,37 +20,46 @@ An episodic romp through the Spinward Marches in a tramp freighter. Honestly, an
   * Round out advantages, disadvantages, and skills  
   * Up to \-5 in personal quirks (i.e., do not count racial quirks)   
 * **Tech Level**: 11 (using Safe-tech parameters, see UT10)  
-  * No Neural interfaces and cybernetics, except for bionics intended to replace missing body parts.  
+  * No Neural interfaces and cybernetics, except for bionics intended to replace missing body parts with a technological equivalent.  
   * No genetic engineering, molecular nanotechnology, swarmbots, or volitional AI.  
-* **Allowable Wealth**: Average or Comfortable.  
-  * Wealth (Average) \[0\]: starting *available* wealth $15,000[^1]  
-  * Wealth (Comfortable) \[10\]: starting *available* wealth $30,000  
+* **Allowable Wealth**: The allowed wealth levels are *Struggling, Average,* or *Comfortable*. We will be using the concept of schrödinger’s luggage, where each character can have a certain amount of useful adventuring gear (‘stuff’) onboard that will be determined later (via skill rolls).  
+  * **Wealth (Struggling) \[-10\]**: starting *available* wealth $2,500[^1], plus up to $5,000/500 lbs in ‘stuff’  
+  * **Wealth (Average) \[0\]**: starting *available* wealth $5,000, plus up to $10,000/1,000 lbs of ‘stuff’  
+  * **Wealth (Comfortable) \[10\]:** starting *available* wealth $10,000, plus $20,000/2,000 lbs of ‘stuff’   
 * **Cost of Living** for the whole gang: $32,000/month in loan repayment, insurance, maintenance, and cost of living for the PCs.   
 * **Income**: We will use the rules below to abstract freight and passenger revenue.
 
 ### **Background**
 
-For this campaign, PCs should be one of the following:
+The Imperial year is 1120 (which translates to 5638 CE).
+
+The setting is the backwaters of the Spinward Marches. The Fifth Frontier War (between the Zhodani and the Imperium) ended 10 years ago.
+
+### **PC Species/Subspecies**
+
+For this campaign, because of the starting location and the social and physical demands of various interstellar species, PCs should be one of the following:
 
 * Human (mixed human, Darrian, Nexxie, Solomani, or Vilani)  
 * Aslan  
 * Vargr
 
-The Imperial year is 1120 (which translates to 5638 CE).  
-The setting is the backwaters of the Spinward Marches.
+### **Equipment and Technology Notes**
 
-### **Background Templates:**
+*I don’t expect this to be a combat-focused game*, but space is a dangerous place and a pistol or rifle slugthrower may be nice to have (along with points in the appropriate Guns skill). 
+
+The technology in the Traveller universe is informed by a particular view of tech from 1977, so some things don’t make sense from a modern standpoint. Just assume that things worked out a little different from real life in the history of this game universe. For example, Laser and Plasma guns in the Traveller universe use cumbersome backpack power units, which makes them less useful on a day-to-day basis. 
+
+Some equipment choices make sense for in-universe reasons. Robots are not common and true AI does not exist within the Imperium because of fear of technology and a reliance on inexpensive human labor. Psionic powers are terrifying to the Imperium due to the wars with the Zhodani Consulate. Psionic blocking tech is built-in for all helmets, vehicles, and buildings as a matter of course. 
+
+A final note on equipment from a gaming standpoint: some choices are made for narrative reasons, rather than verisimilitude. For example, drone operation is an excellent choice in many real life situations, but the lack of inherent danger and narrative tension, as well as the process of splitting the party, makes it unappealing from a gaming standpoint.
+
+### **Background Templates**
 
 These templates flesh out a character, as they are informed by the character’s past.
 
-### **Professional Templates:**
+### **Professional Templates**
 
 There are three main templates: pilot, comm and nav officer, and engineer. Because this is a campaign about a tramp freighter, these are the choices and you’re probably going to want a character with each of these skill sets on the ship.
-
-### **Required traits:**
-
-* Cultural Familiarity (Third Imperium)  
-* Language: Galanglic (Spoken)
 
 ### **Psionics**
 
