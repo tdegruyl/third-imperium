@@ -581,31 +581,6 @@
 							}
 						},
 						{
-							"id": "tLLIyuC-DBLc2CUmB",
-							"name": "Increased Perception",
-							"reference": "B16",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Mental",
-								"Physical"
-							],
-							"points_per_level": 5,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "per",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 5
-							}
-						},
-						{
 							"id": "tDvXf9TS6a9D91SMQ",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
@@ -767,7 +742,7 @@
 						}
 					],
 					"calc": {
-						"points": 40
+						"points": 35
 					}
 				},
 				{
@@ -825,56 +800,8 @@
 							}
 						},
 						{
-							"id": "traNRbBCb2UDWJCGE",
-							"name": "Fewer Fatigue Points",
-							"reference": "B16",
-							"tags": [
-								"Attribute",
-								"Disadvantage",
-								"Physical"
-							],
-							"points_per_level": -3,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "fp",
-									"amount": -1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": -3
-							}
-						},
-						{
-							"id": "t67UanXHcDgKfBSqy",
-							"name": "Fewer Hit Points",
-							"reference": "B16",
-							"tags": [
-								"Attribute",
-								"Disadvantage",
-								"Physical"
-							],
-							"points_per_level": -2,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "hp",
-									"amount": -1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": -2
-							}
-						},
-						{
 							"id": "tdYY9GOuCUfwkKq-o",
-							"name": "Legs (unless a foe is prone and the Vargr standing, in which case they can\nstamp downward)",
+							"name": "Legs",
 							"reference": "B54",
 							"tags": [
 								"Advantage",
@@ -883,7 +810,7 @@
 							],
 							"modifiers": [
 								{
-									"id": "m0UAvXqYT-8SRanIl",
+									"id": "mz8qMOryMKHstUG7L",
 									"name": "@3 or 4@",
 									"reference": "B54",
 									"cost": 5,
@@ -891,7 +818,7 @@
 									"disabled": true
 								},
 								{
-									"id": "mqlwet9lZ-xjD-UKg",
+									"id": "mnBKt__aNm16zHL2i",
 									"name": "@5 or 6@",
 									"reference": "B55",
 									"cost": 10,
@@ -899,7 +826,7 @@
 									"disabled": true
 								},
 								{
-									"id": "m8ZYEdztaNwJ-zkRv",
+									"id": "m0XtW7n9rb5hw0QBk",
 									"name": "@7+@",
 									"reference": "B55",
 									"cost": 15,
@@ -907,7 +834,7 @@
 									"disabled": true
 								},
 								{
-									"id": "mQCRsl0ZCH39zgI8D",
+									"id": "myIO028ypk7xa5Nty",
 									"name": "Long",
 									"reference": "B55",
 									"levels": 1,
@@ -915,20 +842,20 @@
 									"disabled": true
 								},
 								{
-									"id": "moO44UKlUm36qFvHp",
+									"id": "mOakx1syTODZGvRDg",
 									"name": "Cannot Kick",
 									"reference": "B55",
 									"cost": -50
 								},
 								{
-									"id": "mwzFu45y9Tt941mE2",
+									"id": "mNHIUxROzZWVoZFE_",
 									"name": "Extra Flexible",
 									"reference": "MATG27",
 									"cost": 50,
 									"disabled": true
 								},
 								{
-									"id": "mQow2x6Rcdnvnvq3f",
+									"id": "mC5NMbEjbmAFk9zgv",
 									"name": "Prehensile Feet",
 									"reference": "MATG28",
 									"cost": 20,
@@ -1021,7 +948,7 @@
 						}
 					],
 					"calc": {
-						"points": -35
+						"points": -30
 					}
 				},
 				{
@@ -1050,6 +977,54 @@
 							"levels": 1,
 							"calc": {
 								"points": -10
+							}
+						},
+						{
+							"id": "traNRbBCb2UDWJCGE",
+							"name": "Fewer Fatigue Points",
+							"reference": "B16",
+							"tags": [
+								"Attribute",
+								"Disadvantage",
+								"Physical"
+							],
+							"points_per_level": -3,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "fp",
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": -3
+							}
+						},
+						{
+							"id": "t67UanXHcDgKfBSqy",
+							"name": "Fewer Hit Points",
+							"reference": "B16",
+							"tags": [
+								"Attribute",
+								"Disadvantage",
+								"Physical"
+							],
+							"points_per_level": -2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "hp",
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": -2
 							}
 						},
 						{
@@ -1082,6 +1057,31 @@
 							"levels": 1,
 							"calc": {
 								"points": 20
+							}
+						},
+						{
+							"id": "tLLIyuC-DBLc2CUmB",
+							"name": "Increased Perception",
+							"reference": "B16",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental",
+								"Physical"
+							],
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "per",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": 5
 							}
 						}
 					],

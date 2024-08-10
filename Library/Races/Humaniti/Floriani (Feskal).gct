@@ -10,317 +10,344 @@
 			"container_type": "ancestry",
 			"children": [
 				{
-					"id": "tb6mFSR-E05NS9BfA",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "tJi-TQmfqXXVH24kt"
-					},
-					"name": "Slave Mentality",
-					"reference": "B154",
-					"tags": [
-						"Disadvantage",
-						"Mental"
-					],
-					"base_points": -40,
-					"calc": {
-						"points": -40
-					}
-				},
-				{
-					"id": "tJvRiytdyGao8J0GS",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "tw1Ad0oSMw2ATM4X1"
-					},
-					"name": "Language: Floriani",
-					"reference": "B24",
-					"tags": [
-						"Advantage",
-						"Language",
-						"Mental"
-					],
-					"modifiers": [
+					"id": "Tws7RRhUAiGghm3u_",
+					"name": "Advantages",
+					"children": [
 						{
-							"id": "mkF3MAKj5LIEyhJx4",
-							"name": "Native",
-							"reference": "B23",
-							"cost": -6,
-							"cost_type": "points"
-						},
-						{
-							"id": "mMNvPn3C3ID58t323",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "m_XSYk34N1lDE3_lO",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points"
-						},
-						{
-							"id": "mbrkZcRz-bQWXfr1X",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "mgfnPHNqf3c1_z00e",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "mBe7UnY8Yj7G7IyEN",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "None",
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "mzhowxRIKnInDWM0b",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Broken",
-							"cost": 1,
-							"cost_type": "points"
-						},
-						{
-							"id": "mDWs1uzKll4cqcT_G",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Accented",
-							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "mwgXgs3gt9MVGtvMu",
-							"name": "Written",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
-							"cost_type": "points",
-							"disabled": true
-						}
-					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
+							"id": "TZnmSH44xFnttuP6V",
+							"name": "Attribute Modifiers",
+							"children": [
+								{
+									"id": "tGJXIxevpzbFmM2_d",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "t50ZzyORV0rTiYwnb"
+									},
+									"name": "Decreased Intelligence",
+									"reference": "B15",
+									"tags": [
+										"Attribute",
+										"Disadvantage",
+										"Mental"
+									],
+									"points_per_level": -20,
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "iq",
+											"amount": -1,
+											"per_level": true
+										}
+									],
+									"can_level": true,
+									"levels": 2,
+									"calc": {
+										"points": -40
+									}
 								},
-								"level": {
-									"compare": "at_least"
+								{
+									"id": "tj_0E3ARXBzXUhJ5q",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tVt3SvdGWNchJ8z4o"
+									},
+									"name": "Increased Health",
+									"reference": "B14",
+									"tags": [
+										"Advantage",
+										"Attribute",
+										"Physical"
+									],
+									"points_per_level": 10,
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "ht",
+											"amount": 1,
+											"per_level": true
+										}
+									],
+									"can_level": true,
+									"levels": 2,
+									"calc": {
+										"points": 20
+									}
+								},
+								{
+									"id": "tO73HEcuzLgovnjct",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Basic Set\\Basic Set Traits.adq",
+										"id": "tqha9GlDBU9P-Wg-6"
+									},
+									"name": "Increased Strength",
+									"reference": "B14",
+									"tags": [
+										"Advantage",
+										"Attribute",
+										"Physical"
+									],
+									"modifiers": [
+										{
+											"id": "miofKGMWkqJc50_Aj",
+											"name": "No Fine Manipulators",
+											"reference": "B15",
+											"cost": -40,
+											"disabled": true
+										},
+										{
+											"id": "m0btAatgjHNftGy1d",
+											"name": "Size",
+											"reference": "B15",
+											"levels": 1,
+											"cost": -10,
+											"disabled": true
+										},
+										{
+											"id": "mmdtnxvk-syseHlWP",
+											"name": "Super-Effort",
+											"reference": "SU24",
+											"cost": 300,
+											"disabled": true
+										}
+									],
+									"points_per_level": 10,
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "st",
+											"amount": 1,
+											"per_level": true
+										}
+									],
+									"can_level": true,
+									"levels": 5,
+									"calc": {
+										"points": 50
+									}
 								}
+							],
+							"calc": {
+								"points": 30
 							}
-						]
-					},
-					"calc": {
-						"points": -4
-					}
-				},
-				{
-					"id": "tO73HEcuzLgovnjct",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "tqha9GlDBU9P-Wg-6"
-					},
-					"name": "Increased Strength",
-					"reference": "B14",
-					"tags": [
-						"Advantage",
-						"Attribute",
-						"Physical"
-					],
-					"modifiers": [
-						{
-							"id": "miofKGMWkqJc50_Aj",
-							"name": "No Fine Manipulators",
-							"reference": "B15",
-							"cost": -40,
-							"disabled": true
 						},
 						{
-							"id": "m0btAatgjHNftGy1d",
-							"name": "Size",
-							"reference": "B15",
-							"cost": -10,
-							"levels": 1,
-							"disabled": true
+							"id": "tyuHefwqikEGuhrR0",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "toXBQ8q4Nek5lsLPF"
+							},
+							"name": "Cultural Familiarity (Floriani)",
+							"reference": "B23",
+							"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "m2QxrTiMJvVllcE31",
+									"name": "Alien",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m9Ixk1-XffngW7Rqu",
+									"name": "Native",
+									"cost": -1,
+									"cost_type": "points"
+								}
+							],
+							"base_points": 1,
+							"calc": {
+								"points": 0
+							}
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "TWzrKjHxpZCttInRP",
+					"name": "Disadvantages",
+					"children": [
+						{
+							"id": "tJvRiytdyGao8J0GS",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: Floriani",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mkF3MAKj5LIEyhJx4",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points"
+								},
+								{
+									"id": "mMNvPn3C3ID58t323",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m_XSYk34N1lDE3_lO",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points"
+								},
+								{
+									"id": "mbrkZcRz-bQWXfr1X",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mgfnPHNqf3c1_z00e",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mBe7UnY8Yj7G7IyEN",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mzhowxRIKnInDWM0b",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points"
+								},
+								{
+									"id": "mDWs1uzKll4cqcT_G",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mwgXgs3gt9MVGtvMu",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -4
+							}
 						},
 						{
-							"id": "mmdtnxvk-syseHlWP",
-							"name": "Super-Effort",
-							"reference": "SU24",
-							"cost": 300,
-							"disabled": true
-						}
-					],
-					"levels": 5,
-					"points_per_level": 10,
-					"features": [
-						{
-							"type": "attribute_bonus",
-							"attribute": "st",
-							"amount": 1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"calc": {
-						"points": 50
-					}
-				},
-				{
-					"id": "tj_0E3ARXBzXUhJ5q",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "tVt3SvdGWNchJ8z4o"
-					},
-					"name": "Increased Health",
-					"reference": "B14",
-					"tags": [
-						"Advantage",
-						"Attribute",
-						"Physical"
-					],
-					"levels": 2,
-					"points_per_level": 10,
-					"features": [
-						{
-							"type": "attribute_bonus",
-							"attribute": "ht",
-							"amount": 1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"calc": {
-						"points": 20
-					}
-				},
-				{
-					"id": "tGJXIxevpzbFmM2_d",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "t50ZzyORV0rTiYwnb"
-					},
-					"name": "Decreased Intelligence",
-					"reference": "B15",
-					"tags": [
-						"Attribute",
-						"Disadvantage",
-						"Mental"
-					],
-					"levels": 2,
-					"points_per_level": -20,
-					"features": [
-						{
-							"type": "attribute_bonus",
-							"attribute": "iq",
-							"amount": -1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"calc": {
-						"points": -40
-					}
-				},
-				{
-					"id": "tyuHefwqikEGuhrR0",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "toXBQ8q4Nek5lsLPF"
-					},
-					"name": "Cultural Familiarity (Floriani)",
-					"reference": "B23",
-					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
-					"tags": [
-						"Advantage",
-						"Mental"
-					],
-					"modifiers": [
-						{
-							"id": "m2QxrTiMJvVllcE31",
-							"name": "Alien",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
+							"id": "tb6mFSR-E05NS9BfA",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tJi-TQmfqXXVH24kt"
+							},
+							"name": "Slave Mentality",
+							"reference": "B154",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -40,
+							"calc": {
+								"points": -40
+							}
 						},
 						{
-							"id": "m9Ixk1-XffngW7Rqu",
-							"name": "Native",
-							"cost": -1,
-							"cost_type": "points"
-						}
-					],
-					"base_points": 1,
-					"calc": {
-						"points": 0
-					}
-				},
-				{
-					"id": "tCWkR3ueOYXvMZjc4",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "tunEojd-PNzEzVNaU"
-					},
-					"name": "Bad Sight (Farsighted)",
-					"reference": "B123",
-					"tags": [
-						"Disadvantage",
-						"Physical"
-					],
-					"modifiers": [
-						{
-							"id": "mgXzOuTkeUL-rrrGJ",
-							"name": "Mitigator",
-							"notes": "Glasses",
-							"cost": -60,
-							"disabled": true
-						}
-					],
-					"base_points": -25,
-					"features": [
-						{
-							"type": "conditional_modifier",
-							"situation": "to Vision rolls to spot items within 1 yd",
-							"amount": -6
-						},
-						{
-							"type": "conditional_modifier",
-							"situation": "to DX for any close manual task, including close combat",
-							"amount": -3
+							"id": "tCWkR3ueOYXvMZjc4",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tunEojd-PNzEzVNaU"
+							},
+							"name": "Bad Sight (Farsighted)",
+							"reference": "B123",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mgXzOuTkeUL-rrrGJ",
+									"name": "Mitigator",
+									"notes": "Glasses",
+									"cost": -60,
+									"disabled": true
+								}
+							],
+							"base_points": -25,
+							"features": [
+								{
+									"type": "conditional_modifier",
+									"situation": "to Vision rolls to spot items within 1 yd",
+									"amount": -6
+								},
+								{
+									"type": "conditional_modifier",
+									"situation": "to DX for any close manual task, including close combat",
+									"amount": -3
+								}
+							],
+							"calc": {
+								"points": -25
+							}
 						}
 					],
 					"calc": {
-						"points": -25
+						"points": -69
 					}
 				}
 			],

@@ -56,8 +56,6 @@
 						"Advantage",
 						"Mental"
 					],
-					"levels": 3,
-					"points_per_level": 2,
 					"prereqs": {
 						"type": "prereq_list",
 						"all": true,
@@ -72,6 +70,7 @@
 							}
 						]
 					},
+					"points_per_level": 2,
 					"features": [
 						{
 							"type": "attribute_bonus",
@@ -81,6 +80,7 @@
 						}
 					],
 					"can_level": true,
+					"levels": 3,
 					"calc": {
 						"points": 6
 					}
@@ -100,7 +100,7 @@
 					],
 					"modifiers": [
 						{
-							"id": "mFqqJKNqy0hIE8Hx5",
+							"id": "mVgUGYD9O-PmwbmmT",
 							"name": "People Affected",
 							"reference": "B27",
 							"notes": "Almost everyone",
@@ -109,7 +109,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mngiUtlqjSewD_mku",
+							"id": "mxiPorDyEEdVk0sx2",
 							"name": "People Affected",
 							"reference": "B27",
 							"notes": "Almost everyone except @large class of people@",
@@ -118,15 +118,15 @@
 							"disabled": true
 						},
 						{
-							"id": "mQZmTFOZp-oAWJ0Ia",
+							"id": "mQwQQA9tsBzkHQ9AU",
 							"name": "People Affected",
 							"reference": "B27",
-							"notes": "@Large class of people@",
+							"notes": "Military and Former Military",
 							"cost": 0.5,
 							"cost_type": "multiplier"
 						},
 						{
-							"id": "m2xuSrnZldN1aYo1h",
+							"id": "m00uo5Gydxv8k5wve",
 							"name": "People Affected",
 							"reference": "B27",
 							"notes": "@Small class of people@",
@@ -135,7 +135,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mgOj58TGDbFcg5Ewe",
+							"id": "mPsMMbyixJLBxN6DP",
 							"name": "Recognized all the time",
 							"reference": "B28",
 							"cost": 1,
@@ -143,7 +143,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mSraWfM8-M10gs7hX",
+							"id": "mii-edS5xZXw0rNWk",
 							"name": "Recognized sometimes",
 							"reference": "B28",
 							"notes": "10-",
@@ -151,7 +151,7 @@
 							"cost_type": "multiplier"
 						},
 						{
-							"id": "mb1IIcYkGOtL_T7pa",
+							"id": "meFs_tfo7VCp4PFKR",
 							"name": "Recognized occasionally",
 							"reference": "B28",
 							"notes": "7-",
@@ -160,7 +160,6 @@
 							"disabled": true
 						}
 					],
-					"levels": 2,
 					"points_per_level": 5,
 					"features": [
 						{
@@ -172,6 +171,7 @@
 					],
 					"round_down": true,
 					"can_level": true,
+					"levels": 2,
 					"calc": {
 						"points": 2
 					}
@@ -220,9 +220,9 @@
 						"Advantage",
 						"Mental"
 					],
-					"levels": 1,
 					"points_per_level": 5,
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": 5
 					}
@@ -251,8 +251,8 @@
 							},
 							"name": "Costs Fatigue",
 							"reference": "B111,P101",
-							"cost": -5,
-							"levels": 1
+							"levels": 1,
+							"cost": -5
 						},
 						{
 							"id": "mxsffUoeD1kHHDpTI",
@@ -303,6 +303,23 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
 							"id": "mlixLfIBUpL8mKoO0",
@@ -380,23 +397,6 @@
 							"cost_type": "points"
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 0
 					}
@@ -414,9 +414,9 @@
 						"Advantage",
 						"Physical"
 					],
-					"levels": 10,
 					"points_per_level": 1,
 					"can_level": true,
+					"levels": 10,
 					"calc": {
 						"points": 10
 					}

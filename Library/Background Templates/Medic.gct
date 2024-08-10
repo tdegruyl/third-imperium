@@ -11,45 +11,6 @@
 					"name": "Advantages",
 					"children": [
 						{
-							"id": "tM-_zmTVXNQnOgL8N",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "t1w1RFcFceKR2T9_e"
-							},
-							"name": "Increased Intelligence",
-							"reference": "B15",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Mental"
-							],
-							"points_per_level": 20,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "iq",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 2,
-							"calc": {
-								"points": 40
-							}
-						}
-					],
-					"calc": {
-						"points": 40
-					}
-				},
-				{
-					"id": "TD7L1NGGiArqoUdkN",
-					"name": "Attributes",
-					"container_type": "attributes",
-					"children": [
-						{
 							"id": "tFFzh3rjFtFrCfsDm",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
@@ -238,6 +199,45 @@
 					],
 					"calc": {
 						"points": 10
+					}
+				},
+				{
+					"id": "TD7L1NGGiArqoUdkN",
+					"name": "Attributes",
+					"container_type": "attributes",
+					"children": [
+						{
+							"id": "tM-_zmTVXNQnOgL8N",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t1w1RFcFceKR2T9_e"
+							},
+							"name": "Increased Intelligence",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental"
+							],
+							"points_per_level": 20,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "iq",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 40
+							}
+						}
+					],
+					"calc": {
+						"points": 40
 					}
 				},
 				{

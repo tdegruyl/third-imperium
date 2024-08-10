@@ -4,7 +4,7 @@
 	"traits": [
 		{
 			"id": "TZhYZtgdsEHzbziV2",
-			"name": "Ilthanaran",
+			"name": "Iltharan",
 			"reference": "GTH79",
 			"ancestry": "Human",
 			"container_type": "ancestry",
@@ -25,23 +25,22 @@
 					],
 					"modifiers": [
 						{
-							"id": "mxoZF0Mqkh1QVMypx",
+							"id": "m5x7rzMWdhBEmwFyp",
 							"name": "Alien",
 							"cost": 1,
 							"cost_type": "points",
 							"disabled": true
 						},
 						{
-							"id": "mN2hnqgkji-oxvnoV",
+							"id": "mHO-XoPlnOXm3fYl9",
 							"name": "Native",
 							"cost": -1,
-							"cost_type": "points",
-							"disabled": true
+							"cost_type": "points"
 						}
 					],
 					"base_points": 1,
 					"calc": {
-						"points": 1
+						"points": 0
 					}
 				},
 				{
@@ -65,9 +64,9 @@
 						"Exotic",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": 2,
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": 2
 					}
@@ -104,7 +103,6 @@
 						"Attribute",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": 10,
 					"features": [
 						{
@@ -115,6 +113,7 @@
 						}
 					],
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": 10
 					}
@@ -133,17 +132,33 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
-							"id": "mdyI7iPB0xqxO6Vy8",
+							"id": "mpfa5C4eDNpVGJotV",
 							"name": "Native",
 							"reference": "B23",
 							"cost": -6,
-							"cost_type": "points",
-							"disabled": true
+							"cost_type": "points"
 						},
 						{
-							"id": "m7ftRx8XbCGGtoDZX",
+							"id": "mQU6EbgV8ecyUyWfV",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "None",
@@ -151,7 +166,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mUYDUCq2tHeBySXA2",
+							"id": "mLM2ZbIf5iIuZ_4oC",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "Broken",
@@ -160,24 +175,24 @@
 							"disabled": true
 						},
 						{
-							"id": "mrXEOYbOBt8nheKEE",
+							"id": "mojQnWr-xLkMIkK4B",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "Accented",
 							"cost": 2,
-							"cost_type": "points"
-						},
-						{
-							"id": "m2SOeu21FOfObo766",
-							"name": "Spoken",
-							"reference": "B24",
-							"notes": "Native",
-							"cost": 3,
 							"cost_type": "points",
 							"disabled": true
 						},
 						{
-							"id": "m_1Ye_1JoNg74sSjC",
+							"id": "mokx6pxgInwZVlXyI",
+							"name": "Spoken",
+							"reference": "B24",
+							"notes": "Native",
+							"cost": 3,
+							"cost_type": "points"
+						},
+						{
+							"id": "m6SWHE_q4nHWXtjA7",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "None",
@@ -185,7 +200,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mwy2mYCidHXX18x6C",
+							"id": "m_7zBhjXrPvTpDRmG",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "Broken",
@@ -194,22 +209,40 @@
 							"disabled": true
 						},
 						{
-							"id": "mCAwu5azxUPE5wso6",
+							"id": "mVDWHlE59vIrgoG-c",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "Accented",
 							"cost": 2,
-							"cost_type": "points"
+							"cost_type": "points",
+							"disabled": true
 						},
 						{
-							"id": "mlNf4jwUs20KP97P2",
+							"id": "me44vbs6_FFmG_jAU",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "Native",
 							"cost": 3,
-							"cost_type": "points",
-							"disabled": true
+							"cost_type": "points"
 						}
+					],
+					"calc": {
+						"points": 0
+					}
+				},
+				{
+					"id": "t5_TSdobK5jR7R6BG",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Traits.adq",
+						"id": "tw1Ad0oSMw2ATM4X1"
+					},
+					"name": "Language: Galanglic",
+					"reference": "B24",
+					"tags": [
+						"Advantage",
+						"Language",
+						"Mental"
 					],
 					"prereqs": {
 						"type": "prereq_list",
@@ -228,24 +261,6 @@
 							}
 						]
 					},
-					"calc": {
-						"points": 4
-					}
-				},
-				{
-					"id": "t5_TSdobK5jR7R6BG",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "tw1Ad0oSMw2ATM4X1"
-					},
-					"name": "Language: Galanglic",
-					"reference": "B24",
-					"tags": [
-						"Advantage",
-						"Language",
-						"Mental"
-					],
 					"modifiers": [
 						{
 							"id": "mClRV5YJBmxOnf-CM",
@@ -324,23 +339,6 @@
 							"disabled": true
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 4
 					}
@@ -358,9 +356,9 @@
 						"Disadvantage",
 						"Social"
 					],
-					"levels": 1,
 					"points_per_level": -5,
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": -5
 					}
@@ -385,7 +383,7 @@
 				}
 			],
 			"calc": {
-				"points": 14
+				"points": 9
 			}
 		}
 	]

@@ -507,45 +507,6 @@
 							}
 						},
 						{
-							"id": "tkDc1cO00-E8ya4-6",
-							"name": "Extra Hit Points",
-							"reference": "B16",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Physical"
-							],
-							"modifiers": [
-								{
-									"id": "mI70iQDKod0Jog5K-",
-									"name": "Size",
-									"levels": 1,
-									"cost": -10,
-									"disabled": true
-								},
-								{
-									"id": "m284hSjg-_1qT0nIn",
-									"name": "No Fine Manipulators",
-									"cost": -40,
-									"disabled": true
-								}
-							],
-							"points_per_level": 2,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "hp",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 2
-							}
-						},
-						{
 							"id": "twZfeH0zpViWk5YAQ",
 							"name": "Fur",
 							"reference": "B101",
@@ -681,9 +642,9 @@
 							],
 							"points_per_level": 1,
 							"can_level": true,
-							"levels": 10,
+							"levels": 9,
 							"calc": {
-								"points": 10
+								"points": 9
 							}
 						},
 						{
@@ -777,7 +738,7 @@
 						}
 					],
 					"calc": {
-						"points": 55
+						"points": 52
 					}
 				},
 				{
@@ -823,9 +784,9 @@
 								"Disadvantage",
 								"Mental"
 							],
-							"base_points": 15,
+							"base_points": -15,
 							"calc": {
-								"points": 15
+								"points": -15
 							}
 						},
 						{
@@ -890,37 +851,39 @@
 								"Mental",
 								"Quirk"
 							],
-							"base_points": 15,
+							"base_points": -10,
 							"calc": {
-								"points": 15
+								"points": -10
 							}
 						},
 						{
-							"id": "tVdp3x9NCWZeWwQ7Q",
-							"name": "Short Lifespan",
-							"reference": "B154",
+							"id": "tWgObGfIS1ItwYxFH",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "tkvBzkhf0YNP2cF5j"
+							},
+							"name": "Proud",
+							"reference": "B164",
 							"tags": [
-								"Disadvantage",
-								"Exotic",
-								"Physical"
+								"Mental",
+								"Quirk"
 							],
-							"modifiers": [
+							"base_points": -1,
+							"features": [
 								{
-									"id": "mV65abCzK7xaVlC7D",
-									"name": "Only affects frequency of aging rolls, -50%",
-									"cost": -50
+									"type": "reaction_bonus",
+									"situation": "to orders, insults, or social slights",
+									"amount": -1
 								}
 							],
-							"points_per_level": -10,
-							"can_level": true,
-							"levels": 1,
 							"calc": {
-								"points": -5
+								"points": -1
 							}
 						}
 					],
 					"calc": {
-						"points": 10
+						"points": -41
 					}
 				},
 				{
@@ -949,6 +912,45 @@
 							"levels": 1,
 							"calc": {
 								"points": -20
+							}
+						},
+						{
+							"id": "tkDc1cO00-E8ya4-6",
+							"name": "Extra Hit Points",
+							"reference": "B16",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mI70iQDKod0Jog5K-",
+									"name": "Size",
+									"levels": 1,
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "m284hSjg-_1qT0nIn",
+									"name": "No Fine Manipulators",
+									"cost": -40,
+									"disabled": true
+								}
+							],
+							"points_per_level": 2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "hp",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": 2
 							}
 						},
 						{
@@ -1001,67 +1003,12 @@
 						}
 					],
 					"calc": {
-						"points": -10
-					}
-				},
-				{
-					"id": "T1xedLudtCHGi6mMl",
-					"name": "Racial Quirks",
-					"children": [
-						{
-							"id": "tD2wLCRLa9hVaDCLu",
-							"name": "Incompetence (Merchant)",
-							"reference": "B162",
-							"tags": [
-								"Mental",
-								"Quirk"
-							],
-							"base_points": -1,
-							"calc": {
-								"points": -1
-							}
-						},
-						{
-							"id": "tbX23nqWNOO9h712Z",
-							"name": "Only considers land (and to a lesser extent, goods and services) to have any value",
-							"reference": "B162",
-							"tags": [
-								"Mental",
-								"Quirk"
-							],
-							"base_points": -1,
-							"calc": {
-								"points": -1
-							}
-						},
-						{
-							"id": "t0K81_uVQYeTq2YQ6",
-							"name": "Proud",
-							"reference": "B164",
-							"tags": [
-								"Mental",
-								"Quirk"
-							],
-							"base_points": -1,
-							"features": [
-								{
-									"type": "reaction_bonus",
-									"situation": "to orders, insults, or social slights",
-									"amount": -1
-								}
-							],
-							"calc": {
-								"points": -1
-							}
-						}
-					],
-					"calc": {
-						"points": -3
+						"points": -8
 					}
 				}
 			],
 			"calc": {
-				"points": 52
+				"points": 3
 			}
 		}
 	]

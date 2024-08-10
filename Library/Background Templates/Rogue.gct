@@ -200,90 +200,37 @@
 							}
 						},
 						{
-							"id": "TPY4KbZ81dnxMckUV",
-							"name": "Pick One",
-							"template_picker": {
-								"type": "count",
-								"qualifier": {
-									"compare": "is",
-									"qualifier": 1
-								}
+							"id": "tY0Kg8SYnLXQ6DG6W",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set\\Basic Set Traits.adq",
+								"id": "t1w1RFcFceKR2T9_e"
 							},
-							"children": [
+							"name": "Increased Intelligence",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental"
+							],
+							"points_per_level": 20,
+							"features": [
 								{
-									"id": "tHnt68A43IyHsyBTS",
-									"source": {
-										"library": "richardwilkes/gcs_master_library",
-										"path": "Basic Set\\Basic Set Traits.adq",
-										"id": "tGWOSEE6SmBHACE6Y"
-									},
-									"name": "Increased Dexterity",
-									"reference": "B15",
-									"tags": [
-										"Advantage",
-										"Attribute",
-										"Physical"
-									],
-									"modifiers": [
-										{
-											"id": "mmyN9Cqis7RWFSlP9",
-											"name": "No Fine Manipulators",
-											"cost": -40,
-											"disabled": true
-										}
-									],
-									"points_per_level": 20,
-									"features": [
-										{
-											"type": "attribute_bonus",
-											"attribute": "dx",
-											"amount": 1,
-											"per_level": true
-										}
-									],
-									"can_level": true,
-									"levels": 1,
-									"calc": {
-										"points": 20
-									}
-								},
-								{
-									"id": "tY0Kg8SYnLXQ6DG6W",
-									"source": {
-										"library": "richardwilkes/gcs_master_library",
-										"path": "Basic Set\\Basic Set Traits.adq",
-										"id": "t1w1RFcFceKR2T9_e"
-									},
-									"name": "Increased Intelligence",
-									"reference": "B15",
-									"tags": [
-										"Advantage",
-										"Attribute",
-										"Mental"
-									],
-									"points_per_level": 20,
-									"features": [
-										{
-											"type": "attribute_bonus",
-											"attribute": "iq",
-											"amount": 1,
-											"per_level": true
-										}
-									],
-									"can_level": true,
-									"levels": 1,
-									"calc": {
-										"points": 20
-									}
+									"type": "attribute_bonus",
+									"attribute": "iq",
+									"amount": 1,
+									"per_level": true
 								}
 							],
+							"can_level": true,
+							"levels": 1,
 							"calc": {
-								"points": 40
+								"points": 20
 							}
 						}
 					],
 					"calc": {
-						"points": 50
+						"points": 30
 					}
 				},
 				{
@@ -474,7 +421,7 @@
 				}
 			],
 			"calc": {
-				"points": 80
+				"points": 60
 			}
 		}
 	],

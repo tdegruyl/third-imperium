@@ -35,7 +35,7 @@
 						"path": "Basic Set\\Basic Set Traits.adq",
 						"id": "toXBQ8q4Nek5lsLPF"
 					},
-					"name": "Cultural Familiarity (Third Imperium)",
+					"name": "Cultural Familiarity (Imperial)",
 					"reference": "B23",
 					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
 					"tags": [
@@ -44,14 +44,14 @@
 					],
 					"modifiers": [
 						{
-							"id": "mNJq6JSQiFwVfY696",
+							"id": "m0Pybp5vCCrgI9P4o",
 							"name": "Alien",
 							"cost": 1,
 							"cost_type": "points",
 							"disabled": true
 						},
 						{
-							"id": "mMUBUOGgXosjbSIJT",
+							"id": "muncHQ7bZPFFK-a45",
 							"name": "Native",
 							"cost": -1,
 							"cost_type": "points"

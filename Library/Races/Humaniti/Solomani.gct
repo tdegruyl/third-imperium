@@ -15,7 +15,7 @@
 						"path": "Basic Set\\Basic Set Traits.adq",
 						"id": "toXBQ8q4Nek5lsLPF"
 					},
-					"name": "Cultural Familiarity (Third Imperium)",
+					"name": "Cultural Familiarity (Imperial)",
 					"reference": "B23",
 					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
 					"tags": [
@@ -24,14 +24,14 @@
 					],
 					"modifiers": [
 						{
-							"id": "mWAfravUuRcnG9_zw",
+							"id": "mEIw1A1rCvtzEYQ3H",
 							"name": "Alien",
 							"cost": 1,
 							"cost_type": "points",
 							"disabled": true
 						},
 						{
-							"id": "mltL2Cs_JZlpj-jiv",
+							"id": "mYrGk6isGjiZqYVbO",
 							"name": "Native",
 							"cost": -1,
 							"cost_type": "points"
@@ -56,6 +56,23 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
 							"id": "mOzFUtg3Okjbg0Kku",
@@ -133,23 +150,6 @@
 							"cost_type": "points"
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 0
 					}
@@ -168,6 +168,23 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
 							"id": "mzlinZcEjEgteh0jo",
@@ -246,23 +263,6 @@
 							"disabled": true
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 4
 					}
