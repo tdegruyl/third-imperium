@@ -91,14 +91,14 @@
 									],
 									"modifiers": [
 										{
-											"id": "miofKGMWkqJc50_Aj",
+											"id": "mS0HMMzW3LJh0RgSi",
 											"name": "No Fine Manipulators",
 											"reference": "B15",
 											"cost": -40,
 											"disabled": true
 										},
 										{
-											"id": "m0btAatgjHNftGy1d",
+											"id": "m10nGSkj4emBlwHwA",
 											"name": "Size",
 											"reference": "B15",
 											"levels": 1,
@@ -106,14 +106,14 @@
 											"disabled": true
 										},
 										{
-											"id": "mmdtnxvk-syseHlWP",
+											"id": "mhfm9eHw8nUPqkKXz",
 											"name": "Super-Effort",
 											"reference": "SU24",
 											"cost": 300,
 											"disabled": true
 										}
 									],
-									"points_per_level": 10,
+									"points_per_level": 5,
 									"features": [
 										{
 											"type": "attribute_bonus",
@@ -125,12 +125,12 @@
 									"can_level": true,
 									"levels": 5,
 									"calc": {
-										"points": 50
+										"points": 25
 									}
 								}
 							],
 							"calc": {
-								"points": 30
+								"points": 5
 							}
 						},
 						{
@@ -169,7 +169,7 @@
 						}
 					],
 					"calc": {
-						"points": 30
+						"points": 5
 					}
 				},
 				{
@@ -352,7 +352,7 @@
 				}
 			],
 			"calc": {
-				"points": -39
+				"points": -64
 			}
 		}
 	]

@@ -964,7 +964,7 @@
 								"Disadvantage",
 								"Physical"
 							],
-							"points_per_level": -10,
+							"points_per_level": -5,
 							"features": [
 								{
 									"type": "attribute_bonus",
@@ -976,7 +976,7 @@
 							"can_level": true,
 							"levels": 1,
 							"calc": {
-								"points": -10
+								"points": -5
 							}
 						},
 						{
@@ -1086,7 +1086,7 @@
 						}
 					],
 					"calc": {
-						"points": 10
+						"points": 15
 					}
 				},
 				{
@@ -1133,7 +1133,7 @@
 				}
 			],
 			"calc": {
-				"points": 13
+				"points": 18
 			}
 		}
 	]

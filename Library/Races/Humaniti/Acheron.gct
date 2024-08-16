@@ -29,14 +29,14 @@
 							"reference": "B21",
 							"cost": 4,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 1
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mgrSXP9QyxG54QDZf",
@@ -51,14 +51,14 @@
 							"reference": "B21",
 							"cost": 12,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from those attracted to members of your sex, +2 from everyone else",
 									"amount": 4
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mAgrdBwMS5fEIchAQ",
@@ -66,14 +66,14 @@
 							"reference": "B21",
 							"cost": 12,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 3
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "m0hBfm0CrqpyzsWHq",
@@ -81,14 +81,14 @@
 							"reference": "B21",
 							"cost": 12,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 3
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mB4CVlfNJRk8IW4Nt",
@@ -96,14 +96,14 @@
 							"reference": "B21",
 							"cost": 12,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from those attracted to members of your sex, +2 from everyone else",
 									"amount": 4
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "myVBfvq_nlHMHSwED",
@@ -111,14 +111,14 @@
 							"reference": "B21",
 							"cost": 12,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 3
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "max3MgABuMc6Tjbvl",
@@ -126,14 +126,14 @@
 							"reference": "B21",
 							"cost": 12,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 3
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "m-zvkL3WdeMXadvBA",
@@ -141,7 +141,6 @@
 							"reference": "B21,B202",
 							"cost": -16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "skill_bonus",
@@ -157,7 +156,8 @@
 									"situation": "from others",
 									"amount": -4
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mKdRVkfNiQmOOqbx7",
@@ -165,7 +165,6 @@
 							"reference": "B21,B202",
 							"cost": -24,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "skill_bonus",
@@ -181,7 +180,8 @@
 									"situation": "from others",
 									"amount": -6
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "m6rTmhVo0g4aKlfwu",
@@ -196,7 +196,6 @@
 							"reference": "B21,B202",
 							"cost": -20,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "skill_bonus",
@@ -212,7 +211,8 @@
 									"situation": "from others",
 									"amount": -5
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mDdhRtLwoKaXyFCWe",
@@ -228,14 +228,14 @@
 							"reference": "B21",
 							"cost": 20,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead.",
 									"amount": 8
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mrpwd95xZMLrjzhrJ",
@@ -243,14 +243,14 @@
 							"reference": "B21",
 							"cost": 20,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 5
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mR8hQqK_DhwOo5xpa",
@@ -258,14 +258,14 @@
 							"reference": "B21",
 							"cost": 20,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 5
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mI28Kszqlqj9LHT3A",
@@ -287,14 +287,14 @@
 							"reference": "B21",
 							"cost": -4,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": -1
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mi7Mii4jiuFWrmAs6",
@@ -309,14 +309,14 @@
 							"reference": "B21",
 							"cost": 16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead.",
 									"amount": 6
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mq5BD82nlEcRmHQIk",
@@ -324,14 +324,14 @@
 							"reference": "B21",
 							"cost": 16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 4
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mdNHEGN_MjijqwR7B",
@@ -339,14 +339,14 @@
 							"reference": "B21",
 							"cost": 16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 4
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mdwFqx1gw8-PCSaOj",
@@ -354,14 +354,14 @@
 							"reference": "B21",
 							"cost": 16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from those attracted to members of your sex, +2 from everyone else. Exception: Members of the same sex with reason to dislike you (more than -4 in reaction penalties regardless of bonuses) resent your good looks and react at -2 instead.",
 									"amount": 6
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "mJLJJBzx4cTneEPjX",
@@ -369,14 +369,14 @@
 							"reference": "B21",
 							"cost": 16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 4
 								}
-							]
+							],
+							"disabled": true
 						},
 						{
 							"id": "maj38y5H23bbd5V2p",
@@ -384,14 +384,14 @@
 							"reference": "B21",
 							"cost": 16,
 							"cost_type": "points",
-							"disabled": true,
 							"features": [
 								{
 									"type": "reaction_bonus",
 									"situation": "from others",
 									"amount": 4
 								}
-							]
+							],
+							"disabled": true
 						}
 					],
 					"calc": {
@@ -507,7 +507,6 @@
 						"Attribute",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": 10,
 					"features": [
 						{
@@ -518,6 +517,7 @@
 						}
 					],
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": 10
 					}
@@ -538,30 +538,29 @@
 					],
 					"modifiers": [
 						{
-							"id": "mVYAAZDLMykgkEDQX",
+							"id": "mg2vNSKNCCj5z92U_",
 							"name": "No Fine Manipulators",
 							"reference": "B15",
 							"cost": -40,
 							"disabled": true
 						},
 						{
-							"id": "myfP5Gn_S4sBFFnz4",
+							"id": "mtuCTJigPQMiWhd5q",
 							"name": "Size",
 							"reference": "B15",
-							"cost": -10,
 							"levels": 1,
+							"cost": -10,
 							"disabled": true
 						},
 						{
-							"id": "mkcibKjflqqHumqyk",
+							"id": "mysy53hutkVGtLHEn",
 							"name": "Super-Effort",
 							"reference": "SU24",
 							"cost": 300,
 							"disabled": true
 						}
 					],
-					"levels": 3,
-					"points_per_level": 10,
+					"points_per_level": 5,
 					"features": [
 						{
 							"type": "attribute_bonus",
@@ -571,8 +570,9 @@
 						}
 					],
 					"can_level": true,
+					"levels": 3,
 					"calc": {
-						"points": 30
+						"points": 15
 					}
 				},
 				{
@@ -646,6 +646,23 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
 							"id": "mWRbYK8QN7Vujy2Yk",
@@ -723,23 +740,6 @@
 							"cost_type": "points"
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 0
 					}
@@ -758,6 +758,23 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
 							"id": "miqMi2IOFpvSGJ_lh",
@@ -836,23 +853,6 @@
 							"disabled": true
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 4
 					}
@@ -871,7 +871,6 @@
 						"Exotic",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": 1,
 					"features": [
 						{
@@ -882,12 +881,15 @@
 						},
 						{
 							"type": "dr_bonus",
-							"location": "eye",
+							"locations": [
+								"eye"
+							],
 							"amount": 1,
 							"per_level": true
 						}
 					],
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": 1
 					}
@@ -1023,9 +1025,9 @@
 						"Exotic",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": -10,
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": -10
 					}
@@ -1052,7 +1054,7 @@
 				}
 			],
 			"calc": {
-				"points": 16
+				"points": 1
 			}
 		}
 	],
@@ -1075,13 +1077,13 @@
 						"Occult"
 					],
 					"difficulty": "iq/a",
-					"points": 8,
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
 						}
-					]
+					],
+					"points": 8
 				}
 			]
 		}

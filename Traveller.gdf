@@ -40,7 +40,7 @@ LoadAfter="GURPS Ultra-Tech 4e.gdf"
 
 [Settings]
 CampaignName=Tramp Freighter
-BasePoints=175
+BasePoints=200
 DisadLimit=-50
 QuirkLimit=-5
 ShowMalf=no
@@ -49,6 +49,92 @@ DefaultTL=10
 
 [Attributes]
 Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000)
+#ReplaceTags in ST:ST with up(5), down(-5)
+
+
+[BODY]
+
+<Humanoid>
+description(Stock humanoid. B 552)
+name(Vitals), group(Skin, All, Full Suit, Body, Torso, Vitals)
+name(Head), group(Head, Skin, All)
+name(Eyes), group(Head, Eyes, All), display(-1), expanded(-1), posx(149), posy(53)
+name(Left Eye), group(Head, Left Eye, Eyes, All)
+name(Right Eye), group(Head, Right Eye, Eyes, All)
+name(Neck), group(Neck, Body, Full Suit, Skin, All), display(-1), expanded(-1), posx(137), posy(114)
+name(Skull), group(Head, Skull, Skin, All), basedr(2), dr(2), display(-1), expanded(-1), posx(339), posy(43)
+name(Face), group(Head, Face, Skin, All), display(-1), expanded(-1), posx(309), posy(104)
+name(Torso), group(Torso, Body, Full Suit, Skin, All), display(-1), expanded(-1), posx(220), posy(193),width(100),height(50)
+name(Groin), group(Groin, Body, Full Suit, Skin, All), display(-1), expanded(-1), posx(393), posy(474)
+name(Arms), group(Arms, Limbs, Full Suit, Skin, All), display(-1), expanded(-1), posx(403), posy(246)
+name(Left Arm), group(Left Arm, Arms, Limbs, Full Suit, Skin, All)
+name(Right Arm), group(Right Arm, Arms, Limbs, Full Suit, Skin, All)
+name(Hands), group(Hands, Full Suit, Skin, All), display(-1), expanded(-1), posx(420), posy(310)
+name(Left Hand), group(Left Hand, Hands, Full Suit, Skin, All)
+name(Right Hand), group(Right Hand, Hands, Full Suit, Skin, All)
+name(Legs), group(Legs, Limbs, Full Suit, Skin, All), display(-1), expanded(-1), posx(351), posy(587)
+name(Left Leg), group(Left Leg, Legs, Limbs, Full Suit, Skin, All)
+name(Right Leg), group(Right Leg, Legs, Limbs, Full Suit, Skin, All)
+name(Feet), group(Feet, Full Suit, Skin, All), display(-1), expanded(-1), posx(349), posy(662)
+name(Left Foot), group(Left Foot, Feet, Full Suit, Skin, All)
+name(Right Foot), group(Right Foot, Feet, Full Suit, Skin, All)
+name(Body), group(Body, Full Suit, Skin, All)
+name(Full Suit), group(Full Suit, Skin, All)
+name(Skin), group(Skin, All)
+name(All), group(All)
+
+<Winged Humanoid>
+name(Vitals), group(Skin, All, Full Suit, Body, Torso, Vitals)
+name(Head), group(Head, Skin, All)
+name(Eyes), group(Head, Eyes, All), display(-1), expanded(-1), posx(149), posy(53)
+name(Left Eye), group(Head, Left Eye, Eyes, All)
+name(Right Eye), group(Head, Right Eye, Eyes, All)
+name(Neck), group(Neck, Body, Full Suit, Skin, All), display(-1), expanded(-1), posx(137), posy(114)
+name(Skull), group(Head, Skull, Skin, All), basedr(2), dr(2), display(-1), expanded(-1), posx(339), posy(43)
+name(Face), group(Head, Face, Skin, All), display(-1), expanded(-1), posx(309), posy(104)
+name(Torso), group(Torso, Body, Full Suit, Skin, All), display(-1), expanded(-1), posx(220), posy(193),width(100),height(50)
+name(Left Wing), group(Wing, Skin, All)
+name(Right Wing), group(Wing, Skin, All)
+name(Groin), group(Groin, Body, Full Suit, Skin, All), display(-1), expanded(-1), posx(393), posy(474)
+name(Arms), group(Arms, Limbs, Full Suit, Skin, All), display(-1), expanded(-1), posx(403), posy(246)
+name(Left Arm), group(Left Arm, Arms, Limbs, Full Suit, Skin, All)
+name(Right Arm), group(Right Arm, Arms, Limbs, Full Suit, Skin, All)
+name(Hands), group(Hands, Full Suit, Skin, All), display(-1), expanded(-1), posx(420), posy(310)
+name(Left Hand), group(Left Hand, Hands, Full Suit, Skin, All)
+name(Right Hand), group(Right Hand, Hands, Full Suit, Skin, All)
+name(Legs), group(Legs, Limbs, Full Suit, Skin, All), display(-1), expanded(-1), posx(351), posy(587)
+name(Left Leg), group(Left Leg, Legs, Limbs, Full Suit, Skin, All)
+name(Right Leg), group(Right Leg, Legs, Limbs, Full Suit, Skin, All)
+name(Feet), group(Feet, Full Suit, Skin, All), display(-1), expanded(-1), posx(349), posy(662)
+name(Left Foot), group(Left Foot, Feet, Full Suit, Skin, All)
+name(Right Foot), group(Right Foot, Feet, Full Suit, Skin, All)
+name(Body), group(Body, Full Suit, Skin, All)
+name(Full Suit), group(Full Suit, Skin, All)
+name(Tail), group(Skin, All)
+name(Skin), group(Skin, All)
+name(All), group(All)
+
+[HitTables]
+
+<Winged Humanoid>
+description(A creature with two legs and two arms, plus a pair of wings.)
+roll(-), location(Eye), penalty(-9)
+roll(3-4), location(Skull), penalty(-7)
+roll(6), location(Face), penalty(-5)
+roll(7), location(Right Leg), penalty(-2)
+roll(8), location(Right Arm), penalty(-2)
+roll(9), location(Right Wing), penalty(-2), notes(W)
+roll(10-11), location(Torso), penalty(0)
+roll(-), location(Groin), penalty(-3), notes(1,11)
+roll(12), location(Left Wing), penalty(-2), notes(W)
+roll(13), location(Left Arm), penalty(-2)
+roll(14), location(Left Leg), penalty(-2)
+roll(15), location(Hand), penalty(-4)
+roll(16), location(Tail), penalty(-3), notes(T)
+roll(17-18), location(Neck), penalty(-5)
+roll(-), location(Vitals), penalty(-3)
+note(W), text(Wing: Treat a wing as a limb (arm, leg) for crippling purposes. A flyer with a crippled wing cannot fly.)
+note(T), text(Tail: If a tail counts as an Extra Arm or a Striker, or is a fish tail, treat it as a limb (arm, leg) for crippling purposes; otherwise, treat it as an extremity (hand, foot). A crippled tail affects balance. For a ground creature, this gives -1 DX. For a swimmer or flyer, this gives -2 DX and halves Move. If the creature has no tail, or a very short one (like a rabbit), treat as “torso.”)
 
 [Languages]
 Galanglic, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
@@ -63,9 +149,12 @@ Clotho (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None],
 N'Toz, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 N'Toz (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 N'Toz (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Droyne, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Droyne (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Droyne (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Bwap, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Bwap (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Bwap (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Oynprith, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Oynprith (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Oynprith (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Hiver, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Hiver (Gesture), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Hiver (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
@@ -129,6 +218,9 @@ Standard Luriani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language
 Kator, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Kator (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Kator (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Drakaran, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Drakaran (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Drakaran (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
 
 [CULTURES]
 
@@ -141,6 +233,8 @@ Clotho, 1, cat(Cultural Familiarity, Social Background)
 Clotho (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Drakaran, 1, cat(Cultural Familiarity, Social Background)
 Drakaran (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Bwap, 1, cat(Cultural Familiarity, Social Background)
+Bwap (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Droyne, 1, cat(Cultural Familiarity, Social Background)
 Droyne (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Hiver, 1, cat(Cultural Familiarity, Social Background)
@@ -195,6 +289,8 @@ Yilean (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST
 
 #ReplaceTags in "AD:Merchant Rank" with "upto(10)"
 
+
+
 <Mundane Mental>
 //  Talents
 Born Tactician, 10/20, upto(4), gives(+1 to GR:Born Tactician), conditional(+1 to ST:Reaction), page(T:IW135), cat(Talents),_
@@ -212,6 +308,9 @@ Awareness Talent, 5/10, page(T:IW135), cat(Supernatural, Mental, Talents - Power
 #MergeTags in "AD:Psychic Healing Talent" with "needs(AD:Unusual Background (Psi)), page(T:IW135), description(Only allowed at the GM's discretion, see p. T:IW 135.)"
 
 Unusual Background (Psi), 10/25, upto(2), levelnames(Latent, Functional Powers), page(B96, T:IW135), cat(Supernatural, Mental)
+
+<Psionic Powers, Psionic Powers - Telepathy>
+Telepathy Talent, 5/10, upto(4), page(PP57-67), gives(+1 to "CL:Psionic Powers - Telepathy")
 
 [DISADVANTAGES]
 #DeleteByTag Disadvantages, Text IgnoreEmpty, cat HasInList Supernatural
@@ -508,6 +607,7 @@ Retired Bounty Hunter, displaycost(50),
     ),
     adds(_
         AD:Combat Reflexes,
+        AD:Fit,
         SK:Area Knowledge=4pts,
         SK:Brawling=1pts,
         SK:Detect Lies=2pts,
@@ -555,6 +655,7 @@ Retired Military, displaycost(50),
     ),
     adds(_
         AD:Combat Reflexes,
+        AD:Fit,
         SK:Brawling=2pts,
         SK:Knife=2pts,
         SK:Wrestling=2pts_
@@ -828,7 +929,7 @@ Pilot, displaycost(100),
 
 Acheron,cat(Human Races), 
     cost(0),
-    displaycost(24),
+    displaycost(9),
     race(Human (Acheron)),
     adds(_
         AD:Filter Lungs,
@@ -844,7 +945,7 @@ Acheron,cat(Human Races),
         SK:Occultism=8pts_
     ),
     creates(_
-        {"AD:Acheron Attribute Mods",40,gives(+1 to ST:HT, +3 to ST:ST),hide(yes)},
+        {"AD:Acheron Attribute Mods",25,gives(+1 to ST:HT, +3 to ST:ST),hide(yes)},
         {"DI:Delusion (Superstitious)",-5},
         {"DI:Intolerance (Solomani)",-5}_
     ),
@@ -896,7 +997,7 @@ Azhanti,cat(Human Races),
 
 Darrian,cat(Human Races), 
     cost(0),
-    displaycost(-18),
+    displaycost(-13),
     race(Human (Darrian)),
     adds(_
         AD:Acute Vision=1,
@@ -904,7 +1005,7 @@ Darrian,cat(Human Races),
         LA:Darrian=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     creates(_
-        {"DI:Darrian Attribute Mods",-20,gives(-1 to ST:HT, -1 to ST:ST),hide(yes)},
+        {"DI:Darrian Attribute Mods",-15,gives(-1 to ST:HT, -1 to ST:ST),hide(yes)},
     ),
     noresync(no),
     page(GTH30),owns(yes)
@@ -929,7 +1030,7 @@ Dynchia,cat(Human Races),
 
 Floriani (Barnai),cat(Human Races), 
     cost(0),
-    displaycost(5),
+    displaycost(20),
     race(Human (Floriani, Barnai)),
     adds(_
         AD:Discriminatory Smell,
@@ -939,14 +1040,14 @@ Floriani (Barnai),cat(Human Races),
         LA:Floriani=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
     ),
     creates(_
-        {"AD:Barnai Attribute Mods",0,gives(-3 to ST:ST, -1 to ST:HT, +2 to ST:IQ),hide(yes)},
+        {"AD:Barnai Attribute Mods",15,gives(-3 to ST:ST, -1 to ST:HT, +2 to ST:IQ),hide(yes)},
     ),
     noresync(no),
     page(GTH60),owns(yes)
 
 Floriani (Feskal),cat(Human Races), 
     cost(0),
-    displaycost(-39),
+    displaycost(-64),
     race(Human (Floriani, Feskal)),
     adds(_
         CU:Floriani (Native),
@@ -955,14 +1056,14 @@ Floriani (Feskal),cat(Human Races),
         LA:Floriani=1 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     creates(_
-        {"AD:Feskal Attribute Mods",30,gives(+5 to ST:ST, +2 to ST:HT, -2 to ST:IQ),hide(yes)}_
+        {"AD:Feskal Attribute Mods",5,gives(+5 to ST:ST, +2 to ST:HT, -2 to ST:IQ),hide(yes)}_
     ),
     noresync(no),
     page(GTH60),owns(yes)
 
 Geonee,cat(Human Races), 
     cost(0),
-    displaycost(29),
+    displaycost(19),
     race(Human (Geonee)),
     adds(_
         CU:Geonee (Native),
@@ -974,7 +1075,7 @@ Geonee,cat(Human Races),
         {"QU:Strong group identity", -1},
         {"DI:Odious Racial Habit (Treats women as property)", -5, page (B22), gives(-1 to ST:Reaction)},
         {"DI:Delusion (We are the ancients)", -10, page(B130), gives(-2 to ST:Reaction)},
-        {"AD:Geonee Attribute Mods",36,gives(-2 to ST:Hit Points,+2 to ST:ST, +1 to ST:DX),hide(yes)}_
+        {"AD:Geonee Attribute Mods",26,gives(-2 to ST:Hit Points,+2 to ST:ST, +1 to ST:DX),hide(yes)}_
     ),
     noresync(no),
     page(GTH68),owns(yes)
@@ -1031,7 +1132,7 @@ Irhadre,cat(Human Races),
     page(GTH86),owns(yes)
 Kargol,cat(Human Races), 
     cost(0),
-    displaycost(18),
+    displaycost(8),
     race(Human (Irhadre)),
     adds(_
         AD:High Manual Dexterity=2,
@@ -1052,14 +1153,14 @@ Kargol,cat(Human Races),
         {"AD:Resistant (Disease)",10, page(B81)},
         {"QU:Prefer cold, high-pressure environments", -1},
         {"DI:Phobia (Ancient technology)", -5},
-        {"AD:Kargol Attribute Mods", 0, gives(-1 to ST:DX, +2 to ST:ST),hide(yes)}_
+        {"DI:Kargol Attribute Mods", -10, gives(-1 to ST:DX, +2 to ST:ST),hide(yes)}_
     ),
     noresync(no),
     page(GTH93),owns(yes)
 
 Luriani,cat(Human Races), 
     cost(0),
-    displaycost(31),
+    displaycost(21),
     race(Human (Luriani)),
     adds(_
         AD:3D Spatial Sense,
@@ -1080,7 +1181,7 @@ Luriani,cat(Human Races),
         LA:Standard Luriani=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     creates(_
-        {"AD:Luriani Attribute Mods", 0, gives(-1 to ST:DX, +2 to ST:ST),hide(yes)},
+        {"DI:Luriani Attribute Mods", -10, gives(-1 to ST:DX, +2 to ST:ST),hide(yes)},
         {"DI:Code of Honor (Luriani)", -10, page(B127)},
         {"DI:Intolerance (Vilani)", -5},
         {"DI:Racial Reputation (Irrational and unpredictable)", -2, gives(-1 to ST:Reaction when recognized as Luriani (10 or less))}_
@@ -1149,10 +1250,10 @@ Yilean,
     noresync(no), page(GTH135), owns(yes)
 
 Sylean,cat(Human Races), 
-    cost(0),
+    cost(5),
     race(Human (Sylean)),
     creates(_
-        {"DI:Sylean Attribute Mods",-10,gives(-1 to ST:ST),hide(yes)},
+        {"DI:Sylean Attribute Mods",-5,gives(-1 to ST:ST),hide(yes)},
         {"DI:Intolerance (Vilani)", -5}_
     ),
     noresync(no),invisible(yes),hide(yes),
@@ -1181,7 +1282,7 @@ Sylean (Integrated),cat(Human Races),
     noresync(no),
     page(GTH127),owns(yes)
 
-Aslan, cat(Non-human Races), cost(0), displaycost(3), race(Aslan), 
+Aslan, cat(Non-human Races), cost(0), displaycost(8), race(Aslan), 
     adds(_	
         AD:Acute Hearing = 3, 
         AD:Acute Taste and Smell = 3, 
@@ -1198,14 +1299,14 @@ Aslan, cat(Non-human Races), cost(0), displaycost(3), race(Aslan),
     ),
     creates(_
         {AD:Fur, 1},
-        {DI:Aslan Attribute Mods, -8, gives(+1 to ST:ST, -1 to ST:DX, +1 to ST:Hit Points),hide(yes)},
+        {DI:Aslan Attribute Mods, -13, gives(+1 to ST:ST, -1 to ST:DX, +1 to ST:Hit Points),hide(yes)},
         {DI:Code of Honor (Fteir), -15},
         {DI:Intolerance (Non-Aslan), -10},
         {DI:Obsession (Own Land), -10}_
     ),
     noresync(no),
     owns(yes)
-Vargr, cat(Non-human Races), cost(0), displaycost(13), race(Vargr), 
+Vargr, cat(Non-human Races), cost(0), displaycost(18), race(Vargr), 
     adds(_	
         AD:Acute Taste and Smell = 3, 
         AD:Acute Vision = 1, 
@@ -1223,15 +1324,144 @@ Vargr, cat(Non-human Races), cost(0), displaycost(13), race(Vargr),
     ),
     creates(_
         {AD:Fur, 1},
-        {AD:Vargr Attribute Mods, 10, gives(-1 to ST:ST, +1 to ST:DX, +1 to ST:Per, -1 to ST:Fatigue Points, -1 to ST:Hit Points),hide(yes)},
+        {AD:Vargr Attribute Mods, 15, gives(-1 to ST:ST, +1 to ST:DX, +1 to ST:Per, -1 to ST:Fatigue Points, -1 to ST:Hit Points),hide(yes)},
         {DI:Racial Reputation (Flaky and potentially disloyal), -5/-10,page(B27), downto(1), upto(1), cat(Mundane, Social, Influence), conditional(-1 to ST:Reaction when "your reputation works against you")},
         {QU:Heavily influenced by Pack Reputation, -1}_
     ),
     noresync(no),
     owns(yes)
 
-[EQUIPMENT]
+Clotho, cat(Non-human Races), cost(0), displaycost(14), race(Clotho),
+    BodyType(Hexapod),
+    HitTable(Hexapod),
+    adds(_
+        AD:3D Spatial Sense,
+        AD:Claws (Blunt Claws),
+        AD:Double-Jointed,
+        AD:Enhanced Move (Ground)=2 with "Only when not using lower arms to manipulate, -20%",
+        AD:Extra Arms=2,
+        AD:Extra Legs (4 Legs),
+        AD:High Manual Dexterity=2 with "Upper arms only, -0%",
+        CU:Clotho (Native),
+        DI:Compulsive Behavior (Proper Grooming)=2,
+        DI:Mute,
+        DI:Sense of Duty (Sibling)=1,
+        LA:Clotho=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        DI:Squeamish,
+        QU:Attentive,
+        QU:Chauvinistic,
+        QU:Proud_
+    ),
+    creates(_
+        {"AD:Arm ST", 3/6, page(B40), cat(Exotic, Physical), taboo(DI:Weak Arms), conditional(+1 to ST:ST), initmods("Lower two arms only", *5/3)}=2,
+        {"DI:Phobia (Dirt)", -10},
+        {"DI:Phobia (Separation from sibling)", -15},
+        {"FE:Fur", 0}_
+    ),
+    noresync(no),
+    owns(yes)
 
+Drakaran, cat(Non-human Races), cost(0), displaycost(47), race(Drakaran),
+    adds(_
+        AD:Acute Taste and Smell=3,
+        AD:Claws (Sharp Claws),
+        AD:Teeth (Sharp Teeth),
+        AD:Doesn't Sleep with "Must enter ''the stalking'' once every 20 days, -50%",
+        AD:Damage Resistance=2 with "Tough Skin, -40%",
+        AD:Temperature Tolerance=2,
+        LA:Drakaran=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        CU:Drakaran (Native),
+        DI:Hard of Hearing,
+        DI:No Depth Perception,
+        DI:Sense of Duty (Family)=2,
+        DI:Truthfulness _
+    ),
+    creates(_
+        {"AD:Drakaran Depth Perception", 15, initmods(Accessibility: When able to compensate for one eye (most circumstances), -10%)},
+        {"FE:One Eye", 0},
+        {"AD:Drakaran Attribute Mods", 15, gives(+3 to ST:ST, +1 to ST:HT, +1 to ST:Hit Points),hide(yes)},
+        {"AD:Drakarans rarely display emotions and are not prone to panic", 1, gives(+1 to ST:Fright Check)},
+        {"AD:Striker (Crushing; Tail)", 10, displaycost(0), mods(Striker, Alternative Attack), page(B88), cat(Exotic, Physical, Natural Attacks), damage(thr+@if(@hasmod(Weak) then 0 else @basethdice(me::chareffectivest)) +  @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))), damtype(cr), reach(C,1), parry(0), skillused(ST:DX-4, SK:Brawling, SK:Karate), reachbasedon(0), mode(Tail), itemnotes("May attack/parry back and side hexes only")} _
+    ),
+    noresync(no),
+    owns(yes)
+
+Droyne, cat(Non-human Races), cost(0), displaycost(-25), race(Droyne),invisible(yes),
+    BodyType(Winged Humanoid),
+    HitTable(Winged Humanoid),
+    adds(_
+        AD:Claim to Hospitality (Droyne)=3,
+        AD:Claws (Blunt Claws),
+        AD:Flight with "Winged, -25%" and "Cannot Hover, -15%",
+        AD:Mind Clouding (Psi)=6,
+        AD:Night Vision=5,
+        AD:Peripheral Vision,
+        AD:Reduced Consumption=1,
+        AD:Telepathy Talent=3,
+        AD:Telereceive - Shallow (Psi)=3 with "Only receives thoughts from fellow oytrip members, -35%",
+        AD:Telescan (Psi)=1 with "Only to find oytrip or oytrip members, -20%",
+        CU:Droyne (Native),
+        DI:Duty (Service)=3,
+        DI:Gregarious,
+        DI:Hidebound,
+        DI:Low TL=2,
+        DI:Secret (Psionics)=2,
+        DI:Selfless,
+        DI:Short Lifespan=1 with "Only affects maturity and age thresholds, +50%",
+        DI:Vulnerability (Crushing)=2 with "Wounding Multiplier x2, *1",
+        LA:Oynprith=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        SK:Mind Clouding =1pts,
+        SK:Stealth=1pts,
+        SK:Telereceive =1pts,
+        SK:Telescan =1pts_
+    ),
+    creates(_
+        {"AD:Striker (Crushing; Tail)", 5, displaycost(0), mods(Striker, Alternative Attack), page(B88), cat(Exotic, Physical, Natural Attacks), damage(thr+@if(@hasmod(Weak) then 0 else @basethdice(me::chareffectivest)) +  @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))), damtype(cr), reach(C), parry(0), skillused(ST:DX, SK:Brawling, SK:Karate), reachbasedon(0), mode(Tail), itemnotes({May attack/parry back and side hexes only})},
+        {"DI:Addiction (Purpose in Life)", -10, page(B122)},
+        {"DI:Droyne Attribute Mods", -69, gives(-3 to ST:ST, -1 to ST:DX, -2 to ST:IQ, +3 to SK:Mind Clouding), hide(yes)},
+        {"FE:Krinaytsu (can will own death)", 0}_
+    ),
+    noresync(no),hide(yes),
+    owns(yes)
+
+Droyne (Sport), cat(Non-human Races), cost(0), displaycost(55), race(Droyne (Sport)),
+    adds(_
+        TE:Droyne _
+    ),
+    creates(_
+        {"AD:Droyne Sport Attribute Mods", +80, gives(-1 to ST:Size Modifier, +3 to ST:IQ, +1 to ST:DX), hide(yes)},
+    ),
+    noresync(no),
+    owns(yes)
+
+Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
+    adds(_
+        AD:Acute Taste and Smell=1,
+        AD:Acute Vision=1,
+        AD:Amphibious,
+        AD:Double-Jointed,
+        AD:Peripheral Vision,
+        CU:Bwap (Native),
+        CU:Imperial,
+        DI:Honesty,
+        LA:Vilani=3,
+        LA:Galanglic=3,
+        LA:Bwap=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        QU:Attentive,
+        QU:Careful_
+    ),
+    creates(_
+        {"DI:Bwap Attribute Mods", -20, gives(-1 to ST:HT, -2 to ST:ST), hide(yes)},
+        {"DI:Code of Honor (The Wapawab and loyalty to the creche)", -10, page(GTA4:29)},
+        {"QU:Finds comfort and security in complexity", -1},
+        {"QU:Hates to Hurry", -1}_
+    ),
+    noresync(no),
+    owns(yes)
+
+
+
+[EQUIPMENT]
 
 #Clone EQ:Camcorder as EQ:Video Recorder
 #Clone EQ:Grav Bike as EQ:Contragrav Bike
@@ -1320,6 +1550,9 @@ Vargr, cat(Non-human Races), cost(0), displaycost(13), race(Vargr),
 #DeleteByTag Templates, Text IgnoreEmpty, techlvl = 11^
 #DeleteByTag Templates, Text IgnoreEmpty, techlvl = 12
 #DeleteByTag Templates, Text IgnoreEmpty, techlvl = 12^
+#DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Meta-Traits"
+#DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Meta-Traits - Biomorphic Lenses"
+#DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Racial Templates - Ultra-Tech"
 
 <Ultra-Tech, Ultra-Tech - Weapons, Ultra-Tech - Weapons - High-Energy Laser, _Firearms, _Firearms - Ultra-Tech>
 Heavy Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), basecost(2400), baseweight(2), techlvl(10), mods(Equipment, Beams, Laser), lc(3),_

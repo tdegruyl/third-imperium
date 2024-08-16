@@ -22,7 +22,6 @@
 						"Advantage",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": 2,
 					"features": [
 						{
@@ -33,6 +32,7 @@
 						}
 					],
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": 2
 					}
@@ -85,7 +85,6 @@
 						"Disadvantage",
 						"Physical"
 					],
-					"levels": 1,
 					"points_per_level": -10,
 					"features": [
 						{
@@ -96,6 +95,7 @@
 						}
 					],
 					"can_level": true,
+					"levels": 1,
 					"calc": {
 						"points": -10
 					}
@@ -114,8 +114,7 @@
 						"Disadvantage",
 						"Physical"
 					],
-					"levels": 1,
-					"points_per_level": -10,
+					"points_per_level": -5,
 					"features": [
 						{
 							"type": "attribute_bonus",
@@ -125,8 +124,9 @@
 						}
 					],
 					"can_level": true,
+					"levels": 1,
 					"calc": {
-						"points": -10
+						"points": -5
 					}
 				},
 				{
@@ -143,6 +143,23 @@
 						"Language",
 						"Mental"
 					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Language Talent"
+								},
+								"level": {
+									"compare": "at_least"
+								}
+							}
+						]
+					},
 					"modifiers": [
 						{
 							"id": "m8Eem3fnvaER7kwNN",
@@ -220,30 +237,13 @@
 							"cost_type": "points"
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "trait_prereq",
-								"has": false,
-								"name": {
-									"compare": "is",
-									"qualifier": "Language Talent"
-								},
-								"level": {
-									"compare": "at_least"
-								}
-							}
-						]
-					},
 					"calc": {
 						"points": 0
 					}
 				}
 			],
 			"calc": {
-				"points": -18
+				"points": -13
 			}
 		}
 	]
