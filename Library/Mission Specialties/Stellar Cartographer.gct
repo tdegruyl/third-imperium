@@ -1,0 +1,309 @@
+{
+	"version": 5,
+	"id": "Bwpk3Au1kI6Tgz6Gi",
+	"skills": [
+		{
+			"id": "SzEjzg0LOVHUvi00C",
+			"name": "Stellar Cartographer",
+			"children": [
+				{
+					"id": "sOBbx8Fc_0KZoHkQo",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sbcabbj7Zf2iurxxA"
+					},
+					"name": "Astronomy",
+					"reference": "B179",
+					"tags": [
+						"Natural Science"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "mathematics"
+								},
+								"specialization": {
+									"compare": "is",
+									"qualifier": "applied"
+								}
+							}
+						]
+					},
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "s4ZcjLGMpTkxmZ--P",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sB28HTR_MZyXLP90w"
+					},
+					"name": "Cartography",
+					"reference": "B183",
+					"tags": [
+						"Exploration",
+						"Humanities",
+						"Outdoor",
+						"Social Sciences"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Surveying",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 8
+				},
+				{
+					"id": "s4gvbdSrNv9c_Gk_Z",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sluTeYhSTpIbVNfA5"
+					},
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Technical"
+					],
+					"specialization": "Sensors",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Sensors",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "sad8vDReYgDYO_Gbn",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sWwJi69T88FLejD8Q"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Earthlike",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Earthlike",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sYBMEZxEnmqelJO3j",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sUFH00k6r9OtPXPNN"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Gas Giants",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Gas Giants",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sLW0H0kY3XoP-scGd",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "smA7Ihmr-JXza-sai"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Rock Worlds",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Rock Worlds",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sCiExzTYQcV7plNo0",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sGgBbCTe-AwY1nu3W"
+					},
+					"name": "Mathematics",
+					"reference": "B207",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Applied",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Physics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sbjEYrv-3aKJjNkdL",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sobRrRzKAElO2x1dN"
+					},
+					"name": "Physics",
+					"reference": "B213",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Astrophysics",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "mathematics"
+								},
+								"specialization": {
+									"compare": "is",
+									"qualifier": "applied"
+								}
+							}
+						]
+					},
+					"tech_level": "",
+					"points": 4
+				}
+			]
+		}
+	]
+}

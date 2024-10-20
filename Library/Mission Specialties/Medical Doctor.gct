@@ -1,0 +1,275 @@
+{
+	"version": 5,
+	"id": "BmNJ2HtQcgC31iosQ",
+	"skills": [
+		{
+			"id": "Sg6cHKlY9VvGLkSqX",
+			"name": "Medical Doctor",
+			"children": [
+				{
+					"id": "scooNO2WvTlUYBUM-",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s4arfUoQ8xiikH5TB"
+					},
+					"name": "Biology",
+					"reference": "B180",
+					"tags": [
+						"Natural Science",
+						"Plant"
+					],
+					"specialization": "Biochemistry",
+					"difficulty": "iq/vh",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sfoTC1luWcd_nIgLq",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "scBFJWfsDYeIEsCQG"
+					},
+					"name": "Biology",
+					"reference": "B180",
+					"tags": [
+						"Natural Science",
+						"Plant"
+					],
+					"specialization": "Earthlike",
+					"difficulty": "iq/vh",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "syFZRZ6yvoLORSkWt",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sdjyVxpBGLKKkBeCm"
+					},
+					"name": "Diagnosis",
+					"reference": "B187",
+					"tags": [
+						"Medical"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "First Aid",
+							"modifier": -8
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "soLdIePfl8CTKkq0j",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sKTF4zU6WcKytEDRW"
+					},
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Medical",
+						"Technical"
+					],
+					"specialization": "Medical",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Medical",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "sLaMG8YIzFJ7vmXyE",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "secK3UkDUOcuXpmed"
+					},
+					"name": "Pharmacy",
+					"reference": "B213",
+					"tags": [
+						"Design",
+						"Invention",
+						"Medical"
+					],
+					"specialization": "Synthetic",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Chemistry",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sE_c3o1BJa2S1PKaj",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sVSxt6kQGDV8RpNKB"
+					},
+					"name": "Physician",
+					"reference": "B213",
+					"tags": [
+						"Medical"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -7
+						},
+						{
+							"type": "skill",
+							"name": "First Aid",
+							"modifier": -11
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 8
+				},
+				{
+					"id": "sZEW6_-TsS72zfz5U",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sgrDrFiOdLC9njqnC"
+					},
+					"name": "Surgery",
+					"reference": "B223",
+					"tags": [
+						"Medical"
+					],
+					"difficulty": "iq/vh",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "First Aid",
+							"modifier": -12
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physiology",
+							"modifier": -8
+						},
+						{
+							"type": "skill",
+							"name": "Veterinary",
+							"modifier": -5
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "first aid"
+								}
+							},
+							{
+								"type": "skill_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "physician"
+								}
+							}
+						]
+					},
+					"tech_level": "",
+					"points": 4
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,286 @@
+{
+	"version": 5,
+	"id": "Bnr_QRNiGz8pL7at0",
+	"traits": [
+		{
+			"id": "TUy98OYJEfofXqwbf",
+			"name": "Battle(suit) ready",
+			"children": [
+				{
+					"id": "tHjTg4QuVwAMGDK20",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tqha9GlDBU9P-Wg-6"
+					},
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mibixQW8dwRJ3rzcm",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost": -40,
+							"disabled": true
+						},
+						{
+							"id": "mWw2AT_ZTYzA3LviN",
+							"name": "Size",
+							"reference": "B15",
+							"cost": -10,
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mzGhhpd3Rel_Zfjgs",
+							"name": "Super-Effort",
+							"reference": "SU24",
+							"cost": 300,
+							"disabled": true
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10
+					}
+				}
+			],
+			"calc": {
+				"points": 10
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SlodHoLQ0_EBtvceG",
+			"name": "Battle(suit) Ready",
+			"children": [
+				{
+					"id": "sovmZu8ddp6t44TAt",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sku11uyd1oUdTaIPX"
+					},
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Battlesuits",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Battlesuits",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "srBR8_zuqQKxaMWdV",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "siupVKFgi0pYYp4oa"
+					},
+					"name": "Battlesuit",
+					"reference": "B192",
+					"tags": [
+						"Military",
+						"Technical"
+					],
+					"difficulty": "dx/a",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Diving Suit",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Vacc Suit",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "NBC Suit",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 8
+				},
+				{
+					"id": "sgCSb5x5zbaspPtP-",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s7kVwKFERTuMYO3O8"
+					},
+					"name": "Free Fall",
+					"reference": "B197",
+					"tags": [
+						"Athletic"
+					],
+					"difficulty": "dx/a",
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -5
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sh76OM-i7qz2T7SEL",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s3hbw6Ngz9_5OFNcR"
+					},
+					"name": "Guns",
+					"reference": "B198",
+					"tags": [
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
+					],
+					"specialization": "Rifle",
+					"difficulty": "dx/e",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Pistol",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"specialization": "Rifle",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "stUy2Q8aE06L-XRJc",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sAmDzPjf0rKZ6I5G1"
+					},
+					"name": "Vacc Suit",
+					"reference": "B192",
+					"tags": [
+						"Technical"
+					],
+					"difficulty": "dx/a",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Diving Suit",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "NBC Suit",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Battlesuit",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				}
+			]
+		}
+	]
+}

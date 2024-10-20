@@ -307,40 +307,6 @@
 					}
 				},
 				{
-					"id": "tWqIRYSIR-77B2_Y3",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Traits.adq",
-						"id": "toXBQ8q4Nek5lsLPF"
-					},
-					"name": "Cultural Familiarity (Luriani)",
-					"reference": "B23",
-					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
-					"tags": [
-						"Advantage",
-						"Mental"
-					],
-					"modifiers": [
-						{
-							"id": "mtn0Fzogk9Z_gG-pl",
-							"name": "Alien",
-							"cost": 1,
-							"cost_type": "points",
-							"disabled": true
-						},
-						{
-							"id": "m585LGkBjtXxRqik2",
-							"name": "Native",
-							"cost": -1,
-							"cost_type": "points"
-						}
-					],
-					"base_points": 1,
-					"calc": {
-						"points": 0
-					}
-				},
-				{
 					"id": "tsTJh90VLR3dBawpd",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -376,6 +342,40 @@
 					}
 				},
 				{
+					"id": "tWqIRYSIR-77B2_Y3",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Traits.adq",
+						"id": "toXBQ8q4Nek5lsLPF"
+					},
+					"name": "Cultural Familiarity (Luriani)",
+					"reference": "B23",
+					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"modifiers": [
+						{
+							"id": "mtn0Fzogk9Z_gG-pl",
+							"name": "Alien",
+							"cost": 1,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "m585LGkBjtXxRqik2",
+							"name": "Native",
+							"cost": -1,
+							"cost_type": "points"
+						}
+					],
+					"base_points": 1,
+					"calc": {
+						"points": 0
+					}
+				},
+				{
 					"id": "teHLkrbv9xl_g1Adb",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -393,6 +393,35 @@
 					"base_points": -5,
 					"calc": {
 						"points": -5
+					}
+				},
+				{
+					"id": "tv2dpQFiZs3w9SiHv",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Traits.adq",
+						"id": "tu0KTB8faKoeTJiEi"
+					},
+					"name": "Decreased Dexterity",
+					"reference": "B15",
+					"tags": [
+						"Attribute",
+						"Disadvantage",
+						"Physical"
+					],
+					"points_per_level": -20,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "dx",
+							"amount": -1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": -20
 					}
 				},
 				{
@@ -483,6 +512,59 @@
 					"base_points": 20,
 					"calc": {
 						"points": 14
+					}
+				},
+				{
+					"id": "tsCua4-w0RHtsbQnn",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Traits.adq",
+						"id": "tqha9GlDBU9P-Wg-6"
+					},
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mgx8qHFt8KviXpotd",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost": -40,
+							"disabled": true
+						},
+						{
+							"id": "mi3eea1Vw6IwyjnHQ",
+							"name": "Size",
+							"reference": "B15",
+							"levels": 1,
+							"cost": -10,
+							"disabled": true
+						},
+						{
+							"id": "mV1blJ9JogCcerhjp",
+							"name": "Super-Effort",
+							"reference": "SU24",
+							"cost": 300,
+							"disabled": true
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 10
 					}
 				},
 				{
@@ -1100,7 +1182,7 @@
 				}
 			],
 			"calc": {
-				"points": 31
+				"points": 21
 			}
 		}
 	]

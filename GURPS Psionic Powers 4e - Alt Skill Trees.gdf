@@ -1,0 +1,340 @@
+Encoding=UTF-8
+Version=3
+Incomplete=Yes
+Requires=GURPS Psionic Powers 4e.gdf
+LoadAfter=GURPS Power-Ups 10 - Skill Trees.gdf
+
+[AUTHOR]
+*****************************************************************\[START]
+// 
+//  GURPS® Character Assistant
+//  Filename: GURPS Psionic Powers 4e - Alt Skill Trees.gdf
+//  Created: 10/16/2024
+//  Requires GCA v4 or later!
+// 
+//  This data file contains information taken from the GURPS  sourcebook.
+//  GURPS Psionic Powers is Copyright © 2010 by Steve Jackson Games
+//  Incorporated. All rights reserved.
+// 
+//  Information in this file includes:
+// 		Psionic Abilities
+// 		Psionic Talents and Skills
+// 
+*************************************************************************
+// 
+//  Liv Tarter-de Gruyl @effingsorceress
+// 
+*************************************************************************
+// 
+//  GURPS is a registered trademark of Steve Jackson Games Incorporated, 
+//  used with GCA by permission of Steve Jackson Games. All rights 
+//  reserved.
+// 
+//  The GURPS game is Copyright © 1986-1989, 1991-1994 by Steve Jackson 
+//  Games Incorporated. This product includes copyrighted material from 
+//  the GURPS game, which is used by permission of Steve Jackson Games 
+//  Incorporated. All rights reserved by Steve Jackson Games Incorporated.
+// 
+******************************************************************\[STOP]
+
+#delete AD:Animal Telepathy Talent
+#delete AD:Anti-Psi Talent
+#delete AD:Astral Projection Talent
+#delete AD:Biokinesis Talent
+#delete AD:Dream Control Talent
+#delete AD:Ergokinesis Talent
+#delete AD:ESP Talent
+#delete AD:Probability Alteration Talent
+#delete AD:Psychic Healing Talent
+#delete AD:Psychic Vampirism Talent
+#delete AD:Psychokinesis Talent
+#delete AD:Psychometabolism Talent
+#delete AD:Telepathy Talent
+#delete AD:Teleportation Talent
+
+[GROUPS]
+<Animal Telepathy>
+SK:Animal Speech
+SK:Beast Control
+
+<Anti-Psi>
+SK:Para-Invisibility
+SK:Cancellation
+SK:Psionic Shield
+SK:Psychic Armor
+SK:Psionic Resistance
+SK:Screaming
+SK:True Sight
+
+<Astral Projection>
+SK:Astral Armor
+SK:Astral Movement
+SK:Astral Sight
+SK:Astral Sword
+SK:Astral Travel
+
+<Biokinesis>
+SK:Mold Flesh
+SK:Strike Sense
+
+<Dream Control>
+SK:Dream Projection
+SK:Reshape Dream
+
+<Ergokinesis>
+SK:Confuse
+SK:Dampen
+SK:Data Retrieval
+SK:EK Shield
+SK:Electric Vision
+SK:Flash
+SK:Hologram
+SK:I/O Tap
+SK:Lightning
+SK:Netrunning
+SK:Photorefraction
+SK:Radar Sense
+SK:Remote Control
+SK:Surge
+
+<ESP>
+SK:Awareness
+SK:Clairvoyance
+SK:Combat Sense
+SK:Common Sense
+SK:Danger Sense
+SK:Illumination
+SK:Oracle
+SK:Prognostication
+SK:Psi Sense
+SK:Psidar
+SK:Psychic Hunches
+SK:Racial Memory
+SK:Retrocognition
+SK:Seekersense
+SK:Spirit Communication
+SK:True Sight
+SK:Vision
+
+<Probability Alteration>
+SK:Adjustment
+SK:Coincidence
+SK:Combat Sense
+SK:Curse
+SK:Second Chance
+SK:Weather Control
+
+<Psychic Healing>
+SK:Aura Reading
+SK:Cure
+SK:Disease Shield
+SK:Empathy
+SK:Life Extension
+SK:Metabolism Control
+
+<Psychic Vampirism>
+SK:Detect Life
+SK:Drain ST
+SK:Drain DX
+SK:Drain IQ
+SK:Drain HT
+SK:Drain Emotion
+SK:Steal Dreams
+SK:Steal Energy
+SK:Steal Life
+SK:Steal Power
+
+<Psychokinesis>
+SK:Cryokinesis
+SK:Levitation
+SK:PK Shield
+SK:Pyrokinesis
+SK:Telekinetic Control
+SK:TK Bullet
+SK:TK Crush
+SK:TK Grab
+
+<Psychometabolism>
+SK:Damage Control
+SK:Projected Senses
+
+<Telepathy>
+SK:Aspect
+SK:Borrow Skill
+SK:Suggestion
+SK:Emotion Sense
+SK:Instill Fear
+SK:Mental Blow
+SK:Mental Stab
+SK:Mental Surgery
+SK:Mind Clouding
+SK:Mind Shield
+SK:Mind Swap
+SK:Mindwipe
+SK:Sensory Control
+SK:Sleep
+SK:Telecontrol
+SK:Telepathy Sense
+SK:Telereceive
+SK:Telescan
+SK:Telesend
+
+<Teleportation>
+SK:Autoteleport
+SK:Exoteleport
+SK:Innerportation
+SK:Portersense
+
+[SKILLS]
+<Animal Telepathy>
+Animal Telepathy, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Animal Telepathy class "Trunks, AllSources"), isparent(yes)
+
+Animal Speech, IQ/Branch, page(PP71), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Animal Telepathy)
+Beast Control, IQ/Branch, page(PP72), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Animal Telepathy)
+
+<Anti-Psi>
+Anti-Psi, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Anti-Psi class "Trunks, AllSources"), isparent(yes)
+
+Para-Invisibility, IQ/Branch, page(PP23-24), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+Cancellation, Will/Branch, page(PP23-24), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+Psionic Shield, Will/Branch, page(PP24-25), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+Psychic Armor, Will/Branch, page(PP25), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+Psionic Resistance, Will/Branch, page(PP26), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+Screaming, Will/Branch, page(PP25), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+True Sight, Will/Branch, page(PP25), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Anti-Psi)
+
+<Astral Projection>
+Astral Projection, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Astral Projection class "Trunks, AllSources"),isparent(yes)
+Astral Armor, Will/Branch, page(PP26), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Astral Projection)
+Astral Movement, DX/Branch, page(PP26-27), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Astral Projection)
+Astral Sight, Per/Branch, page(PP27-28), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Astral Projection)
+Astral Sword, DX/Branch, page(PP28), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Astral Projection)
+Astral Travel, IQ/Branch, page(PP28-29), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Astral Projection)
+
+<Biokinesis>
+Biokinesis, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Biokinesis class "Trunks, AllSources"),isparent(yes)
+Mold Flesh, Will/Branch, page(PP72-73), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Biokinesis)
+Strike Sense, Will/Branch, page(PP73), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Biokinesis)
+
+<Dream Control>
+Dream Control, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Dream Control class "Trunks, AllSources"),isparent(yes)
+Dream Projection, IQ/Branch, page(PP73-74), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Dream Control)
+Reshape Dream, IQ/Branch, page(PP74), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Dream Control)
+
+<Ergokinesis>
+Ergokinesis, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Ergokinesis class "Trunks, AllSources"),isparent(yes)
+Confuse, Will/Branch, page(PP32-33), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Dampen, IQ/Branch, page(PP33), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Data Retrieval, IQ/Branch, page(PP30), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+EK Shield, IQ/Branch, page(PP33), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Electric Vision, Per/Branch, page(PP33), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Flash, Will/Branch, page(PP35), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Hologram, IQ/Branch, page(PP35-36), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+I/O Tap, IQ/Branch, page(PP30-31), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Lightning, IQ/Branch, page(PP33-34), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Netrunning, IQ/Branch, page(PP31-32), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Photorefraction, IQ/Branch, page(PP36-37), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Radar Sense, Per/Branch, page(PP34), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Remote Control, IQ/Branch, page(PP32), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+Surge, Will/Branch, page(PP34), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ergokinesis)
+
+<ESP>
+ESP, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:ESP class "Trunks, AllSources"), isparent(yes)
+Awareness, Per/Branch, page(PP39-40), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Clairvoyance, IQ/Branch, page(PP40-41), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Combat Sense, IQ/Branch, page(PP37), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Common Sense, IQ/Branch, page(PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Danger Sense, Per/Branch, page(PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Illumination, IQ/Branch, page(PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Oracle, IQ/Branch, page(PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Prognostication, IQ/Branch, page(PP37-38), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Psi Sense, Per/Branch, page(PP38-39,PP41), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Psidar, Per/Branch, page(PP41-42), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Psychic Hunches, IQ/Branch, page(PP42), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Racial Memory, IQ/Branch, page(PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Retrocognition, IQ/Branch, page(PP38), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Seekersense, Per/Branch, page(PP42-43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Spirit Communication, IQ/Branch, page(PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+True Sight, Will/Branch, page(PP25,PP43), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+Vision, IQ/Branch, page(PP39), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:ESP)
+
+<Probability Alteration>
+Probability Alteration, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Probability Alteration class "Trunks, AllSources"),isparent(yes)
+Adjustment, IQ/Branch, page(PP44), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Probability Alteration)
+Coincidence, IQ/Branch, page(PP44), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Probability Alteration)
+Combat Sense, IQ/Branch, page(PP37,PP45), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Probability Alteration)
+Curse, Will/Branch, page(PP45), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Probability Alteration)
+Second Chance, IQ/Branch, page(PP45), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Probability Alteration)
+Weather Control, IQ/Branch, page(PP45-46), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Probability Alteration)
+
+<Psychic Healing>
+Psychic Healing, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Psychic Healing class "Trunks, AllSources"),isparent(yes)
+Aura Reading, IQ/Branch, page(PP46), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Healing)
+Cure, IQ/Branch, page(PP46-47), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Healing)
+Disease Shield, Will/Branch, page(PP48), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Healing)
+Empathy, IQ/Branch, page(PP49), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Healing)
+Life Extension, IQ/Branch, page(PP48-49), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Healing)
+Metabolism Control, HT/Branch, page(PP49), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Healing)
+
+<Psychic Vampirism>
+Psychic Vampirism, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Psychic Vampirism class "Trunks, AllSources"), isparent(yes)
+Detect Life, Per/Branch, page(PP52), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Drain ST, Will/Branch, page(PP50), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Drain DX, Will/Branch, page(PP50), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Drain IQ, Will/Branch, page(PP50), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Drain HT, Will/Branch, page(PP50), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Drain Emotion, IQ/Branch, page(PP50), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Steal Dreams, Will/Branch, page(PP50-51), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Steal Energy, Will/Branch, page(PP51), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Steal Life, Will/Branch, page(PP52), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+Steal Power, Will/Branch, page(PP52), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychic Vampirism)
+
+<Psychokinesis>
+Psychokinesis, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Psychokinesis class "Trunks, AllSources"), isparent(yes)
+Cryokinesis, Will/Branch, page(PP55-56), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+Levitation, IQ/Branch, page(PP55), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+PK Shield, IQ/Branch, page(PP56), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+Pyrokinesis, Will/Branch, page(PP56-57), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+Telekinetic Control, IQ/VH, page(PP54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+TK Bullet, IQ/Branch, page(PP53-54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+TK Crush, IQ/Branch, page(PP54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+TK Grab, IQ/Branch, page(PP54-55), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+
+<Psychometabolism>
+Psychometabolism, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Psychometabolism class "Trunks, AllSources"),isparent(yes)
+Damage Control, HT/Branch, page(PP75), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychometabolism)
+Projected Senses, IQ/Branch, page(PP75-76), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychometabolism)
+
+<Telepathy>
+Telepathy, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to "GR:Telepathy" class "Trunks,AllSources"),isparent(yes)
+Aspect, Will/Branch, page(PP61), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Borrow Skill, IQ/Branch, page(PP57-58), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Suggestion, IQ/Branch, page(PP61,PP63,PP64), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Emotion Sense, IQ/Branch, page(PP58), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Instill Fear, Will/Branch, page(PP64-65), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Mental Blow, Will/Branch, page(PP65), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Mental Stab, Will/Branch, page(PP65-66), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Mental Surgery, IQ/Branch, page(PP61-62), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Mind Clouding, IQ/Branch, page(PP66), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Mind Clouding (#ANY EXCEPT "") class "AllSources")
+Mind Shield, Will/Branch, page(PP66-67), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Mind Swap, IQ/Branch, page(PP62), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Mindwipe, Will/Branch, page(PP62), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Sensory Control, Will/Branch, page(PP62-63), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Sleep, Will/Branch, page(PP49,PP66), cat(Telepathy,Psionic Powers - Psychic Healing), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Telecontrol, IQ/Branch, page(PP64), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Telepathy Sense, Per/Branch, page(PP67), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Telereceive, IQ/Branch, page(PP58-60), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Telescan, Per/Branch, page(PP67), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+Telesend, IQ/Branch, page(PP59-60), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Telepathy)
+
+Mind Clouding (Bulk Compensation), IQ/Leaf, page(PP66), childof(SK:Mind Clouding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mind Clouding (Exclusion), IQ/Leaf, page(PP66), childof(SK:Mind Clouding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Teleportation>
+Teleportation, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Teleportation class "Trunks, AllSources"),isparent(yes)
+Autoteleport, IQ/Branch, page(PP68), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Teleportation)
+Autoteleport, IQ/Branch, page(PP68-69), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Teleportation)
+Exoteleport, IQ/Branch, page(PP69-70), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Teleportation)
+Innerportation, Will/Branch, page(PP70-71), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Teleportation)
+Portersense, Per/Branch, page(PP71), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Teleportation)
+

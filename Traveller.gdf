@@ -4,8 +4,10 @@ WorldBook=Liv-Traveller
 Requires="GURPS Basic Set 4th Ed.--Characters.gdf"
 Requires="GURPS-Traveller.gdf"
 Requires="Variant Basic Set 4e - Remove Spells (all).gdf"
+Requires="GURPS Power-Ups 1 Perks 4e.gdf"
 Requires="GURPS Power-Ups 3 Talents.gdf"
 Requires="GURPS Psionic Powers 4e.gdf"
+Requires="GURPS Power-Ups 10 - Skill Trees.gdf"
 LoadAfter="GURPS Ultra-Tech 4e.gdf"
 
 [AUTHOR]
@@ -39,20 +41,98 @@ LoadAfter="GURPS Ultra-Tech 4e.gdf"
 **************************************************************************
 
 [Settings]
-CampaignName=Tramp Freighter
-BasePoints=200
+CampaignName=IISS
+BasePoints=250
 DisadLimit=-50
 QuirkLimit=-5
 ShowMalf=no
 ShowLC=yes
 DefaultTL=10
 
+[LISTS]
+
+<Combat Skills>
+SK:Artillery
+SK:Axe/Mace
+SK:Beam Weapon
+SK:Blowpipe
+SK:Bolas
+SK:Bow
+SK:Boxing
+SK:Brawling
+SK:Cloak
+SK:Crossbow
+SK:Dropping
+SK:Fencing Weapons
+SK:Gunner
+SK:Guns
+SK:Guns (Grenade Launcher)
+SK:Guns (Gyroc)
+SK:Guns (Light Machine Gun)
+SK:Guns (Pistol)
+SK:Guns (Rifle)
+SK:Guns (Shotgun)
+SK:Guns (Submachine Gun)
+SK:Impact Weapons
+SK:Judo
+SK:Karate
+SK:Knife
+SK:Kusari
+SK:Lasso
+SK:Main-Gauche
+SK:Melee Combat
+SK:Pole Weapons
+SK:Ranged Combat
+SK:Rapier
+SK:Saber
+SK:Shield
+SK:Shields
+SK:Sling
+SK:Sumo Wrestling
+SK:Swords
+SK:Throwing
+SK:Thrown Weapon
+SK:Thrown Weapon (Axe/Mace)
+SK:Thrown Weapon (Dart)
+SK:Thrown Weapon (Knife)
+SK:Thrown Weapon (Shuriken)
+SK:Tonfa
+SK:Two-Handed Axe/Mace
+SK:Whip
+SK:Wrestling
+
 [Attributes]
 Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000)
 #ReplaceTags in ST:ST with up(5), down(-5)
-
+#Delete ST:Chip Slots
 
 [BODY]
+
+<Hiver>
+name(Vitals), group(Skin, All, Full Suit, Body, Torso, Vitals)
+name(Sensory Hand), group(Hands, Skin, All)
+name(Sensory Limb), group(Limbs, Skin, All)
+name(Eyes), group(Sensory Hand, Eyes, All), display(-1), expanded(-1), posx(6), posy(0)
+name(Limbs), group(Limbs, Full Suit, Skin, All)
+name(Fore Limbs), group(Fore Limbs, Limbs, Limbs, Full Suit, Skin, All), display(-1), expanded(-1), posx(200), posy(130)
+name(L Fore Limb), group(Left Fore Limb, Fore Limbs, Limbs, Limbs, Full Suit, Skin, All)
+name(R Fore Limb), group(Right Fore Limb, Fore Limbs, Limbs, Limbs, Full Suit, Skin, All)
+name(Hind Limbs), group(Hind Limbs, Limbs, Limbs, Full Suit, Skin, All), display(-1), expanded(-1), posx(168), posy(340)
+name(L Hind Limb), group(Left Hind Limb, Hind Limbs, Limbs, Limbs, Full Suit, Skin, All)
+name(R Hind Limb), group(Right Hind Limb, Hind Limbs, Limbs, Limbs, Full Suit, Skin, All)
+name(C Hind Limb), group(Central Hind Limb, Mid Limbs, Limbs, Limbs, Full Suit, Skin, All)
+name(Hands), group(Hands, Full Suit, Skin, All)
+name(Fore Hands), group(Fore Hands, Hands, Full Suit, Skin, All), display(-1), expanded(-1), posx(210), posy(180)
+name(Hind Hands), group(Hind Hands, Hands, Full Suit, Skin, All), display(-1), expanded(-1), posx(168), posy(392)
+name(L Fore Hand), group(Left Fore Hand, Fore Hands, Hands, Full Suit, Skin, All)
+name(R Fore Hand), group(Right Fore Hand, Fore Hands, Hands, Full Suit, Skin, All)
+name(L Hind Hand), group(Left Hind Hand, Hind Hands, Hands, Full Suit, Skin, All)
+name(R Hind Hand), group(Right Hind Hand, Hind Hands, Hands, Full Suit, Skin, All)
+name(C Hind Hand), group(Central Hind Hand, Hind Hands, Hands, Full Suit, Skin, All)
+name(Torso), group(Body, Full Suit, Skin, All)
+name(Full Suit), group(Full Suit, Skin, All)
+name(Skin), group(Skin, All)
+name(All), group(All)
 
 <Humanoid>
 description(Stock humanoid. B 552)
@@ -114,7 +194,22 @@ name(Tail), group(Skin, All)
 name(Skin), group(Skin, All)
 name(All), group(All)
 
+
 [HitTables]
+
+<Hiver>
+roll(-), location(Eye), penalty(-9)
+roll(3), location(Sensory Hand), penalty(-7)
+roll(4), location(Sensory Limb), penalty(-4)
+roll(5-6), location(Fore Hands), penalty(-4), notes(*)
+roll(7-8), location(Fore Limbs), penalty(-2), notes(*)
+roll(9-10), location(Torso), penalty(0)
+roll(11-13), location(Hind Limbs), penalty(-2), notes(*)
+roll(15-16), location(Hind Hands), penalty(-4), notes(*)
+roll(17), location(C Hind Limb), penalty(-4)
+roll(18), location(C Hind Hand), penalty(-6)
+roll(-), location(Vitals), penalty(-3)
+note(*), text(If using random hit location, roll 1d: 1-3 is right, 4-6 is left. If it is somehow holding a shield, double the penalty to hit: -4 for a limb, -8 for an extremity.)
 
 <Winged Humanoid>
 description(A creature with two legs and two arms, plus a pair of wings.)
@@ -137,130 +232,148 @@ note(W), text(Wing: Treat a wing as a limb (arm, leg) for crippling purposes. A 
 note(T), text(Tail: If a tail counts as an Extra Arm or a Striker, or is a fish tail, treat it as a limb (arm, leg) for crippling purposes; otherwise, treat it as an extremity (hand, foot). A crippled tail affects balance. For a ground creature, this gives -1 DX. For a swimmer or flyer, this gives -2 DX and halves Move. If the creature has no tail, or a very short one (like a rabbit), treat as “torso.”)
 
 [Languages]
-Galanglic, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Galanglic (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Galanglic (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Aslan, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Aslan (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Aslan (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Clotho, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Clotho (Gesture), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Clotho (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-N'Toz, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-N'Toz (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-N'Toz (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Bwap, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Bwap (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Bwap (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Oynprith, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Oynprith (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Oynprith (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Hiver, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Hiver (Gesture), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Hiver (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-K'kree, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-K'kree (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-K'kree (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Vargr, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Vargr (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Vargr (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Zhodani, 2/4, upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Zhodani (Spoken), 1/2, upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Zhodani (Written), 1/2, upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Vilani, 2/4, page(B24, T:IW134), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Vilani (Spoken), 1/2, page(B24, T:IW134), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Vilani (Written), 1/2, page(B24, T:IW134), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+
 Acheron, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Acheron (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Acheron (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Ael Yael, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Ael Yael (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Ael Yael (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Answerin, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Answerin (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Answerin (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Rakhli, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Rakhli (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Rakhli (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Aslan, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Aslan (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Aslan (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Bwap, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Bwap (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Bwap (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Clotho, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Clotho (Gesture), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Clotho (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Common Iltharan, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Common Iltharan (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Common Iltharan (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
 Darrian, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Darrian (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Darrian (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Detran, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Detran (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Detran (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Drakaran, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Drakaran (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Drakaran (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
 Dynchia Standard, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Dynchia Standard (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Dynchia Standard (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
 Floriani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Floriani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Floriani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Galanglic, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Galanglic (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Galanglic (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Hiver, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Gesture, Language Written, Social Background), taboo(Native Languages >1)
+Hiver (Gesture), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Gesture, Language Written, Social Background), taboo(Native Languages >1)
+Hiver (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Hlanssai, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Hlanssai (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Hlanssai (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Irkonee, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Irkonee (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Irkonee (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Common Iltharan, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Common Iltharan (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Common Iltharan (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Sue'a Medad, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Sue'a Medad (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Sue'a Medad (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Yilean, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Yilean (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Yilean (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Yilean, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Yilean (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Yilean (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Vilani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Vilani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Vilani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Modern Sylean, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Modern Sylean (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Modern Sylean (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Old High Vilani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Old High Vilani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Old High Vilani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Standard Luriani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Standard Luriani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Standard Luriani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
 Kator, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
 Kator (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
 Kator (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
-Drakaran, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
-Drakaran (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
-Drakaran (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+K'kree, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+K'kree (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+K'kree (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Modern Sylean, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Modern Sylean (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Modern Sylean (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+N'Toz, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+N'Toz (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+N'Toz (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Old High Vilani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Old High Vilani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Old High Vilani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Oynprith, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Oynprith (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Oynprith (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Rakhli, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Rakhli (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Rakhli (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Savezitoiah, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Savezitoiah (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Savezitoiah (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Shrieker, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Shrieker (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Shrieker (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Standard Luriani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Standard Luriani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Standard Luriani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Sue'a Medad, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Sue'a Medad (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Sue'a Medad (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Tezcat, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Tezcat (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Tezcat (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Vargr, 2/4,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Vargr (Spoken), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Vargr (Written), 1/2,upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Vilani, 2/4, page(B24, T:IW134), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Vilani, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Vilani (Spoken), 1/2, page(B24, T:IW134), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Vilani (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Vilani (Written), 1/2, page(B24, T:IW134), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Vilani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Yilean, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Yilean, 2/4, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Language Written, Social Background), taboo(Native Languages > 1)
+Yilean (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Yilean (Spoken), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Language, Language Spoken, Social Background), taboo(Native Languages > 1)
+Yilean (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Yilean (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), levelnames([Illiterate], Semi-Literate, Literate, Native), cat(Language, Language Written, Social Background), taboo(Native Languages > 1)
+Zhodani, 2/4, upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Zhodani (Spoken), 1/2, upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
+Zhodani (Written), 1/2, upto(3 Limiting Total), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 
 [CULTURES]
 
-
-Imperial, 1, cat(Cultural Familiarity, Social Background)
-Imperial (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Aslan, 1, cat(Cultural Familiarity, Social Background)
-Aslan (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Clotho, 1, cat(Cultural Familiarity, Social Background)
-Clotho (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Drakaran, 1, cat(Cultural Familiarity, Social Background)
-Drakaran (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Bwap, 1, cat(Cultural Familiarity, Social Background)
-Bwap (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Droyne, 1, cat(Cultural Familiarity, Social Background)
-Droyne (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Hiver, 1, cat(Cultural Familiarity, Social Background)
-Hiver (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-K'kree, 1, cat(Cultural Familiarity, Social Background)
-K'kree (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Vargr, 1, cat(Cultural Familiarity, Social Background)
-Vargr (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Zhodani, 1, cat(Cultural Familiarity, Social Background)
-Zhodani (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Acheron, 1, cat(Cultural Familiarity, Social Backgroun)
 Acheron (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Ael Yael, 1, cat(Cultural Familiarity, Social Background)
+Ael Yael (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Answerin, 1, cat(Cultural Familiarity, Social Backgroun)
 Answerin (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Aslan, 1, cat(Cultural Familiarity, Social Background)
+Aslan (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Azhanti, 1, cat(Cultural Familiarity, Social Backgroun)
 Azhanti (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Bwap, 1, cat(Cultural Familiarity, Social Background)
+Bwap (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Clotho, 1, cat(Cultural Familiarity, Social Background)
+Clotho (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Darrian, 1, cat(Cultural Familiarity, Social Backgroun)
 Darrian (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Drakaran, 1, cat(Cultural Familiarity, Social Background)
+Drakaran (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Droyne, 1, cat(Cultural Familiarity, Social Background)
+Droyne (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Dynchia, 1, cat(Cultural Familiarity, Social Backgroun)
 Dynchia (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Evantha, 1, cat(Cultural Familiarity, Social Background)
+Evantha (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Floriani, 1, cat(Cultural Familiarity, Social Backgroun)
 Floriani (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Geonee, 1, cat(Cultural Familiarity, Social Backgroun)
 Geonee (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Hiver, 1, cat(Cultural Familiarity, Social Background)
+Hiver (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Hlanssai, 1, cat(Cultural Familiarity, Social Background)
+Hlanssai (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Iltharan, 1, cat(Cultural Familiarity, Social Backgroun)
 Iltharan (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Imperial, 1, cat(Cultural Familiarity, Social Background)
+Imperial (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Irhadre, 1, cat(Cultural Familiarity, Social Backgroun)
 Irhadre (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Kargol, 1, cat(Cultural Familiarity, Social Backgroun)
@@ -269,10 +382,20 @@ Luriani, 1, cat(Cultural Familiarity, Social Backgroun)
 Luriani (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Otrai, 1, cat(Cultural Familiarity, Social Backgroun)
 Otrai (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Shrieker, 1, cat(Cultural Familiarity, Social Background)
+Shrieker (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Sylean, 1, cat(Cultural Familiarity, Social Backgroun)
 Sylean (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+The Two-Thousand Worlds, 1, cat(Cultural Familiarity, Social Background)
+The Two-Thousand Worlds (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Tezcat, 1, cat(Cultural Familiarity, Social Background)
+Tezcat (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Vargr, 1, cat(Cultural Familiarity, Social Background)
+Vargr (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Yilean, 1, cat(Cultural Familiarity, Social Backgroun)
 Yilean (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
+Zhodani, 1, cat(Cultural Familiarity, Social Background)
+Zhodani (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 
 [ADVANTAGES]
 #DeleteByTag Advantages, Text IgnoreEmpty, cat HasInList Supernatural
@@ -289,12 +412,10 @@ Yilean (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST
 
 #ReplaceTags in "AD:Merchant Rank" with "upto(10)"
 
-
-
 <Mundane Mental>
 //  Talents
 Born Tactician, 10/20, upto(4), gives(+1 to GR:Born Tactician), conditional(+1 to ST:Reaction), page(T:IW135), cat(Talents),_
-	description(Exptert Skill (Military Science), History (Military), Intelligence Analysis, Leadership, Savoir-Faire (Military), Soldier, Strategy (Land), Tactics)
+	description(Expert Skill (Military Science), History (Military), Intelligence Analysis, Leadership, Savoir-Faire (Military), Soldier, Strategy (Land), Tactics)
 Intuitive Admiral, 10/20, upto(4), gives(+1 to GR:Intuitive Admiral), conditional(+1 to ST:Reaction), page(T:IW135), cat(Talents),_
 	description(Spacer, Expert Skill (Military Science), History (Military), Intelligence Analysis, Leadership, Savoir-Faire (Military), Shiphandling (Spaceship), Shiphandling (Starship), Strategy (Space))
 
@@ -317,9 +438,13 @@ Telepathy Talent, 5/10, upto(4), page(PP57-67), gives(+1 to "CL:Psionic Powers -
 #Clone "DI:Status" as "DI:Status (Terran)"
 
 <Mundane Mental>
-Code of Honor (Imperial), -10, page(B127, T:IW135), cat(Mundane, Mental)
+Code of Honor (Imperial), -10, page(B127, TIW135), cat(Mundane, Mental)
+Code of Honor (Scouts), -5, page(TFI25), cat(Mundane, Mental)
 Sense of Duty (Spacers), -10, cat(Mundane, Mental)
 Sense of Duty (Crew), -5, cat(Mundane, Mental), page(B153)
+
+<Mundane Social>
+Social Stigma (Robot), -10, page(TFI25), cat(Mundane, Social)
 
 [SKILLS]
 #DeleteFromCat Skills, "Traveller Psi"
@@ -362,23 +487,22 @@ Mechanic (Contragravity), IQ/A, tl(10-12), page(B207), default(IQ - 5, "SK:Engin
 #Delete TE:Automaton
 
 <Background Templates>
+
 Belter, displaycost(50),
     description(You lived and worked in an asteroid belt),
-    sets(_
-        ST:IQ = ST:IQ + 1 _
-    ),
     needs(_
-        AD:Born Spacer=2,
         AD:3D Spatial Sense,
         AD:Improved G-Tolerance=2_
     ),
-    adds(_
-        SK:Area Knowledge=4pts,
-        SK:Free Fall= 1pts,
-        SK:Geology (Rock Worlds)=1pts,
-        SK:Navigation (Space)=2pts,
-        SK:Piloting (High-Performance Spacecraft)=1pts,
-        SK:Prospecting=1pts_
+    AddsOrIncreases(_
+        SK:Repair/Maintenance=7pts,
+        SK:Vehicles=14pts,
+        SK:Vacc Suit=2pts,
+        SK:Area Knowledge ([Area])=2pts,
+        SK:Free Fall= 3pts,
+        SK:Geology (Rock Worlds)=4pts,
+        SK:Piloting (High-Performance Spacecraft)=2pts,
+        SK:Prospecting=6pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -394,24 +518,21 @@ Belter, displaycost(50),
             DI:Selfish,
             DI:Sense of Duty (Spacers)_
         )_
-    ),hide(yes)
+    )
 
 Computer Hacker, displaycost(50),
     sets(_
         ST:IQ = ST:IQ + 1 _
     ),
     needs(_
-        AD:Security Clearance=4,
-        AD:Born to be Wired=1 _
+        AD:Security Clearance=4_
     ),
-    adds(_
-        SK:Computer Hacking=8pts,
-        SK:Computer Programming=4pts,
+    AddsOrIncreases(_
+        SK:Clandestine Tech=7pts,
+        SK:Computer Hacking=6pts,
+        SK:Expert Skill (Computer Security) = 3pts,
         SK:Electronics Operation (Security)=2pts,
-        SK:Electronics Operation (Surveillance)=2pts,
-        SK:Electronics Repair (Computers)=2pts,
-        SK:Mathematics (Cryptology)=1pts,
-        SK:Research=1pts _
+        SK:Scholar=7pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -431,18 +552,16 @@ Computer Hacker, displaycost(50),
             DI:Stuttering,
             DI:Workaholic _
         )_
-    ),hide(yes)
+    )
 
 Con Artist, displaycost(50),
-    sets(_
-        ST:HT = ST:HT + 1,  
-        ST:IQ = ST:IQ + 1 _
-    ),
-    adds(_
-        SK:Acting=4pts,
-        SK:Electronics Operation (Security)=2pts,
-        SK:Fast-Talk=4pts,
-        SK:Research=2pts _
+    AddsOrIncreases(_
+        SK:Deception=21pts,
+        SK:Social=14pts,
+        SK:Acting=3pts,
+        SK:Fast-Talk=3pts,
+        SK:Guns (Pistol)=2pts,
+        SK:Knife= 2pts_
     ),
     select1(_
         text("Choose one of the following advantages:"),
@@ -465,36 +584,23 @@ Con Artist, displaycost(50),
             DI:Selfish,
             DI:Stubbornness _
         )_
-    ),
-    select3(_
-        text("Choose one skill:"),
-        pointswanted(exactly 1),
-        itemswanted(exactly 1),
-        list(_
-            SK:Carousing #codes( upto 1pts, downto 1pts),
-            SK:Sex Appeal #codes( upto 1pts, downto 1pts)_
-        )_
-    ),
-    select4(_
-        text("Choose one skill:"),
-        pointswanted(exactly 2),
-        itemswanted(exactly 1),
-        list(_
-            SK:Guns (Pistol) #codes( upto 2pts, downto 2pts),
-            SK:Knife #codes( upto 2pts, downto 2pts)_
-        )_
     )
 
 
 Courier, displaycost(50),
     sets(_
-        ST:DX = ST:DX + 1,  
-        ST:IQ = ST:IQ + 1 _
+        ST:DX = ST:DX + 1_  
     ),
-    adds(_
+    AddsOrIncreases(_
         AD:Combat Reflexes,
-        SK:Body Language=4pts,
-        SK:Detect Lies=4pts_
+        SK:Investigation=7pts,
+        SK:Sneakiness=7pts,
+        SK:Melee Combat=7pts,
+        SK:Unarmed Striking=9pts,
+        SK:Karate=4pts_
+    ),
+    creates(_
+        {"AD:Biomonitor Implant", 1, page(UT208)}_
     ),
     select1(_
         text("Select -20 points from these disadvantages:"),
@@ -513,37 +619,15 @@ Courier, displaycost(50),
             DI:Stubbornness,
             DI:Workaholic _
         )_
-    ),
-    select2(_
-        text("Choose 7 points in skills:"),
-        pointswanted(exactly 7),
-        itemswanted(atleast 1),
-        list(_
-            SK:Guns (Pistol),
-            SK:Knife,
-            SK:Guns (Shotgun),
-            SK:Guns (Rifle),
-            SK:Brawling,
-            SK:Wrestling,
-            SK:Karate,
-            SK:Judo,
-            SK:Sumo Wrestling,
-            SK:Cloak,
-            SK:Fast-Draw (Pistol),
-            SK:Fast-Draw (Knife),
-            SK:Fast-Draw (Longarm) _
-        )_
     )
-Medic, displaycost(50),
-    sets(_
-        ST:IQ = ST:IQ + 2 _
-    ),
-    adds(_
-        SK:Diagnosis=2pts,
-        SK:Electronics Operation (Medical)=2pts,
-        SK:Physician=4pts,
-        SK:Surgery=2pts,
-        AD:Healer=1_
+
+Medical Doctor, displaycost(50),
+    AddsOrIncreases(_
+        SK:Medical=35pts,
+        SK:Natural Sciences=7pts,
+        SK:Diagnosis=3pts,
+        SK:Physician=12pts,
+        SK:Surgery=3pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -551,6 +635,7 @@ Medic, displaycost(50),
         itemswanted(atleast 1),
         list(_
             DI:Chummy,
+            DI:Code of Honor,
             DI:Curious,
             DI:Guilt Complex,
             DI:Light Sleeper,
@@ -558,19 +643,17 @@ Medic, displaycost(50),
             DI:Selfish,
             DI:Stubbornness,
             DI:Stuttering,
-            DI:Vow,
             DI:Workaholic _
         )_
     )
+
 Merchant, displaycost(50),
-    adds(_
+    AddsOrIncreases(_
         AD:Cultural Adaptability,
-        AD:Business Acumen=1,
-        SK:Diplomacy=2pts,
-        SK:Fast-Talk=2pts,
-        SK:Freight Handling=1pts,
-        SK:Merchant=4pts,
-        SK:Propaganda=1pts_
+        SK:Business=14pts,
+        SK:Merchant=6pts,
+        SK:Deception=7pts,
+        SK:Fast-Talk-3pts_
     ),
     select1(_
         text("Select 20 points from these advantages:"),
@@ -591,7 +674,6 @@ Merchant, displaycost(50),
             DI:Chummy,
             DI:Curious
             DI:Gregarious,
-            DI:Greed,
             DI:Gluttony,
             DI:Miserliness,
             DI:Overconfidence,
@@ -605,17 +687,13 @@ Retired Bounty Hunter, displaycost(50),
         ST:DX = ST:DX + 1,
         ST:ST = ST:ST + 1 _
     ),
-    adds(_
+    AddsOrIncreases(_
         AD:Combat Reflexes,
         AD:Fit,
-        SK:Area Knowledge=4pts,
-        SK:Brawling=1pts,
-        SK:Detect Lies=2pts,
-        SK:Electronics Operation (Security)=2pts,
-        SK:Interrogation=2pts,
-        SK:Shadowing=2pts,
-        SK:Streetwise=4pts,
-        SK:Tracking=2pts_
+        SK:Investigation=7pts,
+        SK:Melee Combat=7pts,
+        SK:Unarmed Grappling=3pts,
+        SK:Guns=3pts_
     ),
     select1(_
         text("Select -15 points from these disadvantages:"),
@@ -633,19 +711,6 @@ Retired Bounty Hunter, displaycost(50),
             DI:Stubbornness,
             DI:Workaholic_
         )_
-    ),
-    select2(_
-        text("Select a skill:"),
-        pointswanted(1),
-        itemswanted(exactly 1),
-        list(_
-            SK:Beam Weapons (Pistol) #codes(upto 1pts, downto 1pts),
-            SK:Beam Weapons (Rifle) #codes(upto 1pts, downto 1pts),
-            SK:Guns (Pistol) #codes(upto 1pts, downto 1pts),
-            SK:Guns (Rifle) #codes(upto 1pts, downto 1pts),
-            SK:Guns (Shotgun) #codes(upto 1pts, downto 1pts),
-            SK:Guns (Submachine Gun) #codes(upto 1pts, downto 1pts)_
-        )_
     )
 
 Retired Military, displaycost(50),
@@ -653,12 +718,12 @@ Retired Military, displaycost(50),
         ST:DX = ST:DX + 1,
         ST:ST = ST:ST + 1 _
     ),
-    adds(_
+    AddsOrIncreases(_
         AD:Combat Reflexes,
-        AD:Fit,
-        SK:Brawling=2pts,
-        SK:Knife=2pts,
-        SK:Wrestling=2pts_
+        SK:Military=7pts,
+        SK:Ranged Combat=7pts,
+        SK:Guns=3pts,
+        SK:Unarmed Striking=3pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -667,7 +732,7 @@ Retired Military, displaycost(50),
         list(_
             DI:Bully,
             DI:Chummy,
-            DI:Code of Honour (Soldier's),
+            DI:Code of Honor (Soldier's),
             DI:Curious,
             DI:Callous,
             DI:Flashbacks,
@@ -678,48 +743,17 @@ Retired Military, displaycost(50),
             DI:Stubbornness,
             DI:Truthfulness_
         )_
-    ),
-    select2(_
-        text("Select 1 skill:"),
-        pointswanted(1),
-        itemswanted(exactly 1),
-        list(_
-            SK:Soldier #codes(upto 1pts, downto 1pts),
-            SK:Spacer #codes(upto 1pts, downto 1pts)_
-        )_
-    ),
-    select3(_
-        text("Select two skills:"),
-        pointswanted(8),
-        itemswanted(exactly 2),
-        list(_
-            SK:Artillery (Beam) #codes(upto 4pts, downto 4pts),
-            SK:Artillery (Cannon) #codes(upto 4pts, downto 4pts),
-            SK:Artillery (Guided Missile) #codes(upto 4pts, downto 4pts),
-            SK:Beam Weapons (Pistol) #codes(upto 4pts, downto 4pts),
-            SK:Beam Weapons (Rifle) #codes(upto 4pts, downto 4pts),
-            SK:Gunner (Beams) #codes(upto 4pts, downto 4pts),
-            SK:Gunner (Cannon) #codes(upto 4pts, downto 4pts),
-            SK:Gunner (Machine Gun) #codes(upto 4pts, downto 4pts),
-            SK:Guns (Grenade Launcher) #codes(upto 4pts, downto 4pts),
-            SK:Guns (Rifle) #codes(upto 4pts, downto 4pts),
-            SK:Guns (Shotgun) #codes(upto 4pts, downto 4pts)_
-        )_
     )
 
 Rogue, displaycost(50),
     sets(_
-        ST:IQ = ST:IQ + 1,
-        ST:HT = ST:HT + 1 _
+        ST:IQ = ST:IQ + 1 _
     ),
-    adds(_
-        SK:Acting=2pts,
-        SK:Brawling=1pts,
-        SK:Electronics Operation (Security)=1pts,
-        SK:Fast-Talk=4pts,
-        SK:Guns (Pistol)=1pts,
-        SK:Smuggling=4pts,
-        SK:Wrestling=1pts_
+    addsOrIncreases(,_
+        SK:Deception=14pts,
+        SK:Theft=7pts,
+        SK:Fast-Talk=3pts,
+        SK:Housekeeping=1pts_
     ),
     select1(_
         text("Select one of the following advantages:"),
@@ -739,20 +773,11 @@ Rogue, displaycost(50),
         list(_
             DI:Code of Honour (Pirates's),
             DI:Callous,
+            DI:Curious,
             DI:Light Sleeper,
             DI:Overconfidence,
             DI:Selfish,
             DI:Stubbornness_
-        )_
-    ),
-    select3(_
-        text("Select one of the following skills:"),
-        pointswanted(1),
-        itemswanted(exactly 1),
-        list(_
-            SK:Fast-Draw (Knife) #codes(upto 1pts, downto 1pts),
-            SK:Fast-Draw (Pistol) #codes(upto 1pts, downto 1pts),
-            SK:Fast-Draw (Ammo) #codes(upto 1pts, downto 1pts)_
         )_
     )
 
@@ -761,29 +786,21 @@ Rogue, displaycost(50),
 Comms and Nav Officer, displaycost(100),
     sets(_
         ST:DX = ST:DX + 1,
-        ST:IQ = ST:IQ + 2,
+        ST:IQ = ST:IQ + 1,
         ST:HT = ST:HT + 1 _
     ),
     adds(_
-        AD:Charisma=2,
-        AD:Born Spacer=2,
         DI:Sense of Duty (Crew),
-        SK:Computer Operation=2pts,
-        SK:Electronics Operation (Communications)=2pts,
-        SK:Electronics Operation (Medical)=1pts,
-        SK:Electronics Operation (Sensors)=2pts,
-        SK:Vacc Suit=2pts,
-        SK:First Aid=1pts,
-        SK:Free Fall=1pts,
-        SK:Freight Handling=1pts,
-        SK:Leadership=2pts,
-        SK:Merchant=2pts,
+        SK:Medical=7pts,
+        SK:Practical=7pts,
+        SK:Reconnaissance=21pts,
+        SK:Social=7pts,
+        SK:Vehicles=7pts,
+        SK:Electronics Operation=6pts,
+        SK:Navigation=6pts,
+        SK:NBC Suit=3pts,
         SK:Navigation (Hyperspace)=4pts,
-        SK:Navigation (Space)=4pts,
-        SK:Piloting (High-Performance Spacecraft)=1pts,
-        SK:Propaganda=1pts,
-        SK:Shiphandling (Starship)=2pts,
-        SK:Spacer=2pts_
+        SK:Navigation (Space)=2pts_
     ),
     select1(_
         text("Select -15 points from these disadvantages:"),
@@ -807,29 +824,65 @@ Comms and Nav Officer, displaycost(100),
 
 Engineer, displaycost(100),
     sets(_
-        ST:IQ = ST:IQ + 3,
+        ST:IQ = ST:IQ + 2,
         ST:HT = ST:HT + 1 _
     ),
     adds(_
-        AD:Artificer=1,
-        AD:Born Spacer=2,
         DI:Sense of Duty (Crew),
-        SK:Armoury (Heavy Weapons)=1pts,
-        SK:Armoury (Vehicular Armor)=1pts,
-        SK:Computer Operation=2pts,
-        SK:Computer Programming=2pts,
-        SK:Electrician=1pts,
-        SK:Electronics Repair (Computers)=2pts,
-        SK:Vacc Suit=2pts,
-        SK:First Aid=1pts,
-        SK:Free Fall=1pts,
-        SK:Freight Handling=1pts,
-        SK:Mechanic (Jump Drive)=2pts,
-        SK:Mechanic (Life Support)=4pts,
-        SK:Mechanic (Reactionless Drive)=2pts,
-        SK:Mechanic (Starship)=4pts,
-        SK:Merchant=2pts,
-        SK:Spacer=2pts_
+        SK:Caution=7pts,
+        SK:Innovation=7pts,
+        SK:Natural Sciences=7pts,
+        SK:Practical=7pts,
+        SK:Repair/Maintenance=21pts,
+        SK:Vehicles=7pts,
+        SK:Electronics Repair=3pts,
+        SK:Free Fall=3pts,
+        SK:Mechanic=6pts,
+        SK:Vacc Suit=2pts_
+    ),
+    select1(_
+        text("Select -15 points from these disadvantages:"),
+        pointswanted(-15),
+        itemswanted(atleast 1),
+        list(_
+            DI:Chummy,
+            DI:Easy to Read,
+            SK:Flashbacks,
+            DI:Gregarious,
+            DI:Impulsiveness,
+            DI:Lecherousness,
+            DI:Nightmares,
+            DI:Oblivious,
+            DI:Overconfidence,
+            DI:Pacifism (Reluctant Killer),
+            DI:Phobia,
+            DI:Selfish,
+            DI:Selfless,
+            DI:Shyness,
+            DI:Squeamish,
+            DI:Xenophilia_
+        )_
+    )
+
+Pilot, displaycost(100),
+    sets(_
+        ST:IQ = ST:IQ + 1,
+        ST:DX = ST:DX + 1,
+        ST:HT = ST:HT + 1 _
+    ),
+    adds(_
+        AD:3D Spatial Sense,
+        DI:Sense of Duty (Crew),
+        SK:Practical=7pts,
+        SK:Ranged Combat=7pts,
+        SK:Vehicles=21pts,
+        SK:Electronics Operation=3pts,
+        SK:Leadership=3pts,
+        SK:Navigation=3pts,
+        SK:Piloting=6pts,
+        SK:Piloting (High-Performance Spacecraft)=6pts,
+        SK:Shiphandling (Starship)=2pts,
+        SK:Vacc Suit=2pts_
     ),
     select1(_
         text("Select -15 points from these disadvantages:"),
@@ -855,75 +908,170 @@ Engineer, displaycost(100),
         )_
     )
 
-Pilot, displaycost(100),
+<Mission Specialties>
+
+Biologist, displaycost(25),
+    AddsOrIncreases(_
+        SK:Natural Sciences=7pts
+        SK:Plant=7pts,
+        SK:Biology=9pts,
+        SK:Biology (Earthlike)=2pts_
+    ),hide(yes)
+
+Contact and Liaison, displaycost(25),
+    AddsOrIncreases(_
+        PE:Courtesy Administrative Rank=1,
+        AD:Language Talent,
+        SK:Social=7pts,
+        SK:Social Sciences/Humanities=7pts_
+    ), hide(yes)
+
+Medic, displaycost(25),
+    AddsOrIncreases(_
+        SK:Medical=7pts,
+        SK:Diagnosis=6pts,
+        SK:Physician=9pts,
+        SK:Surgery=3pts_
+    ), hide(yes)
+
+Mission Leader, displaycost(25),
+    AddsOrIncreases(_
+        AD:Administrative Rank (Imperial)=1,
+        SK:Bureaucracy=7pts,
+        SK:Social=7pts,
+        SK:Administration=3pts,
+        SK:Leadership=3pts_
+    ), hide(yes)
+
+Resource Evaluator, displaycost(25),
+    AddsOrIncreases(_
+        SK:Electronics Operation (Sensors)=6pts, 
+        SK:Natural Sciences=7pts,
+        SK:Prospecting=12pts_
+    ), hide(yes)
+
+Security Officer, displaycost(25),
+    AddsOrIncreases(_
+        SK:Investigation=14pts,
+        SK:Unarmed Striking=3pts,
+        SK:Unarmed Grappling=3pts,
+        SK:Electronics Operation=3pts,
+        SK:Guns (Pistol)=2pts_
+    ), hide(yes)
+
+Stellar Cartographer, displaycost(25),
+    AddsOrIncreases(_
+        SK:Natural Sciences=7pts,
+        SK:Reconnaissance=7pts,
+        SK:Astronomy=3pts,
+        SK:Navigation=3pts,
+        SK:Cartography=3pts,
+        SK:Electronics Operation (Sensors)=2pts_
+    ),hide(yes)
+
+<Upgrade Modules>
+
+Battle(suit)-Ready, displaycost(25),
     sets(_
-        ST:IQ = ST:IQ + 1,
-        ST:DX = ST:DX + 2,
-        ST:HT = ST:HT + 1 _
+        ST:ST = ST:ST +2_
+    ), 
+    addsorincreases(_
+        SK:Armoury (Battlesuits) = 2pts,
+        SK:Battlesuit = 8pts,
+        SK:Free Fall = 3pts,
+        SK:Vacc Suit = 2pts_
+    ), hide(yes)
+
+Brainiac, displaycost(25), cost(0),
+    noresync(yes),
+    sets(_
+        ST:IQ = ST:IQ+1_
+    ),
+    addsorincreases(_
+        AD:Academic=1_
+    ), hide(yes)
+
+Designated Animal Wrangler, displaycost(25), cost(0),
+	noresync(yes),_
+	triggers(_ 
+		adds(_
+			{AD:Animal Empathy}_
+		),_ 
+		addsorincreases(_ 
+			SK:Biosciences=14pts,
+                        SK:Animal Handling=6pts_
+		)_ 
+	), hide(yes) 
+
+Explorer, displaycost(25), cost(0),_
+	noresync(yes),_
+	triggers(_ 
+		sets(_
+                        {ST:Basic Move} = {ST:Basic Move} + 1,
+			{ST:Perception} = {ST:Perception} + 3_
+		),_ 
+		adds(_
+			{AD:Absolute Direction}_
+		)_ 
+	), hide(yes) 
+
+Favored, displaycost(25),
+    sets(_
+        ST:Perception = ST:Perception + 1,
+        ST:Will = ST:Will +1_
     ),
     adds(_
-        AD:3D Spatial Sense,
-        AD:Born Spacer=2,
-        DI:Sense of Duty (Crew),
-        SK:Artillery (Cannon)=1pts,
-        SK:Computer Operation=2pts,
-        SK:Electronics Operation (Communications)=1pts,
-        SK:Electronics Operation (Sensors)=1pts,
-        SK:Vacc Suit=2pts,
-        SK:First Aid=1pts,
-        SK:Free Fall=1pts,
-        SK:Freight Handling=1pts,
-        SK:Leadership=2pts,
-        SK:Merchant=2pts,
-        SK:Navigation (Hyperspace)=2pts,
-        SK:Navigation (Space)=2pts,
-        SK:Piloting (Aerospace)=4pts,
-        SK:Piloting (High-Performance Spacecraft)=4pts,
-        SK:Shiphandling (Starship)=2pts,
-        SK:Spacer=2pts_
+        AD:Daredevil_
+    ), hide(yes)
+
+Hulk, displaycost(25),
+    sets(_
+        ST:ST = ST:ST +5_
+    ), hide(yes)
+
+Side of Beef, displaycost(25),
+    sets(_
+        ST:HT = ST:HT + 1,
+        ST:Hit Points = ST:Hit Points + 3_
     ),
-    select1(_
-        text("Select -15 points from these disadvantages:"),
-        pointswanted(-15),
-        itemswanted(atleast 1),
-        list(_
-            DI:Chummy,
-            DI:Easy to Read,
-            SK:Flashbacks,
-            DI:Gregarious,
-            DI:Impulsiveness,
-            DI:Lecherousness,
-            DI:Shyness,
-            DI:Nightmares,
-            DI:Overconfidence,
-            DI:Oblivious,
-            DI:Pacifism (Reluctant Killer),
-            DI:Phobia,
-            DI:Selfish,
-            DI:Selfless,
-            DI:Squeamish,
-            DI:Xenophilia_
-        )_
-    )
+    addsorincreases(_
+       AD:Hard to Kill=1,
+       AD:Hard to Subdue=1,
+       AD:Rapid Healing,
+    ), hide(yes)
+
+Speedy, displaycost(25),
+    sets(_
+        ST:DX = ST:DX +1,
+        ST:Basic Move = ST:Basic Move + 1_
+    ), hide(yes)
+
 <Traveller Races>
+
 #MergeTags in TE:Solomani with adds(_
-    CU:Imperial (Native),
-    LA:Galanglic=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
-    LA:Vilani=2_
+        CU:Imperial (Native),
+        LA:Galanglic=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        LA:Vilani=2_
     ), 
+    displaycost(4),
+    owns(yes),
     cat(Human Races)
 #ReplaceTags in TE:Solomani with displaycost(4), race(Human(Solomani)), hides(no)
 #MergeTags in TE:Vilani with adds (_
-    CU:Imperial (Native),
-    LA:Galanglic=2,
-    LA:Vilani=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
+        CU:Imperial (Native),
+        LA:Galanglic=2,
+        LA:Vilani=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ), 
+    displaycost(4),
+    owns(yes),
     cat(Human Races)
 #ReplaceTags in TE:Vilani with displaycost(4), race(Human(Vilani)), hides(no)
 #MergeTags in TE:Zhodani with adds (_
-    CU:Zhodani (Native),
-    LA:Zhodani=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
+        CU:Zhodani (Native),
+        LA:Zhodani=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ), 
+    owns(yes),
+    displaycost(0),
     cat(Human Races)
 #ReplaceTags in TE:Zhodani with displaycost(0), race(Human(Zhodani)), hides(no)
 
@@ -942,7 +1090,8 @@ Acheron,cat(Human Races),
         LA:Acheron=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
         LA:Galanglic=2,
         QU:Responsive,
-        SK:Occultism=8pts_
+        SK:Occultism=6pts,
+        SK:Psychology (Parapsychology)=2pts_
     ),
     creates(_
         {"AD:Acheron Attribute Mods",25,gives(+1 to ST:HT, +3 to ST:ST),hide(yes)},
@@ -950,11 +1099,11 @@ Acheron,cat(Human Races),
         {"DI:Intolerance (Solomani)",-5}_
     ),
    noresync(no),
-    page(GTH10),owns(yes)
+    page(TH10),owns(yes)
 
 Answerin,cat(Human Races), 
     cost(0),
-    displaycost(24),
+    displaycost(40),
     race(Human (Answerin)),
     adds(_
         AD:Fearlessness=3,
@@ -971,7 +1120,7 @@ Answerin,cat(Human Races),
         {"QU:Vegetarian", -1}_
     ),
     noresync(no),
-    page(GTH17),owns(yes)
+    page(TH17),owns(yes)
 
 Azhanti,cat(Human Races), 
     cost(0),
@@ -993,22 +1142,24 @@ Azhanti,cat(Human Races),
         {AD:Protected Vision, 5, page(B57)}_
     ),
     noresync(no),
-    page(GTH24),owns(yes)
+    page(TH24),owns(yes)
 
 Darrian,cat(Human Races), 
     cost(0),
-    displaycost(-13),
+    displaycost(-8),
     race(Human (Darrian)),
     adds(_
         AD:Acute Vision=1,
         CU:Darrian (Native),
+        CU:Imperial,
+        LA:Galanglic=2,
         LA:Darrian=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     creates(_
         {"DI:Darrian Attribute Mods",-15,gives(-1 to ST:HT, -1 to ST:ST),hide(yes)},
     ),
     noresync(no),
-    page(GTH30),owns(yes)
+    page(TH30),owns(yes)
 
 Dynchia,cat(Human Races), 
     cost(0),
@@ -1026,7 +1177,7 @@ Dynchia,cat(Human Races),
         {QU:Undiscriminating, -1}_
     ),
     noresync(no),
-    page(GTH50),owns(yes)
+    page(TH50),owns(yes)
 
 Floriani (Barnai),cat(Human Races), 
     cost(0),
@@ -1043,7 +1194,7 @@ Floriani (Barnai),cat(Human Races),
         {"AD:Barnai Attribute Mods",15,gives(-3 to ST:ST, -1 to ST:HT, +2 to ST:IQ),hide(yes)},
     ),
     noresync(no),
-    page(GTH60),owns(yes)
+    page(TH60),owns(yes)
 
 Floriani (Feskal),cat(Human Races), 
     cost(0),
@@ -1059,7 +1210,7 @@ Floriani (Feskal),cat(Human Races),
         {"AD:Feskal Attribute Mods",5,gives(+5 to ST:ST, +2 to ST:HT, -2 to ST:IQ),hide(yes)}_
     ),
     noresync(no),
-    page(GTH60),owns(yes)
+    page(TH60),owns(yes)
 
 Geonee,cat(Human Races), 
     cost(0),
@@ -1078,7 +1229,7 @@ Geonee,cat(Human Races),
         {"AD:Geonee Attribute Mods",26,gives(-2 to ST:Hit Points,+2 to ST:ST, +1 to ST:DX),hide(yes)}_
     ),
     noresync(no),
-    page(GTH68),owns(yes)
+    page(TH68),owns(yes)
 
 Human (mixed),cat(Human Races), 
     cost(0),
@@ -1091,6 +1242,7 @@ Human (mixed),cat(Human Races),
     ),
     noresync(no),
     owns(yes)
+
 Iltharan,cat(Human Races), 
     cost(0),
     displaycost(9),
@@ -1109,7 +1261,7 @@ Iltharan,cat(Human Races),
         {"AD:Iltharan Attribute Mods",10,gives(+1 to ST:HT),hide(yes)}_
     ),
     noresync(no),
-    page(GTH79),owns(yes)
+    page(TH79),owns(yes)
 
 Irhadre,cat(Human Races), 
     cost(0),
@@ -1129,7 +1281,8 @@ Irhadre,cat(Human Races),
         {"DI:Racial Reputation (Slavers)", -1.5/-3,page(B27), downto(2), upto(2), cat(Mundane, Social, Influence), conditional(-1 to ST:Reaction when "recognized as Irhadre (7 or less)")},
     ),
     noresync(no),
-    page(GTH86),owns(yes)
+    page(TH86),owns(yes)
+
 Kargol,cat(Human Races), 
     cost(0),
     displaycost(8),
@@ -1156,7 +1309,7 @@ Kargol,cat(Human Races),
         {"DI:Kargol Attribute Mods", -10, gives(-1 to ST:DX, +2 to ST:ST),hide(yes)}_
     ),
     noresync(no),
-    page(GTH93),owns(yes)
+    page(TH93),owns(yes)
 
 Luriani,cat(Human Races), 
     cost(0),
@@ -1187,14 +1340,18 @@ Luriani,cat(Human Races),
         {"DI:Racial Reputation (Irrational and unpredictable)", -2, gives(-1 to ST:Reaction when recognized as Luriani (10 or less))}_
     ),
     noresync(no),
-    page(GTH103),owns(yes)
+    page(TH103),owns(yes)
 
-Alpha Nexxie, displaycost(39),
+Alpha Nexxie, displaycost(44),
     adds(TE:Nexxie), 
-    creates( {"DI:Unnatural Features (Skin, eyes, and gills)", -1/-2, upto(5), downto(5), gives(-1 To SK:Disguise, -1 To SK:Shadowing)} ),
-    page(GTH113),
+    creates(_ 
+        {"DI:Unnatural Features (Skin, eyes, and gills)", -1/-2, upto(5), downto(5), gives(-1 To SK:Disguise, -1 To SK:Shadowing)}_
+    ),
+    page(TH113),
     owns(yes)
-Beta Nexxie, displaycost(29),adds(TE:Nexxie, DI:Chummy, DI:Disturbing Voice), page(GTH113), owns(yes)
+Beta Nexxie, displaycost(34),
+    adds(TE:Nexxie, DI:Chummy, DI:Disturbing Voice), 
+    page(TH113), owns(yes)
 Nexxie,cat(Human Races), 
     cost(0),
     invisible(yes),
@@ -1206,13 +1363,16 @@ Nexxie,cat(Human Races),
         AD:Nictitating Membrane=1,
         AD:Pressure Support=2,
         AD:Universal Digestion,
+        AD:Fearlessness=1,
         CU:Imperial (Native),
         LA:Galanglic=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
-        SK:Swimming=4pts,
-        SK:Aquabatics=1pts_
+        SK:Swimming=3pts_
+    ),
+    creates(_
+        {"AD:Protected Vision", 5, page(B78)}_
     ),
    noresync(no),
-   page(GTH113),owns(yes),hide(yes)
+   page(TH113),owns(yes),hide(yes)
 
 Otrai,cat(Human Races), 
     cost(0),
@@ -1231,7 +1391,7 @@ Otrai,cat(Human Races),
         {"AD:Resistant (Poison)", 15}_
     ),
     noresync(no),
-    page(GTH119),owns(yes)
+    page(TH119),owns(yes)
 
 Yilean,
     cat(Human Races),
@@ -1247,20 +1407,22 @@ Yilean,
     creates(_
         {"FE:Immune to sunburn", 0} _
     ),
-    noresync(no), page(GTH135), owns(yes)
+    noresync(no), page(TH135), owns(yes)
 
 Sylean,cat(Human Races), 
-    cost(5),
+    cost(0),
+    displaycost(-10),
     race(Human (Sylean)),
     creates(_
         {"DI:Sylean Attribute Mods",-5,gives(-1 to ST:ST),hide(yes)},
         {"DI:Intolerance (Vilani)", -5}_
     ),
     noresync(no),invisible(yes),hide(yes),
-    page(GTH127),owns(yes)
+    page(TH127),owns(yes)
+
 Sylean (Successor),cat(Human Races), 
     cost(0),
-    displaycost(-15),
+    displaycost(-10),
     race(Human (Sylean)),
     adds(_
         TE:Sylean,
@@ -1268,21 +1430,51 @@ Sylean (Successor),cat(Human Races),
         LA:Modern Sylean=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     noresync(no),
-    page(GTH127),owns(yes)
+    page(TH127),owns(yes)
 
 
 Sylean (Integrated),cat(Human Races), 
     cost(0),
-    displaycost(-15),
+    displaycost(-10),
     adds(_
         TE:Sylean,
         CU:Imperial (Native),
         LA:Galanglic=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     noresync(no),
-    page(GTH127),owns(yes)
+    page(TH127),owns(yes)
 
-Aslan, cat(Non-human Races), cost(0), displaycost(8), race(Aslan), 
+Ael Yael, cat(Non-human Races), cost(0), displaycost(-40), race(Ael Yael), 
+    BodyType(Winged Humanoid),
+    HitTable(Winged Humanoid),
+    adds(_	
+        AD:Acute Vision=5,
+        AD:Claws (Sharp Claws),
+        AD:Flight with "Winged, -25%" and "Requires grav ≤ 0.6G, -20%" and "Cannot Hover, -15%",
+        AD:Improved G-Tolerance=2,
+        AD:Infravision,
+        CU:Ael Yael (Native),
+        CU:Imperial,
+        DI:Bloodlust,
+        DI:Low TL=5,
+        DI:Short Lifespan=1,
+        DI:Vulnerability (Crushing)=3 with "Wounding Multiplier x2, *1",
+        LA:Ael Yael=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        LA:Galanglic=2,
+        QU:Uncongenial_
+    ),
+    creates(_
+        {AD:Protected Vision, 5, page(B57)},
+        {DI:Sense of Duty (Ael Race), -15},
+        {DI:Intolerance (Corporations), -5},
+        {DI:Vow (Donate to Planetary Fund), -5},
+        {DI:Ael Yael Attribute Mods, -5, gives(-1 to ST:ST),hide(yes)},
+        {AD:Striker (Crushing; Tail), 5, displaycost(0), mods(Striker, Alternative Attack), page(B88), cat(Exotic, Physical, Natural Attacks), damage(thr+@if(@hasmod(Weak) then 0 else @basethdice(me::chareffectivest)) +  @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))), damtype(cr), reach(C), parry(0), skillused(ST:DX, SK:Brawling, SK:Karate), reachbasedon(0), mode(Tail), itemnotes({May attack/parry back and side hexes only})}_
+    ),
+    noresync(no),page(TAR4:5),
+    owns(yes)
+
+Aslan, cat(Non-human Races), cost(0), displaycost(3), race(Aslan), 
     adds(_	
         AD:Acute Hearing = 3, 
         AD:Acute Taste and Smell = 3, 
@@ -1293,8 +1485,10 @@ Aslan, cat(Non-human Races), cost(0), displaycost(8), race(Aslan),
         AD:Night Vision=9,
         AD:Temperature Tolerance (Cold)=1,
         CU:Aslan (Native),
+        CU:Imperial,
         DI:Bad Grip=1,
         LA:Aslan=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        LA:Galanglic=2,
         QU:Proud,
     ),
     creates(_
@@ -1304,9 +1498,179 @@ Aslan, cat(Non-human Races), cost(0), displaycost(8), race(Aslan),
         {DI:Intolerance (Non-Aslan), -10},
         {DI:Obsession (Own Land), -10}_
     ),
-    noresync(no),
+    noresync(no),page(TAR2:5),
     owns(yes)
-Vargr, cat(Non-human Races), cost(0), displaycost(18), race(Vargr), 
+
+Evantha, cat(Non-human Races), cost(0), displaycost(-3), race(Evantha), 
+    BodyType(Winged Humanoid),
+    HitTable(Winged Humanoid),
+    adds(_	
+        AD:Acute Vision=2,
+        AD:Claws(Sharp Claws),
+        AD:Flight with "Winged, -25%" and "Requires grav ≤ 0.6G, -20%" and "Cannot Hover, -15%",
+        AD:Teeth (Sharp Teeth),
+        CU:Evantha (Native),
+        CU:Imperial,
+        DI:Bad Sight (Nearsighted) with "In direct sunlight, -60%",
+        DI:Increased Consumption=1,
+        LA:Detran=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        LA:Galanglic=2,
+        LA:Vilani=2_
+    ),
+    creates(_
+        {"AD:Evantha Attribute Mods", +8, gives(-1 to ST:Ground Move,-2 to ST:ST, +1 to ST:DX, -1 to ST:Hit Points),hide(yes)},
+        {"DI:Claustrophobia (cannot enter small enclosed vehicles)", -9, notes(resist on 12 or less)},
+        {"DI:Fanaticism (Kythari vs Lir)", -15, page(B136)},
+        {"QU:Intolerance (Same-sex friendships)", -1},
+        {"QU:Weakness (Sunlight)", -1, conditional("1 damage per 30 minutes in direct sunlight")}_
+    ),
+    noresync(no),page(TAR4:38),
+    owns(yes)
+
+Girug'kagh, cat(Non-human Races), cost(0), displaycost(-5), race(Girug'kah), 
+    adds(_	
+        AD:High Manual Dexterity=4,
+        CU:The Two-Thousand Worlds (Native),
+        LA:Savezitoiah=3,
+        LA:K'kree=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
+    ),
+    creates(_
+        {"DI:Girug'kagh Attribute Mods", -5, gives(-1 to ST:ST),hide(yes)},
+        {"DI:Intolerance (All lesser species)", -10},
+        {"DI:Odious Racial Habit (Snobbery)", -10},
+        {"DI:Sense of Duty (Caste and family)", -5},
+        {"QU:Enjoys watching others suffer", -1}_
+    ),
+    noresync(no),page(TAR4:47),
+    owns(yes)
+
+Hiver, cat(Non-human Races), cost(0), displaycost(45), race(Hiver), 
+    BodyType(Hiver),
+    HitTable(Hiver),
+    adds(_	
+        AD:360° Vision,
+        AD:Double-Jointed,
+        AD:Extra Arms=3 with "Foot Manipulators, -30%" and "Extra-flexible, +50%",
+        AD:Extra Legs (4 legs),
+        AD:High Manual Dexterity=2,
+        AD:High TL=2,
+        AD:Infravision,
+        AD:Reduced Consumption=1 with "Cast-Iron Stomach, -50%",
+        AD:Regrowth,
+        AD:Vibration Sense,
+        CU:Hiver (native),
+        DI:Callous,
+        DI:Combat Paralysis,
+        DI:Cowardice,
+        DI:Curious,
+        DI:Invertebrate,
+        DI:Low Pain Threshold,
+        DI:Mute with "Mitigator: chest computer, -60%",
+        DI:No Sense of Humor,
+        DI:No Sense of Smell/Taste,
+        DI:Post-Combat Shakes,
+        DI:Selfish,
+        LA:Hiver=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        QU:Chauvinistic_
+    ),
+    creates(_
+        {"AD:Damage Resistance (Tough Skin)", 3/6, gives(+1 to ST:DR), location(skin)}=1,
+        {"AD:Resistant to Telepathy", +7, conditional(+8 to "resist telepathy")},
+        {"AD:Resistant to Disease", +9, conditional(+3 to "resist disease")},
+        {"AD:Injury Tolerance (No Brain)", +5, page(B60)},
+        {"DI:Hiver attribute modifiers", -40, gives(-2 to ST:Basic Speed), hide(yes)},
+    ),
+    noresync(no),page(TAR3:5),
+    owns(yes)
+
+Hlanssai, cat(Non-human Races), cost(0), displaycost(47), race(Hlanssai), 
+    adds(_	
+        AD:Ambidexterity,
+        AD:Night Vision=9,
+        AD:Ultrahearing,
+        CU:Hlanssai (Native),
+        DI:Absent-Mindedness,
+        LA:Hlanssai=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        QU:Broad-Minded,
+        QU:Dreamer,
+        QU:Imaginative_
+    ),
+    creates(_
+        {"AD:Racial Reputation (Talented Artist)", +2, conditional(+2 to Reaction when "devotees of the arts")},
+        {"AD:Hlanssai Attribute Mods", 53, gives(+4 to ST:Perception,-2 to ST:ST, +2 to ST:DX, +1 to ST:Fatigue Points),hide(yes)},
+        {"DI:Odious Racial Habit (Whimsical and Unpredictable Behavior)", -5},
+        {"DI:Racial Reputation (Crazy)", -5, gives(-1 to ST:Reaction)}=2 _
+    ),
+    noresync(no),page(TAR4:76),
+    owns(yes)
+
+K'kree, cat(Non-human Races), cost(0), displaycost(-17), race(K'kree), 
+    BodyType(Centaur),
+    HitTable(Centaur),
+    adds(_	
+        AD:Acute Hearing = 2,
+        AD:Acute Taste and Smell = 6, 
+        AD:Claws (Hooves),
+        AD:Enhanced Move (Ground) = 2,
+        AD:Extra Legs (4 legs),
+        AD:Empathy with "Based on Sense of Smell; only works with other K'Kree, -30%",
+        AD:Temperature Tolerance =2,
+        DI:Gregarious,
+        DI:Guilt Complex,
+        DI:Hidebound,
+        DI:Increased Consumption=2,
+        CU:The Two-Thousand Worlds (Native),
+        LA:K'kree=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
+    ),
+    creates(_
+        {AD:K'kree Attribute Mods, 32, gives(+2 to ST:Size Modifier, +2 to ST:ST, -2 to ST:IQ, +6 to ST:Hit Points, -2 to Dodge, +20 to ST:Lifting ST, +10 to ST:Kick),hide(yes)},
+        {DI:Fanaticism (Exterminate predators/carnivores), -15},
+        {DI:Intolerance (all non-K'kree), -10},
+        {DI:Severe Claustrophobia, -30},
+        {DI:Racial Reputation (Intolerant Fascists), -10, conditional(-2 to reactions from non-K'kree)},
+        {QU:Incompetence (Free Fall), -1, gives(-4 to SK:Free Fall), notes(You may not learn Free fall while you have this trait. This trait may be bought off)}_
+    ),
+    noresync(no), invisible (yes), hide(yes),page(TAR2:64),
+    owns(yes)
+K'kree (male), cat(Non-human Races), cost(0), displaycost(-17), race(K'kree), 
+    adds(_	
+        TE:K'kree _
+    ),
+    noresync(no),page(TAR2:64),
+    owns(yes)
+K'kree (female), cat(Non-human Races), cost(0), displaycost(-47), race(K'kree), 
+    adds(_	
+        DI:Combat Paralysis,
+        DI:Social Stigma (Second-Class Citizen),
+        DI:Social Stigma (Valuable Property),
+        TE:K'kree _
+    ),
+    noresync(no),page(TAR2:64),
+    owns(yes)
+
+Shrieker, cat(Non-human Races), cost(0), displaycost(-9), race(Shrieker), 
+    adds(_	
+        AD:Acute Vision=2,
+        AD:Extra Legs (6 legs),
+        AD:Infravision,
+        AD:Ultrahearing,
+        DI:Increased Consumption=1,
+        DI:Low TL=5,
+        DI:Self-Destruct,
+        DI:Short Arms (2 Arms),
+        DI:Short Lifespan,
+        QU:Broad-Minded,
+        CU:Shrieker (Native),
+        LA:Shrieker=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+    ),
+    creates(_
+        {"DI:Poor Sense of Smell/Taste", -2, gives(-5 to ST:Taste/Smell)},
+        {"AD:Shrieker Attribute Mods", 30, gives( -3 to ST:Basic Move,+4 to ST:ST, +2 to ST:HT, +2 to ST:Hit Points),conditional(+2 to SK:Camouflage when "in tall grass"),hide(yes)},
+    ),
+    noresync(no),page(TAR4:107),
+    owns(yes)
+
+Vargr, cat(Non-human Races), cost(0), displaycost(23), race(Vargr), 
     adds(_	
         AD:Acute Taste and Smell = 3, 
         AD:Acute Vision = 1, 
@@ -1315,23 +1679,25 @@ Vargr, cat(Non-human Races), cost(0), displaycost(18), race(Vargr),
         AD:Damage Resistance=1 with "Tough Skin, -40%",
         AD:Enhanced Move (Ground)=2 with "Fatigues after 5 seconds, -5%",
         CU:Vargr (Native),
+        CU:Imperial,
         DI:Chummy, 
         DI:Curious, 
         DI:Easy to Read, 
         DI:Cannot Kick,
         LA:Vargr=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        LA:Galanglic=2,
         QU:Proud_
     ),
     creates(_
         {AD:Fur, 1},
-        {AD:Vargr Attribute Mods, 15, gives(-1 to ST:ST, +1 to ST:DX, +1 to ST:Per, -1 to ST:Fatigue Points, -1 to ST:Hit Points),hide(yes)},
+        {AD:Vargr Attribute Mods, 15, gives(-1 to ST:ST, +1 to ST:DX, +1 to ST:Perception, -1 to ST:Fatigue Points, -1 to ST:Hit Points),hide(yes)},
         {DI:Racial Reputation (Flaky and potentially disloyal), -5/-10,page(B27), downto(1), upto(1), cat(Mundane, Social, Influence), conditional(-1 to ST:Reaction when "your reputation works against you")},
         {QU:Heavily influenced by Pack Reputation, -1}_
     ),
-    noresync(no),
+    noresync(no),page(TAR1:64),
     owns(yes)
 
-Clotho, cat(Non-human Races), cost(0), displaycost(14), race(Clotho),
+Clotho, cat(Non-human Races), cost(0), displaycost(19), race(Clotho),
     BodyType(Hexapod),
     HitTable(Hexapod),
     adds(_
@@ -1343,10 +1709,12 @@ Clotho, cat(Non-human Races), cost(0), displaycost(14), race(Clotho),
         AD:Extra Legs (4 Legs),
         AD:High Manual Dexterity=2 with "Upper arms only, -0%",
         CU:Clotho (Native),
+        CU:Imperial,
         DI:Compulsive Behavior (Proper Grooming)=2,
         DI:Mute,
         DI:Sense of Duty (Sibling)=1,
         LA:Clotho=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
+        LA:Galanglic=2,
         DI:Squeamish,
         QU:Attentive,
         QU:Chauvinistic,
@@ -1358,7 +1726,7 @@ Clotho, cat(Non-human Races), cost(0), displaycost(14), race(Clotho),
         {"DI:Phobia (Separation from sibling)", -15},
         {"FE:Fur", 0}_
     ),
-    noresync(no),
+    noresync(no),page(TAR1:113),
     owns(yes)
 
 Drakaran, cat(Non-human Races), cost(0), displaycost(47), race(Drakaran),
@@ -1379,14 +1747,14 @@ Drakaran, cat(Non-human Races), cost(0), displaycost(47), race(Drakaran),
     creates(_
         {"AD:Drakaran Depth Perception", 15, initmods(Accessibility: When able to compensate for one eye (most circumstances), -10%)},
         {"FE:One Eye", 0},
-        {"AD:Drakaran Attribute Mods", 15, gives(+3 to ST:ST, +1 to ST:HT, +1 to ST:Hit Points),hide(yes)},
+        {"AD:Drakaran Attribute Mods", 27, gives(+3 to ST:ST, +1 to ST:HT, +1 to ST:Hit Points),hide(yes)},
         {"AD:Drakarans rarely display emotions and are not prone to panic", 1, gives(+1 to ST:Fright Check)},
         {"AD:Striker (Crushing; Tail)", 10, displaycost(0), mods(Striker, Alternative Attack), page(B88), cat(Exotic, Physical, Natural Attacks), damage(thr+@if(@hasmod(Weak) then 0 else @basethdice(me::chareffectivest)) +  @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))), damtype(cr), reach(C,1), parry(0), skillused(ST:DX-4, SK:Brawling, SK:Karate), reachbasedon(0), mode(Tail), itemnotes("May attack/parry back and side hexes only")} _
     ),
-    noresync(no),
+    noresync(no),page(TAR1:100),
     owns(yes)
 
-Droyne, cat(Non-human Races), cost(0), displaycost(-25), race(Droyne),invisible(yes),
+Droyne, cat(Non-human Races), cost(0), displaycost(-15), race(Droyne),invisible(yes),
     BodyType(Winged Humanoid),
     HitTable(Winged Humanoid),
     adds(_
@@ -1397,7 +1765,6 @@ Droyne, cat(Non-human Races), cost(0), displaycost(-25), race(Droyne),invisible(
         AD:Night Vision=5,
         AD:Peripheral Vision,
         AD:Reduced Consumption=1,
-        AD:Telepathy Talent=3,
         AD:Telereceive - Shallow (Psi)=3 with "Only receives thoughts from fellow oytrip members, -35%",
         AD:Telescan (Psi)=1 with "Only to find oytrip or oytrip members, -20%",
         CU:Droyne (Native),
@@ -1408,30 +1775,63 @@ Droyne, cat(Non-human Races), cost(0), displaycost(-25), race(Droyne),invisible(
         DI:Secret (Psionics)=2,
         DI:Selfless,
         DI:Short Lifespan=1 with "Only affects maturity and age thresholds, +50%",
-        DI:Vulnerability (Crushing)=2 with "Wounding Multiplier x2, *1",
+        DI:Vulnerability (Crushing)=3 with "Wounding Multiplier x2, *1",
         LA:Oynprith=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
-        SK:Mind Clouding =1pts,
-        SK:Stealth=1pts,
-        SK:Telereceive =1pts,
-        SK:Telescan =1pts_
+        SK:Telepathy=21pts,
+        SK:Mind Clouding =3pts,
+        SK:Telescan=3pts,
+        SK:Telereceive=3pts,
+        SK:Stealth=3pts,
+        SK:Mind Clouding (Bulk Compensation) =1pts_
     ),
     creates(_
         {"AD:Striker (Crushing; Tail)", 5, displaycost(0), mods(Striker, Alternative Attack), page(B88), cat(Exotic, Physical, Natural Attacks), damage(thr+@if(@hasmod(Weak) then 0 else @basethdice(me::chareffectivest)) +  @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))), damtype(cr), reach(C), parry(0), skillused(ST:DX, SK:Brawling, SK:Karate), reachbasedon(0), mode(Tail), itemnotes({May attack/parry back and side hexes only})},
         {"DI:Addiction (Purpose in Life)", -10, page(B122)},
-        {"DI:Droyne Attribute Mods", -69, gives(-3 to ST:ST, -1 to ST:DX, -2 to ST:IQ, +3 to SK:Mind Clouding), hide(yes)},
+        {"DI:Droyne Attribute Mods", -72, gives(-3 to ST:ST, -1 to ST:DX, -2 to ST:IQ, +3 to SK:Mind Clouding, -1 to ST:Fatigue Points), hide(yes)},
         {"FE:Krinaytsu (can will own death)", 0}_
     ),
-    noresync(no),hide(yes),
+    noresync(no),hide(yes),page(TAR3:63),
     owns(yes)
 
 Droyne (Sport), cat(Non-human Races), cost(0), displaycost(55), race(Droyne (Sport)),
     adds(_
+        CU:Imperial,
+        LA:Galanglic=2,
         TE:Droyne _
     ),
     creates(_
-        {"AD:Droyne Sport Attribute Mods", +80, gives(-1 to ST:Size Modifier, +3 to ST:IQ, +1 to ST:DX), hide(yes)},
+        {"AD:Droyne Sport Attribute Mods", +62, gives(+1 to ST:Hit Points, -1 to ST:Size Modifier, +2 to ST:IQ, +1 to ST:DX), hide(yes)},
     ),
-    noresync(no),
+    noresync(no),page(TAR3:63),
+    owns(yes)
+
+Tezcat, cat(Non-human Races), cost(0), displaycost(14), race(Tezcat),
+    adds(_
+        AD:Chameleon=2,
+        AD:Claws (Sharp Claws),
+        AD:High Manual Dexterity=2,
+        AD:Night Vision=8,
+        AD:Teeth (Sharp Teeth),
+        DI:Bad Sight (Nearsighted) with "In daylight, -60%",
+        DI:Chummy,
+        DI:Easy to Read,
+        DI:Impulsiveness,
+        CU:Tezcat (Native),
+        LA:Tezcat=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
+    ),
+    creates(_
+        {"AD:Tezcat Attribute Mods", 15, gives(+1 to ST:Perception, +1 to ST:DX, -1 to ST:HT), hide(yes)},
+        {"DI:Intolerance (Psionics)", -5},
+        {"QU:Xenophobia", -1},
+        {"AD:Innate Attack (Toxic)",4/8,cat(Exotic, Physical, Innate Attack, Natural Attacks, Exotic Physical),page(B61),mods(_Attack Enhancements, _Attack Limitations, Alternative Attack, Toxic Attack Enhancements, Toxic Attack Limitations, Innate Attack),upto(@if(@hasmod(Partial Dice (Does only 1 pt)) THEN 1)),noresync(yes),basedon(Innate Attack (%TypeList%)),mode(Primary),reachbasedon(0),acc(3),damage($solver(%level)d),dmg(1),damtype(tox),parry(0),rangehalfdam(10),rangemax(100),rcl(1),rof(1),skillused(ST:DX, SK:Brawling),minimode_damage($solver(%level)d),minimode_damtype(tox),
+         initmods( _
+               {Cyclic (1 second interval),group(Toxic Attack Enhancements),cost(+0%/+100%/+200%),page(B103),gives(=" {x$solver(me::level)/sec}" to owner::damtype$),level(2),formula(@if(@ownerhasmod(Resistible) then 0.5 ELSE 1) * (me::level - 1) * 100),forceformula(yes),levelnames(1 cycle,2 cycles, 3 cycles, 4 cycles, 5 cycles, 6 cycles, 7 cycles, 8 cycles, 9 cycles, 10 cycles, 11 cycles, 12 cycles, 13 cycles, 14 cycles, 15 cycles, 16 cycles, 17 cycles, 18 cycles, 19 cycles, 20 cycles, 21 cycles, 22 cycles, 23 cycles, 24 cycles, 25 cycles, 26 cycles, 27 cycles, 28 cycles, 29 cycles, 30 cycles, 31 cycles, 32 cycles, 33 cycles, 34 cycles, 35 cycles, 36 cycles, 37 cycles, 38 cycles, 39 cycles, 40 cycles, 41 cycles, 42 cycles, 43 cycles, 44 cycles, 45 cycles, 46 cycles, 47 cycles, 48 cycles, 49 cycles, 50 cycles, 51 cycles, 52 cycles, 53 cycles, 54 cycles, 55 cycles, 56 cycles, 57 cycles, 58 cycles, 59 cycles, 60 cycles, 61 cycles, 62 cycles, 63 cycles, 64 cycles, 65 cycles, 66 cycles, 67 cycles, 68 cycles, 69 cycles, 70 cycles, 71 cycles, 72 cycles, 73 cycles, 74 cycles, 75 cycles, 76 cycles, 77 cycles, 78 cycles, 79 cycles, 80 cycles, 81 cycles, 82 cycles, 83 cycles, 84 cycles, 85 cycles, 86 cycles, 87 cycles, 88 cycles, 89 cycles, 90 cycles, 91 cycles, 92 cycles, 93 cycles, 94 cycles, 95 cycles, 96 cycles, 97 cycles, 98 cycles, 99 cycles, 100 cycles, 101 cycles, 102 cycles, 103 cycles, 104 cycles, 105 cycles, 106 cycles, 107 cycles, 108 cycles, 109 cycles, 110 cycles, 111 cycles, 112 cycles, 113 cycles, 114 cycles, 115 cycles, 116 cycles, 117 cycles, 118 cycles, 119 cycles, 120 cycles, 121 cycles, 122 cycles, 123 cycles, 124 cycles, 125 cycles, 126 cycles, 127 cycles, 128 cycles, 129 cycles, 130 cycles, 131 cycles, 132 cycles, 133 cycles, 134 cycles, 135 cycles, 136 cycles, 137 cycles, 138 cycles, 139 cycles, 140 cycles, 141 cycles, 142 cycles, 143 cycles, 144 cycles, 145 cycles, 146 cycles, 147 cycles, 148 cycles, 149 cycles, 150 cycles, 151 cycles, 152 cycles, 153 cycles, 154 cycles, 155 cycles, 156 cycles, 157 cycles, 158 cycles, 159 cycles, 160 cycles, 161 cycles, 162 cycles, 163 cycles, 164 cycles, 165 cycles, 166 cycles, 167 cycles, 168 cycles, 169 cycles, 170 cycles, 171 cycles, 172 cycles, 173 cycles, 174 cycles, 175 cycles, 176 cycles, 177 cycles, 178 cycles, 179 cycles, 180 cycles, 181 cycles, 182 cycles, 183 cycles, 184 cycles, 185 cycles, 186 cycles, 187 cycles, 188 cycles, 189 cycles, 190 cycles, 191 cycles, 192 cycles, 193 cycles, 194 cycles, 195 cycles, 196 cycles, 197 cycles, 198 cycles, 199 cycles, 200 cycles, 201 cycles, 202 cycles, 203 cycles, 204 cycles, 205 cycles, 206 cycles, 207 cycles, 208 cycles, 209 cycles, 210 cycles, 211 cycles, 212 cycles, 213 cycles, 214 cycles, 215 cycles, 216 cycles, 217 cycles, 218 cycles, 219 cycles, 220 cycles, 221 cycles, 222 cycles, 223 cycles, 224 cycles, 225 cycles, 226 cycles, 227 cycles, 228 cycles, 229 cycles, 230 cycles, 231 cycles, 232 cycles, 233 cycles, 234 cycles, 235 cycles, 236 cycles, 237 cycles, 238 cycles, 239 cycles, 240 cycles, 241 cycles, 242 cycles, 243 cycles, 244 cycles, 245 cycles, 246 cycles, 247 cycles, 248 cycles, 249 cycles, 250 cycles, 251 cycles, 252 cycles, 253 cycles, 254 cycles, 255 cycles, 256 cycles, 257 cycles, 258 cycles, 259 cycles, 260 cycles, 261 cycles, 262 cycles, 263 cycles, 264 cycles, 265 cycles, 266 cycles, 267 cycles, 268 cycles, 269 cycles, 270 cycles, 271 cycles, 272 cycles, 273 cycles, 274 cycles, 275 cycles, 276 cycles, 277 cycles, 278 cycles, 279 cycles, 280 cycles, 281 cycles, 282 cycles, 283 cycles, 284 cycles, 285 cycles, 286 cycles, 287 cycles, 288 cycles, 289 cycles, 290 cycles, 291 cycles, 292 cycles, 293 cycles, 294 cycles, 295 cycles, 296 cycles, 297 cycles, 298 cycles, 299 cycles, 300 cycles, 301 cycles, 302 cycles, 303 cycles, 304 cycles, 305 cycles, 306 cycles, 307 cycles, 308 cycles, 309 cycles, 310 cycles, 311 cycles, 312 cycles, 313 cycles, 314 cycles, 315 cycles, 316 cycles, 317 cycles, 318 cycles, 319 cycles, 320 cycles, 321 cycles, 322 cycles, 323 cycles, 324 cycles, 325 cycles, 326 cycles, 327 cycles, 328 cycles, 329 cycles, 330 cycles, 331 cycles, 332 cycles, 333 cycles, 334 cycles, 335 cycles, 336 cycles, 337 cycles, 338 cycles, 339 cycles, 340 cycles, 341 cycles, 342 cycles, 343 cycles, 344 cycles, 345 cycles, 346 cycles, 347 cycles, 348 cycles, 349 cycles, 350 cycles, 351 cycles, 352 cycles, 353 cycles, 354 cycles, 355 cycles, 356 cycles, 357 cycles, 358 cycles, 359 cycles, 360 cycles, 361 cycles, 362 cycles, 363 cycles, 364 cycles, 365 cycles, 366 cycles, 367 cycles, 368 cycles, 369 cycles, 370 cycles, 371 cycles, 372 cycles, 373 cycles, 374 cycles, 375 cycles, 376 cycles, 377 cycles, 378 cycles, 379 cycles, 380 cycles, 381 cycles, 382 cycles, 383 cycles, 384 cycles, 385 cycles, 386 cycles, 387 cycles, 388 cycles, 389 cycles, 390 cycles, 391 cycles, 392 cycles, 393 cycles, 394 cycles, 395 cycles, 396 cycles, 397 cycles, 398 cycles, 399 cycles, 400 cycles, 401 cycles, 402 cycles, 403 cycles, 404 cycles, 405 cycles, 406 cycles, 407 cycles, 408 cycles, 409 cycles, 410 cycles, 411 cycles, 412 cycles, 413 cycles, 414 cycles, 415 cycles, 416 cycles, 417 cycles, 418 cycles, 419 cycles, 420 cycles, 421 cycles, 422 cycles, 423 cycles, 424 cycles, 425 cycles, 426 cycles, 427 cycles, 428 cycles, 429 cycles, 430 cycles, 431 cycles, 432 cycles, 433 cycles, 434 cycles, 435 cycles, 436 cycles, 437 cycles, 438 cycles, 439 cycles, 440 cycles, 441 cycles, 442 cycles, 443 cycles, 444 cycles, 445 cycles, 446 cycles, 447 cycles, 448 cycles, 449 cycles, 450 cycles, 451 cycles, 452 cycles, 453 cycles, 454 cycles, 455 cycles, 456 cycles, 457 cycles, 458 cycles, 459 cycles, 460 cycles, 461 cycles, 462 cycles, 463 cycles, 464 cycles, 465 cycles, 466 cycles, 467 cycles, 468 cycles, 469 cycles, 470 cycles, 471 cycles, 472 cycles, 473 cycles, 474 cycles, 475 cycles, 476 cycles, 477 cycles, 478 cycles, 479 cycles, 480 cycles, 481 cycles, 482 cycles, 483 cycles, 484 cycles, 485 cycles, 486 cycles, 487 cycles, 488 cycles, 489 cycles, 490 cycles, 491 cycles, 492 cycles, 493 cycles, 494 cycles, 495 cycles, 496 cycles, 497 cycles, 498 cycles, 499 cycles, 500 cycles, 501 cycles, 502 cycles, 503 cycles, 504 cycles, 505 cycles, 506 cycles, 507 cycles, 508 cycles, 509 cycles, 510 cycles, 511 cycles, 512 cycles, 513 cycles, 514 cycles, 515 cycles, 516 cycles, 517 cycles, 518 cycles, 519 cycles, 520 cycles, 521 cycles, 522 cycles, 523 cycles, 524 cycles, 525 cycles, 526 cycles, 527 cycles, 528 cycles, 529 cycles, 530 cycles, 531 cycles, 532 cycles, 533 cycles, 534 cycles, 535 cycles, 536 cycles, 537 cycles, 538 cycles, 539 cycles, 540 cycles, 541 cycles, 542 cycles, 543 cycles, 544 cycles, 545 cycles, 546 cycles, 547 cycles, 548 cycles, 549 cycles, 550 cycles, 551 cycles, 552 cycles, 553 cycles, 554 cycles, 555 cycles, 556 cycles, 557 cycles, 558 cycles, 559 cycles, 560 cycles, 561 cycles, 562 cycles, 563 cycles, 564 cycles, 565 cycles, 566 cycles, 567 cycles, 568 cycles, 569 cycles, 570 cycles, 571 cycles, 572 cycles, 573 cycles, 574 cycles, 575 cycles, 576 cycles, 577 cycles, 578 cycles, 579 cycles, 580 cycles, 581 cycles, 582 cycles, 583 cycles, 584 cycles, 585 cycles, 586 cycles, 587 cycles, 588 cycles, 589 cycles, 590 cycles, 591 cycles, 592 cycles, 593 cycles, 594 cycles, 595 cycles, 596 cycles, 597 cycles, 598 cycles, 599 cycles, 600 cycles, 601 cycles, 602 cycles, 603 cycles, 604 cycles, 605 cycles, 606 cycles, 607 cycles, 608 cycles, 609 cycles, 610 cycles, 611 cycles, 612 cycles, 613 cycles, 614 cycles, 615 cycles, 616 cycles, 617 cycles, 618 cycles, 619 cycles, 620 cycles, 621 cycles, 622 cycles, 623 cycles, 624 cycles, 625 cycles, 626 cycles, 627 cycles, 628 cycles, 629 cycles, 630 cycles, 631 cycles, 632 cycles, 633 cycles, 634 cycles, 635 cycles, 636 cycles, 637 cycles, 638 cycles, 639 cycles, 640 cycles, 641 cycles, 642 cycles, 643 cycles, 644 cycles, 645 cycles, 646 cycles, 647 cycles, 648 cycles, 649 cycles, 650 cycles, 651 cycles, 652 cycles, 653 cycles, 654 cycles, 655 cycles, 656 cycles, 657 cycles, 658 cycles, 659 cycles, 660 cycles, 661 cycles, 662 cycles, 663 cycles, 664 cycles, 665 cycles, 666 cycles, 667 cycles, 668 cycles, 669 cycles, 670 cycles, 671 cycles, 672 cycles, 673 cycles, 674 cycles, 675 cycles, 676 cycles, 677 cycles, 678 cycles, 679 cycles, 680 cycles, 681 cycles, 682 cycles, 683 cycles, 684 cycles, 685 cycles, 686 cycles, 687 cycles, 688 cycles, 689 cycles, 690 cycles, 691 cycles, 692 cycles, 693 cycles, 694 cycles, 695 cycles, 696 cycles, 697 cycles, 698 cycles, 699 cycles, 700 cycles, 701 cycles, 702 cycles, 703 cycles, 704 cycles, 705 cycles, 706 cycles, 707 cycles, 708 cycles, 709 cycles, 710 cycles, 711 cycles, 712 cycles, 713 cycles, 714 cycles, 715 cycles, 716 cycles, 717 cycles, 718 cycles, 719 cycles, 720 cycles, 721 cycles, 722 cycles, 723 cycles, 724 cycles, 725 cycles, 726 cycles, 727 cycles, 728 cycles, 729 cycles, 730 cycles, 731 cycles, 732 cycles, 733 cycles, 734 cycles, 735 cycles, 736 cycles, 737 cycles, 738 cycles, 739 cycles, 740 cycles, 741 cycles, 742 cycles, 743 cycles, 744 cycles, 745 cycles, 746 cycles, 747 cycles, 748 cycles, 749 cycles, 750 cycles, 751 cycles, 752 cycles, 753 cycles, 754 cycles, 755 cycles, 756 cycles, 757 cycles, 758 cycles, 759 cycles, 760 cycles, 761 cycles, 762 cycles, 763 cycles, 764 cycles, 765 cycles, 766 cycles, 767 cycles, 768 cycles, 769 cycles, 770 cycles, 771 cycles, 772 cycles, 773 cycles, 774 cycles, 775 cycles, 776 cycles, 777 cycles, 778 cycles, 779 cycles, 780 cycles, 781 cycles, 782 cycles, 783 cycles, 784 cycles, 785 cycles, 786 cycles, 787 cycles, 788 cycles, 789 cycles, 790 cycles, 791 cycles, 792 cycles, 793 cycles, 794 cycles, 795 cycles, 796 cycles, 797 cycles, 798 cycles, 799 cycles, 800 cycles, 801 cycles, 802 cycles, 803 cycles, 804 cycles, 805 cycles, 806 cycles, 807 cycles, 808 cycles, 809 cycles, 810 cycles, 811 cycles, 812 cycles, 813 cycles, 814 cycles, 815 cycles, 816 cycles, 817 cycles, 818 cycles, 819 cycles, 820 cycles, 821 cycles, 822 cycles, 823 cycles, 824 cycles, 825 cycles, 826 cycles, 827 cycles, 828 cycles, 829 cycles, 830 cycles, 831 cycles, 832 cycles, 833 cycles, 834 cycles, 835 cycles, 836 cycles, 837 cycles, 838 cycles, 839 cycles, 840 cycles, 841 cycles, 842 cycles, 843 cycles, 844 cycles, 845 cycles, 846 cycles, 847 cycles, 848 cycles, 849 cycles, 850 cycles, 851 cycles, 852 cycles, 853 cycles, 854 cycles, 855 cycles, 856 cycles, 857 cycles, 858 cycles, 859 cycles, 860 cycles, 861 cycles, 862 cycles, 863 cycles, 864 cycles, 865 cycles, 866 cycles, 867 cycles, 868 cycles, 869 cycles, 870 cycles, 871 cycles, 872 cycles, 873 cycles, 874 cycles, 875 cycles, 876 cycles, 877 cycles, 878 cycles, 879 cycles, 880 cycles, 881 cycles, 882 cycles, 883 cycles, 884 cycles, 885 cycles, 886 cycles, 887 cycles, 888 cycles, 889 cycles, 890 cycles, 891 cycles, 892 cycles, 893 cycles, 894 cycles, 895 cycles, 896 cycles, 897 cycles, 898 cycles, 899 cycles, 900 cycles, 901 cycles, 902 cycles, 903 cycles, 904 cycles, 905 cycles, 906 cycles, 907 cycles, 908 cycles, 909 cycles, 910 cycles, 911 cycles, 912 cycles, 913 cycles, 914 cycles, 915 cycles, 916 cycles, 917 cycles, 918 cycles, 919 cycles, 920 cycles, 921 cycles, 922 cycles, 923 cycles, 924 cycles, 925 cycles, 926 cycles, 927 cycles, 928 cycles, 929 cycles, 930 cycles, 931 cycles, 932 cycles, 933 cycles, 934 cycles, 935 cycles, 936 cycles, 937 cycles, 938 cycles, 939 cycles, 940 cycles, 941 cycles, 942 cycles, 943 cycles, 944 cycles, 945 cycles, 946 cycles, 947 cycles, 948 cycles, 949 cycles, 950 cycles, 951 cycles, 952 cycles, 953 cycles, 954 cycles, 955 cycles, 956 cycles, 957 cycles, 958 cycles, 959 cycles, 960 cycles, 961 cycles, 962 cycles, 963 cycles, 964 cycles, 965 cycles, 966 cycles, 967 cycles, 968 cycles, 969 cycles, 970 cycles, 971 cycles, 972 cycles, 973 cycles, 974 cycles, 975 cycles, 976 cycles, 977 cycles, 978 cycles, 979 cycles, 980 cycles, 981 cycles, 982 cycles, 983 cycles, 984 cycles, 985 cycles, 986 cycles, 987 cycles, 988 cycles, 989 cycles, 990 cycles, 991 cycles, 992 cycles, 993 cycles, 994 cycles, 995 cycles, 996 cycles, 997 cycles, 998 cycles, 999 cycles, 1,000 cycles)} _
+            | {Follow-Up (Bite),group(_Attack Limitations),cost(+0%/-5%),page(B105),gives(=nobase to owner::rangehalfdam$,=nobase to owner::rangemax$,=nobase to owner::reach$,=nobase to owner::acc$,=nobase to owner::rof$,=nobase to owner::shots$,=nobase to owner::rcl$,="Fol-Up" to owner::reach$,=nobase to owner::parry$,="No" to owner::parry$),x(),level(1)} _
+            | {Resistible,group(Toxic Attack Limitations),cost(-5%/-10%),page(B115),gives(=" R-HT$if(me::level>5 THEN "+$solver(me::level-6)" ELSE "$solver(me::level-6)")" to owner::damtype$),levelnames(HT-5, HT-4, HT-3, HT-2, HT-1, HT),level(1)} _
+         )_ 
+      }=1_
+    ),
+    noresync(no),page(TAR4:116),
     owns(yes)
 
 Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
@@ -1452,14 +1852,39 @@ Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
     ),
     creates(_
         {"DI:Bwap Attribute Mods", -20, gives(-1 to ST:HT, -2 to ST:ST), hide(yes)},
-        {"DI:Code of Honor (The Wapawab and loyalty to the creche)", -10, page(GTA4:29)},
+        {"DI:Code of Honor (The Wapawab and loyalty to the creche)", -10, page(TA4:29)},
         {"QU:Finds comfort and security in complexity", -1},
         {"QU:Hates to Hurry", -1}_
     ),
-    noresync(no),
+    noresync(no),page(TAR4:22),
     owns(yes)
 
-
+_Basic Kit,
+    cost(0),
+    displaycost(0),
+    hide(yes),
+    adds(_
+        {EQ:10mmCLP Conventional Ammunition #loadout(Combat, Travel)}=40,
+        {EQ:10mmCLP Tranquilizer Ammunition #loadout(Combat, Travel)}=40,
+        {EQ:Cigarette Lighter #loadout(Travel, Everyday)},
+        {EQ:Covert Action Communicator #loadout(Travel, Combat, Everyday)},
+        {EQ:Emergency Beacon #loadout(Travel)},
+        {EQ:Envirobag #loadout(Travel)},
+        {EQ:Expedition Backpack #loadout(Travel)},
+        {EQ:Filtration Canteen #loadout(Travel)},
+        {EQ:First Aid Kit #loadout(Travel, Combat, Everyday)},
+        {EQ:Flashlight, Mini #loadout(Travel, Combat)},
+        {EQ:Food Tablet #loadout(Travel)}=3,
+        {EQ:Heavy Pistol, 10mmCLP #loadout(Travel, Combat)},
+        {EQ:IISS Air Mask #loadout(Travel, Combat)},
+        {EQ:IISS Uniform #loadout(Travel, Combat, Everyday)},
+        {EQ:Inertial Compass #loadout(Travel, Combat)},
+        {EQ:Medscanner #loadout(Travel)},
+        {EQ:Mini-Toolkit #loadout(Travel)},
+        {EQ:Small Computer #loadout(Travel)},
+        {EQ:Tent, 1-Man #loadout(Travel)}_
+    ),
+    setloadout(Combat)
 
 [EQUIPMENT]
 
@@ -1467,6 +1892,18 @@ Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
 #Clone EQ:Grav Bike as EQ:Contragrav Bike
 #Clone EQ:Grav Jeep as EQ:Contragrav Transport
 
+#Delete Battlesuit (TL9)
+#Delete Battlesuit (TL10)
+#Delete Battlesuit (TL11)
+#Delete Battlesuit Helmet (TL9)
+#Delete Battlesuit Helmet (TL10)
+#Delete Battlesuit Helmet (TL11)
+#Delete Commando Battlesuit
+#Delete Commando Battlesuit Helmet
+#Delete Dreadnought Battlesuit
+#Delete Dreadnought Battlesuit Helmet
+#Delete Heavy Battlesuit
+#Delete Heavy Battlesuit Helmet
 #Delete "EQ:Camera, 35mm"
 #Delete "EQ:Film, 35mm"
 #Delete "EQ:Plow, Iron"
@@ -1508,6 +1945,7 @@ Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
 #Delete EQ:Tramp Steamer
 #Delete EQ:Chariot
 #Delete EQ:Dogsled
+#Delete EQ:Space Biosuit
 
 #DeleteByTag Advanyages, Text IgnoreEmpty, techlvl = 11^
 #DeleteByTag Advanyages, Text IgnoreEmpty, techlvl = 12
@@ -1521,8 +1959,8 @@ Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Basic Set - Vehicles - Spacecraft"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Ammunition - Grav Gun Ammunition"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Armor - Bioplas Armor"
-#DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Cybernetics - Body Modifications"
-#DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Cybernetics - Brain Implants"
+* #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Cybernetics - Body Modifications"
+* #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Cybernetics - Brain Implants"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Antiparticle Beam"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Blue-Green Laser"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Ultraviolet Laser"
@@ -1532,6 +1970,7 @@ Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - X-Ray Laser"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Neural Weapon"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Omni-Particle Beam"
+#DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Basic Set - Firearms"
 #DeleteByTag Equipment, Text IgnoreEmpty, name contains Laser Crystal
 #DeleteByTag Equipment, Text IgnoreEmpty, name contains Antimatter
 #DeleteByTag Equipment, Text IgnoreEmpty, name contains Monowire
@@ -1554,6 +1993,242 @@ Bwap, cat(Non-human Races), cost(0), displaycost(13), race(Bwap),
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Meta-Traits - Biomorphic Lenses"
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Racial Templates - Ultra-Tech"
 
+//Guns
+#MergeTags in "EQ:Anti-Materiel Rifle 15mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Assault Carbine, 7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Auto Rifle, 7.62mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Bazooka, 60mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Civilian Shotgun, 18.5mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Close Assault Weapon, 18.5mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:EMGL, 40mmG" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gattling Carbine, 5.7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss CAW, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss LSW, 4mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Machine Pistol, 4mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Minineedler, 3mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Needle Rifle, 3mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Needler, 3mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Pistol, 4mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Shotgun Pistol, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gyroc Carbine, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gyroc Launch Pistol, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gyroc LSW, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Heavy Pistol, 10mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Holdout Gyroc, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Holdout Pistol, 7.5mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Hunting Rifle, 7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Ice Gun, 3mm ice" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:LAW, 86mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Light Support Weapon, 7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:LMG, 7.62mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Machine Pistol, 10mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Magnum Pistol, 15mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Medium Pistol, 7.5mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Needle Rifle, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Paint Carbine, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Paint Pistol, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Partisan Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Payload Rifle, 25mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Personal Defense Weapon, 5.7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Portable Railgun, 10mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:RPG, 85mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:SAW, 5.56" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Shotgun Pistol 18.5mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Sniper Railgun, 7mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Splat Gun, 15mmPLB" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Storm Carbine, 10mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Storm Chaingun, 10mmCLR" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Storm Rifle, 10mmCLR" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Tangler Pistol, 25mmT" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Tangler, 25mmT" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Under-Barrel Grenade Launcher, 40mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel EMGL, 25mmG" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Grenade Launcher, 25mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Grenade Launcher, 40mmPLB" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Gyroc, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Shotgun, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Urban Assault Weapon" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Wrist Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+
+
+//Liquid Projector
+#MergeTags in "EQ:Assault Flamer" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Backpack Vortex Projector" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Flamethrower" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Pocket Aerosol" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Spray Can" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Spray Tank" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Underbarrel Vortex Projector" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Vortex Pistol" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+
+//Beam Weapons
+#MergeTags in "EQ:Area Defense Laser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Dazzler Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Dinosaur Laser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Dinosaur Stunner" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:EMP Gun" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Fusion Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Fusion Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Fusion Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Hand Flamer" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Electrolaser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Flamer" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Fusion Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Fusion Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Laser Flashlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Laser Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Plasma Gun" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Holdout Electrolaser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Penlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Searchlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Sniper Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Military Ladar" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Mini Laser Flashlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Nausea Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Nausea Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Point Defense Laser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Pulse Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Scrambler" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Screamer Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Screamer Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stinger" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stun Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stun Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stunner" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Underbarrel Electrolaser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+
+//Artillery
+#MergeTags in "EQ:Assault Cannon, 25mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Electromag Mortar, 64mm" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Heavy Chaingun, 15mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:IML, 64mm (TL 9)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:IML, 64mm (TL10)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Minigun, 7mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:MLAWS, 64mm (TL 9)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:MLAWS, 64mm (TL10)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Mortar Box, 40mmPLB" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Mortar Box, 64mmPLB" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:SAM, 70mm" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Tank Cannon, 100mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:TML, 100mm (TL9)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:TML, 100mm (TL10)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:" with skillused(SK:Ranged Combat, SK:Artillery)
+
+//Gunner
+#MergeTags in "EQ:ATGM, 115mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Auto EMGL, 40mmG" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Fusion Cannon (TL10)" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Fusion Cannon (TL11)" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Gattling Laser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Gauss HMG, 7mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Gauss Minigun, 4mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:HMG, .50" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Laser Cannon" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Plasma Cannon" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Plasma Gattling Gun" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Railgun, 40mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Electrolaser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Flamer" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Fusion Gun" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Laser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Plasma Gun" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Sonic Stun Cannon" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Strike Laser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical Disrupter" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical MAD" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical Nauseator" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical Screamer" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:" with skillused(SK:Ranged Combat, SK:Gunner)
+
+
+<Traveller, Traveller - Ammunition>
+10mmCLP Tranquilizer Ammunition, baseweight(0.014), basecost(0.84) 
+
+<Traveller, Traveller - Miscellaneous - Communication>
+Covert Action Communicator, baseweight(0), basecost(100),page(TFI27)
+Emergency Beacon, baseweight(2), basecost(1000), page(TFI27)
+
+<Traveller, Traveller - Miscellaneous - Survival>
+Envirobag, tl(10), baseweight(2), basecost(80), page(UT75)
+Expedition Backpack, displaycost(350), displayweight(110), techlevel(11), basecost(350), baseweight(5), isparent(yes), weightcapacity(100)
+Filtration Canteen, baseweight(3), basecost(180), page(UT75)
+Food Tablets (1 day), baseweight(0.75), basecost(10), page(UT73)
+IISS Air Mask, baseweight(4), basecost(500), description(includes 60 minutes of air), page(GT112)
+
+<Traveller, Traveller - Armor>
+IISS Uniform, baseweight(1500), basecost(1100), dr(16/2), baseweight(4.2), location(torso, neck, skull, arms, legs, hands, feet, groin), description(DR 2 vs impaling)
+
+<Traveller, Traveller - Miscellaneous - Tools>
+Medscanner,baseweight(0.5), basecost(750), page(TFI28)
+Mini-Toolkit, baseweight(4), basecost(200), page (UT82)
+Small Computer, baseweight(0.5), basecost(100), page(UT22), description(Complexity 4, 10TB) 
+<Traveller,Traveller - Miscellaneous, Traveller - Miscellaneous - Survival>
+Air-Tank, page(T112), baseweight(10), techlevel(9), basecost(100)
+Advanced Rebreather, page(T112), baseweight(1), techlevel(10), basecost(200)
+
+<Traveller, Traveller - Miscellaneous, Traveller - Miscellaneous - Sensors>
+Atmosphere Tester, page(T112), techlevel(9), baseweight(1), basecost(400)
+Biosniffer, page(T112), techlevel(10), baseweight(2), basecost(2000)
+Chemsniffer, page(T113), techlevel(9), baseweight(2), basecost(700)
+Densitometer, page(T113), techlevel(10), baseweight(10), basecost(15000)
+Anti-glare Goggles, page(T113), techlevel(8), baseweight(0.1), basecost(150)
+Infrared Goggles, page(T113), techlevel(8), baseweight(0.1), basecost(600)
+Sensor Visor, page(T113), techlevel(10), baseweight(0.25), basecost(1500)
+
+<Traveller, Traveller - Miscellaneous>
+Automedic, page(T116), techlevel(9), baseweight(50), basecost(5000)
+Electronic Lockpick, page(T116), techlevel(9), baseweight(0.1), basecost(1500)
+Disguise Kit, page(T116), techlevel(5), baseweight(10), basecost(300)
+Inertial Compass, page(T116), techlevel(8), baseweight(0.25), basecost(250)
+Heads-Up Display (Holographic), page(T116), techlevel(10), baseweight(0.5), basecost(500)
+
+<Traveller, Traveller - Miscellaneous, Traveller, Traveller - Miscellaneous, Traveller - Miscellaneous - Tools>
+Basic Engineer Tool Kit, page(T116), techlevel(10), baseweight(300), basecost(800)
+Basic Mechanic Tool Kit, page(T116), techlevel(10), baseweight(300), basecost(800)
+Basic Armoury Tool Kit, page(T116), techlevel(10), baseweight(100), basecost(1200)
+Basic Electronics Tool Kit, page(T116), techlevel(10), baseweight(100), basecost(1200)
+Portable Engineer Tool Kit, page(T116), techlevel(10), baseweight(20), basecost(600)
+Portable Mechanic Tool Kit, page(T116), techlevel(10), baseweight(20), basecost(600)
+Portable Armoury Tool Kit, page(T116), techlevel(10), baseweight(10), basecost(900)
+Portable Electronics Tool Kit, page(T116), techlevel(10), baseweight(10), basecost(900)
+Mini Engineer Tool Kit, page(T116), techlevel(10), baseweight(2), basecost(400)
+Mini Mechanic Tool Kit, page(T116), techlevel(10), baseweight(2), basecost(400)
+Mini Armoury Tool Kit, page(T116), techlevel(10), baseweight(2), basecost(400)
+Mini Electronics Tool Kit, page(T116), techlevel(10), baseweight(2), basecost(400)
+
+<Traveller, Traveller - Armor, _Armor>
+Mesh Armor, techlevel(10), baseweight(6), basecost(900), dr(18/6), location(body,limbs)
+Jack Armor, techlevel(1), page(T117), baseweight(10), basecost(100),dr(1),location(body,limbs)
+Jack Armor (Heavy), techlevel(1), page(T117), baseweight(15), basecost(150),dr(2),location(body,limbs)
+Flak Jacket, techlevel(8), page(T117), baseweight(5), basecost(600), dr(16/2), location(body,arms)
+Reflec Suit, techlevel(10), baseweight(6), basecost(900), dr(12/4), location(body, limbs)
+Scout Expedition Dress, techlevel(11), page(TFI32), baseweight(160), basecost(163000),location(full suit, head, hands, feet), dr(60), gives(+20 to ST:ST, +1 to ST:Basic Move)
+Battledress, techlevel(10), page(T118), baseweight(275), basecost(58050),location(full suit, head, hands, feet), dr(150), gives(+20 to ST:ST, +1 to ST:Basic Move)
+Improved Battledress, techlevel(11), page(T118), baseweight(260), basecost(63050),location(full suit, head, hands, feet), dr(240), gives(+20 to ST:ST, +1 to ST:Basic Move)
+
+
+<Traveller, Traveller - Miscellaneous, Traveller - Miscellaneous - Communication>
+Short-range Communicator, page(T113), techlevel(8), baseweight(0), basecost(50)
+Medium-range Communicator, page(T113), techlevel(8), baseweight(0.5), basecost(200)
+Long-range Communicator, page(T113), techlevel(8), baseweight(10), basecost(600)
+Long-range Communicator (video), page(T113), techlevel(8), baseweight(10), basecost(700)
+
+<Traveller, Traveller - Miscellaneous, Traveller - Miscellaneous - Medical>
+Anagathics (drug, injectable), page(T109), baseweight(0.05), techlevel(11), basecost(30000)
+Anagathics (drug, tablet), page(T109), baseweight(0.01), techlevel(11), basecost(30000)
+Combat (drug, injectable), page(T109), baseweight(0.05), techlevel(10), basecost(400), note(Gives user +2 to ST, DX, and HT. Duration 10 minutes. User has -2 to ST, DX, and HT for 20 minutes after.)
+Combat (drug, tablet), page(T109), baseweight(0.01), techlevel(10), basecost(200), note(1 minute onset. Gives user +2 to ST, DX, and HT. Duration 10 minutes. User has -2 to ST, DX, and HT for 20 minutes after.)
+Fast antidote (drug, injectable), page(T109), baseweight(0.05), techlevel(10), basecost(100), note(Reverses effects of Fast.)
+Fast (drug, injectable), page(T109), baseweight(0.05), techlevel(10), basecost(1500), note(Suspend animation for 60 days, user consumes 1 day's life support. User takes 1d tox damage after.)
+Fast (drug, tablet), page(T109), baseweight(0.01), techlevel(10), basecost(1500), note(One minute onset. Suspend animation for 60 days, user consumes 1 day's life support. User takes 1d tox damage after.)
+Slow (drug, injectable), page(T109), baseweight(0.05), techlevel(10), basecost(2000), note(Gives user Altered Time Rate 1, for 10 minutes. Take 1d tox damage after.)
+Slow (drug, tablet), page(T109), baseweight(0.01), techlevel(10), basecost(2000), note(One minute onset. Gives user Altered Time Rate 1, for 10 minutes. Take 1d tox damage after.)
+
 <Ultra-Tech, Ultra-Tech - Weapons, Ultra-Tech - Weapons - High-Energy Laser, _Firearms, _Firearms - Ultra-Tech>
 Heavy Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), basecost(2400), baseweight(2), techlvl(10), mods(Equipment, Beams, Laser), lc(3),_
 	itemnotes(_
@@ -1562,7 +2237,7 @@ Heavy Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT1
 			),_
         isparent(yes),_
 	description(TL:10 LC:3 Ammo:Dp Damage:4d (2) burn Acc:6 Range:300/900 RoF:10 Shots:(33) ST:6 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(4d), armordivisor(2), damtype(burn), minst(6), rangehalfdam(300), rangemax(900), acc(4), rof(10), uses(33), shots(33(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(4d), armordivisor(2), damtype(burn), minst(6), rangehalfdam(300), rangemax(900), acc(4), rof(10), uses(33), shots(33(3)), rcl(1), bulk(-2), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), basecost(1100), baseweight(1.5), techlvl(10), mods(Equipment, Beams, Laser), lc(3),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1570,7 +2245,7 @@ Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), b
 			),_
         isparent(yes),_
 	description(TL:10 LC:3 Ammo:Dp Damage:3d (2) burn Acc:6 Range:200/600 RoF:10 Shots:66(3) ST:4 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(3d), armordivisor(2), damtype(burn), minst(4), rangehalfdam(200), rangemax(600), acc(6), rof(10), uses(66), shots(66(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(3d), armordivisor(2), damtype(burn), minst(4), rangehalfdam(200), rangemax(600), acc(6), rof(10), uses(66), shots(66(3)), rcl(1), bulk(-2), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Assault Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(10000), baseweight(10), techlvl(9), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1578,7 +2253,7 @@ Assault Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), 
 			),_
         isparent(yes),_
 	description(TL:9 LC:2 Ammo:Ep Damage:4d (2) burn Acc:6+1 Range:700/2100 RoF:1 Shots:80(5) ST:7†  Bulk:-5 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(4d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+1), rof(1), uses(80), shots(80(5)), rcl(1), bulk(-5), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(4d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+1), rof(1), uses(80), shots(80(5)), rcl(1), bulk(-5), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Sniper Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(20000), baseweight(20), techlvl(9), mods(Equipment, Beams, Laser), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1586,7 +2261,7 @@ Laser Sniper Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT1
 			),_
         isparent(yes),_
 	description(TL:9 LC:1 Ammo:Ep Damage:5d (2) burn Acc:8+2 Range:1100/3300 RoF:1 Shots:200(5) ST:10†  Bulk:-8 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1100), rangemax(3300), acc(8+2), rof(1), uses(40), shots(40(5)), rcl(1), bulk(-8), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1100), rangemax(3300), acc(8+2), rof(1), uses(40), shots(40(5)), rcl(1), bulk(-8), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Dinosaur Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(19000), baseweight(19), techlvl(10), mods(Equipment, Beams, Laser), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1594,7 +2269,7 @@ Dinosaur Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116),
 			),_
         isparent(yes),_
 	description(TL:10 LC:1 Ammo:Ep Damage:8d (2) burn Acc:6 Range:1300/3900 RoF:1 Shots:35(5) ST:10†  Bulk:-5 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(8d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1300), rangemax(3900), acc(6), rof(1), uses(70), shots(70(5)), rcl(1), bulk(-5), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(8d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1300), rangemax(3900), acc(6), rof(1), uses(70), shots(70(5)), rcl(1), bulk(-5), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), basecost(4600), baseweight(5.6), techlvl(10), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1602,7 +2277,7 @@ Laser Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), 
 			),_
         isparent(yes),_
 	description(TL:10 LC:2 Ammo:2Dp Damage:5d (2) burn Acc:6 Range:500/1500 RoF:10 Shots:56(3) ST:5†  Bulk:-3 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(2), damtype(burn), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5), rof(10), uses(56), shots(56(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(2), damtype(burn), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5), rof(10), uses(56), shots(56(3)), rcl(1), bulk(-3), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), basecost(8000), baseweight(8), techlvl(10), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1610,7 +2285,7 @@ Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), ba
 			),_
         isparent(yes),_
 	description(TL:10 LC:2 Ammo:Dp Damage:6d (2) burn Acc:6 Range:700/2100 RoF:10 Shots:83(5) ST:7†  Bulk:-4 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(6d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6), rof(10), uses(83), shots(83(5)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(6d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6), rof(10), uses(83), shots(83(5)), rcl(1), bulk(-4), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 
 
 <Ultra-Tech, Ultra-Tech - Weapons, Ultra-Tech - Weapons - Particle Beam, _Firearms, _Firearms - Ultra-Tech>
@@ -1621,7 +2296,7 @@ Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), 
 			),_
         isparent(yes),_
 	description(TL:11 LC:3 Ammo:Dp Damage:3d (5) burn sur Acc:5 Range:300/900 RoF:3 Shots:80(3) ST:4 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(3d), armordivisor(5), damtype(burn sur), minst(4), rangehalfdam(300), rangemax(900), acc(5), rof(3), uses(80), shots(80(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(3d), armordivisor(5), damtype(burn sur), minst(4), rangehalfdam(300), rangemax(900), acc(5), rof(3), uses(80), shots(80(3)), rcl(1), bulk(-2), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Heavy Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(2Dp), page(UT123), basecost(5600), baseweight(3.3), techlvl(11), mods(Equipment, Beams), lc(3),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1629,7 +2304,7 @@ Heavy Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(2Dp), page(U
 			),_
         isparent(yes),_
 	description(TL:11 LC:3 Ammo:2Dp Damage:4d (5) burn sur Acc:5 Range:500/1500 RoF:3 Shots:66(3) ST:6 Bulk:-3 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(4d), armordivisor(5), damtype(burn sur), minst(6), rangehalfdam(500), rangemax(1500), acc(5), rof(3), uses(66), shots(66(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(4d), armordivisor(5), damtype(burn sur), minst(6), rangehalfdam(500), rangemax(1500), acc(5), rof(3), uses(66), shots(66(3)), rcl(1), bulk(-3), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Fusion Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(9200), baseweight(5.6), techlvl(11), mods(Equipment, Beams), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1637,7 +2312,7 @@ Fusion Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123),
 			),_
         isparent(yes),_
 	description(TL:11 LC:2 Ammo:Dp Damage:5d (5) burn sur Acc:5+1 Range:500/1500 RoF:3 Shots:34(3) ST:5†  Bulk:-3 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(5), damtype(burn sur), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5+1), rof(3), uses(34), shots(34(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(5), damtype(burn sur), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5+1), rof(3), uses(34), shots(34(3)), rcl(1), bulk(-3), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(18000), baseweight(10), techlvl(11), mods(Equipment, Beams), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1645,7 +2320,7 @@ Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), b
 			),_
         isparent(yes),_
 	description(TL:11 LC:2 Ammo:Dp Damage:6d (5) burn sur Acc:6+2 Range:700/2100 RoF:3 Shots:20(3) ST:7†  Bulk:-4 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(6d), armordivisor(5), damtype(burn sur), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+2), rof(3), uses(20), shots(20(3)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(6d), armordivisor(5), damtype(burn sur), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+2), rof(3), uses(20), shots(20(3)), rcl(1), bulk(-4), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Heavy Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(40000), baseweight(20), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1653,7 +2328,7 @@ Heavy Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT1
 			),_
         isparent(yes),_
 	description(TL:11 LC:1 Ammo:Dp Damage:8d (5) burn sur Acc:6+4 Range:1200/3600 RoF:3 Shots:15(5) ST:10†  Bulk:-6 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(8d), armordivisor(5), damtype(burn sur), minst(10† ), rangehalfdam(1200), rangemax(3600), acc(6+4), rof(3), uses(15), shots(15(5)), rcl(1), bulk(-6), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(8d), armordivisor(5), damtype(burn sur), minst(10† ), rangehalfdam(1200), rangemax(3600), acc(6+4), rof(3), uses(15), shots(15(5)), rcl(1), bulk(-6), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Fusion Cannon (TL10), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page(UT123), basecost(2000000), baseweight(4000), techlvl(10), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1661,7 +2336,7 @@ Fusion Cannon (TL10), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page
 			),_
         isparent(yes),_
 	description(TL:10 LC:1 Ammo:10Fp Damage:5dx10 (5) burn sur Acc:15 Range:30000/90000 RoF:1 Shots:20(5) ST:160M Bulk:-10 Rcl:1 Skill:Gunner (Beams)),_
-	damage(5dx10), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(30000), rangemax(90000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(5dx10), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(30000), rangemax(90000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 Fusion Cannon (TL11), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page(UT123), basecost(2000000), baseweight(4000), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1669,7 +2344,7 @@ Fusion Cannon (TL11), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page
 			),_
         isparent(yes),_
 	description(TL:11 LC:1 Ammo:10Fp Damage:5dx20 (5) burn sur Acc:15 Range:120000/360000 RoF:1 Shots:20(5) ST:160M Bulk:-10 Rcl:1 Skill:Gunner (Beams)),_
-	damage(5dx20), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(120000), rangemax(360000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(5dx20), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(120000), rangemax(360000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT123), basecost(140000), baseweight(70), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -1677,5 +2352,78 @@ Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), pa
 			),_
         isparent(yes),_
 	description(TL:11 LC:1 Ammo:Ep Damage:6dx2 (5) burn sur Acc:15 Range:2800/8400 RoF:3 Shots:50(5) ST:18M Bulk:-8 Rcl:1 Skill:Gunner (Beams)),_
-	damage(6dx2), armordivisor(5), damtype(burn sur), minst(18M), rangehalfdam(2800), rangemax(8400), acc(15), rof(3), uses(50), shots(50(5)), rcl(1), bulk(-8), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(6dx2), armordivisor(5), damtype(burn sur), minst(18M), rangehalfdam(2800), rangemax(8400), acc(15), rof(3), uses(50), shots(50(5)), rcl(1), bulk(-8), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+
+[SKILLS]
+
+Biosciences, Trunk, gives(=+ (me::step - me::extralevels) to GR:Biosciences class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Biosciences, Trunks)
+Physical Sciences, Trunk, gives(=+ (me::step - me::extralevels) to GR:Physical Sciences class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Physical Sciences, Trunks)
+
+#Delete SK:Animal
+#Delete SK:Herb Lore
+#Delete SK:Natural Sciences
+#Delete SK:Plant
+
+#MergeTags in all "SK:Animal Handling" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Astronomy" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Biology" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Chemistry" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Falconry" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Farming" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Gardening" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Geology" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Mathematics" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Metallurgy" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Meteorology" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Naturalist" with group(Biosciences, Physical Sciences), cat(Biosciences, Physical Sciences)
+#MergeTags in all "SK:Packing" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Paleontology" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Physics" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Riding" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Teamster" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Veterinary" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Weather Sense" with group(Outdoor/Exploration), cat(Outdoor/Exploration)
+#MergeTags in "SK:Connoisseur (Horses)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Connoisseur (Raptors)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Expert Skill (Hydrology)" with group(Physical Sciences)
+#MergeTags in "SK:Expert Skill (Natural Philosophy)" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in "SK:Mimicry (Animal Sounds)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Mimicry (Bird Calls)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Pharmacy (Herbal)" with group(Biosciences), cat(Biosciences)
+#ReplaceTags in "SK:Animal Handling" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Astronomy" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Biology) with childof(Biosciences)
+#ReplaceTags in "SK:Boxing" with type(DX/Leaf)
+#ReplaceTags in "SK:Brawling" with type(DX/Leaf)
+#ReplaceTags in "SK:Chemistry" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Connoiseur (Horses)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Connoiseur (Raptors)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Expert Skill (Hydrology)" with cat(Physical Sciences)
+#ReplaceTags in "SK:Expert Skill (Natural Philosophy)" with cat(Physical Sciences)
+#ReplaceTags in "SK:Farming" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Gardening" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Geology" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Mathematics" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Metallurgy" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Meteorology" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Mimicry (Animal Sounds)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Mimicry (Bird Calls)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Naturalist" with childof(SK:Outdoor/Exploration)
+#ReplaceTags in "SK:Packing" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Paleontology" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Pharmacy (Herbal)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Physics" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Riding" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Teamster" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Veterinary" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Weather Sense" with childof(SK:Outdoor/Exploration)
+#ReplaceTags in "SK:Wrestling" with type(DX/Leaf)
+
+#MergeTags in ST:Punch with skillused(SK:Melee Combat, SK:Unarmed Striking)
+#MergeTags in ST:Kick with skillused(SK:Melee Combat, SK:Unarmed Striking)
+#MergeTags in ST:Bite with skillused(SK:Melee Combat, SK:Unarmed Striking)
+#ReplaceTags in SK:Judo with parryat(@int(%level/2)+3), mode(Grappling),damagebasedon(ST:Lifting ST),damage(thr+@IF(SK:Judo >= ST:DX+10 THEN 2 * @basethdice(ST:Lifting ST) ELSEIF SK:Judo >= ST:DX+4 THEN @basethdice(ST:Lifting ST) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Judo, DX)
+#ReplaceTags in SK:Sumo Wrestling with parryat(@int(%level/2)+3),mode(Grappling|Slam),damage(@THR(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Sumo Wrestling >= ST:DX+7 THEN 2 * @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Sumo Wrestling >= ST:DX+2 THEN @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )|@THR(ST:ST+@IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0) )-2),damtype(control|cr),parry(0|),reach(C|C),skillused(SK:Sumo Wrestling, DX|SK:Sumo Wrestling, DX)
+#ReplaceTags in SK:Unarmed Grappling with parryat(@int(%level/2)+3),mode(Grappling),damage(@THR(ST:Lifting ST+@IF(SK:Unarmed Grappling >= ST:DX+2 THEN 2 ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Unarmed Grappling >= ST:DX+4 THEN 2 * @basethdice(ST:Lifting ST+@IF(SK:Unarmed Grappling >= ST:DX+2 THEN 2 ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN @basethdice(ST:Lifting ST+@IF(SK:Unarmed Grappling >= ST:DX+2 THEN 2 ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Unarmed Grappling, DX)
+#ReplaceTags in SK:Wrestling with parryat(@int(%level/2)+3),mode(Grappling),damage(@THR(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Wrestling >= ST:DX+4 THEN 2 * @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Wrestling >= ST:DX+1 THEN @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Wrestling, DX)
 

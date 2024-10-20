@@ -1,0 +1,635 @@
+{
+	"version": 5,
+	"id": "BQpBswysFURTEdw7X",
+	"traits": [
+		{
+			"id": "TGiZx_sqyQzEYecrD",
+			"name": "Shrieker",
+			"reference": "TA4:110",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "Ttm2o0slifkQk5Yfq",
+					"name": "Racial Advantages",
+					"children": [
+						{
+							"id": "tzekdC4dmvtFG6dhW",
+							"name": "Acute Vision",
+							"reference": "B35",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"points_per_level": 2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "vision",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 4
+							}
+						},
+						{
+							"id": "tXC8ghinerBBRpe7m",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tLFklg798TKhdKuDn"
+							},
+							"name": "Extra Legs",
+							"reference": "B54",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "m1ME61xvU8L9CzztQ",
+									"name": "@3 or 4@",
+									"reference": "B54",
+									"cost": 5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mrcfNoI0_SRl6tnNW",
+									"name": "6 legs",
+									"reference": "B55",
+									"cost": 10,
+									"cost_type": "points"
+								},
+								{
+									"id": "mKOfAsXa5j0BX-1CL",
+									"name": "@7+@",
+									"reference": "B55",
+									"cost": 15,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mC38ovTYLC_GcQ8VJ",
+									"name": "Long",
+									"reference": "B55",
+									"levels": 1,
+									"cost": 100,
+									"disabled": true
+								},
+								{
+									"id": "mhfXQlUFOy9wTnEQv",
+									"name": "Cannot Kick",
+									"reference": "B55",
+									"cost": -50,
+									"disabled": true
+								},
+								{
+									"id": "m6-9V_mXgZUbl31bz",
+									"name": "Extra Flexible",
+									"reference": "MATG27",
+									"cost": 50,
+									"disabled": true
+								},
+								{
+									"id": "mQXZpVVzCq_8bnPZb",
+									"name": "Prehensile Feet",
+									"reference": "MATG28",
+									"cost": 20,
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "tsimAGBAr-T0jJ-tR",
+							"name": "Infravision",
+							"reference": "B60",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "md_yG_98KOmAzd42I",
+									"name": "No normal vision",
+									"reference": "B60",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 10,
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "tI_XtvPOb_OWTIy2Z",
+							"name": "Ultrahearing",
+							"reference": "B94",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mgnQB22LRBlOoKLx0",
+									"name": "No normal hearing",
+									"reference": "B94",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 5,
+							"calc": {
+								"points": 5
+							}
+						}
+					],
+					"calc": {
+						"points": 29
+					}
+				},
+				{
+					"id": "TM0ZxFhcNI1VL4g90",
+					"name": "Racial Disadvantages",
+					"children": [
+						{
+							"id": "tgR8LShsHVfOwJ-Zc",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "toXBQ8q4Nek5lsLPF"
+							},
+							"name": "Cultural Familiarity (Shrieker)",
+							"reference": "B23",
+							"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mUoKxO0QSIuLUIKnf",
+									"name": "Alien",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mS2RW1lGJHXZ4bvWL",
+									"name": "Native",
+									"cost": -1,
+									"cost_type": "points"
+								}
+							],
+							"base_points": 1,
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"id": "tCuTGO37IAru4VK3B",
+							"name": "Increased Consumption",
+							"reference": "B139",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "myUUXfH0K20UPtiDd",
+									"name": "Consumption x2",
+									"reference": "B139",
+									"cost": -10,
+									"cost_type": "points"
+								},
+								{
+									"id": "mflTLzpPtgPOZIBtY",
+									"name": "Consumption x4",
+									"reference": "B139",
+									"cost": -20,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mIy3IUTaXNe4uyDne",
+									"name": "Consumption x8",
+									"reference": "B139",
+									"cost": -30,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "thwUM7HrrYWfI6dDX",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: Shrieker",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mJFtX3au7OGpi9N0c",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points"
+								},
+								{
+									"id": "mcBOCmm4IL47rLDFl",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mzFNvt5UBr_BdAZ6Y",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "my9NZ8Sna3S0RK6GO",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mCEvv1XjTKOLLt0dr",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points"
+								},
+								{
+									"id": "mBrvjUkjAA-3EbXGK",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mh8FGWCDyDbJJWRbX",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "msB8AHa2fJjfKObT4",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mwioCtpTTd7V6-C_l",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points"
+								}
+							],
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"id": "tR8LG0KNKAawAXHgx",
+							"name": "Low TL",
+							"reference": "B22",
+							"tags": [
+								"Disadvantage",
+								"Social"
+							],
+							"points_per_level": -5,
+							"can_level": true,
+							"levels": 5,
+							"calc": {
+								"points": -25
+							}
+						},
+						{
+							"id": "tbtZbjRlq1p6itQVG",
+							"name": "Poor Sense of Smell/Taste",
+							"reference": "B146",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"base_points": -2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "taste_smell",
+									"amount": -5
+								}
+							],
+							"calc": {
+								"points": -2
+							}
+						},
+						{
+							"id": "tAd4fObQI8CX4DD2D",
+							"name": "Self-Destruct",
+							"reference": "B153",
+							"tags": [
+								"Disadvantage",
+								"Exotic",
+								"Physical"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "terminally ill"
+										}
+									}
+								]
+							},
+							"base_points": -10,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "t-FXyjBhklyMbaINh",
+							"name": "Short Arms",
+							"base_points": -10,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tLg_hE4FdOeznvpb8",
+							"name": "Short Lifespan",
+							"reference": "B154",
+							"tags": [
+								"Disadvantage",
+								"Exotic",
+								"Physical"
+							],
+							"points_per_level": -10,
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": -10
+							}
+						}
+					],
+					"calc": {
+						"points": -67
+					}
+				},
+				{
+					"id": "T6bfKxm7W0N8i3tey",
+					"name": "Racial Primary Modifiers",
+					"children": [
+						{
+							"id": "togpDxphrWCub3Qw7",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tBBMkYdKxMwhn73fI"
+							},
+							"name": "Decreased Basic Move",
+							"reference": "B17",
+							"tags": [
+								"Attribute",
+								"Disadvantage",
+								"Physical"
+							],
+							"points_per_level": -5,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "basic_move",
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 3,
+							"calc": {
+								"points": -15
+							}
+						},
+						{
+							"id": "tly3JbgvNOuslYu9Y",
+							"name": "Extra Hit Points",
+							"reference": "B16",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mLoSm6987yHZhlCOh",
+									"name": "Size",
+									"levels": 1,
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "mCCTcADQspfjdQjBs",
+									"name": "No Fine Manipulators",
+									"cost": -40,
+									"disabled": true
+								}
+							],
+							"points_per_level": 2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "hp",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 4
+							}
+						},
+						{
+							"id": "tpwnYFqncG6vnQoN4",
+							"name": "Increased Health",
+							"reference": "B14",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"points_per_level": 10,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "ht",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 20
+							}
+						},
+						{
+							"id": "tbZ8tmofJcWlzuqXg",
+							"name": "Increased Strength",
+							"reference": "B14",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "m2GYIC_i-KmRgHMmS",
+									"name": "No Fine Manipulators",
+									"reference": "B15",
+									"cost": -40,
+									"disabled": true
+								},
+								{
+									"id": "mMo7Z3HXiRRQCT9Vt",
+									"name": "Size",
+									"reference": "B15",
+									"levels": 1,
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "m7wcbzLk84nfAxm8q",
+									"name": "Super-Effort",
+									"reference": "SU24",
+									"cost": 300,
+									"disabled": true
+								}
+							],
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "st",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 4,
+							"calc": {
+								"points": 20
+							}
+						},
+						{
+							"id": "t9_8xk43nMYf4vtiF",
+							"name": "Racial bonus to Camoflage",
+							"base_points": 1,
+							"features": [
+								{
+									"type": "conditional_modifier",
+									"situation": "to Camoflouge in tall grass",
+									"amount": 2
+								}
+							],
+							"calc": {
+								"points": 1
+							}
+						}
+					],
+					"calc": {
+						"points": 30
+					}
+				},
+				{
+					"id": "TaLcOF_BiyMLHw3G-",
+					"name": "Racial Quirks",
+					"children": [
+						{
+							"id": "twhOI-ja1vNv4hCa7",
+							"name": "Broad-Minded",
+							"reference": "B163",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"calc": {
+								"points": -1
+							}
+						}
+					],
+					"calc": {
+						"points": -1
+					}
+				}
+			],
+			"calc": {
+				"points": -9
+			}
+		}
+	]
+}

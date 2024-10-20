@@ -1,0 +1,1234 @@
+{
+	"version": 5,
+	"id": "BWxxpmqAWbo0VU74Y",
+	"traits": [
+		{
+			"id": "Tc_Ja32Zl2nCtFcvm",
+			"name": "K'kree - Female",
+			"reference": "TA2:66",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "TLCkQtgcOhTyT8RMq",
+					"name": "Racial Advantages",
+					"children": [
+						{
+							"id": "tz7l9lWY6vQflW66u",
+							"name": "Acute Hearing",
+							"reference": "B35",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"points_per_level": 2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "hearing",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 4
+							}
+						},
+						{
+							"id": "tmoIcn_BJ2MWS40nb",
+							"name": "Acute Taste \u0026 Smell",
+							"reference": "B35",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"points_per_level": 2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "taste_smell",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 6,
+							"calc": {
+								"points": 12
+							}
+						},
+						{
+							"id": "tj6V7E0ytAMAinxN5",
+							"name": "Blunt Claws (Hooves)",
+							"reference": "B42",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"base_points": 3,
+							"weapons": [
+								{
+									"id": "wL2XN6FSGcppnNSJF",
+									"damage": {
+										"type": "cr",
+										"st": "thr",
+										"base": "-1",
+										"modifier_per_die": 1
+									},
+									"usage": "Punch",
+									"reach": "C",
+									"parry": "0",
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "skill",
+											"name": "Boxing"
+										},
+										{
+											"type": "skill",
+											"name": "Karate"
+										}
+									],
+									"calc": {
+										"damage": "thr-1 (+1 per die) cr"
+									}
+								},
+								{
+									"id": "wd1sB-rShg4DEWTUy",
+									"damage": {
+										"type": "cr",
+										"st": "thr",
+										"modifier_per_die": 1
+									},
+									"usage": "Kick",
+									"reach": "C,1",
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Brawling",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Karate",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"damage": "thr (+1 per die) cr"
+									}
+								}
+							],
+							"calc": {
+								"points": 3
+							}
+						},
+						{
+							"id": "t9pWNzYbDhh28AgrA",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "toXBQ8q4Nek5lsLPF"
+							},
+							"name": "Cultural Familiarity (The Two Thousand Worlds)",
+							"reference": "B23",
+							"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mZH2kSWvqkzRfLI5B",
+									"name": "Alien",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m-e-mTIcJ3hRLWVLG",
+									"name": "Native",
+									"cost": -1,
+									"cost_type": "points"
+								}
+							],
+							"base_points": 1,
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"id": "tv_rVvccMSt8Ww-0y",
+							"name": "Empathy",
+							"reference": "B51",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mFqFYrW8BMQExxTho",
+									"name": "Remote",
+									"reference": "P48",
+									"cost": 50,
+									"disabled": true
+								},
+								{
+									"id": "md2TXcXGNQhKQgPKc",
+									"name": "Racial, Smell Based",
+									"cost": -30
+								},
+								{
+									"id": "m4aRveiPBL9RsvDCB",
+									"name": "Smell Based",
+									"cost": -20,
+									"disabled": true
+								}
+							],
+							"base_points": 15,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "detect lies"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "fortune-telling"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "psychology"
+									},
+									"amount": 3
+								}
+							],
+							"calc": {
+								"points": 11
+							}
+						},
+						{
+							"id": "tSeoCsggi7be8SKP7",
+							"name": "Enhanced Move (Ground)",
+							"reference": "B52",
+							"notes": "Multiply normal Running Move by 1 + level",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "m5xcLTR-H85rowrTJ",
+									"name": "Handling Bonus",
+									"reference": "B52",
+									"levels": 1,
+									"cost": 5,
+									"disabled": true
+								},
+								{
+									"id": "mEiXu32wMlTiP-3Ab",
+									"name": "Handling Penalty",
+									"reference": "B52",
+									"levels": 1,
+									"cost": -5,
+									"disabled": true
+								},
+								{
+									"id": "mMMJV2p39HaVOvFjS",
+									"name": "Newtonian",
+									"reference": "B52",
+									"cost": -50,
+									"disabled": true
+								},
+								{
+									"id": "mvmzIGyIsVM_xpmtm",
+									"name": "Road-Bound",
+									"reference": "B52",
+									"cost": -50,
+									"disabled": true
+								},
+								{
+									"id": "mHSyjvD5ZajjxUdnV",
+									"name": "All-Out",
+									"reference": "P49",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "m8b1M_fwyr0HoTjtY",
+									"name": "Cosmic",
+									"reference": "SU26",
+									"notes": "Instantaneous Acceleration",
+									"cost": 50,
+									"disabled": true
+								},
+								{
+									"id": "m3X8MPmgThURA3AKY",
+									"name": "Cosmic",
+									"reference": "SU27",
+									"notes": "Complete Maneuverability",
+									"cost": 50,
+									"disabled": true
+								}
+							],
+							"points_per_level": 20,
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": 20
+							}
+						},
+						{
+							"id": "t2nbZOaOj_94POfE-",
+							"name": "Extra Legs",
+							"reference": "B54",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mh-KYxhBavfTuhhll",
+									"name": "4",
+									"reference": "B54",
+									"cost": 5,
+									"cost_type": "points"
+								},
+								{
+									"id": "m1TFPywVU9i5k9W_W",
+									"name": "@5 or 6@",
+									"reference": "B55",
+									"cost": 10,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m7c9j6EqCobrSyljO",
+									"name": "@7+@",
+									"reference": "B55",
+									"cost": 15,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mpVb1ysxyliBOWzLb",
+									"name": "Long",
+									"reference": "B55",
+									"levels": 1,
+									"cost": 100,
+									"disabled": true
+								},
+								{
+									"id": "mhoTfV3Brm48rO68I",
+									"name": "Cannot Kick",
+									"reference": "B55",
+									"cost": -50,
+									"disabled": true
+								},
+								{
+									"id": "mqIR3dC5-4FD8Ppq-",
+									"name": "Extra Flexible",
+									"reference": "MATG27",
+									"cost": 50,
+									"disabled": true
+								},
+								{
+									"id": "m-ehmRwqU4ytTZnML",
+									"name": "Prehensile Feet",
+									"reference": "MATG28",
+									"cost": 20,
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 5
+							}
+						},
+						{
+							"id": "tXPIYl96pZjLJINPm",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: K'kree",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mybrixmkVAkaFrvjj",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points"
+								},
+								{
+									"id": "mU_8DwQ0oKRqM2msy",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mVKihAPIN2ZewUqS-",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "msDAhfcfwS1vJ0tPJ",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mxk9eaEM3oJ19Zjjn",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points"
+								},
+								{
+									"id": "mEDAaukvkWBplcMMi",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m56BYVxLHK81EKJGr",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mnvfccNxxJMZ2SfkC",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mt-b9MG3Xr6iGWdp4",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points"
+								}
+							],
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"id": "thYr2XNzOY4_8c4kp",
+							"name": "Temperature Tolerance",
+							"reference": "B93",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"points_per_level": 1,
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 2
+							}
+						}
+					],
+					"calc": {
+						"points": 57
+					}
+				},
+				{
+					"id": "TYt3huXK67QEdhrKA",
+					"name": "Racial Disadvantages",
+					"children": [
+						{
+							"id": "t_b_icmE_sOsXa-zK",
+							"name": "Claustrophobia (Enclosed Spaces)",
+							"reference": "B149",
+							"notes": "You are uncomfortable any time you can’t see the sky – or at least a very high ceiling. In a small room or vehicle, you feel the walls closing in on you... You need air! This is a dangerous fear for someone who plans to go underground.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr_adj": "action_penalty",
+							"cr": 6,
+							"base_points": -15,
+							"calc": {
+								"points": -30
+							}
+						},
+						{
+							"id": "tbnj4FONPKQ9wj1J9",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "trdRnHewvO9QjUZDJ"
+							},
+							"name": "Combat Paralysis",
+							"reference": "B127",
+							"notes": "In any situation in which personal harm seems imminent, make a HT roll. Do not roll until the instant you need to fight, run, pull the trigger, or whatever. Any roll over 13 is a failure, even if you have HT 14+. On a success, you can act normally. On a failure, you are mentally stunned. ",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Combat Reflexes"
+										}
+									}
+								]
+							},
+							"base_points": -15,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "fright_check",
+									"amount": -2
+								}
+							],
+							"calc": {
+								"points": -15
+							}
+						},
+						{
+							"id": "tap1tg7L0YlbPkPMT",
+							"name": "Fanaticism",
+							"reference": "B136",
+							"notes": "exterminate all predators/carnivores",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "m9uuXoO8VDHjxRDoK",
+									"name": "Extreme",
+									"reference": "B136",
+									"disabled": true
+								}
+							],
+							"base_points": -15,
+							"calc": {
+								"points": -15
+							}
+						},
+						{
+							"id": "tNFMTDCFeWSv32olO",
+							"name": "Gregarious",
+							"reference": "B126",
+							"notes": "-2 to IQ-based skills when alone, or -1 in a group of 4 or less",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -10,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "to others",
+									"amount": 4
+								}
+							],
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tqrOFFtM-4ng1LhpU",
+							"name": "Guilt Complex",
+							"reference": "B137",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -5,
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tLKnS3brcVHjYlhV0",
+							"name": "Hidebound",
+							"reference": "B138",
+							"notes": "-2 penalty on any task that requires creativity or invention, including most rolls against Artist skill, all Engineer rolls for new inventions, and all skill rolls made to use the Gadgeteer advantage.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -5,
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tkFpk8_iDdc3c5fLN",
+							"name": "Increased Consumption",
+							"reference": "B139",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mJ4cyi7_DGaDcJorp",
+									"name": "Consumption x2",
+									"reference": "B139",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mL6W1_op1KUD0EgPR",
+									"name": "Consumption x4",
+									"reference": "B139",
+									"cost": -20,
+									"cost_type": "points"
+								},
+								{
+									"id": "mxhm7khN_3AJJY7UB",
+									"name": "Consumption x8",
+									"reference": "B139",
+									"cost": -30,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -20
+							}
+						},
+						{
+							"id": "tJNmbvDUAuT9eUZqK",
+							"name": "Intolerance (Non-K'kree)",
+							"reference": "B140",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mPXby_D-YPUeDWWF9",
+									"name": "Scope: Common",
+									"reference": "B140",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m0BNfmsdF4tiHgW1Y",
+									"name": "Scope: Occasional",
+									"reference": "B140",
+									"cost": -2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mjRjvXR0uk-agtn65",
+									"name": "Scope: Rare",
+									"reference": "B140",
+									"cost": -1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m4B6ad8-qsWZxs0B3",
+									"name": "Scope: Anyone unlike you",
+									"reference": "B140",
+									"cost": -10,
+									"cost_type": "points"
+								}
+							],
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from victims of your intolerance (may be as much as -5, at GM's discretion)",
+									"amount": -1
+								}
+							],
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tPPC5yAgRTwYwcqgE",
+							"name": "Reputation (Intolerant Fascists)",
+							"reference": "B26",
+							"tags": [
+								"Disadvantage",
+								"Social"
+							],
+							"modifiers": [
+								{
+									"id": "mhUmYUeCi2xuO2bt0",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Almost everyone",
+									"cost": 1,
+									"cost_type": "multiplier"
+								},
+								{
+									"id": "mVXKlKijJvJ4NOwwd",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Almost everyone except @large class of people@",
+									"cost": 0.67,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "muFW-VN7pWAHW-H7j",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "@Large class of people@",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mqC4HbNLQeA4Hm1rk",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "@Small class of people@",
+									"cost": 0.33,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mJZEhKJs22pekO37o",
+									"name": "Recognized all the time",
+									"reference": "B28",
+									"cost": 1,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mERIaZFubiACoYjbL",
+									"name": "Recognized sometimes",
+									"reference": "B28",
+									"notes": "10-",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mCieF37YHpENLMJfe",
+									"name": "Recognized occasionally",
+									"reference": "B28",
+									"notes": "7-",
+									"cost": 0.33,
+									"cost_type": "multiplier",
+									"disabled": true
+								}
+							],
+							"points_per_level": -5,
+							"round_down": true,
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tlk1StQY2lWDaL9s5",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tkchRxKpwct0fHH7U"
+							},
+							"name": "Social Stigma (Second-Class Citizen)",
+							"reference": "B155",
+							"notes": "You belong to a group that receives fewer rights and privileges than “full citizens.”",
+							"tags": [
+								"Disadvantage",
+								"Social"
+							],
+							"base_points": -5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from others except those of your own kind",
+									"amount": -1
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tsTJfnsgosqwR6eDz",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tLQKF9eUQ9wM7pDRJ"
+							},
+							"name": "Social Stigma (Valuable Property)",
+							"reference": "B156",
+							"tags": [
+								"Disadvantage",
+								"Social"
+							],
+							"base_points": -10,
+							"calc": {
+								"points": -10
+							}
+						}
+					],
+					"calc": {
+						"points": -135
+					}
+				},
+				{
+					"id": "TfDtlKqE0BGazSRb-",
+					"name": "Racial Primary Modifiers",
+					"children": [
+						{
+							"id": "tEPrpegihikRCPPOb",
+							"name": "K'kree attribute modifiers",
+							"base_points": 32,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "hp",
+									"amount": 6
+								},
+								{
+									"type": "attribute_bonus",
+									"limitation": "lifting_only",
+									"attribute": "st",
+									"amount": 20
+								},
+								{
+									"type": "weapon_effective_st_bonus",
+									"selection_type": "weapons_with_required_skill",
+									"level": {
+										"compare": "at_least"
+									},
+									"usage": {
+										"compare": "is",
+										"qualifier": "Kick"
+									},
+									"amount": 10
+								},
+								{
+									"type": "attribute_bonus",
+									"attribute": "iq",
+									"amount": -2
+								},
+								{
+									"type": "attribute_bonus",
+									"attribute": "st",
+									"amount": 2
+								}
+							],
+							"calc": {
+								"points": 32
+							}
+						},
+						{
+							"id": "tcH6RhXLLXTQu_sQB",
+							"name": "Racial Size Modifier",
+							"reference": "B19",
+							"notes": "(Longest dimension)",
+							"tags": [
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mAuIedLkSyh7ktKcQ",
+									"name": "SM -10",
+									"notes": "Horizontal - 0.05 Yard; Veritical - 1.8\"",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -10
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mssegbU9KD_8QHN9-",
+									"name": "SM -09",
+									"notes": "Horizontal - 0.07 Yard; Veritical - 2.5\"",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -9
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mP2noQRFJ-GhkPnAh",
+									"name": "SM -08",
+									"notes": "Horizontal - 0.1 Yard; Veritical - 3.5\"",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -8
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "muFD_18SDOB0uA7Kd",
+									"name": "SM -07",
+									"notes": "Horizontal - 0.15 Yard; Veritical - 5\"",
+									"disabled": true
+								},
+								{
+									"id": "mel2SRiXwGl67MCzn",
+									"name": "SM -06",
+									"notes": "Horizontal - 0.2 Yard; Veritical - 7\"",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -6
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mVtElHEmfTe3L7jcE",
+									"name": "SM -05",
+									"notes": "Horizontal - 0.3 Yard; Veritical - 10\"",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -5
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mwclmiHPqrdA1cvz2",
+									"name": "SM -04",
+									"notes": "Horizontal - 0.5 Yard; Veritical - 18\"",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -4
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "m5lnrqf8_D2qDbSz5",
+									"name": "SM -03",
+									"notes": "Horizontal - 0.7 Yard; Veritical - 2'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -2
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mZe0YRcFbpgZm9PBd",
+									"name": "SM -02",
+									"notes": "Horizontal - 1 Yard; Veritical - 3'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -2
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "m6z1ERiEITkZrDlG6",
+									"name": "SM -01",
+									"notes": "Horizontal - 1.5 Yards; Veritical - 4.5'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": -1
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "m8J9Wz32cMH8SrC4v",
+									"name": "SM +0",
+									"notes": "Horizontal - 2 Yards; Veritical - 6'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 0
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "m2633Tr9mCsMCirXm",
+									"name": "SM +01",
+									"notes": "Horizontal - 3 Yards; Veritical - 9'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 1
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mJlTfNscTU6LwTgnq",
+									"name": "SM +02",
+									"notes": "Horizontal - 5 Yards; Veritical - 15'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 2
+										}
+									]
+								},
+								{
+									"id": "mQY3L8s5JSIPQPQJv",
+									"name": "SM +03",
+									"notes": "Horizontal - 7 Yards; Veritical - 21'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 3
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "muGZZRlLhk_vZumGc",
+									"name": "SM +04",
+									"notes": "Horizontal - 10 Yards; Veritical - 30'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 4
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mz1E97mYS5NG_aPth",
+									"name": "SM +05",
+									"notes": "Horizontal - 15 Yards; Veritical - 45'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 5
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mnfwNqlNmzA98pGHI",
+									"name": "SM +06",
+									"notes": "Horizontal - 20 Yards; Veritical - 60'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 6
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "m-mZD4cOMVTW0pyLt",
+									"name": "SM +07",
+									"notes": "Horizontal - 30 Yards; Veritical - 90'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 7
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mE_th9AcAnJw8gGGz",
+									"name": "SM +08",
+									"notes": "Horizontal - 50 Yards; Veritical - 150'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 8
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "ms9jjjg2vJ9PNPTBK",
+									"name": "SM +09",
+									"notes": "Horizontal - 70 Yards; Veritical - 210'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 9
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mRCwDkAN4qgWYvEp3",
+									"name": "SM +10",
+									"notes": "Horizontal - 100 Yards; Veritical - 300'",
+									"features": [
+										{
+											"type": "attribute_bonus",
+											"attribute": "sm",
+											"amount": 10
+										}
+									],
+									"disabled": true
+								},
+								{
+									"id": "mPoJHT7zG159CUnmN",
+									"name": "SM +11",
+									"notes": "Horizontal - 150 Yards; Veritical - 450'",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 0
+							}
+						}
+					],
+					"calc": {
+						"points": 32
+					}
+				},
+				{
+					"id": "T6RbzXSbSLtI4weV3",
+					"name": "Racial Quirks",
+					"children": [
+						{
+							"id": "tsqL__yJ56_Jw9Fex",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "t5NruiJFzLvsyzwd1"
+							},
+							"name": "Incompetence (Free Fall)",
+							"reference": "B164",
+							"notes": "May only know Free Fall at defaut, with a -4 penalty. This may be bought off.",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Free Fall"
+									},
+									"amount": -4
+								}
+							],
+							"calc": {
+								"points": -1
+							}
+						}
+					],
+					"calc": {
+						"points": -1
+					}
+				}
+			],
+			"calc": {
+				"points": -47
+			}
+		}
+	]
+}

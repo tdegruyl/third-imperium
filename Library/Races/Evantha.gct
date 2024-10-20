@@ -1,0 +1,1054 @@
+{
+	"version": 5,
+	"id": "BrN4grx7baxgY6AzW",
+	"traits": [
+		{
+			"id": "T5wXvYPoH-4cVlfeA",
+			"name": "Evantha",
+			"reference": "TA4:40",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "T9FbcVL41nI78s9Oc",
+					"name": "Racial Advantages",
+					"children": [
+						{
+							"id": "t8xOPZUvCgJ-eCH-N",
+							"name": "Acute Vision",
+							"reference": "B35",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"points_per_level": 2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "vision",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 4
+							}
+						},
+						{
+							"id": "tFd-8lrLHnPuHmb6o",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "toXBQ8q4Nek5lsLPF"
+							},
+							"name": "Cultural Familiarity (Evantha)",
+							"reference": "B23",
+							"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "miv-icu89qf429UKb",
+									"name": "Alien",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m7lPSaaY78Zz8pef9",
+									"name": "Native",
+									"cost": -1,
+									"cost_type": "points"
+								}
+							],
+							"base_points": 1,
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"id": "tEmV0HEgeEt-yIGP-",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "toXBQ8q4Nek5lsLPF"
+							},
+							"name": "Cultural Familiarity (Imperial)",
+							"reference": "B23",
+							"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "m0LfFgbO5cDiR4nwe",
+									"name": "Alien",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mrl_nYXRwBd6yCl7o",
+									"name": "Native",
+									"cost": -1,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 1,
+							"calc": {
+								"points": 1
+							}
+						},
+						{
+							"id": "t_pOWLT6F9QouWg-k",
+							"name": "Flight",
+							"reference": "B56",
+							"notes": "Air Move is Basic Speed x 2 (drop all fractions)",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mMtIWH_1sa7FIDvtX",
+									"name": "Newtonian Space Flight",
+									"reference": "B56",
+									"cost": 25,
+									"disabled": true
+								},
+								{
+									"id": "msYlxpbDmOZfWQXUJ",
+									"name": "Space Flight",
+									"reference": "B56",
+									"cost": 50,
+									"disabled": true
+								},
+								{
+									"id": "mBevKyweMI1YkJLUO",
+									"name": "Cannot Hover",
+									"reference": "B56",
+									"cost": -15
+								},
+								{
+									"id": "mhosIPL9sC-fHqNt3",
+									"name": "Controlled Gliding",
+									"reference": "B56",
+									"cost": -45,
+									"disabled": true
+								},
+								{
+									"id": "mgHg6XDW18CddGzcH",
+									"name": "Gliding",
+									"reference": "B56",
+									"cost": -50,
+									"disabled": true
+								},
+								{
+									"id": "mR-SRA3KBX_ouAGFq",
+									"name": "Lighter Than Air",
+									"reference": "B56",
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "maK08-V6NYAS3ncU8",
+									"name": "Low Ceiling",
+									"reference": "B56",
+									"notes": "30'",
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "mO5SU8Fho3f5yEvoC",
+									"name": "Low Ceiling",
+									"reference": "B56",
+									"notes": "10'",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "mYsSoRu7GWrNbbut-",
+									"name": "Low Ceiling",
+									"reference": "B56",
+									"notes": "5'",
+									"cost": -25,
+									"disabled": true
+								},
+								{
+									"id": "mArmnRK1iEcWVhyba",
+									"name": "Small Wings",
+									"reference": "B56",
+									"cost": -10,
+									"disabled": true
+								},
+								{
+									"id": "mJ2rjLSQqvXso8bqf",
+									"name": "Space Flight Only",
+									"reference": "B56",
+									"cost": -75,
+									"disabled": true
+								},
+								{
+									"id": "m8qVa2BMEy_HBhZCH",
+									"name": "Winged",
+									"reference": "B56",
+									"cost": -25
+								},
+								{
+									"id": "mWDPfBgomidyQVAbE",
+									"name": "Planetary",
+									"reference": "P50",
+									"cost": -5,
+									"disabled": true
+								},
+								{
+									"id": "mCCJG8AoJ0q3rBSN5",
+									"name": "Requires grav 0.6 G or below",
+									"cost": -20,
+									"use_level_from_trait": true
+								},
+								{
+									"id": "mbG7qiR3TxLIH_j3L",
+									"name": "Requires Surface",
+									"reference": "P50",
+									"cost": -20,
+									"disabled": true
+								},
+								{
+									"id": "mHIhaIfxVxZYHufsA",
+									"name": "Slow",
+									"reference": "PSI14",
+									"notes": "Basic Speed",
+									"cost": -25,
+									"disabled": true
+								},
+								{
+									"id": "mOacCqKf4kA4xzexe",
+									"name": "Slow, Move 1",
+									"reference": "PSI14",
+									"cost": -45,
+									"disabled": true
+								}
+							],
+							"base_points": 40,
+							"calc": {
+								"points": 16
+							}
+						},
+						{
+							"id": "tNpVduhmhcoFceN2i",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "te2vFre2KU0dZrDgd"
+							},
+							"name": "Increased Consumption",
+							"reference": "B139",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mEVs0zXedKtycKizG",
+									"name": "Consumption x2",
+									"reference": "B139",
+									"cost": -10,
+									"cost_type": "points"
+								},
+								{
+									"id": "m_AVYRwT5r2tukzwb",
+									"name": "Consumption x4",
+									"reference": "B139",
+									"cost": -20,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mA8z7zaEyCb_ZgCX7",
+									"name": "Consumption x8",
+									"reference": "B139",
+									"cost": -30,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tt-w1v5Z-78rE1Mi5",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: Detran",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mD9aCgQ8Dil4iqdhH",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points"
+								},
+								{
+									"id": "m_sUMkpFbWqNnQA16",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mh1nVWgfDNVCiGm63",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mzb_IzhM-usZdorDY",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mjmtMlwKz8IzGr_9q",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points"
+								},
+								{
+									"id": "mHCtfXkaTj2juWgDx",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mzCCJu-twwgGwxkqV",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mlZawiydT7UxF6LuK",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mSSvpPjGZuxaesWpd",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points"
+								}
+							],
+							"calc": {
+								"points": 0
+							}
+						},
+						{
+							"id": "thWPfxe9fFboxQGP_",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: Imperial",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mA6XKTJzFqg7UZlOh",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m70NhObApspV7KjqU",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mfwKYb_edpqQ1aRRM",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m0DidyPDfFLFbkmEs",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points"
+								},
+								{
+									"id": "mbpWIsjMotIXpjQ4t",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "moG7_LkjUuTW-tLIa",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mahndJzfFtA7sBlc7",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m1j8GGmgyp4D2g4sp",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points"
+								},
+								{
+									"id": "mYwmhGH6NKiWMp8QM",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 4
+							}
+						},
+						{
+							"id": "t1poBriob_UwHnV98",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: Vilani",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mfMLsTtN1xsxGNc8-",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mtjSmdl5-N02cqZSQ",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mzeAiuyNObopxSHQL",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mRmp0joD1yC-mVjH6",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points"
+								},
+								{
+									"id": "ml8fanlBcnxMCUivY",
+									"name": "Spoken",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mw4T3A-Vhombasuz2",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m1zPfVMTOQIsbtPL0",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mGHXn8PJ-XjYKIolT",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Accented",
+									"cost": 2,
+									"cost_type": "points"
+								},
+								{
+									"id": "mDUHSL-dxz1JwOC13",
+									"name": "Written",
+									"reference": "B24",
+									"notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 4
+							}
+						},
+						{
+							"id": "tD61MaYTR7G8fJFlh",
+							"name": "Sharp Claws",
+							"reference": "B42",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"base_points": 5,
+							"weapons": [
+								{
+									"id": "wgulSiB-Xa8Ja2dmv",
+									"damage": {
+										"type": "cut",
+										"st": "thr",
+										"base": "-1"
+									},
+									"usage": "Slash",
+									"reach": "C",
+									"parry": "0",
+									"defaults": [
+										{
+											"type": "dx"
+										},
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "skill",
+											"name": "Boxing"
+										},
+										{
+											"type": "skill",
+											"name": "Karate"
+										}
+									],
+									"calc": {
+										"damage": "thr-1 cut"
+									}
+								},
+								{
+									"id": "wd--6_xqlkbop2Hq2",
+									"damage": {
+										"type": "cut",
+										"st": "thr"
+									},
+									"usage": "Kick",
+									"reach": "C,1",
+									"defaults": [
+										{
+											"type": "dx",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Karate",
+											"modifier": -2
+										},
+										{
+											"type": "skill",
+											"name": "Brawling",
+											"modifier": -2
+										}
+									],
+									"calc": {
+										"damage": "thr cut"
+									}
+								}
+							],
+							"calc": {
+								"points": 5
+							}
+						},
+						{
+							"id": "tRd9c_9pvbZtURegg",
+							"name": "Sharp Teeth",
+							"reference": "B91",
+							"tags": [
+								"Exotic",
+								"Perk",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mI7A5q6ftjNHhRMJm",
+									"name": "Provided by Vampiric Bite",
+									"reference": "B96",
+									"cost": -1,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 1,
+							"weapons": [
+								{
+									"id": "wtT8__neIniHM-V1b",
+									"damage": {
+										"type": "cut",
+										"st": "thr",
+										"base": "-1"
+									},
+									"usage": "Bite",
+									"reach": "C",
+									"defaults": [
+										{
+											"type": "skill",
+											"name": "Brawling"
+										},
+										{
+											"type": "dx"
+										}
+									],
+									"calc": {
+										"damage": "thr-1 cut"
+									}
+								}
+							],
+							"calc": {
+								"points": 1
+							}
+						}
+					],
+					"calc": {
+						"points": 25
+					}
+				},
+				{
+					"id": "TEjlHgbd-IeEvv-Yf",
+					"name": "Racial Disadvantages",
+					"children": [
+						{
+							"id": "ttql_Av5ojMra9kkp",
+							"name": "Bad Sight (Nearsighted)",
+							"reference": "B123",
+							"notes": " -6 to Vision rolls to spot items more than 1 yd away; -2 to all melee attacks; double actual distance to the target when calculating the range modifier for ranged attacks",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mZNNXidiSBgrtMZkS",
+									"name": "Mitigator",
+									"notes": "Glasses",
+									"cost": -60,
+									"disabled": true
+								},
+								{
+									"id": "mb_3xKWCd2gf16-O-",
+									"name": "Only in direct sunlight,",
+									"cost": -60
+								}
+							],
+							"base_points": -25,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "t71Ia2W5n06NHHEGJ",
+							"name": "Claustrophobia (Enclosed Spaces)",
+							"reference": "B149",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"cr_adj": "action_penalty",
+							"modifiers": [
+								{
+									"id": "miwg7W9eIJ6po_hWF",
+									"name": "Mild, carmot occupy small enclosed vehicles",
+									"cost": -40
+								}
+							],
+							"cr": 12,
+							"base_points": -15,
+							"calc": {
+								"points": -9
+							}
+						},
+						{
+							"id": "tgkrN-q2gSwcTfXYq",
+							"name": "Fanaticism (Kythari vs Lir (law vs chaos))",
+							"reference": "B136",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mI6BUu2J0UDE5QRdL",
+									"name": "Extreme",
+									"reference": "B136",
+									"disabled": true
+								}
+							],
+							"base_points": -15,
+							"calc": {
+								"points": -15
+							}
+						}
+					],
+					"calc": {
+						"points": -34
+					}
+				},
+				{
+					"id": "TWsVYzpT5tVm664m_",
+					"name": "Racial Primary Modifiers",
+					"children": [
+						{
+							"id": "tqDRXePQjYAUx1fHM",
+							"name": "Decreased Strength",
+							"reference": "B14",
+							"tags": [
+								"Attribute",
+								"Disadvantage",
+								"Physical"
+							],
+							"points_per_level": -5,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "st",
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "tMKMR11WPvlu8fApp",
+							"name": "Fewer Hit Points",
+							"reference": "B16",
+							"tags": [
+								"Attribute",
+								"Disadvantage",
+								"Physical"
+							],
+							"points_per_level": -2,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "hp",
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": -2
+							}
+						},
+						{
+							"id": "tzqFr6UG3l_hKe0UG",
+							"name": "Increased Dexterity",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mjxjNDSr87qH2V0Q0",
+									"name": "No Fine Manipulators",
+									"cost": -40,
+									"disabled": true
+								}
+							],
+							"points_per_level": 20,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "dx",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": 20
+							}
+						},
+						{
+							"id": "tp_eS8ikniYjoRGiR",
+							"name": "Reduced Ground Move 1",
+							"features": [
+								{
+									"type": "conditional_modifier",
+									"situation": "Ground Move",
+									"amount": -1
+								}
+							],
+							"calc": {
+								"points": 0
+							}
+						}
+					],
+					"calc": {
+						"points": 8
+					}
+				},
+				{
+					"id": "TW91XDva4NYDBaneI",
+					"name": "Racial Quirks",
+					"children": [
+						{
+							"id": "ty9VikW9uM2Y5OttX",
+							"name": "Intolerance - Same-sex friendships",
+							"reference": "B162",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"calc": {
+								"points": -1
+							}
+						},
+						{
+							"id": "tGAB1mXcs2acEeZHt",
+							"name": "Weakness (sunlight)",
+							"reference": "B161",
+							"tags": [
+								"Disadvantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mmu7-tcVDeGX2KoUg",
+									"name": "1d damage per minute",
+									"reference": "B161",
+									"cost": -20,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m0_ObDbVHPKXGVA6u",
+									"name": "1d damage per 5 minutes",
+									"reference": "B161",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m5TUXp_i--yin0G5p",
+									"name": "1d damage per 30 minutes",
+									"reference": "B161",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mAN0hbd2wcP58hJZQ",
+									"name": "1 damage",
+									"cost": -2,
+									"cost_type": "points",
+									"use_level_from_trait": true
+								},
+								{
+									"id": "mWQuvOhVBo26OvDo6",
+									"name": "@Rare Substance@",
+									"reference": "B161",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mqK4OqN_Zp8GpF9RO",
+									"name": "@Occasional Substance@",
+									"reference": "B161",
+									"cost": 1,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mZLkV21_P1JHDFBIs",
+									"name": "@Common Substance@",
+									"reference": "B161",
+									"cost": 2,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mK6W2m0amKtU_bod7",
+									"name": "@Very Common Substance@",
+									"reference": "B161",
+									"cost": 3,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mumti0ISvWmSwbdlL",
+									"name": "Fatigue Only",
+									"reference": "B161",
+									"cost": -50,
+									"disabled": true
+								},
+								{
+									"id": "m23L-gkwcm8ui6t1V",
+									"name": "Variable",
+									"reference": "B161",
+									"cost": -40
+								}
+							],
+							"calc": {
+								"points": -1
+							}
+						}
+					],
+					"calc": {
+						"points": -2
+					}
+				}
+			],
+			"calc": {
+				"points": -3
+			}
+		}
+	]
+}

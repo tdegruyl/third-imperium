@@ -646,16 +646,15 @@
 						},
 						{
 							"id": "t7HeaHzmdhZRhJ73j",
-							"name": "Quirk - Unfazeable",
+							"name": "Drakarans rarely display emotion, and are not prone to panic",
 							"reference": "B95",
-							"notes": "Drakarans rarely display emotion, and are not prone to panic (+1 to avoid Fright Checks)",
 							"tags": [
 								"Advantage",
 								"Mental"
 							],
 							"modifiers": [
 								{
-									"id": "mTHosNewpXLBXI1Xs",
+									"id": "mTGCgKgL7AX_ICpM4",
 									"name": "Familiar Horrors",
 									"reference": "H20",
 									"cost": -50,
@@ -663,6 +662,13 @@
 								}
 							],
 							"base_points": 1,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "fright_check",
+									"amount": 1
+								}
+							],
 							"calc": {
 								"points": 1
 							}

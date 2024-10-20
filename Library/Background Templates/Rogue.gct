@@ -565,7 +565,7 @@
 							"modifier": -5
 						}
 					],
-					"points": 4
+					"points": 2
 				},
 				{
 					"id": "sjY1NGuErZNeC9MRj",
@@ -645,6 +645,32 @@
 					],
 					"tech_level": "10",
 					"points": 1
+				},
+				{
+					"id": "suJtgoyfDdx7o2R52",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sbzAJAcPWGr5sFAdP"
+					},
+					"name": "Lockpicking",
+					"reference": "B206",
+					"tags": [
+						"Criminal",
+						"Police",
+						"Spy",
+						"Street",
+						"Technical"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 2
 				},
 				{
 					"id": "SiUxhJoMwwb8EMCH2",

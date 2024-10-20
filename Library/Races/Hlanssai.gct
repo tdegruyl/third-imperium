@@ -1,0 +1,493 @@
+{
+	"version": 5,
+	"id": "BCtue8SgMEyUfLNR6",
+	"traits": [
+		{
+			"id": "T_nDlRRKhmhI1Y6BH",
+			"name": "Hlanssai",
+			"reference": "TA4:79",
+			"ancestry": "Human",
+			"container_type": "ancestry",
+			"children": [
+				{
+					"id": "T1XlpVfe3sI1sB02N",
+					"name": "Racial Advantages",
+					"children": [
+						{
+							"id": "t0P1ORV3hiqe7fnmM",
+							"name": "Ambidexterity",
+							"reference": "B39",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"base_points": 10,
+							"calc": {
+								"points": 10
+							}
+						},
+						{
+							"id": "txS0E1HfwP227-4Rh",
+							"name": "Night Vision",
+							"reference": "B71",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"points_per_level": 1,
+							"can_level": true,
+							"levels": 9,
+							"calc": {
+								"points": 9
+							}
+						},
+						{
+							"id": "tWkEVvXTAnQ7H8Byf",
+							"name": "Ultrahearing",
+							"reference": "B94",
+							"tags": [
+								"Advantage",
+								"Exotic",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mI_thAW4VPty7kwtY",
+									"name": "No normal hearing",
+									"reference": "B94",
+									"cost": -5,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 5,
+							"calc": {
+								"points": 5
+							}
+						},
+						{
+							"id": "tNaF2HbVCwY-svIo5",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "ta04iFiZ_Kw0s0juj"
+							},
+							"name": "Racial Reputation (Talented Artists)",
+							"reference": "B26,MA54",
+							"tags": [
+								"Advantage",
+								"Social"
+							],
+							"modifiers": [
+								{
+									"id": "mFxRs4qPeUi4JvFZk",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Almost everyone",
+									"cost": 1,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "m-hCnE9nakhGus5FH",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Almost everyone except @large class of people@",
+									"cost": 0.67,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "m2dV7F9wNWqy67qCL",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "@Large class of people@",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mkA63lLSiSMPtIaWT",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "devotees of the arts",
+									"cost": 0.33,
+									"cost_type": "multiplier"
+								},
+								{
+									"id": "ma-y3Os5bWuZE_9Jh",
+									"name": "Recognized all the time",
+									"reference": "B28",
+									"cost": 1,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mYwmg0TqiD3YUPB7N",
+									"name": "Recognized sometimes",
+									"reference": "B28",
+									"notes": "10-",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "m7OnHXv7EBFpEL6Uy",
+									"name": "Recognized occasionally",
+									"reference": "B28",
+									"notes": "7-",
+									"cost": 0.33,
+									"cost_type": "multiplier",
+									"disabled": true
+								}
+							],
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "reaction_bonus",
+									"situation": "from others aware of your reputation",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"round_down": true,
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 3
+							}
+						}
+					],
+					"calc": {
+						"points": 27
+					}
+				},
+				{
+					"id": "TXtFVy62UnD2gLjbW",
+					"name": "Racial Disadvantages",
+					"children": [
+						{
+							"id": "tbELeDaC3RsrtG-JD",
+							"name": "Absent-Mindedness",
+							"reference": "B122",
+							"notes": "-5 on all IQ and IQ-based skill rolls, save those for the task you are currently concentrating on. Once adrift in your own thoughts, you must roll against Perception-5 in order to notice any event short of personal physical injury.",
+							"tags": [
+								"Disadvantage",
+								"Mental"
+							],
+							"base_points": -15,
+							"calc": {
+								"points": -15
+							}
+						},
+						{
+							"id": "t9dlGn4WzfWDHUY_O",
+							"name": "Odious Personal Habit",
+							"reference": "B22",
+							"notes": "Whimsical and unpredictable behavior",
+							"tags": [
+								"Disadvantage",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mq-vu2OHqbRtZOnMr",
+									"name": "-1 Reaction",
+									"reference": "B22",
+									"cost": -5,
+									"cost_type": "points"
+								},
+								{
+									"id": "mrTqnu74K2LF4zd3g",
+									"name": "-2 Reaction",
+									"reference": "B22",
+									"cost": -10,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mik40R7eCsbJhubop",
+									"name": "-3 Reaction",
+									"reference": "B22",
+									"cost": -15,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": -5
+							}
+						},
+						{
+							"id": "tZHXR39wuqMxQUPMi",
+							"name": "Racial Reputation (crazy)",
+							"reference": "B26",
+							"tags": [
+								"Disadvantage",
+								"Social"
+							],
+							"modifiers": [
+								{
+									"id": "mvIgZuszr6HeRO_f7",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Almost everyone",
+									"cost": 1,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mg_qu5oBm0RQg0ZMo",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Almost everyone except Vargr minions",
+									"cost": 0.67,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mQAJGfmbf8E0yuVgb",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "@Large class of people@",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mp4YDxee1FjS-hXqV",
+									"name": "People Affected",
+									"reference": "B27",
+									"notes": "Vargr minions",
+									"cost": 0.33,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "mkNwtQPbqC7213b4T",
+									"name": "Recognized all the time",
+									"reference": "B28",
+									"cost": 1,
+									"cost_type": "multiplier"
+								},
+								{
+									"id": "mBFQPci_CqTyKrwAn",
+									"name": "Recognized sometimes",
+									"reference": "B28",
+									"notes": "10-",
+									"cost": 0.5,
+									"cost_type": "multiplier",
+									"disabled": true
+								},
+								{
+									"id": "m1N3AqSS-amu0nvth",
+									"name": "Recognized occasionally",
+									"reference": "B28",
+									"notes": "7-",
+									"cost": 0.33,
+									"cost_type": "multiplier",
+									"disabled": true
+								}
+							],
+							"points_per_level": -5,
+							"round_down": true,
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": -10
+							}
+						}
+					],
+					"calc": {
+						"points": -30
+					}
+				},
+				{
+					"id": "TFHJq09fGSrk_1Ajb",
+					"name": "Racial Primary Modifiers",
+					"children": [
+						{
+							"id": "tTSv-Eghz4txCZ8lV",
+							"name": "Decreased Strength",
+							"reference": "B14",
+							"tags": [
+								"Attribute",
+								"Disadvantage",
+								"Physical"
+							],
+							"points_per_level": -5,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "st",
+									"amount": -1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": -10
+							}
+						},
+						{
+							"id": "t_ZAjRraxqwPT5_kg",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tsIfS0jZqdshsDFOM"
+							},
+							"name": "Extra Fatigue Points",
+							"reference": "B16",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"points_per_level": 3,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "fp",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 1,
+							"calc": {
+								"points": 3
+							}
+						},
+						{
+							"id": "tiefOiiqrmTcTcaCk",
+							"name": "Increased Dexterity",
+							"reference": "B15",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Physical"
+							],
+							"modifiers": [
+								{
+									"id": "mZinQCKVGBYTAzjn9",
+									"name": "No Fine Manipulators",
+									"cost": -40,
+									"disabled": true
+								}
+							],
+							"points_per_level": 20,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "dx",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 2,
+							"calc": {
+								"points": 40
+							}
+						},
+						{
+							"id": "thnzxKEGfrQRLDIy7",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tmpxhXmSORakqvrbn"
+							},
+							"name": "Increased Perception",
+							"reference": "B16",
+							"tags": [
+								"Advantage",
+								"Attribute",
+								"Mental",
+								"Physical"
+							],
+							"points_per_level": 5,
+							"features": [
+								{
+									"type": "attribute_bonus",
+									"attribute": "per",
+									"amount": 1,
+									"per_level": true
+								}
+							],
+							"can_level": true,
+							"levels": 4,
+							"calc": {
+								"points": 20
+							}
+						}
+					],
+					"calc": {
+						"points": 53
+					}
+				},
+				{
+					"id": "TCarHNE1L7lM6ZRFu",
+					"name": "Racial Quirks",
+					"children": [
+						{
+							"id": "tNF6GgZMh2buJVNv4",
+							"name": "Broad-minded",
+							"reference": "B162",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"calc": {
+								"points": -1
+							}
+						},
+						{
+							"id": "trMsWRVSf-ltBD3jn",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Power Ups/Power Ups Traits.adq",
+								"id": "tUAIeEBXuWXXZaqks"
+							},
+							"name": "Dreamer",
+							"reference": "PU6:18",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"calc": {
+								"points": -1
+							}
+						},
+						{
+							"id": "tiRhoS-K8Tay11ZBp",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Power Ups/Power Ups Traits.adq",
+								"id": "ts1oT0wF_54sENp_K"
+							},
+							"name": "Imaginative",
+							"reference": "PU6:19",
+							"tags": [
+								"Mental",
+								"Quirk"
+							],
+							"base_points": -1,
+							"calc": {
+								"points": -1
+							}
+						}
+					],
+					"calc": {
+						"points": -3
+					}
+				}
+			],
+			"calc": {
+				"points": 47
+			}
+		}
+	]
+}

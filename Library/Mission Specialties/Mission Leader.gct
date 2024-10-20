@@ -1,0 +1,299 @@
+{
+	"version": 5,
+	"id": "BTXBWQLl4Axp4AsrD",
+	"traits": [
+		{
+			"id": "TJ45DvLA_wWCWjaBf",
+			"name": "Mission Leader",
+			"children": [
+				{
+					"id": "tLP97vtHSq0PpQSkK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tmp8yecgaZq9TOk59"
+					},
+					"name": "Administrative Rank (Imperial)",
+					"reference": "B29",
+					"tags": [
+						"Advantage",
+						"Social"
+					],
+					"modifiers": [
+						{
+							"id": "mR_Bm994CE1XI0BCI",
+							"name": "Replaces Status",
+							"reference": "B29",
+							"cost": 5,
+							"cost_type": "points",
+							"affects": "levels_only",
+							"disabled": true
+						},
+						{
+							"id": "meZdJIopaQk5eELuw",
+							"name": "Courtesy",
+							"reference": "B29",
+							"cost": -4,
+							"cost_type": "points",
+							"affects": "levels_only",
+							"disabled": true
+						}
+					],
+					"points_per_level": 5,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tbXNDZY9PZY1-3qqK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Power Ups/Power Ups Traits.adq",
+						"id": "trBGwkM0-bFOQUZcz"
+					},
+					"name": "Talent (Intuitive Admiral (Space))",
+					"reference": "PU3:12",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Talent"
+					],
+					"modifiers": [
+						{
+							"id": "mPyiLgJDCMcdLlH5a",
+							"name": "Alternative Cost",
+							"cost": -2,
+							"cost_type": "points",
+							"affects": "levels_only",
+							"disabled": true
+						}
+					],
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Expert Skill"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Military Science"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "History"
+							},
+							"specialization": {
+								"compare": "ends_with",
+								"qualifier": "Military"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Intelligence Analysis"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Leadership"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Savoir-Faire"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Military"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shiphandling"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Spaceship"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shiphandling"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Starship"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Spacer"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Strategy"
+							},
+							"specialization": {
+								"compare": "is",
+								"qualifier": "Space"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "From anyone you serve with or command.",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "Bonus to initiative roll if leader",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10
+					}
+				}
+			],
+			"calc": {
+				"points": 15
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SV7PUPg25tXG3XlTT",
+			"name": "Mission Leader",
+			"children": [
+				{
+					"id": "snZmdzXXxzv8aNGsF",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sn-AqOk3ggCs7fqIQ"
+					},
+					"name": "Administration",
+					"reference": "B174",
+					"tags": [
+						"Business",
+						"Social"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Merchant",
+							"modifier": -3
+						},
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "sNUPBxgvLDWnO3gLW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s8j6tcaNxXkF89Xbt"
+					},
+					"name": "Diplomacy",
+					"reference": "B187",
+					"tags": [
+						"Business",
+						"Police",
+						"Social"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Politics",
+							"modifier": -6
+						}
+					],
+					"points": 4
+				},
+				{
+					"id": "se6fq6bugSarcNvFa",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sSxGnNPMXyZpZKoFZ"
+					},
+					"name": "Leadership",
+					"reference": "B204",
+					"tags": [
+						"Military",
+						"Social"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 4
+				}
+			]
+		}
+	]
+}

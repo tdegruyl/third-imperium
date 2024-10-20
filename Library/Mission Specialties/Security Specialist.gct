@@ -1,0 +1,481 @@
+{
+	"version": 5,
+	"id": "BjIVbrcThE2AnyArN",
+	"traits": [
+		{
+			"id": "TFcLZ57SwiJ9J7IC0",
+			"name": "Security Specialist",
+			"children": [
+				{
+					"id": "tLKyVLyp6DCYDtr0y",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Power Ups/Power Ups Traits.adq",
+						"id": "tOjsbk80G_rSNlfY3"
+					},
+					"name": "Talent (Natural Copper)",
+					"reference": "PU3:13",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Talent"
+					],
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Body Language"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Criminology"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Detect Lies"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Intelligence Analysis"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Interrogation"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Observation"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Savoir-Faire"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Search"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Shadowing"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Streetwise"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "From police and PIs.",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "Bonus to unskilled Per rolls to notice clues, and to all rolls to use Intuition",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10
+					}
+				}
+			],
+			"calc": {
+				"points": 10
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SYJG7_wm0yxzwFL9_",
+			"name": "Security Specialist",
+			"children": [
+				{
+					"id": "sGt8uSZQinnTv1jIG",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sOp4wssAMtUc1ukJI"
+					},
+					"name": "Body Language",
+					"reference": "B181",
+					"tags": [
+						"Police",
+						"Social",
+						"Spy"
+					],
+					"difficulty": "per/a",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Detect Lies",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Psychology",
+							"modifier": -4
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sjhosfQk4Utt1CrUz",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "shtDdl5thrvKSnJHf"
+					},
+					"name": "Brawling",
+					"reference": "B182,MA55",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/e",
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"selection_type": "weapons_with_required_skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Brawling"
+							},
+							"level": {
+								"compare": "at_least",
+								"qualifier": 2
+							},
+							"amount": 1,
+							"per_die": true
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "s8LY7OmM5dzax6bpI",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sIegIM7jx4oMnRMm2"
+					},
+					"name": "Detect Lies",
+					"reference": "B187",
+					"tags": [
+						"Police",
+						"Social",
+						"Spy"
+					],
+					"difficulty": "per/h",
+					"defaults": [
+						{
+							"type": "per",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Body Language",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Psychology",
+							"modifier": -4
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "sWDNM17sgg6L4PFea",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "slXlqD4FNReNHmsov"
+					},
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Criminal",
+						"Spy",
+						"Street",
+						"Technical"
+					],
+					"specialization": "Security",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Security",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sCwS5LM1PmeTkXhmq",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sfWUh9TJBpQuwZBVo"
+					},
+					"name": "Guns",
+					"reference": "B198",
+					"tags": [
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
+					],
+					"specialization": "Pistol",
+					"difficulty": "dx/e",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"specialization": "Pistol",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "sXPR8WObtSBPyZvkg",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPyZ0zxFI-Kygrzie"
+					},
+					"name": "Intelligence Analysis",
+					"reference": "B201",
+					"tags": [
+						"Military",
+						"Police",
+						"Spy"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Strategy",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sOEjtsvAX-_TaTg6z",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sfB-d4kTee0C-BZv0"
+					},
+					"name": "Interrogation",
+					"reference": "B202",
+					"tags": [
+						"Military",
+						"Police",
+						"Spy"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Intimidation",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Psychology",
+							"modifier": -4
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "soPJULFnXFbsyzCUk",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sgWf_qVqI7HrPQUo7"
+					},
+					"name": "Tactics",
+					"reference": "B224,MA60",
+					"tags": [
+						"Military",
+						"Police"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Strategy",
+							"modifier": -6
+						}
+					],
+					"points": 4
+				},
+				{
+					"id": "se04W_0NnEPiaKHio",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s8parl7zgbXys0OF2"
+					},
+					"name": "Wrestling",
+					"reference": "B228,MA61",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/a",
+					"points": 1
+				}
+			]
+		}
+	]
+}

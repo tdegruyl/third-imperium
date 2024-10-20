@@ -1,0 +1,1417 @@
+Encoding=UTF-8
+Version=3
+* Taboo="GURPS Power-Ups 3: Talents - Alt Cost.gdf"
+* Taboo="GURPS Power-Ups 3: Talents.gdf"
+Incomplete=Yes
+LoadAfter="GURPS Basic Set 4th Ed.--Characters.gdf"
+
+[Author]
+************************************************************************************\[START]
+//  
+//   GURPS® Character Assistant
+//   Filename: GURPS Power-Ups 10: Skill Trees.gdf
+//   Created:  2024 October 11
+//   Requires GCA v5 or later!
+//  
+//   This data file contains information taken from the GURPS Power-Ups 10: Skill Trees. 
+//   GURPS Power-Ups 10: Skill Trees is Copyright © 2024 
+//   by Steve Jackson Games Incorporated. All rights reserved.
+//  
+//   Information in this file includes:
+//  	Skills
+//  
+*****************************************************************************************
+//  
+//   This file compiled by Liv Tarter-de Gruyl (@effingsorceress)
+//  
+****************************************************************************************
+//  
+//   GURPS is a registered trademark of Steve Jackson Games Incorporated, used 
+//   with GCA by permission of Steve Jackson Games. All rights reserved.
+//  
+//   The GURPS game is Copyright © 1986, 1987, 1988, 1989, 1991, 1992, 1993, 
+//   1994, 1996, 1998, 1999, 2002, 2004, 2008 by Steve Jackson Games Incorporated. 
+//   This product includes copyrighted material from the GURPS game, which is 
+//   used by permission of Steve Jackson Games Incorporated. All rights reserved 
+//   by Steve Jackson Games Incorporated.
+//  
+**************************************************************************************\[STOP]
+
+
+#Delete N/A
+#Delete N | A
+#Delete Tech/A
+#Delete Tech/H
+#Delete Will/WC
+#Delete Will/VH
+#Delete Will/H
+#Delete Will/A
+#Delete Will/E
+#Delete HT/WC
+#Delete HT/VH
+#Delete HT/H
+#Delete HT/A
+#Delete HT/E
+#Delete HT/WC
+#Delete HT/VH
+#Delete HT/H
+#Delete HT/A
+#Delete HT/E
+#Delete Per/WC
+#Delete Per/VH
+#Delete Per/H
+#Delete Per/A
+#Delete Per/E
+#Delete DX/WC
+#Delete DX/VH
+#Delete DX/H
+#Delete DX/A
+#Delete DX/E
+#Delete IQ/WC
+#Delete IQ/VH
+#Delete IQ/H
+#Delete IQ/A
+#Delete IQ/E
+
+#DeleteByTag Skills, Text, Name ISNOTEMPTY
+#DeleteAllCats Skills
+
+
+[BONUSCLASSES]
+Trunks, stacks yes
+AllSources, stacks yes upto 15
+
+[SKILLTYPES]
+Trunk, cost(7/14), base(0), defaultstat(10), relname(), zeropointsokay(yes)
+IQ/Branch, cost(3/6), base(0), defaultstat(IQ)
+DX/Branch, cost(3/6), base(0), defaultstat(DX)
+HT/Branch, cost(3/6), base(0), defaultstat(HT)
+Will/Branch, cost(3/6), base(0), defaultstat(Will)
+Per/Branch, cost(3/6), base(0), defaultstat(Perception), relname(Per)
+IQ/Twig, cost(2/4), base(0), defaultstat(IQ)
+DX/Twig, cost(2/4), base(0), defaultstat(DX)
+HT/Twig, cost(2/4), base(0), defaultstat(HT)
+Will/Twig, cost(2/4), base(0), defaultstat(Will)
+Per/Twig, cost(2/4), base(0), defaultstat(Perception), relname(Per)
+IQ/Leaf, cost(1/2), base(0), defaultstat(IQ)
+DX/Leaf, cost(1/2), base(0), defaultstat(DX)
+HT/Leaf, cost(1/2), base(0), defaultstat(HT)
+Will/Leaf, cost(1/2), base(0), defaultstat(Will)
+Per/Leaf, cost(1/2), base(0), defaultstat(Perception), relname(Per)
+Tech/Leaf, cost(1/2), base(0), defaultstat(%default), relname(def)
+
+[GROUPS]
+<Animal>
+SK:Animal Handling
+SK:Connoisseur (Horses)
+SK:Connoisseur (Raptors)
+SK:Falconry
+SK:Mimicry (Animal Sounds)
+SK:Mimicry (Bird Calls)
+SK:Naturalist
+SK:Packing
+SK:Riding
+SK:Teamster
+SK:Veterinary
+
+<Arts/Entertainment>
+SK:Artist
+SK:Connoisseur
+SK:Current Affairs (High Culture)
+SK:Current Affairs (Popular Culture)
+SK:Dancing
+SK:Fire Eating
+SK:Group Performance
+SK:Makeup
+SK:Mimicry (Speech)
+SK:Musical Composition
+SK:Musical Instrument
+SK:Performance
+SK:Photography
+SK:Poetry
+SK:Singing
+SK:Sleight of Hand
+SK:Stage Combat
+SK:Ventriloquism
+
+<Athletics>
+SK:Acrobatics
+SK:Aerobatics
+SK:Aquabatics
+SK:Bicycling
+SK:Body Sense
+SK:Breath Control
+SKCAT:Combat Art
+SKCAT:Combat Sport
+SKCAT:Games - Sport
+SK:Climbing
+SK:Combat Art
+SK:Combat Sport
+SK:Current Affairs (Sports)
+SK:Flight
+SK:Free Fall
+SK:Hiking
+SK:Jumping
+SK:Lifting
+SK:Mount
+SK:Parachuting
+SK:Running
+SK:Scuba
+SK:Skating
+SK:Skiing
+SK:Sports
+SK:Swimming
+SK:Throwing
+
+<Bureaucracy>
+SK:Administration
+SK:Current Affairs (Politics)
+SK:Diplomacy
+SK:Economics
+SK:Expert Skill (Political Science)
+SK:Geography (Political)
+SK:Law
+SK:Politics
+SK:Professional Skill (Business Administration)
+SK:Public Speaking
+SK:Sociology
+
+<Business>
+SK:Accounting
+SK:Administration
+SK:Economics
+SK:Finance
+SK:Market Analysis
+SK:Merchant
+SK:Professional Skill (Business Administration)
+SK:Propaganda
+SK:Current Affairs (Business)
+
+<Clandestine Tech>
+SK:Computer Hacking
+SK:Counterfeiting
+SK:Cryptography
+SK:Forgery
+SK:Electronics Operation (Communications)
+SK:Electronics Operation (Electronic Warfare)
+SK:Electronics Operation (Media)
+SK:Electronics Operation (Security)
+SK:Electronics Operation (Surveillance)
+SK:Expert Skill (Computer Security)
+
+<Crafts>
+SK:Artist (Pottery)
+SK:Artist (Woodworking)
+SK:Carpentry
+SK:Cooking
+SK:Jeweler
+SK:Knot-Tying
+SK:Leatherworking
+SK:Masonry
+SK:Sewing
+SK:Smith
+
+<Deception>
+SK:Acting
+SK:Body Language
+SK:Detect Lies
+SK:Disguise
+SK:Fast-Talk
+SK:Mimicry
+SK:Propaganda
+SK:Psychology
+SK:Savoir-Faire
+
+<Esoteric>
+SK:Autohypnosis
+SK:Dreaming
+SK:Esoteric Medicine
+SK:Exorcism
+SK:Expert Skill (Psionics)
+SK:Fortune-Telling
+SK:Meditation
+SK:Mind Block
+SK:Occultism
+SK:Psychology (Parapsychology)
+SK:Religious Ritual
+SK:Ritual Magic
+SK:Symbol Drawing
+SK:Thaumatology
+SK:Theology
+
+<Innovation>
+SK:Architecture
+SK:Bioengineering
+SK:Computer Programming
+SK:Engineer
+SK:Pharmacy
+SK:Weird Science
+SK:Current Affairs (Science & Technology)
+
+<Investigation>
+SK:Criminology
+SK:Detect Lies
+SK:Expert Skill (Conspiracy Theory)
+SK:Forensics
+SK:Intelligence Analysis
+SK:Interrogation
+SK:Observation
+SK:Professional Skill (Police Officer)
+SK:Search
+SK:Tracking
+
+<Medical>
+SK:Diagnosis
+SK:Esoteric Medicine
+SK:First Aid
+SK:Hypnotism
+SK:Pharmacy
+SK:Physician
+SK:Physiology
+SK:Poisons
+SK:Psychology
+SK:Surgery
+SK:Veterinary
+SK:Electronics Operation (Medical)
+SK:Expert Skill (Epidemiology)
+
+<Melee Combat>
+SK:Axe/Mace
+SK:Broadsword
+SKCAT:Combat Art
+SKCAT:Combat Sport
+SK:Cloak
+SK:Combat Art
+SK:Combat Sport
+SK:Connoisseur (Weapons)
+SK:Fast-Draw (Force Sword)
+SK:Fast-Draw (Knife)
+SK:Fast-Draw (Sword)
+SK:Fast-Draw (Two-Handed Sword)
+SK:Fencing Weapons
+SK:Flail
+SK:Flails
+SK:Force Sword
+SK:Force Whip
+SK:Garrote
+SK:Impact Weapons
+SK:Jitte/Sai
+SK:Judo
+SK:Karate
+SK:Knife
+SK:Kusari
+SK:Lance
+SK:Main-Gauche
+SK:Monowire Whip
+SK:Polearm
+SK:Pole Weapons
+SK:Rapier
+SK:Saber
+SK:Shield (Buckler)
+SK:Shields
+SK:Shield (Shield)
+SK:Shortsword
+SK:Boxing
+SK:Brawling
+SK:Savoir-Faire (Dojo)
+SK:Smallsword
+SK:Spear
+SK:Staff
+SK:Sumo Wrestling
+SK:Swords
+SK:Tonfa
+SK:Two-Handed Axe/Mace
+SK:Two-Handed Sword
+SK:Unarmed Grappling
+SK:Unarmed Striking
+SK:Whip
+SK:Whips
+SK:Wrestling
+SK:Arm Lock
+SK:Back Kick
+SK:Elbow Strike
+SK:Jump Kick
+SK:Kicking
+SK:Knee Strike
+
+<Military>
+SK:Administration
+SK:Forward Observer
+SK:Heraldry
+SK:Intelligence Analysis
+SK:Leadership
+SK:Observation
+SK:Soldier
+SK:Strategy
+SK:Tactics
+SK:Expert Skill (Military Science)
+SK:Savoir-Faire (Military)
+
+<Natural Sciences>
+SK:Astronomy
+SK:Biology
+SK:Chemistry
+SK:Current Affairs (Science & Technology)
+SK:Electronics Operation (Scientific)
+SK:Expert Skill (Epidemiology)
+SK:Expert Skill (Hydrology)
+SK:Expert Skill (Natural Philosophy)
+SK:Geology
+SK:Mathematics
+SK:Metallurgy
+SK:Meteorology
+SK:Naturalist
+SK:Paleontology
+SK:Physics
+SK:Physiology
+
+<Outdoor/Exploration>
+SK:Camouflage
+SK:Cartography
+SK:Fishing
+SK:Hiking
+SK:Mimicry (Animal Sounds)
+SK:Mimicry (Bird Calls)
+SK:Naturalist
+SK:Navigation
+SK:Prospecting
+SK:Skating
+SK:Skiing
+SK:Survival
+SK:Swimming
+SK:Tracking
+SK:Weather Sense
+
+<Plant>
+SK:Biology
+SK:Farming
+SK:Gardening
+SK:Herb Lore
+SK:Naturalist
+SK:Pharmacy (Herbal)
+SK:Weather Sense
+
+<Ranged Combat>
+SK:Artillery
+SK:Beam Weapon
+SK:Blowpipe
+SK:Bolas
+SK:Bow
+SK:Crossbow
+SK:Dropping
+SK:Gunner
+SK:Guns
+SK:Innate Attack
+SK:Lasso
+SK:Liquid Projector
+SK:Net
+SK:Sling
+SK:Spear Thrower
+SK:Throwing
+SK:Thrown Weapon
+
+<Reconnaissance>
+SK:Body Language
+SK:Cartography
+SK:Forward Observer
+SK:Lip Reading
+SK:Observation
+SK:Photography
+SK:Shadowing
+SK:Electronics Operation (Sensors)
+SK:Electronics Operation (Surveillance)
+
+<Repair/Maintenance>
+SK:Armoury
+SK:Electrician
+SK:Electronics Repair
+SK:Machinist
+SK:Mechanic
+SK:Current Affairs (Science & Technology)
+
+<Scholar>
+SK:Computer Operation
+SK:Literature
+SK:Public Speaking
+SK:Research
+SK:Speed-Reading
+SK:Teaching
+SK:Typing
+SK:Writing
+SK:Connoisseur (Literature)
+
+<Sneakiness>
+SK:Camouflage
+SK:Escape
+SK:Holdout
+SK:Shadowing
+SK:Smuggling
+SK:Stealth
+
+<Social>
+SK:Carousing
+SK:Diplomacy
+SK:Erotic Art
+SK:Fast-Talk
+SK:Gambling
+SK:Gesture
+SK:Intimidation
+SK:Leadership
+SK:Panhandling
+SK:Public Speaking
+SK:Savoir-Faire
+SK:Sex Appeal
+SK:Streetwise
+
+<Social Sciences/Humanities>
+SK:Anthropology
+SK:Archaeology
+SK:Economics
+SK:Geography
+SK:History
+SK:Linguistics
+SK:Literature
+SK:Philosophy
+SK:Psychology
+SK:Sociology
+SK:Theology
+SK:Expert Skill (Egyptology)
+SK:Expert Skill (Political Science)
+SK:Expert Skill (Thanatology)
+SK:Expert Skill (Xenology)
+SK:Paleontology (Paleoanthropology)
+
+<Theft>
+SK:Filch
+SK:Forced Entry
+SK:Lockpicking
+SK:Pickpocket
+SK:Scrounging
+SK:Search
+SK:Sleight of Hand
+SK:Traps
+
+<Vehicles>
+SK:Airshipman
+SK:Battlesuit
+SK:Bicycling
+SK:Boating
+SK:Crewman
+SK:Driving
+SK:Navigation
+SK:Piloting
+SK:Seamanship
+SK:Seamanship
+SK:Shiphandling
+SK:Spacer
+SK:Submarine
+SK:Submariner
+SK:Teamster
+
+<Caution>
+SK:Battlesuit
+SK:Diving Suit
+SK:Explosives
+SK:Hazardous Materials
+SK:NBC Suit
+SK:Poisons
+SK:Traps
+SK:Urban Survival
+SK:Vacc Suit
+
+<Enthrallment>
+SK:Brainwashing
+SK:Captivate
+SK:Hypnotism
+SK:Musical Influence
+SK:Persuade
+SK:Suggest
+SK:Sway Emotions
+
+<Ki>
+SK:Blind Fighting
+SK:Body Control
+SK:Breaking Blow
+SK:Flying Leap
+SK:Immovable Stance
+SK:Invisibility Art
+SK:Kiai
+SK:Light Walk
+SK:Mental Strength
+SK:Parry Missile Weapon
+SK:Power Blow
+SK:Pressure Points
+SK:Pressure Secrets
+SK:Push
+SK:Throwing Art
+SK:Zen Archery
+
+<Practical>
+SK:Cooking
+SK:Freight Handling
+SK:Housekeeping
+SK:Professional Skill
+SK:Savoir-Faire (Servant)
+SK:Urban Survival
+
+[SKILLS]
+<Animal, Trunks>
+Animal, Trunk,  page(PU10:22), gives(=+ (me::step - me::extralevels) to GR:Animal class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Animal, Branches>
+Animal Handling, IQ/Branch, page(B175), childof(SK:Animal),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Animal Handling (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Packing, IQ/Branch, page(B212), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Riding, DX/Branch, page(B217), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Riding (#ANY EXCEPT "") class "AllSources") 
+Teamster, IQ/Branch, page(B225), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Teamster (#ANY EXCEPT "") class "AllSources"), cat(Vehicles)
+Veterinary, IQ/Branch, page(B228), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Animal, Twigs>
+Animal Handling (Big Cats), IQ/Twig, page(B175), childof(SK:Animal Handling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Animal Handling (Dogs), IQ/Twig, page(B175), childof(SK:Animal Handling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Animal Handling (Equines), IQ/Twig, page(B175),childof(SK:Animal Handling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Animal Handling (Raptors), IQ/Twig, page(B175), childof(SK:Animal Handling), gives(=+ (me::step - me::extralevels) to SK:Falconry class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Connoisseur (Horses), IQ/Twig, page(B185), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Connoisseur (Raptors), IQ/Twig, page(B185), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Mimicry (Animal Sounds), IQ/Twig, childof(SK:Animal), page(B210), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Deception), cat(Outdoor/Exploration)
+Mimicry (Bird Calls), IQ/Twig, childof(SK:Animal), page(B210), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Deception), cat(Outdoor/Exploration)
+Riding (%beast%), DX/Twig, page(B217), childof(SK:Riding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), x(#InputReplace("You must specialize by riding beast:", %beast%, "Equines", "Riding"))
+Riding (Big Cats), DX/Twig, page(B217), childof(SK:Riding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Riding (Dogs), DX/Twig, page(B217), childof(SK:Riding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Riding (Raptors), DX/Twig, page(B217), childof(SK:Riding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Riding (Equines), DX/Twig, page(B217), childof(SK:Riding), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Teamster (Specialization), IQ/Twig, page(B225), x(#InputToTagReplace("You must specialize by animal type:", nameext, "Equines", "Teamster")), childof(SK:Teamster), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+
+<Animal, Leaves>
+Falconry, IQ/Leaf, page(B194), childof(SK:Animal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Arts/Entertainment, Trunks>
+Arts/Entertainment, Trunk,  page(PU10:22),isparent(yes), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Arts/Entertainment class "Trunks, AllSources")
+
+<Arts/Entertainment, Branches>
+Artist, IQ/Branch, page(B179), isparent(yes), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Artist (#ANY EXCEPT "") class "AllSources")
+Dancing, DX/Branch, page(B187), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Fire Eating, DX/Branch, page(B195), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Group Performance, IQ/Branch, needs((SK:Social | SK:Bureaucracy | SK:Diplomacy | SK:Intimidation | SK:Leadership)), page(B198), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Group Performance (#ANY EXCEPT "") class "AllSources")
+Makeup, IQ/Branch, page(B206), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Musical Composition, IQ/Branch, page(B210), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Musical Instrument, IQ/Branch, page(B211), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Musical Instrument (#ANY EXCEPT "") class "AllSources")
+Performance, IQ/Branch, page(B212), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Photography, IQ/Branch, page(B213), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Reconnaissance)
+Poetry, IQ/Branch, page(B214), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Singing, IQ/Branch, page(B220), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Sleight of Hand, IQ/Branch, page(B221), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Theft)
+Stage Combat, IQ/Branch, page(B222), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Ventriloquism, IQ/Branch, page(B228), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Arts/Entertainment, Twigs>
+Artist (Body Art), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Calligraphy), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Drawing), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Illumination), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Illusion), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Interior Decorating), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Painting), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Pottery), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Crafts)
+Artist (Scene Design), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Sculpting), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Artist (Woodworking), IQ/Twig, page(B179), childof(SK:Artist), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Crafts) 
+Connoisseur, IQ/Twig, page(B185), x(#InputToTag("Specify the required specialty:", nameext, , "Connoisseur")), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Connoisseur (Dance), IQ/Twig, page(B185), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Connoisseur (Literature), IQ/Twig, page(B185), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Scholar)
+Connoisseur (Music), IQ/Twig, page(B185), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Connoisseur (Visual Arts), IQ/Twig, page(B185), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Connoisseur (Wine), IQ/Twig, page(B185), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Current Affairs (High Culture), IQ/Twig, page(B186), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Current Affairs (Popular Culture), IQ/Twig, page(B186), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Group Performance (Choreography), IQ/Twig, needs((SK:Social | SK:Bureaucracy | SK:Diplomacy | SK:Intimidation | SK:Leadership), SK:Dancing), page(B198), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes)
+Group Performance (Conducting), IQ/Twig, needs((SK:Social | SK:Bureaucracy | SK:Diplomacy | SK:Intimidation | SK:Leadership), SK:Musical Instrument (#ANY) | SK:Singing), page(B198), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes)
+Group Performance (Directing), IQ/Twig, needs((SK:Social | SK:Bureaucracy | SK:Diplomacy | SK:Intimidation | SK:Leadership), SK:Performance), page(B198), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes)
+Group Performance (Fight Choreography), IQ/Twig, needs((SK:Social | SK:Bureaucracy | SK:Diplomacy | SK:Intimidation | SK:Leadership), SK:Stage Combat), page(B198), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes)
+Mimicry (Speech), IQ/Twig, page(B210), childof({SK:Arts/Entertainment}), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes),cat(Deception)
+Musical Instrument (Instrument), IQ/Twig, page(B211), x(#InputToTag("You must specialize in a particular instrument:", nameext, , "Musical Instrument")),childof(SK:Musical Instrument), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Athletics, Trunks>
+Athletics, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Athletics class "Trunks, AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Athletics, Branches>
+Acrobatics, DX/Branch, page(B174),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Aerobatics, DX/Branch, page(B174),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Aquabatics, DX/Branch, needs(SK:Swimming | AD:Amphibious | "DI:No Legs (Aquatic)"), page(B174),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Bicycling, DX/Branch, page(B180),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+Body Sense, DX/Branch, page(B181),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Breath Control, HT/Branch, page(B182),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Climbing, DX/Branch, page(B183),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Combat Art, DX/Branch, page(B175), gives(=+ (me::step - me::extralevels) to SKCAT:Combat Art class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), childof(SK:Athletics)
+Combat Sport, DX/Branch, page(B175), gives(=+ (me::step - me::extralevels) to SKCAT:Combat Sport class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), childof(SK:Athletics)
+Flight, HT/Branch, needs(AD:Flight), page(B195),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Free Fall, DX/Branch, page(B197),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Hiking, HT/Branch, page(B200),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Outdoor/Exploration)
+Jumping, DX/Branch, page(B203),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Lifting, HT/Branch, page(B205),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Mount, DX/Branch, page(B210),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Parachuting, DX/Branch, page(B212),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Running, HT/Branch, page(B218),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Scuba, IQ/Branch, page(B219),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Skating, HT/Branch, page(B220),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Outdoor/Exploration)
+Skiing, HT/Branch, page(B221),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Outdoor/Exploration)
+Sports, DX/Branch, page(B222), gives(=+ (me::step - me::extralevels) to (SK:Sports (#ANY EXCEPT ""), SKCAT:Games - Sport) class "AllSources" ), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), childof(SK:Athletics)
+Swimming, HT/Branch, page(B224),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Outdoor/Exploration)
+Throwing, DX/Branch, page(B226),childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Athletics, Twigs>
+Combat Art (Skill), DX/Twig, page(B175), cat(Combat Art), parryat(@int(%level/2)+3), blockat(@int(%level/2)+3), x(#InputToTagReplace("Specify the name of the Combat skill here:", nameext)), noresync(yes), childof(SK:Combat Art), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Combat Sport (Skill), DX/Twig, page(B175), cat(Combat Sport), parryat(@int(%level/2)+3), blockat(@int(%level/2)+3), x(#InputToTagReplace("Specify the name of the Combat skill here:", nameext)), noresync(yes), childof(SK:Combat Sport), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Current Affairs (Sports), IQ/Twig, page(B186), childof(SK:Athletics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Games (Sport), IQ/Twig, page(B186), childof(SK:Athletics), cat(Games - Sport), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) x(#InputToTagReplace("Specify the name of the sport here:", nameext)), noresync(yes), childof(SK:Sports)
+Sports (Sport), DX/Twig, page(B222), x(#InputToTagReplace("Specify the name of the sport here:", "_Combat", nameext)), noresync(yes), childof(SK:Sports), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Bureaucracy, Trunks>
+Bureaucracy, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Bureaucracy class "Trunks, AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Bureaucracy, Branches>
+Administration, IQ/Branch, page(B174), childof(SK:Bureaucracy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Military)
+Law, IQ/Branch, page(B204), childof(SK:Bureaucracy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Politics, IQ/Branch, page(B215), childof(SK:Bureaucracy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Expert Skill (Political Science), IQ/Branch, page(B193), childof(SK:Bureaucracy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Bureaucracy, Twigs>
+Law (Region), IQ/Twig, page(B204), x(#InputToTagReplace("You must specialize in the laws of a particular political region, or in a specialized body of law not associated with a political region:", nameext, "local", "Law")), childof(SK:Law), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Current Affairs (Politics), IQ/Twig, page(B186), childof(SK:Bureaucracy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Social)
+
+<Business, Trunks>
+Business, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Business class "Trunks, AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Business, Branches>
+Accounting, IQ/Branch, page(B174), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Economics, IQ/Branch, page(B189), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Social Sciences/Humanities)
+Finance, IQ/Branch, page(B195), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Market Analysis, IQ/Branch, page(B207), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Merchant, IQ/Branch, page(B209), conditional(=@if(me::level >= 20 then 2 else @if(me::basepoints > 0 then 1 else 0)) to ST:Reaction when "buying or selling"), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Propaganda, IQ/Branch, page(B216), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Deception)
+Professional Skill (Business Administration), IQ/Branch, childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Business, Twigs>
+Current Affairs (Business), IQ/Twig, page(B186), childof(SK:Business), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Clandestine Tech, Trunks>
+Clandestine Tech, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Clandestine Tech class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Clandestine Tech, Branches>
+Computer Hacking, IQ/Branch, page(B184), symbol(Cinematic), childof(SK:Clandestine Tech), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Counterfeiting, IQ/Branch, page(B185), childof(SK:Clandestine Tech), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Cryptography, IQ/Branch, page(B186), childof(SK:Clandestine Tech), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Forgery, IQ/Branch, page(B196), childof(SK:Clandestine Tech), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Expert Skill (Computer Security), IQ/Branch, page(B193), childof(SK:Clandestine Tech), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Clandestine Tech, Twigs>
+
+<Crafts, Trunks>
+Crafts, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Crafts class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Crafts, Branches>
+Carpentry, IQ/Branch, default(IQ - 4), page(B183), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Jeweler, IQ/Branch, page(B203), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Leatherworking, DX/Branch, page(B205), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Masonry, IQ/Branch, page(B207), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Sewing, DX/Branch, page(B219), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Smith, IQ/Branch, page(B221), isparent(yes), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to SK:Smith (#ANY EXCEPT "") class "AllSources")
+Cooking, IQ/Branch, page(B185), isparent(yes), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Knot-Tying, IQ/Branch, page(B203), isparent(yes), childof(SK:Crafts), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Crafts, Twigs>
+Smith (Copper), IQ/Twig, page(B221), childof(SK:Smith), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Smith (Iron), IQ/Twig, page(B221), childof(SK:Smith), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Smith (Lead and Tin), IQ/Twig, page(B221), childof(SK:Smith), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Deception, Trunks>
+Deception, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Deception class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Deception, Branches>
+Acting, IQ/Branch, page(B174), childof(SK:Deception), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Body Language, Per/Branch, page(B181), childof(SK:Deception), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Reconnaissance)
+Detect Lies, Per/Branch, page(B187), childof(SK:Deception), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Disguise, IQ/Branch, page(B187), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(+= (me::step - me::extralevels) to SK:Disguise (#ALL EXCEPT "") class "AllSources"), isparent(yes)
+Fast-Talk, IQ/Branch, page(B195), gives(=@if(me::level >= 20 then 2 else 0) to ST:Reaction), childof(SK:Deception), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Social)
+Mimicry, IQ/Branch, childof(SK:Deception), page(B210), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(+= (me::step - me::extralevels) to SK:Mimicry (#ANY EXCEPT "")), isparent(yes)
+
+<Deception, Twigs>
+Disguise (Specialization), IQ/Twig, page(B187), x(#InputToTagReplace("You must specialize by species:", nameext, "Human", "Disguise")), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Esoteric, Trunks>
+Esoteric, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Esoteric class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Esoteric, Branches>
+Autohypnosis, Will/Branch, page(B179), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Dreaming, Will/Branch, page(B188), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Esoteric Medicine, Per/Branch, page(B192), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric), cat(Medical)
+Exorcism, Will/Branch, page(B193), conditional(=-4 to SK:Exorcism when "user doesn't possess Blessed, Power Investiture, or True Faith"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Fortune-Telling, IQ/Branch, page(B196), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Fortune-Telling (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Meditation, Will/Branch, page(B207), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Mind Block, Will/Branch, page(B210), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Occultism, IQ/Branch, page(B212), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Religious Ritual, IQ/Branch, page(B217), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Religious Ritual (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Ritual Magic, IQ/Branch, page(B218), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Ritual Magic (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Symbol Drawing, IQ/Branch, page(B224), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Symbol Drawing (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Thaumatology, IQ/Branch, page(B225), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric) 
+Theology, IQ/Branch, page(B226), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Theology (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Esoteric), cat(Social Sciences/Humanities)
+
+<Esoteric, Twigs>
+Fortune-Telling (Specialization), IQ/Twig, page(B196), x(#InputToTagReplace("You must specialize in a particular method of Fortune-Telling:", nameext, , "Fortune-Telling")), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Astrology), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Augury), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Crystal Gazing), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Dream Interpretation), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Feng Shui), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Palmistry), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Fortune-Telling (Tarot), IQ/Twig, page(B196), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Fortune-Telling) 
+Religious Ritual (Specialization), IQ/Twig, page(B217), x(#InputToTagReplace("You must specialize by religion:", nameext, , "Religious Ritual")), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Religious Ritual) 
+Ritual Magic (Specialization), IQ/Twig, page(B218), x(#InputToTagReplace("You must specialize by tradition:", nameext)), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Ritual Magic) 
+Symbol Drawing (Specialization), IQ/Twig, page(B224), x(#InputToTagReplace("You must specialize in a particular magical tradition:", nameext, , "Symbol Drawing")), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Symbol Drawing) 
+Theology (Specialization), IQ/Twig, page(B226), x(#InputToTagReplace("You must specialize by religion:", nameext, , "Theology")), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Theology) 
+
+<Innovation, Trunks>
+Innovation, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Innovation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Innovation, Branches>
+Architecture, IQ/Branch, page(B176), childof(SK:Innovation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Bioengineering, IQ/Branch, page(B180), childof(SK:Innovation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Computer Programming, IQ/Branch, page(B184), childof(SK:Innovation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Engineer, IQ/Branch, page(B190), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Engineer (#ANY EXCEPT "") class "AllSources"), childof(SK:Innovation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Pharmacy, IQ/Branch, page(B213), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),cat(Medical)
+Weird Science, IQ/Branch, page(B228), childof(SK:Innovation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Innovation, Twigs>
+Bioengineering (Cloning), IQ/Twig, page(B180), childof(SK:Bioengineering), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Bioengineering (Genetic Engineering), IQ/Twig, page(B180), childof(SK:Bioengineering), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Bioengineering (Tissue Engineering), IQ/Twig, page(B180), childof(SK:Bioengineering), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Current Affairs (Science & Technology), IQ/Twig, page(B186), childof(SK:Innovation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Repair/Maintenance)
+Engineer (%type%), IQ/Twig, page(B190),_
+ 	needs($if(me::tl > 4 THEN "SK:Mathematics (Applied) = 1pts")), 
+ 	x(#ChoiceList(_
+			name(type),_
+ 			title(Engineer: Choose an Engineering Specialty),_
+ 			text(Choose an Engineering Specialty from the list of examples provided:),_
+ 			picksallowed(1),_
+ 			method(bynumber),_
+ 			list(_
+ 				"Aerospace",_
+ 				"Antimatter Reactor",_
+                                "Artillery",_
+ 				"Autogyro",_
+ 				"Automobile",_
+ 				"Battlesuits",_
+ 				"Bicycle",_
+ 				"Body Armor",_
+                                "Civil",_
+ 				"Clockwork",_
+                                "Combat",_
+ 				"Construction Equipment",_
+ 				"Contragravity",_
+ 				"Diesel Engine",_
+                                "Electrical",_
+                                "Electronics",_
+ 				"Fission Reactor",_
+ 				"Flight Pack",_
+ 				"Force Shields",_
+ 				"Free-Flooding Sub",_
+ 				"Fuel Cell",_
+ 				"Fusion Reactor",_
+ 				"Gasoline Engine",_
+ 				"Gas Turbine",_
+ 				"Glider",_
+ 				"Halftrack Vehicle",_
+ 				"Heavy Airplane",_
+ 				"Heavy Wheeled Vehicle",_
+ 				"Helicopter",_
+ 				"High-Performance Airplane",_
+ 				"High-Performance Spacecraft",_
+ 				"Hovercraft",_
+ 				"Large Powerboat",_
+ 				"Large Sub",_
+ 				"Legged Motive System",_
+ 				"Light Airplane",_
+ 				"Lighter-Than-Air",_
+ 				"Lightsail",_
+ 				"Locomotive",_
+ 				"Low-G Wings",_
+ 				"Low-Performance Spacecraft",_
+                                "Materials",_
+ 				"Mecha",_
+ 				"Melee Weapons",_
+                                "Microtechnology",_
+                                "Mining",_
+ 				"Mini-Sub",_
+ 				"Missile Weapons",_
+ 				"Motorboat",_
+                                "Nanotechnology",_
+                                "Parachronic",_
+                                "Psychotronic",_
+ 				"Reactionless Thrusters",_
+ 				"Robotics",_
+ 				"Rockets",_
+ 				"Sailboat",_
+ 				"Small Arms",_
+ 				"Steam Engine",_
+                                "Temporal",_
+ 				"Tracked Motive System",_
+ 				"Tracked Vehicle",_
+ 				"Ultralight Airplane",_
+ 				"Unpowered Boat",_
+ 				"Vehicular Armor",_
+ 				"Vertol",_
+ 				"Wheeled Motive System" _
+ 		)_
+            )_
+ 	), noresync(yes), childof(SK:Engineer), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Pharmacy (Herbal), IQ/Twig, page(B213), childof(SK:Pharmacy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Medical, Plant)
+Pharmacy (Synthetic), IQ/Twig, page(B213), childof(SK:Pharmacy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Medical)  
+
+<Investigation, Trunks>
+Investigation, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Investigation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Investigation, Branches>
+Criminology, IQ/Branch, page(B186), childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Forensics, IQ/Branch, page(B196), childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Search, Per/Branch, page(B219), childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Theft)
+Interrogation, IQ/Branch, page(B202), childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Expert Skill (Conspiracy Theory), IQ/Branch, childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Professional Skill (Police Officer), IQ/Branch, childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Investigation, Twigs>
+
+<Medical, Trunks>
+Medical, Trunk, page(PU10:22), isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Medical class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Medical, Branches>
+Diagnosis, IQ/Branch, page(B187), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+First Aid, IQ/Branch, page(B195), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Hypnotism, IQ/Branch, page(B201), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Enthrallment)
+Physician, IQ/Branch, page(B213), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Physiology, IQ/Branch, page(B213), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to SK:Physiology (#ANY EXCEPT "") class "AllSources"), cat(Natural Sciences)
+Poisons, IQ/Branch, page(B214), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Surgery, IQ/Branch, page(B223), childof(SK:Medical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Expert Skill (Epidemiology), IQ/Branch, childof(SK:Medical), page(B195), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)
+
+<Medical, Twigs>
+Electronics Operation (Medical), IQ/Twig, childof(SK:Medical), page(B195), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Physiology (Specialization), IQ/Twig, page(B213), childof(SK:Physiology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), x(#InputToTagReplace("You must specialize by species:", nameext, "Human", "Disguise")), cat(Natural Sciences)
+
+<Melee Combat, Trunks>
+Melee Combat, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Melee Combat class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Melee Combat, Branches>
+Fencing Weapons, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Main-Gauche, SK:Rapier, SK:Saber, SK:Smallsword, SK:Fast-Draw (Sword), SK:Fast-Draw (Knife)) class "AllSources"), isparent(yes)
+Flails, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Flail, SK:Two-Handed Flail) class "AllSources"), isparent(yes)
+Garrote, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B197)
+Impact Weapons, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Axe/Mace, SK:Two-Handed Axe/Mace) class "AllSources"), isparent(yes)
+Pole Weapons, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Polearm, SK:Spear, SK:Staff, SK:Lance) class "AllSources"), isparent(yes)
+Shields, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B220), gives(=+ (me::step - me::extralevels) to (SK:Shield (#ANY), SK:Cloak) class "AllSources"), isparent(yes)
+Swords, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Broadsword, SK:Two-Handed Sword, SK:Force Sword, SK:Jitte/Sai, SK:Knife, SK:Shortsword, SK:Fast-Draw (Sword), SK:Fast-Draw (Knife), SK:Fast-Draw (Two-Handed Sword)) class "AllSources"), isparent(yes)
+Tonfa, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Unarmed Grappling, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(PU10:21), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Arm Lock, SK:Choke Hold, SK:Finger Lock) class "All Sources")
+Unarmed Striking, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(PU10:21), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Back Kick, SK:Elbow Strike, SK:Jump Kick, SK:Kicking, SK:Knee Strike) class "All Sources")
+Whips, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Kusari, SK:Whip, SK:Force Whip, SK:Monowire Whip) class "AllSources"), isparent(yes)
+
+<Melee Combat, Twigs>
+Axe/Mace, DX/Twig, childof(SK:Impact Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Boxing, DX/Twig, childof(SK:Unarmed Striking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B182)
+Brawling, DX/Twig, childof(SK:Unarmed Striking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B182)
+Broadsword, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Cloak, DX/Twig, childof(SK:Shields), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B184)
+Connoisseur (Weapons), DX/Twig, childof(SK:Melee Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B185)
+Fast-Draw (Force Sword), DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B194)
+Fast-Draw (Knife), DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B194)
+Fast-Draw (Sword), DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B194)
+Fast-Draw (Two-Handed Sword), DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B194)
+Flail, DX/Twig, childof(SK:Flails), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Force Sword, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Force Whip, DX/Twig, childof(SK:Whips), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Jitte/Sai, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Judo, DX/Twig, childof(SK:Unarmed Grappling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B203)
+Karate, DX/Twig, childof(SK:Unarmed Striking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B203)
+Knife, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Kusari, DX/Twig, childof(SK:Flails), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Lance, DX/Twig, childof(SK:Pole Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B204)
+Main-Gauche, DX/Twig, childof(SK:Fencing Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Monowire Whip, DX/Twig, childof(SK:Whips), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Polearm, DX/Twig, childof(SK:Pole Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Rapier, DX/Twig, childof(SK:Fencing Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Saber, DX/Twig, childof(SK:Fencing Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Shield (Buckler), DX/Twig, childof(SK:Shields), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B220)
+Shield (Shield), DX/Twig, childof(SK:Shields), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B220)
+Shortsword, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Smallsword, DX/Twig, childof(SK:Fencing Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Spear, DX/Twig, childof(SK:Pole Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Staff, DX/Twig, childof(SK:Pole Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Sumo Wrestling, DX/Twig, childof(SK:Unarmed Grappling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B223)
+Two-Handed Axe/Mace, DX/Twig, childof(SK:Impact Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208)
+Two-Handed Sword, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Whip, DX/Twig, childof(SK:Whips), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
+Wrestling, DX/Twig, childof(SK:Unarmed Grappling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B228)
+Savoir-Faire (Dojo), IQ/Twig, page(B218), childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Melee Combat, Leaves>
+Arm Lock, DX/Leaf, page(B230), default(DX-4), childof(SK:Unarmed Grappling)
+Back Kick, DX/Leaf, page(B230), default(DX-4),childof(SK:Unarmed Striking)
+Elbow Strike, DX/Leaf, page(B230), default(DX-2),childof(SK:Unarmed Striking)
+Jump Kick, DX/Leaf, page(B231), default(DX-4),childof(SK:Unarmed Striking)
+Kicking, DX/Leaf, page(B231), default(DX-2),childof(SK:Unarmed Striking)
+Knee Strike, DX/Leaf, page(B232), default(DX-1),childof(SK:Unarmed Striking)
+
+<Military, Trunks>
+Military, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Military class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Military, Branches>
+Heraldry, IQ/Branch, page(B199), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Intelligence Analysis, IQ/Branch, page(B201), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Investigation)
+Soldier, IQ/Branch, page(B221), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Strategy, IQ/Branch, page(B222), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Strategy (#ANY EXCEPT "") class "AllSources")
+Tactics, IQ/Branch, page(B224), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Expert Skill (Military Science), IQ/Branch, page(B193), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Military, Twigs>
+Savoir-Faire (Military), IQ/Twig, page(B218), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Strategy (Air), IQ/Twig, page(B222), childof(SK:Strategy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Strategy (Interstellar), IQ/Twig, page(B222), childof(SK:Strategy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Strategy (Land), IQ/Twig, page(B222), childof(SK:Strategy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Strategy (Naval), IQ/Twig, page(B222), childof(SK:Strategy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Strategy (Space), IQ/Twig, page(B222), childof(SK:Strategy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Natural Sciences, Trunks>
+Natural Sciences, Trunk, page(PU10:23), isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Natural Sciences class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Natural Sciences, Branches>
+Astronomy, IQ/Branch, page(B179), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Astronomy (#ANY EXCEPT "") class "AllSources"), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Biology, IQ/Branch, page(B180), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Biology (#ANY EXCEPT "") class "AllSources"), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Plant)
+Chemistry, IQ/Branch, page(B183), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Expert Skill (Hydrology), IQ/Branch, page(B193), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Expert Skill (Natural Philosophy), IQ/Branch, page(B193), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology, IQ/Branch, page(B198), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Geology (#ANY EXCEPT "") class "AllSources")
+Mathematics, IQ/Branch, page(B207), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Mathematics (#ANY EXCEPT "") class "AllSources")
+Metallurgy, IQ/Branch, page(B209), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology, IQ/Branch, page(B209), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Meteorology (#ANY EXCEPT "") class "AllSources")
+Naturalist, IQ/Branch, page(211), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),cat(Animal,Outdoor/Exploration,Plant)
+Paleontology, IQ/Branch, page(B212), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Paleontology (#ANY EXCEPT "") class "AllSources")
+Physics, IQ/Branch, needs($if(me::tl > 4 THEN "SK:Mathematics (Applied) = 1pts")), page(B213), childof(SK:Natural Sciences), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+
+<Natural Sciences, Twigs>
+Astronomy (Observational), IQ/Twig, page(B179), childof(SK:Astronomy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Biology (Earthlike), IQ/Twig, page(B180), childof(SK:Biology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Plant)
+Biology (Gas Giants), IQ/Twig, page(B180), childof(SK:Biology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Biology (Hostile Terrestrial), IQ/Twig, page(B180), childof(SK:Biology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Biology (Ice Dwarfs), IQ/Twig, page(B180), childof(SK:Biology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Biology (Ice Worlds), IQ/Twig, page(B180), childof(SK:Biology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Biology (Rock Worlds), IQ/Twig, page(B180), childof(SK:Biology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology (Earthlike), IQ/Twig, page(B198), childof(SK:Geology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology (Gas Giants), IQ/Twig, page(B198), childof(SK:Geology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology (Hostile Terrestrial), IQ/Twig, page(B198), childof(SK:Geology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology (Ice Dwarfs), IQ/Twig, page(B198), childof(SK:Geology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology (Ice Worlds), IQ/Twig, page(B198), childof(SK:Geology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geology (Rock Worlds), IQ/Twig, page(B198), childof(SK:Geology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mathematics (Applied), IQ/Twig, page(B207), childof(SK:Mathematics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mathematics (Computer Science), IQ/Twig, page(B207), childof(SK:Mathematics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mathematics (Cryptology), IQ/Twig, page(B207), childof(SK:Mathematics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mathematics (Pure), IQ/Twig, page(B207), childof(SK:Mathematics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mathematics (Statistics), IQ/Twig, page(B207), childof(SK:Mathematics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mathematics (Surveying), IQ/Twig, page(B207), childof(SK:Mathematics), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology (Earthlike), IQ/Twig, page(B209), childof(SK:Meteorolgy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology (Gas Giants), IQ/Twig, page(B209), childof(SK:Meteorolgy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology (Hostile Terrestrial), IQ/Twig, page(B209), childof(SK:Meteorolgy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology (Ice Dwarfts), IQ/Twig, page(B209), childof(SK:Meteorolgy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology (Ice Worlds), IQ/Twig, page(B209), childof(SK:Meteorolgy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Meteorology (Rock Worlds), IQ/Twig, page(B209), childof(SK:Meteorolgy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Paleontology (Micropaleontology), IQ/Twig, page(B212), childof(SK:Paleontology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Paleontology (Paleoanthropology), IQ/Twig, page(B212), childof(SK:Paleontology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Social Sciences/Humanities)
+Paleontology (Paleobotany), IQ/Twig, page(B212), childof(SK:Paleontology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Paleontology (Paleozoology), IQ/Twig, page(B212), childof(SK:Paleontology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Outdoor/Exploration, Trunks>
+Outdoor/Exploration, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Outdoor/Exploration class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Outdoor/Exploration, Branches>
+Camouflage, IQ/Branch, page(B183), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Sneakiness)
+Cartography, IQ/Branch, page(B183), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Reconnaissance)
+Fishing, Per/Branch, page(B195), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Navigation, IQ/Branch, page(B211), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Navigation (#ANY EXCEPT "") class "AllSources"), cat(Vehicles)
+Prospecting, IQ/Branch, page(B216), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival, Per/Branch, page(B223), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Survival (#ANY EXCEPT "") class "AllSources")
+Tracking, Per/Branch, page(B226), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Investigation)
+Weather Sense, IQ/Branch, page(B209), childof(SK:Outdoor/Exploration), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Plant)
+
+<Outdoor/Exploration, Twigs>
+Navigation (Air), IQ/Twig, page(B211), childof(SK:Navigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+Navigation (Hyperspace), IQ/Twig, page(B211), childof(SK:Navigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+Navigation (Land), IQ/Twig, page(B211), childof(SK:Navigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+Navigation (Sea), IQ/Twig, page(B211), childof(SK:Navigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+Navigation (Space), IQ/Twig, page(B211), childof(SK:Navigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Vehicles)
+Survival (Specialization), Per/Twig, page(B223), x(#InputToTagReplace("You must specialize by a particular terrain type:", nameext, , "Survival")), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Radioactive Wasteland), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Arctic), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Desert), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Island/Beach), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Jungle), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Mountain), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Plains), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Swampland), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Woodlands), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Bank), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Deep Ocean Vent), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Fresh-Water Lake), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Open Ocean), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Reef), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (River/Stream), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Salt-Water Sea), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Survival (Tropical Lagoon), Per/Twig, page(B223), childof(SK:Survival), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Plant, Trunks>
+Plant, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Plant class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Plant, Branches>
+Herb Lore, IQ/Branch, page(B199), childof(SK:Plant), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Farming, IQ/Branch, page(B194), childof(SK:Plant), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Gardening, IQ/Branch, page(B197), childof(SK:Plant), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Ranged Combat, Trunks>
+Ranged Combat, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Ranged Combat class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Ranged Combat, Branches>
+Artillery, IQ/Branch, page(B178), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Artillery (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Beam Weapons, DX/Branch, page(B179), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Beam Weapons (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Blowpipe, DX/Branch, page(B180), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Bolas, DX/Branch, page(B181), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Bow, DX/Branch, page(B182), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Crossbow, DX/Branch, page(B186), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Dropping, DX/Branch, page(B189), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Gunner, DX/Branch, page(B198), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Gunner (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns, DX/Branch, page(B198), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Guns (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Innate Attack, DX/Branch, page(B201), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Innate Attacks (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Lasso, DX/Branch, page(B204), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Liquid Projector, DX/Branch, page(B205), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Liquid Projector (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Net, DX/Branch, page(B211), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Sling, DX/Branch, page(B221), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Spear Thrower, DX/Branch, page(B222), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon, DX/Branch, page(B226), childof(SK:Ranged Combat), childof(SK:Ranged Combat), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Thrown Weapon (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Ranged Combat, Twigs>
+Artillery (Beams), IQ/Twig, page(B178), childof(SK:Artillery), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Artillery (Bombs), IQ/Twig, page(B178), childof(SK:Artillery), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Artillery (Cannon), IQ/Twig, page(B178), childof(SK:Artillery), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Artillery (Catapult), IQ/Twig, page(B178), childof(SK:Artillery), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Artillery (Guided Missile), IQ/Twig, page(B178), childof(SK:Artillery), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Artillery (Torpedoes), IQ/Twig, page(B178), childof(SK:Artillery), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Beam Weapons (Pistol), DX/Twig, page(B179), childof(SK:Beam Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Beam Weapons (Projector), DX/Twig, page(B179), childof(SK:Beam Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Beam Weapons (Rifle), DX/Twig, page(B179), childof(SK:Beam Weapons), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Fast-Draw (Arrow), DX/Twig, page(B194), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Fast-Draw (Ammo), DX/Twig, page(B194), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Fast-Draw (Long Arm), DX/Twig, page(B194), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Fast-Draw (Pistol), DX/Twig, page(B194), childof(SK:Ranged Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Gunner (Beams), DX/Twig, page(B198), childof(SK:Gunner), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Gunner (Cannon), DX/Twig, page(B198), childof(SK:Gunner), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Gunner (Catapult), DX/Twig, page(B198), childof(SK:Gunner), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Gunner (Machine Gun), DX/Twig, page(B198), childof(SK:Gunner), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Gunner (Rockets), DX/Twig, page(B198), childof(SK:Gunner), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Grenade Launcher), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Guns (Gyroc), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Light Anti-Armor Weapon), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Light Machine Gun), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Musket), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Pistol), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Rifle), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Shotgun), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Guns (Submachine Gun), DX/Twig, page(B198), childof(SK:Guns), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Innate Attack (Beam), DX/Twig, page(B201), childof(SK:Innate Attack), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Innate Attack (Breath), DX/Twig, page(B201), childof(SK:Innate Attack), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Innate Attack (Gaze), DX/Twig, page(B201), childof(SK:Innate Attack), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Innate Attack (Projectile), DX/Twig, page(B201), childof(SK:Innate Attack), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Liquid Projector (Flamethrower), DX/Twig, page(B205), childof(SK:Liquid Projector), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Liquid Projector (Sprayer), DX/Twig, page(B205), childof(SK:Liquid Projector), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Liquid Projector (Squirt Gun), DX/Twig, page(B205), childof(SK:Liquid Projector), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Liquid Projector (Water Cannon), DX/Twig, page(B205), childof(SK:Liquid Projector), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Axe/Mace), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Dart), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Harpoon), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Knife), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Shuriken), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Spear), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Thrown Weapon (Stick), DX/Twig, page(B226), childof(SK:Thrown Weapon), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Reconnaissance, Trunks>
+Reconnaissance, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Reconnaissance class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Reconnaissance, Branches>
+Forward Observer, IQ/Branch, page(B196), childof(SK:Military), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Military)
+Lip Reading, Per/Branch, page(B205), childof(SK:Reconnaissance), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Observation, Per/Branch, page(B211), childof(SK:Investigation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Investigation)
+Shadowing, IQ/Branch, page(B219), childof(SK:Reconnaissance), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Sneakiness)
+
+<Repair/Maintenance, Trunks>
+Repair/Maintenance, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Repair/Maintenance class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Repair/Maintenance, Branches>
+Armoury, IQ/Branch, page(B178), childof(SK:Repair/Maintenance), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Armoury (#ANY EXCEPT "") class "AllSources")
+Electrician, IQ/Branch, page(B189), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair, IQ/Branch, page(B190), childof(SK:Repair/Maintenance), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Electronics Repair (#ANY EXCEPT "") class "AllSources")
+Machinist, IQ/Branch, page(B206), childof(SK:Repair/Maintenance), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mechanic, IQ/Branch, page(B207), childof(SK:Repair/Maintenance), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Mechanic (#ANY EXCEPT "") class "AllSources")
+
+<Repair/Maintenance, Twigs>
+Armoury (Battlesuits), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Body Armor), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Force Shields), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Vehicular Armor), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Melee Weapons), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Small Arms), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Heavy Weapons), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Armoury (Missile Weapons), IQ/Twig, page(B178), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Armoury) 
+Electronics Repair (Communications), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Computers), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Force Shields), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Matter Transmitters), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Media), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Medical), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Parachronic), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Psychotronics), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Scientific), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Security), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Sensors), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Sonar), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Surveillance), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Repair (Temporal), IQ/Twig, page(B190), childof(SK:Electronics Repair), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Mechanic (Specialization), IQ/Twig, page(B207), childof(SK:Mechanic), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), x(#InputToTagReplace("Mechanic Specialization:", nameext))
+
+<Scholar, Trunks>
+Scholar, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Scholar class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Scholar, Branches>
+Computer Operation, IQ/Branch, page(B184), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))   
+Literature, IQ/Branch, page(B205), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Social Sciences/Humanities)
+Research, IQ/Branch, needs((1 CA:Language Written = 2 | ST:Native Languages < 0.5)), page(B217), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))   
+Speed-Reading, IQ/Branch, page(B222), needs((1 CA:Language Written = 2 | ST:Native Languages < 0.5)), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))   
+Teaching, IQ/Branch, page(B224), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))   
+Typing, DX/Branch, page(B228), needs((1 CA:Language Written = 1 | ST:Native Languages < 0.5)), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))   
+Writing, IQ/Branch, page(B228), needs((1 CA:Language Written = 2 | ST:Native Languages < 0.5)), childof(SK:Scholar), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))   
+
+<Sneakiness, Trunks>
+Sneakiness, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Sneakiness class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Sneakiness, Branches>
+Escape, DX/Branch, page(B192), childof(SK:Sneakiness), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Holdout, IQ/Branch, page(B200), childof(SK:Sneakiness), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Smuggling, IQ/Branch, page(B221), childof(SK:Sneakiness), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Stealth, DX/Branch, page(B222), childof(SK:Sneakiness), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+
+<Social, Trunks>
+Social, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Social class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Social, Branches>
+Diplomacy, IQ/Branch, page(B187), gives(=@if(me::level >= 20 then 2 else 0) to ST:Reaction), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)),cat(Bureaucracy)
+Public Speaking, IQ/Branch, page(B216), gives(=+ (me::step - me::extralevels) to SK:Public Speaking (#ANY EXCEPT "") class "AllSources"), isparent(yes), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Bureaucracy, Scholar) 
+Savoir-Faire, IQ/Branch, page(B218), childof(SK:Social) displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))), gives(=+ (me::step - me::extralevels) to SK:Savoir-Faire (#ANY EXCEPT "") class "AllSources"), isparent(yes),cat(Deception)
+Carousing, HT/Branch, page(B183), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Gambling, IQ/Branch, page(B197), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Intimidation, Will/Branch, page(B202), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Gesture, IQ/Branch, page(B198), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Leadership, IQ/Branch, page(B204), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Military)
+Panhandling, IQ/Branch, page(B212), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)
+Sex Appeal, HT/Branch, page(B219, S224), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Military), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Sex Appeal (#ANY EXCEPT "") class "AllSources")
+Streetwise, IQ/Branch, page(B223), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Social, Twigs>
+Erotic Art, DX/Twig, page(B192, S224), childof(SK:Social), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Public Speaking (Debate), IQ/Twig, page(B216), childof(SK:Public Speaking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Bureaucracy, Scholar) 
+Public Speaking (Oratory), IQ/Twig, page(B216), childof(SK:Public Speaking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Bureaucracy, Scholar)  
+Public Speaking (Rhetoric), IQ/Twig, page(B216), childof(SK:Public Speaking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Bureaucracy, Scholar)  
+Public Speaking (Punning), IQ/Twig, page(B216), childof(SK:Public Speaking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Public Speaking (Storytelling), IQ/Twig, page(B216), childof(SK:Public Speaking), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Savoir-Faire (Specialization), IQ/Twig, page(B218), x(#InputToTag("You must specialize in a subculture:", nameext, , "Savoir-Faire"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))), childof(SK:Savoir-Faire),cat(Deception)
+Sex Appeal (Specialization), HT/Twig, page(B219, S224), x(#InputToTagReplace("You must specialize by species:", nameext, "Human", "Sex Appeal")), childof(SK:Sex Appeal), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Military)
+
+<Social Sciences/Humanities, Trunks>
+Social Sciences/Humanities, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Social Sciences/Humanities::level class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Social Sciences/Humanities, Branches>
+Anthropology, IQ/Branch, page(B175), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Anthropology (#ANY EXCEPT "") class "AllSources")   
+Archaeology, IQ/Branch, page(B176), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Geography, IQ/Twig, page(B198), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Geography (#ANY EXCEPT "") class "AllSources")
+History, IQ/Branch, page(B200),, childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:History (#ANY EXCEPT "") class "AllSources")  
+Linguistics, IQ/Branch, page(B205), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Philosophy, IQ/Branch, page(B213), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Philosophy (#ANY EXCEPT "") class "AllSources") 
+Psychology, IQ/Branch, page(B216), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Deception, Medical), gives(=+ (me::step- me::extralevels) to SK:Psychology (#ANY EXCEPT "") class "AllSources")
+Sociology, IQ/Branch, page(B221), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
+Expert Skill (Egyptology), IQ/Branch, page(B193), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Expert Skill (Political Science), IQ/Branch, page(B193), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Expert Skill (Thanatology), IQ/Branch, page(B193), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Expert Skill (Xenology), IQ/Branch, page(B193), childof(SK:Social Sciences/Humanities), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Social Sciences/Humanities, Twigs>
+Anthropology (Specialization), IQ/Twig, page(B175), x(#InputToTagReplace("You must specialize in a particular species:", nameext, "Human", "Anthropology")), childof(SK:Anthropology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Geography (Political), IQ/Twig, page(B198), childof(SK:Geography), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Bureaucracy)
+Geography (Specialization), IQ/Twig, page(B198) x(#InputToTagReplace("Please specify the region covered:", nameext)), childof(SK:Geography), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+History (Specialization), IQ/Twig, page(B200), x(#InputToTagReplace("You must specialize in a limited geographical region or a single era:", nameext, , "History")), childof(SK:History), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Philosophy (Specialization), IQ/Twig, page(B213), x(#InputToTagReplace("You must specialize in a particular school of philosophy:", nameext, , "Philosophy")), childof(SK:Philosophy), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Psychology (Specialization), IQ/Twig, page(B216), x(#InputToTagReplace("You must specialize by species:", nameext, "Human", "Psychology")), childof(SK:Psychology), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+ 
+<Theft, Trunks>
+Theft, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Theft class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Theft, Branches>
+Filch, DX/Branch, page(B195), childof(SK:Theft), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Forced Entry, DX/Branch, page(B196), childof(SK:Theft), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Lockpicking, IQ/Branch, page(B206), childof(SK:Theft), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Pickpocket, DX/Branch, page(B213), childof(SK:Theft), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Scrounging, Per/Branch, page(B218), childof(SK:Theft), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Traps, IQ/Branch, page(B226), childof(SK:Theft), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Caution)  
+
+<Vehicles, Trunks>
+Vehicles, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Vehicles class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Vehicles, Branches>
+Battlesuit, DX/Branch, page(B192), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Caution), childof(SK:Vehicles)
+Boating, DX/Branch, page(B180), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Boating (#ANY EXCEPT "") class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Crewman, IQ/Branch, page(B185), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Airshipman, SK:Seamanship, SK:Spacer, SK:Submariner) class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving, DX/Branch, page(B188), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Driving (#ANY EXCEPT "") class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting, DX/Branch, page(B214), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Piloting (#ANY EXCEPT "") class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Shiphandling, IQ/Branch, page(B220), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Shiphandling (#ANY EXCEPT "") class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Submarine, DX/Branch, page(B223), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Submarine (#ANY EXCEPT "") class "AllSources")
+
+<Vehicles, Twigs>
+Airshipman, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Seamanship, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Spacer, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Submariner, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Boating (Large Powerboat), DX/Twig, page(B180), childof(SK:Boating), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Boating (Motorboat), DX/Twig, page(B180), childof(SK:Boating), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Boating (Sailboat), DX/Twig, page(B180), childof(SK:Boating), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Boating (Unpowered), DX/Twig, page(B180), childof(SK:Boating), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Automobile), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Construction Equipment), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Halftrack), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Heavy Wheeled), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Hovercraft), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Locomotive), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Mecha), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Motorcycle), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Driving (Tracked), DX/Twig, page(B188), childof(SK:Driving), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Aerospace), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Autogyro), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Contragravity), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Flight Pack), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Glider), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Heavy Airplane), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Helicopter), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (High-Performance Airplane), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (High-Performance Spacecraft), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Light Airplane), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Lighter-Than-Air), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Lightsail), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Low-G Wings), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Low-Performance Spacecraft), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Ultralight), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Piloting (Vertol), DX/Twig, page(B214), childof(SK:Piloting), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Shiphandling (Airship), IQ/Twig, page(B220), childof(SK:Shiphandling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Shiphandling (Ship), IQ/Twig, page(B220), childof(SK:Shiphandling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Shiphandling (Spaceship), IQ/Twig, page(B220), childof(SK:Shiphandling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Shiphandling (Starship), IQ/Twig, page(B220), childof(SK:Shiphandling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Shiphandling (Submarine), IQ/Twig, page(B220), childof(SK:Shiphandling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Submarine (Free-Flooding Sub), DX/Twig, page(B223), childof(SK:Submarine), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Submarine (Large Sub), DX/Twig, page(B223), childof(SK:Submarine), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Submarine (Mini-Sub), DX/Twig, page(B223), childof(SK:Submarine), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+
+<Outliers, Branches>
+Alchemy, IQ/Branch, page(B174), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Operation, IQ/Branch, page(B189), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Hidden Lore (Conspiracies), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hidden Lore (Demon Lore), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hidden Lore (Faerie Lore), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hidden Lore (Spirit Lore), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Outliers, Twigs>
+Electronics Operation (Communication), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Clandestine Tech)      
+Electronics Operation (Electronic Warfare), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Clandestine Tech)      
+Electronics Operation (Media), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Clandestine Tech)    
+Electronics Operation (Security), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Clandestine Tech)  
+Electronics Operation (Sensors), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Reconnaissance)  
+Electronics Operation (Surveillance), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Reconnaissance)    
+Electronics Operation (Scientific), IQ/Twig, page(B189), childof(SK:Electronics Operation), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Games, IQ/Twig, page(B197), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Games (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Outliers, Leaves>
+Area Knowledge ([Area]), IQ/Leaf, page(B176), x(#InputToTagReplace("Please specify the area covered:", nameext)), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Games (Specialty), IQ/Leaf, page(B197), x(#InputToTagReplace("You must specialize in a particular game:", nameext, "GURPS", "Games")), childof(SK:Games), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Caution, Outliers, Trunks>
+Caution, Trunk, page(PU10:10), isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Caution class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Caution, Outliers, Branches>
+Explosives, IQ/Branch, page(B194), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Explosives (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hazardous Materials, IQ/Branch, page(B199), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Hazardous Materials (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+NBC Suit, DX/Branch, page(B192), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Diving Suit, SK:Vacc Suit, SK:Battlesuit) class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Poisons, IQ/Branch, page(B214), childof(SK:Caution), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Urban Survival, Per/Branch, page(B228), childof(SK:Caution), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Practical)
+
+<Caution, Outliers, Twigs>
+Explosives (Demolition), IQ/Twig, page(B194), childof(SK:Explosives), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Explosives (Explosive Ordinance Disposal), IQ/Twig, page(B194), childof(SK:Explosives), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Explosives (Fireworks), IQ/Twig, page(B194), childof(SK:Explosives), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Explosives (Nuclear Ordnance), IQ/Twig, page(B194), childof(SK:Explosives), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Explosives (Underwater Demolition), IQ/Twig, page(B194), childof(SK:Explosives), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Hazardous Materials (Biological), IQ/Twig, page(B199), childof(SK:Hazardous Materials), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hazardous Materials (Radioactive), IQ/Twig, page(B199), childof(SK:Hazardous Materials), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hazardous Materials (Chemical), IQ/Twig, page(B199), childof(SK:Hazardous Materials), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Diving Suit, DX/Twig, page(B192), childof(SK:NBC Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Vacc Suit, DX/Twig, page(B192), childof(SK:NBC Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Enthrallment, Outliers, Trunks>
+Enthrallment, Trunk, page(PU10:10), isparent(yes), gives(+= (me::step - me::extralevels) to GR:Enthrallment class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Enthrallment, Outliers, Branches>
+Brainwashing, IQ/Branch, page(B182), childof(Enthrallment), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Musical Influence, IQ/Branch, page(B210), childof(Enthrallment), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Captivate, Will/Branch, page(B191), childof(Enthrallment), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Persuade, Will/Branch, page(B191), childof(Enthrallment), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Suggest, Will/Branch, page(B191), childof(Enthrallment), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Sway Emotions, Will/Branch, page(B191), childof(Enthrallment), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Ki, Outliers, Trunks>
+Ki, Trunk, page(PU10:10), isparent(yes), gives(+= (me::step - me::extralevels) to GR:Ki class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Ki, Outliers, Branches>
+Blind Fighting, Per/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(B180)
+Body Control, HT/Branch, needs(AD:Trained By A Master, SK:Breath Control = 1pts, SK:Meditation = 1pts), page(B181), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Breaking Blow, IQ/Branch, needs(AD:Trained By A Master), page(B182), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Flying Leap, IQ/Branch, needs(AD:Trained By A Master, SK:Jumping = 1pts, SK:Power Blow = 1pts | AD:Weapon Master, SK:Jumping = 1pts, SK:Power Blow = 1pts), page(B196), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Immovable Stance, DX/Branch, needs(AD:Trained By A Master), page(B201), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Invisibility Art, IQ/Branch, needs(AD:Trained By A Master, SK:Hypnotism = 14, SK:Stealth = 14), page(B202), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Kiai, HT/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(B203), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Light Walk, DX/Branch, needs(AD:Trained By A Master, SK:Acrobatics = 14, SK:Stealth = 14), page(B205), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Mental Strength, Will/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(B209), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Parry Missile Weapons, DX/Branch, page(B212), parryat(@int(%level/2)+3), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Power Blow, Will/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(B215), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Pressure Points, IQ/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(B215), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Pressure Secrets, IQ/Branch, needs(AD:Trained By A Master, SK:Pressure Points = 16), page(B215), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Push, DX/Branch, needs(AD:Trained By A Master), page(B216), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Throwing Art, DX/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(B226), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Zen Archery, IQ/Branch, needs(AD:Trained By A Master, SK:Bow >= 18, SK:Meditation = 1pts | AD:Weapon Master, SK:Bow >= 18, SK:Meditation = 1pts), page(B228), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Practical, Outliers, Trunks>
+Practical, Trunk, page(PU10:10), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Practical class "Trunks,AllSources")
+
+<Practical, Outliers, Branches>
+Freight Handling, IQ/Branch, page(B197), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Professional Skill (IQ based), IQ/Branch, page(B215), x( #InputToTagReplace("Specify the profession encompassed by this skill:", nameext)), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Practical, Outliers, Twigs>
+Cooking, IQ/Twig, page(B185), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+<Practical, Outliers, Leaves>
+Housekeeping, IQ/Leaf, page(B200), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hobby Skill (DX-based), DX/Leaf, page(B200), x( #InputToTagReplace("Specify the field of study:", nameext) ), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Hobby Skill (IQ-based), IQ/Leaf, page(B200), x( #InputToTagReplace("Specify the field of study:", nameext) ), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+
+
+
+
+
+ 

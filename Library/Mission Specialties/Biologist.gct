@@ -1,0 +1,384 @@
+{
+	"version": 5,
+	"id": "BtLtS4pW43KH4vi2y",
+	"traits": [
+		{
+			"id": "TgzybhVYzsm3QsOi9",
+			"name": "Biologist",
+			"children": [
+				{
+					"id": "thE9O1IiUEig1cPY-",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Power Ups/Power Ups Traits.adq",
+						"id": "ttrmORiWbD1uv2rpD"
+					},
+					"name": "Talent (Natural Scientist)",
+					"reference": "PU3:13",
+					"tags": [
+						"Advantage",
+						"Mental",
+						"Talent"
+					],
+					"modifiers": [
+						{
+							"id": "mr121SeP6a_nF7ThA",
+							"name": "Alternative Cost",
+							"cost": 1,
+							"cost_type": "points",
+							"affects": "levels_only",
+							"disabled": true
+						}
+					],
+					"points_per_level": 10,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Astronomy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Chemistry"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Expert Skill"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Expert Skill"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Geology"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mathematics"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mathematics"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mathematics"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Metallurgy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Meteorology"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Paleontology"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Physics"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Pysiology"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "reaction_bonus",
+							"situation": "From scientists and those impressed by \"smart people\".",
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "conditional_modifier",
+							"situation": "Reduce TL and familiarity penalties for gear examined for an hour with a covered skill",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 10
+					}
+				}
+			],
+			"calc": {
+				"points": 10
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "S6od3sT5MDdtpn1eQ",
+			"name": "Biologist",
+			"children": [
+				{
+					"id": "s7bBj4SzSNfkSUOcP",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s4arfUoQ8xiikH5TB"
+					},
+					"name": "Biology",
+					"reference": "B180",
+					"tags": [
+						"Natural Science",
+						"Plant"
+					],
+					"specialization": "Biochemistry",
+					"difficulty": "iq/vh",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sSou0l8c04JOOBSAC",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "scBFJWfsDYeIEsCQG"
+					},
+					"name": "Biology",
+					"reference": "B180",
+					"tags": [
+						"Natural Science",
+						"Plant"
+					],
+					"specialization": "Earthlike",
+					"difficulty": "iq/vh",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "sz9BBB8GnoqW-Y4fB",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sluTeYhSTpIbVNfA5"
+					},
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Technical"
+					],
+					"specialization": "Sensors",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Sensors",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "s1GmdyKoC3T1oslA_",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "swPEguEhGicG5M08E"
+					},
+					"name": "Expert Skill",
+					"reference": "B193,MA56",
+					"tags": [
+						"Knowledge",
+						"Natural Science",
+						"Scholarly"
+					],
+					"specialization": "Hydrology",
+					"difficulty": "iq/h",
+					"points": 1
+				},
+				{
+					"id": "sTa6TgDqFAjdMHrD8",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sNN-ULO6HlINrt-Yb"
+					},
+					"name": "Paleontology",
+					"reference": "B212",
+					"tags": [
+						"Humanities",
+						"Natural Science",
+						"Social Sciences"
+					],
+					"specialization": "Paleozoology",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Biology",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Paleontology",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sDAkH4k_pbVfagzzJ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPfyz7_V73fxlVXOS"
+					},
+					"name": "Physiology",
+					"reference": "B213",
+					"tags": [
+						"Medical",
+						"Natural Science"
+					],
+					"specialization": "@Specialty@",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Diagnosis",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Surgery",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				}
+			]
+		}
+	]
+}

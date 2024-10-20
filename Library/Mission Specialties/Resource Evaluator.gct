@@ -1,0 +1,183 @@
+{
+	"version": 5,
+	"id": "BRF4jWNu0Y81L2YF4",
+	"skills": [
+		{
+			"id": "SpuqjSCIEYC5Aj14R",
+			"name": "Resource Evaluator",
+			"children": [
+				{
+					"id": "stxkhqDEbWqxaQU5U",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sluTeYhSTpIbVNfA5"
+					},
+					"name": "Electronics Operation",
+					"reference": "B189",
+					"tags": [
+						"Technical"
+					],
+					"specialization": "Sensors",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"specialization": "Sensors",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "sq3JEp1EgcF0G-aSv",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sWwJi69T88FLejD8Q"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Earthlike",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Earthlike",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "s7yAsChVsgXH8uPkH",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "smA7Ihmr-JXza-sai"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Rock Worlds",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Rock Worlds",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "s715sYeYQKpXlOWRc",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sH-gwMqLTWQ337rzx"
+					},
+					"name": "Propaganda",
+					"reference": "B216",
+					"tags": [
+						"Business",
+						"Military",
+						"Social",
+						"Spy"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Merchant",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Psychology",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
+					"id": "svYUDnNhZS3omf4Yc",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "ssj5Oq-3-vH-bQ1AL"
+					},
+					"name": "Prospecting",
+					"reference": "B216",
+					"tags": [
+						"Exploration",
+						"Outdoor"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Geology",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 12
+				}
+			]
+		}
+	]
+}

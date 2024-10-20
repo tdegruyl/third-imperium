@@ -75,7 +75,7 @@
 					},
 					"modifiers": [
 						{
-							"id": "m4dV21gjb6bzVi7hf",
+							"id": "m9XTFZogpmxGLpley",
 							"name": "Native",
 							"reference": "B23",
 							"cost": -6,
@@ -83,7 +83,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mKSrbJT2qXKc-PL38",
+							"id": "mnxnvD5vOuGdZL-HW",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "None",
@@ -91,7 +91,7 @@
 							"disabled": true
 						},
 						{
-							"id": "myC-f6UX4Yn4ts8_p",
+							"id": "mYtUO_yhJi8HEBejL",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "Broken",
@@ -100,24 +100,24 @@
 							"disabled": true
 						},
 						{
-							"id": "mNYKGP3a_I22ADpSl",
+							"id": "m0DdGvvqWJvt93GVA",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "Accented",
 							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
+							"cost_type": "points"
 						},
 						{
-							"id": "mkn_50SKiZnOI-uzq",
+							"id": "mEbF_SrYK__742o1C",
 							"name": "Spoken",
 							"reference": "B24",
 							"notes": "Native",
 							"cost": 3,
-							"cost_type": "points"
+							"cost_type": "points",
+							"disabled": true
 						},
 						{
-							"id": "mVuD0H_yn8t3UcJKW",
+							"id": "mavH2wCg4xn0gMZCy",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "None",
@@ -125,7 +125,7 @@
 							"disabled": true
 						},
 						{
-							"id": "mWS88toxdIu32ezZn",
+							"id": "mhLz5XBiQpsoCBdou",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "Broken",
@@ -134,25 +134,25 @@
 							"disabled": true
 						},
 						{
-							"id": "m7dZmyqLd2DMXM_PL",
+							"id": "mv8FtTzaaB2UegNOU",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "Accented",
 							"cost": 2,
-							"cost_type": "points",
-							"disabled": true
+							"cost_type": "points"
 						},
 						{
-							"id": "mwwCsAEa8dWpLtCFC",
+							"id": "mXjjM00ZfZXi7ttSE",
 							"name": "Written",
 							"reference": "B24",
 							"notes": "Native",
 							"cost": 3,
-							"cost_type": "points"
+							"cost_type": "points",
+							"disabled": true
 						}
 					],
 					"calc": {
-						"points": 6
+						"points": 4
 					}
 				},
 				{
@@ -269,7 +269,7 @@
 				}
 			],
 			"calc": {
-				"points": 6
+				"points": 4
 			}
 		}
 	]
