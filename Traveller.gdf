@@ -624,7 +624,7 @@ Courier, displaycost(50),
 Medical Doctor, displaycost(50),
     AddsOrIncreases(_
         SK:Medical=35pts,
-        SK:Natural Sciences=7pts,
+        SK:Physical Sciences=7pts,
         SK:Diagnosis=3pts,
         SK:Physician=12pts,
         SK:Surgery=3pts_
@@ -831,7 +831,7 @@ Engineer, displaycost(100),
         DI:Sense of Duty (Crew),
         SK:Caution=7pts,
         SK:Innovation=7pts,
-        SK:Natural Sciences=7pts,
+        SK:Physical Sciences=7pts,
         SK:Practical=7pts,
         SK:Repair/Maintenance=21pts,
         SK:Vehicles=7pts,
@@ -912,8 +912,7 @@ Pilot, displaycost(100),
 
 Biologist, displaycost(25),
     AddsOrIncreases(_
-        SK:Natural Sciences=7pts
-        SK:Plant=7pts,
+        SK:Biosciences=14pts
         SK:Biology=9pts,
         SK:Biology (Earthlike)=2pts_
     ),hide(yes)
@@ -946,7 +945,7 @@ Mission Leader, displaycost(25),
 Resource Evaluator, displaycost(25),
     AddsOrIncreases(_
         SK:Electronics Operation (Sensors)=6pts, 
-        SK:Natural Sciences=7pts,
+        SK:Physical Sciences=7pts,
         SK:Prospecting=12pts_
     ), hide(yes)
 
@@ -961,7 +960,7 @@ Security Officer, displaycost(25),
 
 Stellar Cartographer, displaycost(25),
     AddsOrIncreases(_
-        SK:Natural Sciences=7pts,
+        SK:Physical Sciences=7pts,
         SK:Reconnaissance=7pts,
         SK:Astronomy=3pts,
         SK:Navigation=3pts,
