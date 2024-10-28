@@ -37,6 +37,9 @@ LoadAfter=GURPS Power-Ups 10 - Skill Trees.gdf
 // 
 ******************************************************************\[STOP]
 
+
+[ADVANTAGES]
+
 #delete AD:Animal Telepathy Talent
 #delete AD:Anti-Psi Talent
 #delete AD:Astral Projection Talent
@@ -51,6 +54,8 @@ LoadAfter=GURPS Power-Ups 10 - Skill Trees.gdf
 #delete AD:Psychometabolism Talent
 #delete AD:Telepathy Talent
 #delete AD:Teleportation Talent
+
+TK Bullet (Psi),cat(Psionic Powers, Psionic Powers - Psychokinesis),cost(5/10),page(PP53-54), mode(Bullet|Flat Edge|Sharp Edge|Rapid Fire),acc(3|3|3|3),armordivisor(||2|),damage($val(%level)d-$val(%level)|$val(%level)d-$val(%level)|$val(%level)d-$val(%level)|$val(%level)d-$val(%level)),dmg(1|1|1|1),damtype(pi|pi+|pi|pi),rangehalfdam(500|500|500|500),rangemax(2000|2000|2000|2000),rcl(1|1|1|1),rof(1|1|1|7),skillused(SK:TK Bullet, SK:Psychokinesis, IQ-5|SK:Flat Edge (TK Bullet), SK:TK Bullet-2, SK:Psychokinesis-2, IQ-7|SK:Sharp Edge (TK Bullet), SK:TK Bullet-5, SK:Psychokinesis-5, IQ-10|SK:Rapid Fire (TK Bullet), SK:TK Bullet-7, SK:Psychokinesis-7, IQ-12)
 
 [GROUPS]
 <Animal Telepathy>
@@ -296,9 +301,15 @@ Levitation, IQ/Branch, page(PP55), displaynameformula($val(me::fullname): +$eval
 PK Shield, IQ/Branch, page(PP56), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
 Pyrokinesis, Will/Branch, page(PP56-57), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
 Telekinetic Control, IQ/VH, page(PP54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
-TK Bullet, IQ/Branch, page(PP53-54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+
+    
+TK Bullet, IQ/Branch, page(PP53-54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis), isparent(yes)
 TK Crush, IQ/Branch, page(PP54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
 TK Grab, IQ/Branch, page(PP54-55), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:Psychokinesis)
+
+Rapid Fire (TK Bullet), Tech/Leaf, upto($eval(SK:TK Bullet::level)), default(SK:TK Bullet - 7, SK:Psychokinesis - 7), basedon(SK:TK Bullet), page(PP53-54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:TK Bullet)
+Flat Edge (TK Bullet), Tech/Leaf, upto($eval(SK:TK Bullet::level)), default(SK:TK Bullet - 2, SK:Psychokinesis - 2), basedon(SK:TK Bullet), page(PP53-54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:TK Bullet)
+Sharp Edge (TK Bullet), Tech/Leaf, upto($eval(SK:TK Bullet::level)), default(SK:TK Bullet - 4, SK:Psychokinesis - 4), basedon(SK:TK Bullet), page(PP53-54), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), childof(SK:TK Bullet)
 
 <Psychometabolism>
 Psychometabolism, Trunk, displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Psychometabolism class "Trunks, AllSources"),isparent(yes)

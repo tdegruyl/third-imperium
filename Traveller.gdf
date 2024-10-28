@@ -14,7 +14,8 @@ LoadAfter="GURPS Ultra-Tech 4e.gdf"
 **************************************************************************
 * GURPS(R) Character Assistant
 * Filename: traveller.gdf
-* Created: July 27, 2024
+* Created:  27 July 2024
+* Edited:   21 October 2024
 * Requires GCA v5.0.220.0 or later!
 *
 * GURPS Traveller is Copyright(C)1998 by Steve Jackson Games 
@@ -102,7 +103,7 @@ SK:Whip
 SK:Wrestling
 
 [Attributes]
-Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000)
+Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000),page(PU5:17)
 #ReplaceTags in ST:ST with up(5), down(-5)
 #Delete ST:Chip Slots
 
@@ -445,6 +446,7 @@ Sense of Duty (Crew), -5, cat(Mundane, Mental), page(B153)
 
 <Mundane Social>
 Social Stigma (Robot), -10, page(TFI25), cat(Mundane, Social)
+
 
 [SKILLS]
 #DeleteFromCat Skills, "Traveller Psi"
@@ -789,7 +791,7 @@ Comms and Nav Officer, displaycost(100),
         ST:IQ = ST:IQ + 1,
         ST:HT = ST:HT + 1 _
     ),
-    adds(_
+    addsOrIncreases(_
         DI:Sense of Duty (Crew),
         SK:Medical=7pts,
         SK:Practical=7pts,
@@ -827,7 +829,7 @@ Engineer, displaycost(100),
         ST:IQ = ST:IQ + 2,
         ST:HT = ST:HT + 1 _
     ),
-    adds(_
+    addsOrIncreases(_
         DI:Sense of Duty (Crew),
         SK:Caution=7pts,
         SK:Innovation=7pts,
@@ -870,7 +872,7 @@ Pilot, displaycost(100),
         ST:DX = ST:DX + 1,
         ST:HT = ST:HT + 1 _
     ),
-    adds(_
+    addsOrIncreases(_
         AD:3D Spatial Sense,
         DI:Sense of Duty (Crew),
         SK:Practical=7pts,
@@ -912,7 +914,7 @@ Pilot, displaycost(100),
 
 Biologist, displaycost(25),
     AddsOrIncreases(_
-        SK:Biosciences=14pts
+        SK:Biosciences=14pts,
         SK:Biology=9pts,
         SK:Biology (Earthlike)=2pts_
     ),hide(yes)
@@ -970,7 +972,7 @@ Stellar Cartographer, displaycost(25),
 
 <Upgrade Modules>
 
-Battle(suit)-Ready, displaycost(25),
+Battle(dress)-Ready, displaycost(25),
     sets(_
         ST:ST = ST:ST +2_
     ), 
@@ -1044,6 +1046,22 @@ Speedy, displaycost(25),
         ST:DX = ST:DX +1,
         ST:Basic Move = ST:Basic Move + 1_
     ), hide(yes)
+
+Telepath, displaycost(25),
+    addsorincreases(_
+        AD:Telereceive - Shallow (Psi)=1,
+        SK:Telepathy=7pts_
+    ), hide(yes)
+
+Teke, displaycost(25),
+    addsorincreases(_
+        AD:TK Bullet (Psi)=2,
+        AD:TK Grab - Short Ranged (Psi)=1,
+        SK:Psychokinesis=7pts,
+        SK:TK Bullet=3pts,
+        SK:Sharp Edge (TK Bullet) = 1pts_
+    ), hide(yes)
+
 
 <Traveller Races>
 
@@ -1946,9 +1964,9 @@ _Basic Kit,
 #Delete EQ:Dogsled
 #Delete EQ:Space Biosuit
 
-#DeleteByTag Advanyages, Text IgnoreEmpty, techlvl = 11^
-#DeleteByTag Advanyages, Text IgnoreEmpty, techlvl = 12
-#DeleteByTag Advanyages, Text IgnoreEmpty, techlvl = 12^
+#DeleteByTag Advantages, Text IgnoreEmpty, techlvl = 11^
+#DeleteByTag Advantages, Text IgnoreEmpty, techlvl = 12
+#DeleteByTag Advantages, Text IgnoreEmpty, techlvl = 12^
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "_Armor - Low-Tech"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Basic Set - Animals - Equestrian Gear"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Basic Set - Animals - Horse Armor/Barding"
@@ -1958,8 +1976,6 @@ _Basic Kit,
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Basic Set - Vehicles - Spacecraft"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Ammunition - Grav Gun Ammunition"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Armor - Bioplas Armor"
-* #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Cybernetics - Body Modifications"
-* #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Cybernetics - Brain Implants"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Antiparticle Beam"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Blue-Green Laser"
 #DeleteByTag Equipment, Text IgnoreEmpty, cat hasinlist "Ultra-Tech - Weapons - Ultraviolet Laser"
@@ -2049,7 +2065,6 @@ _Basic Kit,
 #MergeTags in "EQ:Underbarrel Shotgun, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
 #MergeTags in "EQ:Urban Assault Weapon" with skillused(SK:Ranged Combat, SK:Guns)
 #MergeTags in "EQ:Wrist Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
-
 
 //Liquid Projector
 #MergeTags in "EQ:Assault Flamer" with skillused(SK:Ranged Combat, SK:Liquid Projector)

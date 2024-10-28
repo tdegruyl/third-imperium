@@ -327,12 +327,6 @@ SK:Unarmed Striking
 SK:Whip
 SK:Whips
 SK:Wrestling
-SK:Arm Lock
-SK:Back Kick
-SK:Elbow Strike
-SK:Jump Kick
-SK:Kicking
-SK:Knee Strike
 
 <Military>
 SK:Administration
@@ -908,8 +902,8 @@ Pole Weapons, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::f
 Shields, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B220), gives(=+ (me::step - me::extralevels) to (SK:Shield (#ANY), SK:Cloak) class "AllSources"), isparent(yes)
 Swords, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Broadsword, SK:Two-Handed Sword, SK:Force Sword, SK:Jitte/Sai, SK:Knife, SK:Shortsword, SK:Fast-Draw (Sword), SK:Fast-Draw (Knife), SK:Fast-Draw (Two-Handed Sword)) class "AllSources"), isparent(yes)
 Tonfa, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
-Unarmed Grappling, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(PU10:21), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Arm Lock, SK:Choke Hold, SK:Finger Lock) class "All Sources")
-Unarmed Striking, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(PU10:21), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Back Kick, SK:Elbow Strike, SK:Jump Kick, SK:Kicking, SK:Knee Strike) class "All Sources")
+Unarmed Grappling, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(PU10:21), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Wrestling, SK:Judo, SK:Sumo Wrestling) class "All Sources")
+Unarmed Striking, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(PU10:21), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Brawling, SK:Karate, SK:Boxing) class "All Sources")
 Whips, DX/Branch, childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B208), gives(=+ (me::step - me::extralevels) to (SK:Kusari, SK:Whip, SK:Force Whip, SK:Monowire Whip) class "AllSources"), isparent(yes)
 
 <Melee Combat, Twigs>
@@ -949,14 +943,6 @@ Two-Handed Sword, DX/Twig, childof(SK:Swords), displaynameformula($val(me::fulln
 Whip, DX/Twig, childof(SK:Whips), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B209)
 Wrestling, DX/Twig, childof(SK:Unarmed Grappling), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), page(B228)
 Savoir-Faire (Dojo), IQ/Twig, page(B218), childof(SK:Melee Combat), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)) 
-
-<Melee Combat, Leaves>
-Arm Lock, DX/Leaf, page(B230), default(DX-4), childof(SK:Unarmed Grappling)
-Back Kick, DX/Leaf, page(B230), default(DX-4),childof(SK:Unarmed Striking)
-Elbow Strike, DX/Leaf, page(B230), default(DX-2),childof(SK:Unarmed Striking)
-Jump Kick, DX/Leaf, page(B231), default(DX-4),childof(SK:Unarmed Striking)
-Kicking, DX/Leaf, page(B231), default(DX-2),childof(SK:Unarmed Striking)
-Knee Strike, DX/Leaf, page(B232), default(DX-1),childof(SK:Unarmed Striking)
 
 <Military, Trunks>
 Military, Trunk,  page(PU10:22),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Military class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
