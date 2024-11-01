@@ -82,7 +82,7 @@ Trunks, stacks yes
 AllSources, stacks yes upto 15
 
 [SKILLTYPES]
-Trunk, cost(7/14), base(0), defaultstat(10), relname(), zeropointsokay(yes)
+Trunk, cost(7/14), base(0), defaultstat(10), relname()
 IQ/Branch, cost(3/6), base(0), defaultstat(IQ)
 DX/Branch, cost(3/6), base(0), defaultstat(DX)
 HT/Branch, cost(3/6), base(0), defaultstat(HT)
@@ -507,6 +507,7 @@ SK:Battlesuit
 SK:Diving Suit
 SK:Explosives
 SK:Hazardous Materials
+SK:Environmental Suit
 SK:NBC Suit
 SK:Poisons
 SK:Traps
@@ -1254,7 +1255,6 @@ Traps, IQ/Branch, page(B226), childof(SK:Theft), displaynameformula($val(me::ful
 Vehicles, Trunk,  page(PU10:23),isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Vehicles class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
 
 <Vehicles, Branches>
-Battlesuit, DX/Branch, page(B192), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Caution), childof(SK:Vehicles)
 Boating, DX/Branch, page(B180), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Boating (#ANY EXCEPT "") class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
 Crewman, IQ/Branch, page(B185), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Airshipman, SK:Seamanship, SK:Spacer, SK:Submariner) class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
 Driving, DX/Branch, page(B188), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Driving (#ANY EXCEPT "") class "AllSources"), childof(SK:Vehicles), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
@@ -1264,6 +1264,7 @@ Submarine, DX/Branch, page(B223), childof(SK:Vehicles), displaynameformula($val(
 
 <Vehicles, Twigs>
 Airshipman, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Battlesuit, DX/Twig, page(B192), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Caution), childof(SK:Vehicles)
 Seamanship, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
 Spacer, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
 Submariner, IQ/Twig, page(B185), childof(SK:Crewman), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
@@ -1307,7 +1308,7 @@ Submarine (Mini-Sub), DX/Twig, page(B223), childof(SK:Submarine), displaynamefor
 
 <Outliers, Branches>
 Alchemy, IQ/Branch, page(B174), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
-Electronics Operation, IQ/Branch, page(B189), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))  
+Electronics Operation, IQ/Branch, page(B189), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to SK:Electronics Operation (#ANY EXCEPT "") class "AllSources"), isparent(yes)
 Hidden Lore (Conspiracies), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Hidden Lore (Demon Lore), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Hidden Lore (Faerie Lore), IQ/Branch, page(B199), childof(SK:Hidden Lore), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
@@ -1333,7 +1334,7 @@ Caution, Trunk, page(PU10:10), isparent(yes), gives(=+ (me::step - me::extraleve
 <Caution, Outliers, Branches>
 Explosives, IQ/Branch, page(B194), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Explosives (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Hazardous Materials, IQ/Branch, page(B199), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to SK:Hazardous Materials (#ANY EXCEPT "") class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
-NBC Suit, DX/Branch, page(B192), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Diving Suit, SK:Vacc Suit, SK:Battlesuit) class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Environment Suit, DX/Branch, page(B192), childof(SK:Caution), isparent(yes), gives(=+ (me::step - me::extralevels) to (SK:Diving Suit, SK:Vacc Suit, SK:NBC Suit, SK:Battlesuit) class "AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Poisons, IQ/Branch, page(B214), childof(SK:Caution), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Urban Survival, Per/Branch, page(B228), childof(SK:Caution), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Practical)
 
@@ -1346,8 +1347,9 @@ Explosives (Underwater Demolition), IQ/Twig, page(B194), childof(SK:Explosives),
 Hazardous Materials (Biological), IQ/Twig, page(B199), childof(SK:Hazardous Materials), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Hazardous Materials (Radioactive), IQ/Twig, page(B199), childof(SK:Hazardous Materials), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 Hazardous Materials (Chemical), IQ/Twig, page(B199), childof(SK:Hazardous Materials), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
-Diving Suit, DX/Twig, page(B192), childof(SK:NBC Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
-Vacc Suit, DX/Twig, page(B192), childof(SK:NBC Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+Diving Suit, DX/Twig, page(B192), childof(SK:Environment Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Natural Sciences)    
+Vacc Suit, DX/Twig, page(B192), childof(SK:Environment Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
+NBC Suit, DX/Twig, page(B192), childof(SK:Environment Suit), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 
 <Enthrallment, Outliers, Trunks>
 Enthrallment, Trunk, page(PU10:10), isparent(yes), gives(+= (me::step - me::extralevels) to GR:Enthrallment class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
@@ -1382,7 +1384,7 @@ Throwing Art, DX/Branch, needs(AD:Trained By A Master | AD:Weapon Master), page(
 Zen Archery, IQ/Branch, needs(AD:Trained By A Master, SK:Bow >= 18, SK:Meditation = 1pts | AD:Weapon Master, SK:Bow >= 18, SK:Meditation = 1pts), page(B228), childof(Ki), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))
 
 <Practical, Outliers, Trunks>
-Practical, Trunk, page(PU10:10), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), gives(=+ (me::step - me::extralevels) to GR:Practical class "Trunks,AllSources")
+Practical, Trunk, page(PU10:10), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), isparent(yes), gives(=+ (me::step - me::extralevels) to GR:Practical class "Trunks,AllSources")
 
 <Practical, Outliers, Branches>
 Freight Handling, IQ/Branch, page(B197), childof(SK:Practical), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels))

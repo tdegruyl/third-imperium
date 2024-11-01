@@ -456,6 +456,7 @@ Mechanic (Jump Drive), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer 
 Mechanic (Reactionless Drive), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Reactionless Drive)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 Mechanic (Contragravity), IQ/A, tl(10-12), page(B207), default(IQ - 5, "SK:Engineer (Reactionless Drive)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 
+
 [TEMPLATES]
 #Delete TE:Dragon (Basic Set)
 #Delete TE:Dwarf (Basic Set)
@@ -800,7 +801,7 @@ Comms and Nav Officer, displaycost(100),
         SK:Vehicles=7pts,
         SK:Electronics Operation=6pts,
         SK:Navigation=6pts,
-        SK:NBC Suit=3pts,
+        SK:Environment Suit=3pts,
         SK:Navigation (Hyperspace)=4pts,
         SK:Navigation (Space)=2pts_
     ),
@@ -1319,7 +1320,7 @@ Kargol,cat(Human Races),
         LA:Kator=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     creates(_
-        {"AD:Fur", 1},
+        {"FE:Fur", 0},
         {"AD:Resistant (Disease)",10, page(B81)},
         {"QU:Prefer cold, high-pressure environments", -1},
         {"DI:Phobia (Ancient technology)", -5},
@@ -1509,7 +1510,7 @@ Aslan, cat(Non-human Races), cost(0), displaycost(3), race(Aslan),
         QU:Proud,
     ),
     creates(_
-        {AD:Fur, 1},
+        {FE:Fur, 0},
         {DI:Aslan Attribute Mods, -13, gives(+1 to ST:ST, -1 to ST:DX, +1 to ST:Hit Points),hide(yes)},
         {DI:Code of Honor (Fteir), -15},
         {DI:Intolerance (Non-Aslan), -10},
@@ -1706,7 +1707,7 @@ Vargr, cat(Non-human Races), cost(0), displaycost(23), race(Vargr),
         QU:Proud_
     ),
     creates(_
-        {AD:Fur, 1},
+        {FE:Fur, 0},
         {AD:Vargr Attribute Mods, 15, gives(-1 to ST:ST, +1 to ST:DX, +1 to ST:Perception, -1 to ST:Fatigue Points, -1 to ST:Hit Points),hide(yes)},
         {DI:Racial Reputation (Flaky and potentially disloyal), -5/-10,page(B27), downto(1), upto(1), cat(Mundane, Social, Influence), conditional(-1 to ST:Reaction when "your reputation works against you")},
         {QU:Heavily influenced by Pack Reputation, -1}_
@@ -1714,11 +1715,12 @@ Vargr, cat(Non-human Races), cost(0), displaycost(23), race(Vargr),
     noresync(no),page(TAR1:64),
     owns(yes)
 
-Clotho, cat(Non-human Races), cost(0), displaycost(19), race(Clotho),
+Clotho, cat(Non-human Races), cost(0), displaycost(34), race(Clotho),
     BodyType(Hexapod),
     HitTable(Hexapod),
     adds(_
         AD:3D Spatial Sense,
+        AD:Arm ST=2 with "Two Arms, *5/3" and "Size, +0%",
         AD:Claws (Blunt Claws),
         AD:Double-Jointed,
         AD:Enhanced Move (Ground)=2 with "Only when not using lower arms to manipulate, -20%",
@@ -1738,7 +1740,6 @@ Clotho, cat(Non-human Races), cost(0), displaycost(19), race(Clotho),
         QU:Proud_
     ),
     creates(_
-        {"AD:Arm ST", 3/6, page(B40), cat(Exotic, Physical), taboo(DI:Weak Arms), conditional(+1 to ST:ST), initmods("Lower two arms only", *5/3)}=2,
         {"DI:Phobia (Dirt)", -10},
         {"DI:Phobia (Separation from sibling)", -15},
         {"FE:Fur", 0}_
@@ -2175,7 +2176,7 @@ Food Tablets (1 day), baseweight(0.75), basecost(10), page(UT73)
 IISS Air Mask, baseweight(4), basecost(500), description(includes 60 minutes of air), page(GT112)
 
 <Traveller, Traveller - Armor>
-IISS Uniform, baseweight(1500), basecost(1100), dr(16/2), baseweight(4.2), location(torso, neck, skull, arms, legs, hands, feet, groin), description(DR 2 vs impaling)
+IISS Uniform, baseweight(1500), basecost(1100), dr(16), baseweight(4.2), location(torso, neck, skull, arms, legs, hands, feet, groin)
 
 <Traveller, Traveller - Miscellaneous - Tools>
 Medscanner,baseweight(0.5), basecost(750), page(TFI28)
@@ -2370,8 +2371,54 @@ Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), pa
 
 [SKILLS]
 
-Biosciences, Trunk, gives(=+ (me::step - me::extralevels) to GR:Biosciences class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Biosciences, Trunks)
-Physical Sciences, Trunk, gives(=+ (me::step - me::extralevels) to GR:Physical Sciences class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$eval(me::step - me::extralevels)), cat(Physical Sciences, Trunks)
+#ReplaceTags in SK:Arts/Entertainment with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Arts/Entertainment class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Athletics with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Athletics class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Bureaucracy with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Bureaucracy class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Business with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Business class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Clandestine Tech with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Clandestine Tech class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Crafts with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Crafts class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Deception with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Deception class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Esoteric with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Esoteric class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Innovation with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Innovation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Investigation with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Investigation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Medical with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Medical class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Melee Combat with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Melee Combat class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Military with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Military class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Outdoor/Exploration with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Outdoor/Exploration class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Ranged Combat with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Ranged Combat class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Reconnaissance with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Reconnaissance class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Repair/Maintenance with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Repair/Maintenance class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Scholar with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Scholar class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Sneakiness with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Sneakiness class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Social with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Social class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Social Sciences/Humanities with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Social Sciences/Humanities class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Theft with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Theft class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Vehicles with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Vehicles class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Caution with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Caution class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Enthrallment with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Enthrallment class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Ki with default(0), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Ki class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Practical with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Practical class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+
+#MergeTags in SK:Electronics Operation with group(Practical), childof(SK:Practical)
+#ReplaceTags in SK:Vacc Suit with childof(SK:Practical)
+
+#ReplaceTags in SK:Animal Telepathy with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Animal Telepathy class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Anti-Psi with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Anti-Psi class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Astral Projection with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Astral Projection class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Biokinesis with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Biokinesis class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Dream Control with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Dream Control class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Ergokinesis with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Ergokinesis class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:ESP with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:ESP class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Probablility Alteration with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Probablility Alteration class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychic Healing with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychic Healing class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychic Vampirism with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychic Vampirism class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychokinesis with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychokinesis class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychometabolism with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychometabolism class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Telepathy with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Telepathy class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Teleportation with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Teleportation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+
+Biosciences, Trunk, gives(=+ $if( me::basepoints > 0 THEN (me::step - me::extralevels) ELSE 0) to GR:Biosciences class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0), cat(Biosciences, Trunks), default(5)
+Physical Sciences, Trunk, gives(=+ $if(me::basepoints > 0 THEN (me::step - me::extralevels) else 0) to GR:Physical Sciences class "Trunks,AllSources"), isparent(yes), cat(Physical Sciences, Trunks), default(5), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
 
 #Delete SK:Animal
 #Delete SK:Herb Lore
@@ -2433,6 +2480,13 @@ Physical Sciences, Trunk, gives(=+ (me::step - me::extralevels) to GR:Physical S
 #ReplaceTags in "SK:Weather Sense" with childof(SK:Outdoor/Exploration)
 #ReplaceTags in "SK:Wrestling" with type(DX/Leaf)
 
+#ReplaceTags in AD:Arm ST with _
+    skillused(ST:DX, SK:Brawling, SK:Boxing, SK:Karate, SK:Unarmed Striking), 
+    mode(punch), reach(C), 
+    reachbasedon(ST:Two Arm Reach), 
+    parry(0), 
+    damage( $if(@hasmod(One Arm) THEN @thr(ST:One Arm Striking ST::score) ELSE $if(@hasmod(Two Arms) THEN @thr(ST:Two Arm Striking ST::score) ELSE $if(@hasmod(Three Arms) THEN @thr(ST:Three Arm Striking ST::score) ELSE 0)))-1 + @if("AD:Claws (Blunt Claws)::level" = 1 then @basethdice(ST:Punch) else @if("AD:Claws (Long Talons)::level" = 1 then @basethdice(ST:Punch) else 0)) + @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))),_
+    damtype( $if("AD:Claws (Sharp Claws)::level" = 1 THEN "cut" ELSE $if("AD:Claws (Talons)::level" = 1 THEN "cut/imp" ELSE $if("AD:Claws (Long Talons)::level" = 1 THEN "cut/imp" ELSE "cr"))))
 #MergeTags in ST:Punch with skillused(SK:Melee Combat, SK:Unarmed Striking)
 #MergeTags in ST:Kick with skillused(SK:Melee Combat, SK:Unarmed Striking)
 #MergeTags in ST:Bite with skillused(SK:Melee Combat, SK:Unarmed Striking)
