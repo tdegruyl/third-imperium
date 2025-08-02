@@ -1210,7 +1210,7 @@
 								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
 								"id": "en3ky8jIp2VteORsI"
 							},
-							"description": "Electronics Repair (@Specialization@) Mini-Toolkit",
+							"description": "Mini-Toolkit",
 							"reference": "UT82",
 							"local_notes": "-2 (quality). 5A/10hr.",
 							"tech_level": "9",
