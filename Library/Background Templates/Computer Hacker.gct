@@ -28,7 +28,7 @@
 									"id": "mQMz5nuv1LhVi15Hk",
 									"name": "Narrow Clearance on a \"Need to Know\" Basis",
 									"reference": "B82",
-									"notes": "@What@",
+									"local_notes": "@What@",
 									"cost": 5,
 									"cost_type": "points",
 									"disabled": true
@@ -37,7 +37,7 @@
 									"id": "mDU4ZM18bXWzB-xep",
 									"name": "Narrow Clearance with Free Access",
 									"reference": "B82",
-									"notes": "@What@",
+									"local_notes": "@What@",
 									"cost": 10,
 									"cost_type": "points",
 									"disabled": true
@@ -46,7 +46,7 @@
 									"id": "mS4QJM80uyuxt2qLy",
 									"name": "Broad Clearance on a \"Need to Know\" Basis",
 									"reference": "B82",
-									"notes": "@What@",
+									"local_notes": "@What@",
 									"cost": 10,
 									"cost_type": "points",
 									"disabled": true
@@ -55,7 +55,7 @@
 									"id": "mc0Rh5YSlxIQOsloT",
 									"name": "Broad Clearance with Free Access",
 									"reference": "B82",
-									"notes": "@What@",
+									"local_notes": "@What@",
 									"cost": 15,
 									"cost_type": "points"
 								},
@@ -71,115 +71,10 @@
 							"calc": {
 								"points": 15
 							}
-						},
-						{
-							"id": "tnaNNr6agwXG2pLc4",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Power Ups\\Power Ups Traits.adq",
-								"id": "tpefZX7zoFMtZULZj"
-							},
-							"name": "Talent (Born to Be Wired)",
-							"reference": "PU3:8",
-							"tags": [
-								"Advantage",
-								"Mental",
-								"Talent"
-							],
-							"modifiers": [
-								{
-									"id": "mcpOxpj5MZX66K89I",
-									"name": "Alternative Cost",
-									"cost": 1,
-									"cost_type": "points",
-									"affects": "levels_only",
-									"disabled": true
-								}
-							],
-							"points_per_level": 5,
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Computer Hacking"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Computer Operation"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Computer Programming"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Cryptography"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Electronics Repair (Computers)"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Expert Skill (Computer Security)"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "From hackers; people buying stock in your dot-com.",
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "conditional_modifier",
-									"situation": "Less-severe penalties from Familiarity (p. B169) for unfamiliar computer equipment, and/or success at Computer Hacking or Computer Programming lets you improvise code that removes -1/level from the penalty for not having proper software for a task that requires it (p. B345).",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 5
-							}
 						}
 					],
 					"calc": {
-						"points": 20
+						"points": 15
 					}
 				},
 				{
@@ -328,7 +223,7 @@
 							},
 							"name": "Cowardice",
 							"reference": "B129",
-							"notes": "Make a self-control roll any time you are called on to risk physical danger. Roll at -5 if you must risk death.",
+							"local_notes": "Make a self-control roll any time you are called on to risk physical danger. Roll at -5 if you must risk death.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -348,7 +243,7 @@
 							},
 							"name": "Curious",
 							"reference": "B129",
-							"notes": "Make a self-control roll when presented with an interesting item or situation",
+							"local_notes": "Make a self-control roll when presented with an interesting item or situation",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -411,7 +306,7 @@
 							},
 							"name": "Light Sleeper",
 							"reference": "B142",
-							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"local_notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -430,7 +325,7 @@
 							},
 							"name": "Loner",
 							"reference": "B142",
-							"notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -451,7 +346,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -483,7 +378,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -640,7 +535,7 @@
 				}
 			],
 			"calc": {
-				"points": -40
+				"points": -45
 			}
 		}
 	],
@@ -682,6 +577,30 @@
 					"points": 8
 				},
 				{
+					"id": "sd9Eq64GDMnEiywAQ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "ssHhRG7LH-Ma3YDnH"
+					},
+					"name": "Computer Operation",
+					"reference": "B184",
+					"tags": [
+						"Everyman",
+						"Scholarly",
+						"Technical"
+					],
+					"difficulty": "iq/e",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
 					"id": "sR-55CSgR8zn7Ne2R",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -697,6 +616,31 @@
 					"difficulty": "iq/h",
 					"tech_level": "10",
 					"points": 4
+				},
+				{
+					"id": "sIdYmjbHBKfOQR20S",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sKEmDeUJja8G_ZlSV"
+					},
+					"name": "Cryptography",
+					"reference": "B186",
+					"tags": [
+						"Military",
+						"Spy"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Cryptology",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 1
 				},
 				{
 					"id": "sGIrKbROuPz_9xi_B",
@@ -739,215 +683,25 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 2
+					"points": 4
 				},
 				{
-					"id": "s5MDFoYMFCMKGvLwL",
+					"id": "sMBVrAyAhME50DKql",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "s71NSSCnVzScWznSY"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "srkpvMJuu4TRxCcO7"
 					},
-					"name": "Electronics Operation",
-					"reference": "B189",
+					"name": "Expert Skill",
+					"reference": "B193,MA56",
 					"tags": [
-						"Police",
-						"Spy",
-						"Technical"
-					],
-					"specialization": "Surveillance",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Repair",
-							"specialization": "Surveillance",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Engineer",
-							"specialization": "Electronics",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Operation",
-							"modifier": -4
-						}
-					],
-					"tech_level": "10",
-					"points": 2
-				},
-				{
-					"id": "sRUcMb1nXXH6WwjZY",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sqH7X8s6knQ9FmK-F"
-					},
-					"name": "Electronics Repair",
-					"reference": "B190",
-					"tags": [
-						"Maintenance",
-						"Repair"
-					],
-					"specialization": "Computer",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Computer Operation",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Engineer",
-							"specialization": "Electronics",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Repair",
-							"modifier": -4
-						}
-					],
-					"tech_level": "10",
-					"points": 2
-				},
-				{
-					"id": "snZcQquxcomI2OyAo",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sGj0s0Ofs7NkYOFsy"
-					},
-					"name": "Mathematics",
-					"reference": "B207",
-					"tags": [
-						"Natural Science"
-					],
-					"specialization": "Cryptology",
-					"difficulty": "iq/h",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Cryptography",
-							"modifier": -5
-						}
-					],
-					"tech_level": "10",
-					"points": 1
-				},
-				{
-					"id": "sDAnDFJCMorhvr0VR",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "stFawUEv8gxldDoiC"
-					},
-					"name": "Research",
-					"reference": "B217",
-					"tags": [
+						"Knowledge",
 						"Scholarly",
 						"Spy"
 					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Writing",
-							"modifier": -3
-						}
-					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "prereq_list",
-								"all": true,
-								"when_tl": {
-									"compare": "at_least",
-									"qualifier": 8
-								},
-								"prereqs": [
-									{
-										"type": "skill_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "Computer Operation"
-										}
-									}
-								]
-							},
-							{
-								"type": "prereq_list",
-								"all": false,
-								"when_tl": {
-									"compare": "at_most",
-									"qualifier": 4
-								},
-								"prereqs": [
-									{
-										"type": "trait_prereq",
-										"has": true,
-										"name": {
-											"compare": "starts_with",
-											"qualifier": "Language"
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "Written (Native"
-										}
-									},
-									{
-										"type": "trait_prereq",
-										"has": true,
-										"name": {
-											"compare": "starts_with",
-											"qualifier": "Language"
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "Written (Accented)"
-										}
-									},
-									{
-										"type": "trait_prereq",
-										"has": true,
-										"name": {
-											"compare": "starts_with",
-											"qualifier": "Language"
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "Written (Broken)"
-										}
-									}
-								]
-							}
-						]
-					},
-					"tech_level": "10",
-					"points": 1
+					"specialization": "Computer Security",
+					"difficulty": "iq/h",
+					"points": 4
 				}
 			]
 		}

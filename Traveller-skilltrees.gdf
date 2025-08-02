@@ -7,6 +7,7 @@ Requires="Variant Basic Set 4e - Remove Spells (all).gdf"
 Requires="GURPS Power-Ups 1 Perks 4e.gdf"
 Requires="GURPS Power-Ups 3 Talents.gdf"
 Requires="GURPS Psionic Powers 4e.gdf"
+Requires="GURPS Power-Ups 10 - Skill Trees.gdf"
 LoadAfter="GURPS Ultra-Tech 4e.gdf"
 
 [AUTHOR]
@@ -48,6 +49,58 @@ QuirkLimit=-5
 ShowMalf=no
 ShowLC=yes
 DefaultTL=10
+
+[LISTS]
+
+<Combat Skills>
+SK:Artillery
+SK:Axe/Mace
+SK:Beam Weapon
+SK:Blowpipe
+SK:Bolas
+SK:Bow
+SK:Boxing
+SK:Brawling
+SK:Cloak
+SK:Crossbow
+SK:Dropping
+SK:Fencing Weapons
+SK:Gunner
+SK:Guns
+SK:Guns (Grenade Launcher)
+SK:Guns (Gyroc)
+SK:Guns (Light Machine Gun)
+SK:Guns (Pistol)
+SK:Guns (Rifle)
+SK:Guns (Shotgun)
+SK:Guns (Submachine Gun)
+SK:Impact Weapons
+SK:Judo
+SK:Karate
+SK:Knife
+SK:Kusari
+SK:Lasso
+SK:Main-Gauche
+SK:Melee Combat
+SK:Pole Weapons
+SK:Ranged Combat
+SK:Rapier
+SK:Saber
+SK:Shield
+SK:Shields
+SK:Sling
+SK:Sumo Wrestling
+SK:Swords
+SK:Throwing
+SK:Thrown Weapon
+SK:Thrown Weapon (Axe/Mace)
+SK:Thrown Weapon (Dart)
+SK:Thrown Weapon (Knife)
+SK:Thrown Weapon (Shuriken)
+SK:Tonfa
+SK:Two-Handed Axe/Mace
+SK:Whip
+SK:Wrestling
 
 [Attributes]
 Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000),page(PU5:17)
@@ -220,9 +273,6 @@ Floriani (Written), 1/2, page(B24), upto(3 LimitingTotal), mods(Language), level
 Galanglic, 2/4,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Galanglic (Spoken), 1/2,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Galanglic (Written), 1/2,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Halloraxian, 2/4,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Halloraxian (Spoken), 1/2,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
-Halloraxian (Written), 1/2,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
 Hiver, 2/4,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Gesture, Language Written, Social Background), taboo(Native Languages >1)
 Hiver (Gesture), 1/2,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Gesture, Language Written, Social Background), taboo(Native Languages >1)
 Hiver (Written), 1/2,upto(3 LimitingTotal), mods(Language), levelnames([None], Broken, Accented, Native), cat(Mundane, Social, Language, Language Spoken, Language Written, Social Background), taboo(Native Languages >1)
@@ -324,8 +374,6 @@ Hiver, 1, cat(Cultural Familiarity, Social Background)
 Hiver (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Hlanssai, 1, cat(Cultural Familiarity, Social Background)
 Hlanssai (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
-Halloraxian, 1, cat(Cultural Familiarity, Social Backgroun)
-Halloraxian (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Iltharan, 1, cat(Cultural Familiarity, Social Backgroun)
 Iltharan (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to ST:Native Cultural Familiarities), taboo(Native Cultural Familiarities > 1)
 Imperial, 1, cat(Cultural Familiarity, Social Background)
@@ -370,9 +418,6 @@ Zhodani (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to S
 
 #ReplaceTags in "AD:Merchant Rank" with "upto(10)"
 
-#ReplaceTags in "AD:Trading Character Points for Money" with gives(+25000 to ST:Money, +25000 to ST:Remaining Funds)
-Signature Gear ([Gear]), 1, cat(Mundane, Social, Perks, Mundane Social)
-
 <Mundane Mental>
 //  Talents
 Born Tactician, 10/20, upto(4), gives(+1 to GR:Born Tactician), conditional(+1 to ST:Reaction), page(T:IW135), cat(Talents),_
@@ -410,9 +455,6 @@ Social Stigma (Robot), -10, page(TFI25), cat(Mundane, Social)
 
 [SKILLS]
 #DeleteFromCat Skills, "Traveller Psi"
-Engineer (Starship), IQ/H, tl(9-12), default("SK:Mechanic (Starship)" - 6, SK:Engineer - 4), page(B190),_
-	needs($if(me::tl > 4 THEN "SK:Mathematics (Applied) = 1pts")), cat(_General, Design/Invention)
-Mechanic (Fusion Reactor), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Fusion Reactor)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 Mechanic (Life Support), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Life Support)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 Mechanic (Starship), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Starship)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 Mechanic (Jump Drive), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Jump Drive)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
@@ -458,20 +500,17 @@ Belter, displaycost(50),
     description(You lived and worked in an asteroid belt),
     needs(_
         AD:3D Spatial Sense,
-        AD:Born Spacer=2,
         AD:Improved G-Tolerance=2_
     ),
-    AddsOrIncreases(_ 
+    AddsOrIncreases(_
+        SK:Repair/Maintenance=7pts,
+        SK:Vehicles=14pts,
+        SK:Vacc Suit=2pts,
         SK:Area Knowledge ([Area])=2pts,
-        SK:Free Fall= 8pts,
-        SK:Freight Handling=2pts,
+        SK:Free Fall= 3pts,
         SK:Geology (Rock Worlds)=4pts,
-        SK:Mechanic (Life Support)=2pts,
-        SK:Mechanic (Reactionless Drive)=2pts,
-        SK:Navigation (Space)=2pts,
         SK:Piloting (High-Performance Spacecraft)=2pts,
-        SK:Prospecting=8pts,
-        SK:Vacc Suit=8pts_
+        SK:Prospecting=6pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -496,13 +535,12 @@ Computer Hacker, displaycost(50),
     needs(_
         AD:Security Clearance=4_
     ),
-    AddsOrIncreases(_ 
-        SK:Computer Hacking=8pts,
-        SK:Computer Operation=4pts,
-        SK:Computer Programming=4pts,
-        SK:Cryptography=1pts,
-        SK:Electronics Operation (Security)=4pts,
-        SK:Expert Skill (Computer Security)=4pts_
+    AddsOrIncreases(_
+        SK:Clandestine Tech=7pts,
+        SK:Computer Hacking=6pts,
+        SK:Expert Skill (Computer Security) = 3pts,
+        SK:Electronics Operation (Security)=2pts,
+        SK:Scholar=7pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -525,17 +563,13 @@ Computer Hacker, displaycost(50),
     )
 
 Con Artist, displaycost(50),
-    AddsOrIncreases(_ 
-        SK:Acting=12pts,
-        SK:Beam Weapons (Pistol)=2pts,
-        SK:Carousing=2pts,
-        SK:Diplomacy=1pts,
-        SK:Fast-Talk=12pts,
+    AddsOrIncreases(_
+        SK:Deception=21pts,
+        SK:Social=14pts,
+        SK:Acting=3pts,
+        SK:Fast-Talk=3pts,
         SK:Guns (Pistol)=2pts,
-        SK:Knife=2pts,
-        SK:Savoir-Faire=2pts,
-        SK:Sex Appeal=2pts,
-        SK:Streetwise=8pts_
+        SK:Knife= 2pts_
     ),
     select1(_
         text("Choose one of the following advantages:"),
@@ -567,16 +601,11 @@ Courier, displaycost(50),
     ),
     AddsOrIncreases(_
         AD:Combat Reflexes,
-        SK:Body Language=1pts,
-        SK:Guns (Pistol)=4pts,
-        SK:Intelligence Analysis=2pts,
-        SK:Judo=8pts,
-        SK:Karate=8pts,
-        SK:Knife=4pts,
-        SK:Observation=4pts,
-        SK:Savoir-Faire=1pts,
-        SK:Stealth=1pts,
-        SK:Streetwise=1pts_
+        SK:Investigation=7pts,
+        SK:Sneakiness=7pts,
+        SK:Melee Combat=7pts,
+        SK:Unarmed Striking=9pts,
+        SK:Karate=4pts_
     ),
     creates(_
         {"AD:Biomonitor Implant", 1, page(UT208)}_
@@ -601,13 +630,12 @@ Courier, displaycost(50),
     )
 
 Medical Doctor, displaycost(50),
-    AddsOrIncreases(_ 
-        SK:Diagnosis=12pts,
-        SK:Electronics Operation (Medical)=8pts,
-        SK:Pharmacy (Synthetic)=8pts,
-        SK:Physician=16pts,
-        SK:Physiology=8pts,
-        SK:Surgery=8pts_
+    AddsOrIncreases(_
+        SK:Medical=35pts,
+        SK:Physical Sciences=7pts,
+        SK:Diagnosis=3pts,
+        SK:Physician=12pts,
+        SK:Surgery=3pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -627,29 +655,32 @@ Medical Doctor, displaycost(50),
         )_
     )
 
-Merchant, 
-    displaycost(50),
-    AddsOrIncreases(_ 
+Merchant, displaycost(50),
+    AddsOrIncreases(_
         AD:Cultural Adaptability,
-        AD:Wealth=1,
-        SK:Accounting=1pts,
-        SK:Acting=4pts,
-        SK:Administration=8pts,
-        SK:Diplomacy=4pts,
-        SK:Economics=4pts,
-        SK:Fast-Talk=8pts,
-        SK:Finance=1pts,
-        SK:Merchant=8pts,
-        SK:Propaganda=1pts,
-        SK:Savoir-Faire=1pts _
+        SK:Business=14pts,
+        SK:Merchant=6pts,
+        SK:Deception=7pts,
+        SK:Fast-Talk-3pts_
     ),
     select1(_
+        text("Select 20 points from these advantages:"),
+        pointswanted(20),
+        itemswanted(atleast 1),
+        list(_
+            AD:Contact,
+            AD:Contact Group,
+            AD:Ally,
+            AD:Patron _
+        )_
+    )
+    select2(_
         text("Select -10 points from these disadvantages:"),
         pointswanted(-10),
         itemswanted(atleast 1),
         list(_
             DI:Chummy,
-            DI:Curious,
+            DI:Curious
             DI:Gregarious,
             DI:Gluttony,
             DI:Miserliness,
@@ -659,8 +690,6 @@ Merchant,
             DI:Workaholic _
         )_
     )
-
-
 Retired Bounty Hunter, displaycost(50),
     sets(_
         ST:DX = ST:DX + 1,
@@ -669,13 +698,10 @@ Retired Bounty Hunter, displaycost(50),
     AddsOrIncreases(_
         AD:Combat Reflexes,
         AD:Fit,
-        SK:Guns (Pistol)=2pts,
-        SK:Judo=4pts,
-        SK:Karate=4pts,
-        SK:Observation=1pts,
-        SK:Psychology=1pts,
-        SK:Shadowing=4pts,
-        SK:Tracking=4pts_
+        SK:Investigation=7pts,
+        SK:Melee Combat=7pts,
+        SK:Unarmed Grappling=3pts,
+        SK:Guns=3pts_
     ),
     select1(_
         text("Select -15 points from these disadvantages:"),
@@ -700,17 +726,12 @@ Retired Military, displaycost(50),
         ST:DX = ST:DX + 1,
         ST:ST = ST:ST + 1 _
     ),
-    AddsOrIncreases(_ //20
+    AddsOrIncreases(_
         AD:Combat Reflexes,
-        SK:Beam Weapons (Rifle)=4pts,
-        SK:Brawling=2pts,
-        SK:Guns (Pistol)=2pts,
-        SK:Guns (Rifle)=4pts,
-        SK:Knife=1pts,
-        SK:Leadership=2pts,
-        SK:Observation=2pts,
-        SK:Soldier=1pts,
-        SK:Tactics=2pts_
+        SK:Military=7pts,
+        SK:Ranged Combat=7pts,
+        SK:Guns=3pts,
+        SK:Unarmed Striking=3pts_
     ),
     select1(_
         text("Select -10 points from these disadvantages:"),
@@ -736,17 +757,11 @@ Rogue, displaycost(50),
     sets(_
         ST:IQ = ST:IQ + 1 _
     ),
-    addsOrIncreases(,_ 
-        SK:Acting=8pts,
-        SK:Electronics Operation (Security)=1pts,
-        SK:Fast-Talk=4pts,
-        SK:Filch=1pts,
-        SK:Forced Entry=1pts,
-        SK:Housekeeping=1pts,
-        SK:Lockpicking=2pts,
-        SK:Scrounging=2pts,
-        SK:Sleight of Hand=1pts,
-        SK:Streetwise=4pts_
+    addsOrIncreases(,_
+        SK:Deception=14pts,
+        SK:Theft=7pts,
+        SK:Fast-Talk=3pts,
+        SK:Housekeeping=1pts_
     ),
     select1(_
         text("Select one of the following advantages:"),
@@ -776,32 +791,24 @@ Rogue, displaycost(50),
 
 <Main Role Templates>
 
-Operations Officer, displaycost(100),
+Comms and Nav Officer, displaycost(100),
     sets(_
         ST:DX = ST:DX + 1,
         ST:IQ = ST:IQ + 1,
         ST:HT = ST:HT + 1 _
     ),
-    addsOrIncreases(_ //70
-        TE:_Basic Kit,
+    addsOrIncreases(_
         DI:Sense of Duty (Crew),
-        SK:Computer Operation=4pts,
-        SK:Computer Programming=2pts,
-        SK:Cryptography=4pts,
-        SK:Diplomacy=4pts,
-        SK:Electronics Operation (Communications)=8pts,
-        SK:Electronics Operation (Sensors)=8pts,
-        SK:Electronics Repair (Communications)=2pts,
-        SK:Electronics Repair (Computers)=2pts,
-        SK:Electronics Repair (Sensors)=2pts,
-        SK:Expert Skill (Computer Security)=2pts,
-        SK:Free Fall=2pts,
-        SK:Linguistics=8pts,
-        SK:Navigation (Hyperspace)=8pts,
-        SK:Navigation (Space)=4pts,
-        SK:Research=2pts, 
-        SK:Spacer=4pts,
-        SK:Vacc Suit=4pts_
+        SK:Medical=7pts,
+        SK:Practical=7pts,
+        SK:Reconnaissance=21pts,
+        SK:Social=7pts,
+        SK:Vehicles=7pts,
+        SK:Electronics Operation=6pts,
+        SK:Navigation=6pts,
+        SK:Environment Suit=3pts,
+        SK:Navigation (Hyperspace)=4pts,
+        SK:Navigation (Space)=2pts_
     ),
     select1(_
         text("Select -15 points from these disadvantages:"),
@@ -825,32 +832,21 @@ Operations Officer, displaycost(100),
 
 Engineer, displaycost(100),
     sets(_
-        ST:ST = ST:ST + 1,
         ST:IQ = ST:IQ + 2,
         ST:HT = ST:HT + 1 _
     ),
-    addsOrIncreases(_ 
-        TE:_Basic Kit,
+    addsOrIncreases(_
         DI:Sense of Duty (Crew),
-        SK:Armoury (Heavy Weapons)=2pts,
-        SK:Computer Operation=2pts,
-        SK:Computer Programming=2pts,
-        SK:Electrician=4pts, 
-        SK:Electronics Repair (Communications)=4pts,
-        SK:Electronics Repair (Computers)=4pts,
-        SK:Electronics Repair (Sensors)=4pts, 
-        SK:Engineer (Starship)=2pts,
-        SK:Free Fall=1pts,
-        SK:Machinist =2pts,
-        SK:Mathematics (Applied)=2pts,
-        SK:Mechanic (Fusion Reactor)=4pts, 
-        SK:Mechanic (Jump Drive)=8pts, 
-        SK:Mechanic (Life Support)=4pts,
-        SK:Mechanic (Reactionless Drive)=4pts, 
-        SK:Mechanic (Starship)=8pts,
-        SK:Scrounging=2pts,
-        SK:Spacer=2pts,
-        SK:Vacc Suit=4pts_
+        SK:Caution=7pts,
+        SK:Innovation=7pts,
+        SK:Physical Sciences=7pts,
+        SK:Practical=7pts,
+        SK:Repair/Maintenance=21pts,
+        SK:Vehicles=7pts,
+        SK:Electronics Repair=3pts,
+        SK:Free Fall=3pts,
+        SK:Mechanic=6pts,
+        SK:Vacc Suit=2pts_
     ),
     select1(_
         text("Select -15 points from these disadvantages:"),
@@ -859,7 +855,7 @@ Engineer, displaycost(100),
         list(_
             DI:Chummy,
             DI:Easy to Read,
-            DI:Flashbacks,
+            SK:Flashbacks,
             DI:Gregarious,
             DI:Impulsiveness,
             DI:Lecherousness,
@@ -882,28 +878,18 @@ Pilot, displaycost(100),
         ST:DX = ST:DX + 1,
         ST:HT = ST:HT + 1 _
     ),
-    addsOrIncreases(_ 
-        TE:_Basic Kit,
+    addsOrIncreases(_
         AD:3D Spatial Sense,
         DI:Sense of Duty (Crew),
-        SK:Artillery (Guided Missile)=4pts,
-        SK:Astronomy=2pts,
-        SK:Cartography=4pts,
-        SK:Computer Operation=2pts,
-        SK:Electronics Operation (Sensors)=4pts,
-        SK:Free Fall=2pts,
-        SK:Gunner (Beams)=1pts,
-        SK:Gunner (Cannon)=1pts,
-        SK:Leadership=4pts,
-        SK:Navigation (Hyperspace)=2pts,
-        SK:Navigation (Space)=4pts,
-        SK:Piloting (Aerospace)=4pts,
-        SK:Piloting (Contragravity)=4pts,
-        SK:Piloting (High-Performance Spacecraft)=12pts,
-        SK:Shiphandling (Starship)=4pts,
-        SK:Spacer=1pts,
-        SK:Strategy (Space)=2pts,
-        SK:Tactics=1pts,
+        SK:Practical=7pts,
+        SK:Ranged Combat=7pts,
+        SK:Vehicles=21pts,
+        SK:Electronics Operation=3pts,
+        SK:Leadership=3pts,
+        SK:Navigation=3pts,
+        SK:Piloting=6pts,
+        SK:Piloting (High-Performance Spacecraft)=6pts,
+        SK:Shiphandling (Starship)=2pts,
         SK:Vacc Suit=2pts_
     ),
     select1(_
@@ -913,7 +899,7 @@ Pilot, displaycost(100),
         list(_
             DI:Chummy,
             DI:Easy to Read,
-            DI:Flashbacks,
+            SK:Flashbacks,
             DI:Gregarious,
             DI:Impulsiveness,
             DI:Lecherousness,
@@ -934,104 +920,73 @@ Pilot, displaycost(100),
 
 Biologist, displaycost(25),
     AddsOrIncreases(_
-        SK:Biology (Earthlike)=12pts,
-        SK:Biology (Hostile Terrestrial)=4pts,
-        SK:Biology (Ice Worlds)=8pts,
-        SK:Biology (Rock Worlds)=1pts_
+        SK:Biosciences=14pts,
+        SK:Biology=9pts,
+        SK:Biology (Earthlike)=2pts_
     ),hide(yes)
 
 Contact and Liaison, displaycost(25),
     AddsOrIncreases(_
         PE:Courtesy Administrative Rank=1,
         AD:Language Talent,
-        SK:Diplomacy=8pts,
-        SK:Gesture=1pts,
-        SK:Linguistics=2pts,
-        SK:Public Speaking=2pts,
-        SK:Savoir-Faire=1pts_
-    ), hide(yes)
-
-Mechanic, displaycost(25),
-    AddsOrIncreases(_
-        SK:Computer Operations=1pts,
-        SK:Electrician=1pts,
-        SK:Electronics Repair (Communications)=2pts,
-        SK:Electronics Repair (Computers)=2pts,
-        SK:Electronics Repair (Sensors)=2pts,
-        SK:Machinist=1pts,
-        SK:Mechanic (Fusion Reactor)=2pts,
-        SK:Mechanic (Jump Drive)=4pts,
-        SK:Mechanic (Life Support)=2pts,
-        SK:Mechanic (Reactionless Drive)=4pts,
-        SK:Mechanic (Starship)=4pts_
+        SK:Social=7pts,
+        SK:Social Sciences/Humanities=7pts_
     ), hide(yes)
 
 Medic, displaycost(25),
     AddsOrIncreases(_
-        SK:Diagnosis=8pts,
-        SK:Electronics Operation (Medical)=4pts,
-        SK:Pharmacy (Synthetic)=1pts,
-        SK:Physician=8pts,
-        SK:Surgery=4pts_
+        SK:Medical=7pts,
+        SK:Diagnosis=6pts,
+        SK:Physician=9pts,
+        SK:Surgery=3pts_
     ), hide(yes)
 
 Mission Leader, displaycost(25),
     AddsOrIncreases(_
         AD:Administrative Rank (Imperial)=1,
-        SK:Administration=4pts,
-        SK:Diplomacy=4pts,
-        SK:Leadership=8pts,
-        SK:Public Speaking=4pts_
+        SK:Bureaucracy=7pts,
+        SK:Social=7pts,
+        SK:Administration=3pts,
+        SK:Leadership=3pts_
     ), hide(yes)
 
 Resource Evaluator, displaycost(25),
     AddsOrIncreases(_
-        SK:Electronics Operation (Sensors)=4pts, 
-        SK:Geology (Earthlike)=4pts,
-        SK:Geology (Ice Worlds)=1pts,
-        SK:Geology (Rock Worlds)=4pts,
+        SK:Electronics Operation (Sensors)=6pts, 
+        SK:Physical Sciences=7pts,
         SK:Prospecting=12pts_
     ), hide(yes)
 
 Security Officer, displaycost(25),
     AddsOrIncreases(_
-        SK:Detect Lies=4pts,
-        SK:Electronics Operation (Security)=2pts,
-        SK:Electronics Operation (Sensors)=1pts,
-        SK:Guns (Pistol)=1pts,
-        SK:Intelligence Analysis=4pts,
-        SK:Interrogation=4pts,
-        SK:Judo=4pts,
-        SK:Karate=4pts,
-        SK:Search=1pts_
+        SK:Investigation=14pts,
+        SK:Unarmed Striking=3pts,
+        SK:Unarmed Grappling=3pts,
+        SK:Electronics Operation=3pts,
+        SK:Guns (Pistol)=2pts_
     ), hide(yes)
 
 Stellar Cartographer, displaycost(25),
     AddsOrIncreases(_
-        SK:Astronomy=8pts,
-        SK:Cartography=8pts,
-        SK:Electronics Operation (Sensors)=2pts,
-        SK:Mathematics (Applied)=1pts,
-        SK:Navigation (Space)=4pts,
-        SK:Physics (Astrophysics)=2pts_
+        SK:Physical Sciences=7pts,
+        SK:Reconnaissance=7pts,
+        SK:Astronomy=3pts,
+        SK:Navigation=3pts,
+        SK:Cartography=3pts,
+        SK:Electronics Operation (Sensors)=2pts_
     ),hide(yes)
 
 <Upgrade Modules>
 
-Battledress-Ready, displaycost(25),
+Battle(dress)-Ready, displaycost(25),
     sets(_
-        ST:ST = ST:ST +1_
+        ST:ST = ST:ST +2_
     ), 
-    creates(_
-        {"AD:Equipment Bond (Scout Expedition Dress)", 1, conditional(+1 when using your special Battledress)},
-        {"AD:Tacticool", 1},
-        {"AD:Signature Gear (Scout Expedition Dress)", 1}_
-    ),
     addsorincreases(_
-        EQ:Scout Expedition Dress #loadout(Combat),
-        AD:Trading Character Points for Money=7,
-        SK:Armoury (Battlesuits)=2pts,
-        SK:Battlesuit = 8pts_
+        SK:Armoury (Battlesuits) = 2pts,
+        SK:Battlesuit = 8pts,
+        SK:Free Fall = 3pts,
+        SK:Vacc Suit = 2pts_
     ), hide(yes)
 
 Brainiac, displaycost(25), cost(0),
@@ -1050,17 +1005,8 @@ Designated Animal Wrangler, displaycost(25), cost(0),
 			{AD:Animal Empathy}_
 		),_ 
 		addsorincreases(_ 
-                        SK:Animal Handling (Big Cats)=1pts,
-                        SK:Animal Handling (Cephalopods)=1pts,
-                        SK:Animal Handling (Dogs)=1pts,
-                        SK:Animal Handling (Equines)=1pts,
-                        SK:Animal Handling (Primates)=1pts,
-                        SK:Animal Handling (Raptors)=1pts,
-			SK:Biology (Earthlike)=4pts,
-                        SK:Packing=1pts,
-			SK:Pharmacy (Synthetic)=4pts,
-                        SK:Riding (Equines)=1pts,
-                        SK:Veterinary=4pts_
+			SK:Biosciences=14pts,
+                        SK:Animal Handling=6pts_
 		)_ 
 	), hide(yes) 
 
@@ -1107,20 +1053,19 @@ Speedy, displaycost(25),
         ST:Basic Move = ST:Basic Move + 1_
     ), hide(yes)
 
-Teke, displaycost(25),
-    addsorincreases(_
-        AD:Psychokinesis Talent=1,
-        AD:TK Bullet (Psi)=2,
-        AD:TK Grab - Short Ranged (Psi)=1,
-        SK:TK Bullet=2pts,
-        SK:TK Grab=4pts_
-    ), hide(yes)
-
 Telepath, displaycost(25),
     addsorincreases(_
-        AD:Telereceive - Shallow (Psi)=2,
-        AD:Telepathy Talent=1,
-        SK:Telereceive=2pts,
+        AD:Telereceive - Shallow (Psi)=1,
+        SK:Telepathy=7pts_
+    ), hide(yes)
+
+Teke, displaycost(25),
+    addsorincreases(_
+        AD:TK Bullet (Psi)=2,
+        AD:TK Grab - Short Ranged (Psi)=1,
+        SK:Psychokinesis=7pts,
+        SK:TK Bullet=3pts,
+        SK:Sharp Edge (TK Bullet) = 1pts_
     ), hide(yes)
 
 
@@ -1169,8 +1114,8 @@ Acheron,cat(Human Races),
         LA:Acheron=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
         LA:Galanglic=2,
         QU:Responsive,
-        SK:Occultism=4pts,
-        SK:Psychology (Parapsychology)=4pts_
+        SK:Occultism=6pts,
+        SK:Psychology (Parapsychology)=2pts_
     ),
     creates(_
         {"AD:Acheron Attribute Mods",25,gives(+1 to ST:HT, +3 to ST:ST),hide(yes)},
@@ -1313,7 +1258,7 @@ Geonee,cat(Human Races),
 Human (mixed),cat(Human Races), 
     cost(0),
     displaycost(4),
-    race(Human (Mixed)),
+    race(Human, Mixed),
     adds(_
         CU:Imperial (Native),
         LA:Galanglic=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
@@ -1321,22 +1266,6 @@ Human (mixed),cat(Human Races),
     ),
     noresync(no),
     owns(yes)
-
-Halloraxian,cat(Human Races), 
-    cost(0),
-    displaycost(7),
-    race(Human (Halloraxian)),
-    adds(_
-        AD:Flight with "Winged, -25%" and _
-            "Temp Disad (No Fine Mnipulators), -30%" and _
-            "Cannot Hover, -15%",
-        CU:Halloraxian (Native),
-        DI:Ham-Fisted=1,
-        LA:Halloraxian=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
-    ),
-    noresync(no),
-    owns(yes)
-
 
 Iltharan,cat(Human Races), 
     cost(0),
@@ -1437,14 +1366,14 @@ Luriani,cat(Human Races),
     noresync(no),
     page(TH103),owns(yes)
 
-Alpha Nexxie, displaycost(46),
+Alpha Nexxie, displaycost(44),
     adds(TE:Nexxie), 
     creates(_ 
         {"DI:Unnatural Features (Skin, eyes, and gills)", -1/-2, upto(5), downto(5), gives(-1 To SK:Disguise, -1 To SK:Shadowing)}_
     ),
     page(TH113),
     owns(yes)
-Beta Nexxie, displaycost(36),
+Beta Nexxie, displaycost(34),
     adds(TE:Nexxie, DI:Chummy, DI:Disturbing Voice), 
     page(TH113), owns(yes)
 Nexxie,cat(Human Races), 
@@ -1461,11 +1390,10 @@ Nexxie,cat(Human Races),
         AD:Fearlessness=1,
         CU:Imperial (Native),
         LA:Galanglic=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
-        SK:Swimming=1pts_
+        SK:Swimming=3pts_
     ),
     creates(_
-        {"AD:Protected Vision", 5, page(B78)},
-        {"AD:Nexxie Swimming Bonus", 4, gives(+2 to SK:Swimming)}_
+        {"AD:Protected Vision", 5, page(B78)}_
     ),
    noresync(no),
    page(TH113),owns(yes),hide(yes)
@@ -1854,12 +1782,11 @@ Droyne, cat(Non-human Races), cost(0), displaycost(-15), race(Droyne),invisible(
     adds(_
         AD:Claim to Hospitality (Droyne)=3,
         AD:Claws (Blunt Claws),
-        AD:Flight with "Winged, -25%" and "Low-G (≤0.6G) only, -15%",
+        AD:Flight with "Winged, -25%" and "Cannot Hover, -15%",
         AD:Mind Clouding (Psi)=6,
         AD:Night Vision=5,
         AD:Peripheral Vision,
         AD:Reduced Consumption=1,
-        AD:Telepathy Talent=3,
         AD:Telereceive - Shallow (Psi)=3 with "Only receives thoughts from fellow oytrip members, -35%",
         AD:Telescan (Psi)=1 with "Only to find oytrip or oytrip members, -20%",
         CU:Droyne (Native),
@@ -1872,11 +1799,12 @@ Droyne, cat(Non-human Races), cost(0), displaycost(-15), race(Droyne),invisible(
         DI:Short Lifespan=1 with "Only affects maturity and age thresholds, +50%",
         DI:Vulnerability (Crushing)=3 with "Wounding Multiplier x2, *1",
         LA:Oynprith=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)",
-        SK:Mind Clouding =4pts,
-        SK:Telescan=4pts,
-        SK:Telereceive=4pts,
-        SK:Stealth=4pts,
-        SK:Mind Clouding (Bulk Compensation)=3pts_
+        SK:Telepathy=21pts,
+        SK:Mind Clouding =3pts,
+        SK:Telescan=3pts,
+        SK:Telereceive=3pts,
+        SK:Stealth=3pts,
+        SK:Mind Clouding (Bulk Compensation) =1pts_
     ),
     creates(_
         {"AD:Striker (Crushing; Tail)", 5, displaycost(0), mods(Striker, Alternative Attack), page(B88), cat(Exotic, Physical, Natural Attacks), damage(thr+@if(@hasmod(Weak) then 0 else @basethdice(me::chareffectivest)) +  @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))), damtype(cr), reach(C), parry(0), skillused(ST:DX, SK:Brawling, SK:Karate), reachbasedon(0), mode(Tail), itemnotes({May attack/parry back and side hexes only})},
@@ -1887,7 +1815,7 @@ Droyne, cat(Non-human Races), cost(0), displaycost(-15), race(Droyne),invisible(
     noresync(no),hide(yes),page(TAR3:63),
     owns(yes)
 
-Droyne (Sport), cat(Non-human Races), cost(0), displaycost(44), race(Droyne (Sport)),
+Droyne (Sport), cat(Non-human Races), cost(0), displaycost(55), race(Droyne (Sport)),
     adds(_
         CU:Imperial,
         LA:Galanglic=2,
@@ -2085,6 +2013,158 @@ _Basic Kit,
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Meta-Traits - Biomorphic Lenses"
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Racial Templates - Ultra-Tech"
 
+//Guns
+#MergeTags in "EQ:Anti-Materiel Rifle 15mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Assault Carbine, 7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Auto Rifle, 7.62mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Bazooka, 60mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Civilian Shotgun, 18.5mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Close Assault Weapon, 18.5mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:EMGL, 40mmG" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gattling Carbine, 5.7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss CAW, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss LSW, 4mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Machine Pistol, 4mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Minineedler, 3mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Needle Rifle, 3mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Needler, 3mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Pistol, 4mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gauss Shotgun Pistol, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gyroc Carbine, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gyroc Launch Pistol, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Gyroc LSW, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Heavy Pistol, 10mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Holdout Gyroc, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Holdout Pistol, 7.5mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Hunting Rifle, 7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Ice Gun, 3mm ice" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:LAW, 86mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Light Support Weapon, 7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:LMG, 7.62mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Machine Pistol, 10mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Magnum Pistol, 15mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Medium Pistol, 7.5mmCLP" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Needle Rifle, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Paint Carbine, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Paint Pistol, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Partisan Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Payload Rifle, 25mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Personal Defense Weapon, 5.7mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Portable Railgun, 10mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:RPG, 85mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:SAW, 5.56" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Shotgun Pistol 18.5mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Sniper Railgun, 7mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Splat Gun, 15mmPLB" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Storm Carbine, 10mmCL" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Storm Chaingun, 10mmCLR" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Storm Rifle, 10mmCLR" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Tangler Pistol, 25mmT" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Tangler, 25mmT" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Under-Barrel Grenade Launcher, 40mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel EMGL, 25mmG" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Grenade Launcher, 25mmPC" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Grenade Launcher, 40mmPLB" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Gyroc, 15mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Underbarrel Shotgun, 18.5mm" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Urban Assault Weapon" with skillused(SK:Ranged Combat, SK:Guns)
+#MergeTags in "EQ:Wrist Needler, 3mmN" with skillused(SK:Ranged Combat, SK:Guns)
+
+//Liquid Projector
+#MergeTags in "EQ:Assault Flamer" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Backpack Vortex Projector" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Flamethrower" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Pocket Aerosol" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Spray Can" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Spray Tank" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Underbarrel Vortex Projector" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+#MergeTags in "EQ:Vortex Pistol" with skillused(SK:Ranged Combat, SK:Liquid Projector)
+
+//Beam Weapons
+#MergeTags in "EQ:Area Defense Laser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Dazzler Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Dinosaur Laser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Dinosaur Stunner" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:EMP Gun" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Fusion Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Fusion Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Fusion Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Hand Flamer" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Electrolaser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Flamer" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Fusion Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Fusion Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Laser Flashlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Laser Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Heavy Plasma Gun" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Holdout Electrolaser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Penlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Searchlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Laser Sniper Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Military Ladar" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Mini Laser Flashlight" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Nausea Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Nausea Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Point Defense Laser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Pulse Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Scrambler" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Screamer Carbine" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Screamer Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stinger" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stun Pistol" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stun Rifle" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Sonic Stunner" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:Underbarrel Electrolaser" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+#MergeTags in "EQ:" with skillused(SK:Ranged Combat, SK:Beam Weapons)
+
+//Artillery
+#MergeTags in "EQ:Assault Cannon, 25mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Electromag Mortar, 64mm" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Heavy Chaingun, 15mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:IML, 64mm (TL 9)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:IML, 64mm (TL10)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Minigun, 7mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:MLAWS, 64mm (TL 9)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:MLAWS, 64mm (TL10)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Mortar Box, 40mmPLB" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Mortar Box, 64mmPLB" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:SAM, 70mm" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:Tank Cannon, 100mmCL" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:TML, 100mm (TL9)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:TML, 100mm (TL10)" with skillused(SK:Ranged Combat, SK:Artillery)
+#MergeTags in "EQ:" with skillused(SK:Ranged Combat, SK:Artillery)
+
+//Gunner
+#MergeTags in "EQ:ATGM, 115mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Auto EMGL, 40mmG" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Fusion Cannon (TL10)" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Fusion Cannon (TL11)" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Gattling Laser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Gauss HMG, 7mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Gauss Minigun, 4mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:HMG, .50" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Laser Cannon" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Plasma Cannon" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Plasma Gattling Gun" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Railgun, 40mm" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Electrolaser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Flamer" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Fusion Gun" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Laser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Semi-Portable Plasma Gun" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Sonic Stun Cannon" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Strike Laser" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical Disrupter" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical MAD" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical Nauseator" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:Tactical Screamer" with skillused(SK:Ranged Combat, SK:Gunner)
+#MergeTags in "EQ:" with skillused(SK:Ranged Combat, SK:Gunner)
+
+
 <Traveller, Traveller - Ammunition>
 10mmCLP Tranquilizer Ammunition, baseweight(0.014), basecost(0.84) 
 
@@ -2106,8 +2186,6 @@ IISS Uniform, baseweight(1500), basecost(1100), dr(16), baseweight(4.2), locatio
 Medscanner,baseweight(0.5), basecost(750), page(TFI28)
 Mini-Toolkit, baseweight(4), basecost(200), page (UT82)
 Small Computer, baseweight(0.5), basecost(100), page(UT22), description(Complexity 4, 10TB) 
-Compact Personal Computer, baseweight(2.5), basecost(2000), page(UT22), description(Complexity 7, 100PB) 
-Universal Translator Program, tl(11), basecost(2000), description(Dedicated AI program, C9)
 <Traveller,Traveller - Miscellaneous, Traveller - Miscellaneous - Survival>
 Air-Tank, page(T112), baseweight(10), techlevel(9), basecost(100)
 Advanced Rebreather, page(T112), baseweight(1), techlevel(10), basecost(200)
@@ -2148,11 +2226,7 @@ Jack Armor, techlevel(1), page(T117), baseweight(10), basecost(100),dr(1),locati
 Jack Armor (Heavy), techlevel(1), page(T117), baseweight(15), basecost(150),dr(2),location(body,limbs)
 Flak Jacket, techlevel(8), page(T117), baseweight(5), basecost(600), dr(16/2), location(body,arms)
 Reflec Suit, techlevel(10), baseweight(6), basecost(900), dr(12/4), location(body, limbs)
-Scout Expedition Dress, 
-    techlevel(11), page(TFI32), baseweight(160), 
-    gives(+20 to (ST:Striking ST, ST:Lifting ST), +2 to ST:Basic Move),
-    basecost(163000),location(full suit, face, eyes, head, hands, feet), dr(60), 
-    usernotes(ST/HP: 24; Hnd/SR: +2/1; HT: 12; Air Move (Space): 10/300 (4G); Lwt: 0.75; Load: 0.5; SM: 0; Occ: 1; DR: 60)
+Scout Expedition Dress, techlevel(11), page(TFI32), baseweight(160), basecost(163000),location(full suit, head, hands, feet), dr(60), gives(+20 to ST:ST, +1 to ST:Basic Move)
 Battledress, techlevel(10), page(T118), baseweight(275), basecost(58050),location(full suit, head, hands, feet), dr(150), gives(+20 to ST:ST, +1 to ST:Basic Move)
 Improved Battledress, techlevel(11), page(T118), baseweight(260), basecost(63050),location(full suit, head, hands, feet), dr(240), gives(+20 to ST:ST, +1 to ST:Basic Move)
 
@@ -2182,7 +2256,7 @@ Heavy Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT1
 			),_
         isparent(yes),_
 	description(TL:10 LC:3 Ammo:Dp Damage:4d (2) burn Acc:6 Range:300/900 RoF:10 Shots:(33) ST:6 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(4d), armordivisor(2), damtype(burn), minst(6), rangehalfdam(300), rangemax(900), acc(4), rof(10), uses(33), shots(33(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(4d), armordivisor(2), damtype(burn), minst(6), rangehalfdam(300), rangemax(900), acc(4), rof(10), uses(33), shots(33(3)), rcl(1), bulk(-2), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), basecost(1100), baseweight(1.5), techlvl(10), mods(Equipment, Beams, Laser), lc(3),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2190,7 +2264,7 @@ Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), b
 			),_
         isparent(yes),_
 	description(TL:10 LC:3 Ammo:Dp Damage:3d (2) burn Acc:6 Range:200/600 RoF:10 Shots:66(3) ST:4 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(3d), armordivisor(2), damtype(burn), minst(4), rangehalfdam(200), rangemax(600), acc(6), rof(10), uses(66), shots(66(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(3d), armordivisor(2), damtype(burn), minst(4), rangehalfdam(200), rangemax(600), acc(6), rof(10), uses(66), shots(66(3)), rcl(1), bulk(-2), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Assault Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(10000), baseweight(10), techlvl(9), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2198,7 +2272,7 @@ Assault Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), 
 			),_
         isparent(yes),_
 	description(TL:9 LC:2 Ammo:Ep Damage:4d (2) burn Acc:6+1 Range:700/2100 RoF:1 Shots:80(5) ST:7†  Bulk:-5 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(4d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+1), rof(1), uses(80), shots(80(5)), rcl(1), bulk(-5), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(4d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+1), rof(1), uses(80), shots(80(5)), rcl(1), bulk(-5), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Sniper Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(20000), baseweight(20), techlvl(9), mods(Equipment, Beams, Laser), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2206,7 +2280,7 @@ Laser Sniper Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT1
 			),_
         isparent(yes),_
 	description(TL:9 LC:1 Ammo:Ep Damage:5d (2) burn Acc:8+2 Range:1100/3300 RoF:1 Shots:200(5) ST:10†  Bulk:-8 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1100), rangemax(3300), acc(8+2), rof(1), uses(40), shots(40(5)), rcl(1), bulk(-8), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1100), rangemax(3300), acc(8+2), rof(1), uses(40), shots(40(5)), rcl(1), bulk(-8), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Dinosaur Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(19000), baseweight(19), techlvl(10), mods(Equipment, Beams, Laser), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2214,7 +2288,7 @@ Dinosaur Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116),
 			),_
         isparent(yes),_
 	description(TL:10 LC:1 Ammo:Ep Damage:8d (2) burn Acc:6 Range:1300/3900 RoF:1 Shots:35(5) ST:10†  Bulk:-5 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(8d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1300), rangemax(3900), acc(6), rof(1), uses(70), shots(70(5)), rcl(1), bulk(-5), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(8d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1300), rangemax(3900), acc(6), rof(1), uses(70), shots(70(5)), rcl(1), bulk(-5), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), basecost(4600), baseweight(5.6), techlvl(10), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2222,7 +2296,7 @@ Laser Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), 
 			),_
         isparent(yes),_
 	description(TL:10 LC:2 Ammo:2Dp Damage:5d (2) burn Acc:6 Range:500/1500 RoF:10 Shots:56(3) ST:5†  Bulk:-3 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(2), damtype(burn), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5), rof(10), uses(56), shots(56(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(2), damtype(burn), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5), rof(10), uses(56), shots(56(3)), rcl(1), bulk(-3), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), basecost(8000), baseweight(8), techlvl(10), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2230,7 +2304,7 @@ Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), ba
 			),_
         isparent(yes),_
 	description(TL:10 LC:2 Ammo:Dp Damage:6d (2) burn Acc:6 Range:700/2100 RoF:10 Shots:83(5) ST:7†  Bulk:-4 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(6d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6), rof(10), uses(83), shots(83(5)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(6d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6), rof(10), uses(83), shots(83(5)), rcl(1), bulk(-4), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 
 
 <Ultra-Tech, Ultra-Tech - Weapons, Ultra-Tech - Weapons - Particle Beam, _Firearms, _Firearms - Ultra-Tech>
@@ -2241,7 +2315,7 @@ Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), 
 			),_
         isparent(yes),_
 	description(TL:11 LC:3 Ammo:Dp Damage:3d (5) burn sur Acc:5 Range:300/900 RoF:3 Shots:80(3) ST:4 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(3d), armordivisor(5), damtype(burn sur), minst(4), rangehalfdam(300), rangemax(900), acc(5), rof(3), uses(80), shots(80(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(3d), armordivisor(5), damtype(burn sur), minst(4), rangehalfdam(300), rangemax(900), acc(5), rof(3), uses(80), shots(80(3)), rcl(1), bulk(-2), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Heavy Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(2Dp), page(UT123), basecost(5600), baseweight(3.3), techlvl(11), mods(Equipment, Beams), lc(3),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2249,7 +2323,7 @@ Heavy Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(2Dp), page(U
 			),_
         isparent(yes),_
 	description(TL:11 LC:3 Ammo:2Dp Damage:4d (5) burn sur Acc:5 Range:500/1500 RoF:3 Shots:66(3) ST:6 Bulk:-3 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(4d), armordivisor(5), damtype(burn sur), minst(6), rangehalfdam(500), rangemax(1500), acc(5), rof(3), uses(66), shots(66(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(4d), armordivisor(5), damtype(burn sur), minst(6), rangehalfdam(500), rangemax(1500), acc(5), rof(3), uses(66), shots(66(3)), rcl(1), bulk(-3), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Fusion Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(9200), baseweight(5.6), techlvl(11), mods(Equipment, Beams), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2257,7 +2331,7 @@ Fusion Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123),
 			),_
         isparent(yes),_
 	description(TL:11 LC:2 Ammo:Dp Damage:5d (5) burn sur Acc:5+1 Range:500/1500 RoF:3 Shots:34(3) ST:5†  Bulk:-3 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(5), damtype(burn sur), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5+1), rof(3), uses(34), shots(34(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(5), damtype(burn sur), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5+1), rof(3), uses(34), shots(34(3)), rcl(1), bulk(-3), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(18000), baseweight(10), techlvl(11), mods(Equipment, Beams), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2265,7 +2339,7 @@ Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), b
 			),_
         isparent(yes),_
 	description(TL:11 LC:2 Ammo:Dp Damage:6d (5) burn sur Acc:6+2 Range:700/2100 RoF:3 Shots:20(3) ST:7†  Bulk:-4 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(6d), armordivisor(5), damtype(burn sur), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+2), rof(3), uses(20), shots(20(3)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(6d), armordivisor(5), damtype(burn sur), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+2), rof(3), uses(20), shots(20(3)), rcl(1), bulk(-4), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Heavy Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(40000), baseweight(20), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2273,7 +2347,7 @@ Heavy Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT1
 			),_
         isparent(yes),_
 	description(TL:11 LC:1 Ammo:Dp Damage:8d (5) burn sur Acc:6+4 Range:1200/3600 RoF:3 Shots:15(5) ST:10†  Bulk:-6 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(8d), armordivisor(5), damtype(burn sur), minst(10† ), rangehalfdam(1200), rangemax(3600), acc(6+4), rof(3), uses(15), shots(15(5)), rcl(1), bulk(-6), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(8d), armordivisor(5), damtype(burn sur), minst(10† ), rangehalfdam(1200), rangemax(3600), acc(6+4), rof(3), uses(15), shots(15(5)), rcl(1), bulk(-6), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Fusion Cannon (TL10), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page(UT123), basecost(2000000), baseweight(4000), techlvl(10), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2281,7 +2355,7 @@ Fusion Cannon (TL10), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page
 			),_
         isparent(yes),_
 	description(TL:10 LC:1 Ammo:10Fp Damage:5dx10 (5) burn sur Acc:15 Range:30000/90000 RoF:1 Shots:20(5) ST:160M Bulk:-10 Rcl:1 Skill:Gunner (Beams)),_
-	damage(5dx10), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(30000), rangemax(90000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(5dx10), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(30000), rangemax(90000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 Fusion Cannon (TL11), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page(UT123), basecost(2000000), baseweight(4000), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2289,7 +2363,7 @@ Fusion Cannon (TL11), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page
 			),_
         isparent(yes),_
 	description(TL:11 LC:1 Ammo:10Fp Damage:5dx20 (5) burn sur Acc:15 Range:120000/360000 RoF:1 Shots:20(5) ST:160M Bulk:-10 Rcl:1 Skill:Gunner (Beams)),_
-	damage(5dx20), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(120000), rangemax(360000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(5dx20), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(120000), rangemax(360000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT123), basecost(140000), baseweight(70), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
@@ -2297,8 +2371,118 @@ Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), pa
 			),_
         isparent(yes),_
 	description(TL:11 LC:1 Ammo:Ep Damage:6dx2 (5) burn sur Acc:15 Range:2800/8400 RoF:3 Shots:50(5) ST:18M Bulk:-8 Rcl:1 Skill:Gunner (Beams)),_
-	damage(6dx2), armordivisor(5), damtype(burn sur), minst(18M), rangehalfdam(2800), rangemax(8400), acc(15), rof(3), uses(50), shots(50(5)), rcl(1), bulk(-8), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(6dx2), armordivisor(5), damtype(burn sur), minst(18M), rangehalfdam(2800), rangemax(8400), acc(15), rof(3), uses(50), shots(50(5)), rcl(1), bulk(-8), skillused(SK:Ranged Combat, SK:Beam Weapons, SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 
+[SKILLS]
+
+#ReplaceTags in SK:Arts/Entertainment with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Arts/Entertainment class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Athletics with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Athletics class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Bureaucracy with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Bureaucracy class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Business with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Business class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Clandestine Tech with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Clandestine Tech class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Crafts with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Crafts class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Deception with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Deception class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Esoteric with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Esoteric class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Innovation with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Innovation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Investigation with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Investigation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Medical with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Medical class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Melee Combat with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Melee Combat class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Military with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Military class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Outdoor/Exploration with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Outdoor/Exploration class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Ranged Combat with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Ranged Combat class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Reconnaissance with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Reconnaissance class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Repair/Maintenance with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Repair/Maintenance class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Scholar with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Scholar class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Sneakiness with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Sneakiness class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Social with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Social class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Social Sciences/Humanities with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Social Sciences/Humanities class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Theft with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Theft class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Vehicles with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Vehicles class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Caution with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Caution class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Enthrallment with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Enthrallment class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Ki with default(0), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Ki class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Practical with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Practical class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+
+#MergeTags in SK:Electronics Operation with group(Practical), childof(SK:Practical)
+#ReplaceTags in SK:Vacc Suit with childof(SK:Practical)
+
+#ReplaceTags in SK:Animal Telepathy with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Animal Telepathy class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Anti-Psi with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Anti-Psi class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Astral Projection with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Astral Projection class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Biokinesis with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Biokinesis class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Dream Control with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Dream Control class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Ergokinesis with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Ergokinesis class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:ESP with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:ESP class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Probablility Alteration with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Probablility Alteration class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychic Healing with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychic Healing class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychic Vampirism with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychic Vampirism class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychokinesis with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychokinesis class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Psychometabolism with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Psychometabolism class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Telepathy with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Telepathy class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+#ReplaceTags in SK:Teleportation with default(5), gives(=+ $if(me::basepoints > 0 THEN me::step - me::extralevels ELSE 0) to GR:Teleportation class "Trunks,AllSources"), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+
+Biosciences, Trunk, gives(=+ $if( me::basepoints > 0 THEN (me::step - me::extralevels) ELSE 0) to GR:Biosciences class "Trunks,AllSources"), isparent(yes), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0), cat(Biosciences, Trunks), default(5)
+Physical Sciences, Trunk, gives(=+ $if(me::basepoints > 0 THEN (me::step - me::extralevels) else 0) to GR:Physical Sciences class "Trunks,AllSources"), isparent(yes), cat(Physical Sciences, Trunks), default(5), displaynameformula($val(me::fullname): +$if(me::basepoints > 0 THEN $eval(me::step - me::extralevels) ELSE 0))
+
+#Delete SK:Animal
+#Delete SK:Herb Lore
+#Delete SK:Natural Sciences
+#Delete SK:Plant
+
+#MergeTags in all "SK:Animal Handling" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Astronomy" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Biology" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Chemistry" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Falconry" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Farming" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Gardening" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Geology" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Mathematics" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Metallurgy" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Meteorology" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Naturalist" with group(Biosciences, Physical Sciences), cat(Biosciences, Physical Sciences)
+#MergeTags in all "SK:Packing" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Paleontology" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Physics" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in all "SK:Riding" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Teamster" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Veterinary" with group(Biosciences), cat(Biosciences)
+#MergeTags in all "SK:Weather Sense" with group(Outdoor/Exploration), cat(Outdoor/Exploration)
+#MergeTags in "SK:Connoisseur (Horses)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Connoisseur (Raptors)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Expert Skill (Hydrology)" with group(Physical Sciences)
+#MergeTags in "SK:Expert Skill (Natural Philosophy)" with group(Physical Sciences), cat(Physical Sciences)
+#MergeTags in "SK:Mimicry (Animal Sounds)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Mimicry (Bird Calls)" with group(Biosciences), cat(Biosciences)
+#MergeTags in "SK:Pharmacy (Herbal)" with group(Biosciences), cat(Biosciences)
+#ReplaceTags in "SK:Animal Handling" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Astronomy" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Biology) with childof(Biosciences)
+#ReplaceTags in "SK:Boxing" with type(DX/Leaf)
+#ReplaceTags in "SK:Brawling" with type(DX/Leaf)
+#ReplaceTags in "SK:Chemistry" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Connoiseur (Horses)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Connoiseur (Raptors)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Expert Skill (Hydrology)" with cat(Physical Sciences)
+#ReplaceTags in "SK:Expert Skill (Natural Philosophy)" with cat(Physical Sciences)
+#ReplaceTags in "SK:Farming" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Gardening" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Geology" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Mathematics" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Metallurgy" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Meteorology" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Mimicry (Animal Sounds)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Mimicry (Bird Calls)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Naturalist" with childof(SK:Outdoor/Exploration)
+#ReplaceTags in "SK:Packing" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Paleontology" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Pharmacy (Herbal)" with childof(SK:Biolsciences)
+#ReplaceTags in "SK:Physics" with childof(SK:Physical Sciences)
+#ReplaceTags in "SK:Riding" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Teamster" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Veterinary" with childof(SK:Biosciences)
+#ReplaceTags in "SK:Weather Sense" with childof(SK:Outdoor/Exploration)
+#ReplaceTags in "SK:Wrestling" with type(DX/Leaf)
 
 #ReplaceTags in AD:Arm ST with _
     skillused(ST:DX, SK:Brawling, SK:Boxing, SK:Karate, SK:Unarmed Striking), 
@@ -2307,7 +2491,11 @@ Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), pa
     parry(0), 
     damage( $if(@hasmod(One Arm) THEN @thr(ST:One Arm Striking ST::score) ELSE $if(@hasmod(Two Arms) THEN @thr(ST:Two Arm Striking ST::score) ELSE $if(@hasmod(Three Arms) THEN @thr(ST:Three Arm Striking ST::score) ELSE 0)))-1 + @if("AD:Claws (Blunt Claws)::level" = 1 then @basethdice(ST:Punch) else @if("AD:Claws (Long Talons)::level" = 1 then @basethdice(ST:Punch) else 0)) + @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))),_
     damtype( $if("AD:Claws (Sharp Claws)::level" = 1 THEN "cut" ELSE $if("AD:Claws (Talons)::level" = 1 THEN "cut/imp" ELSE $if("AD:Claws (Long Talons)::level" = 1 THEN "cut/imp" ELSE "cr"))))
+#MergeTags in ST:Punch with skillused(SK:Melee Combat, SK:Unarmed Striking)
+#MergeTags in ST:Kick with skillused(SK:Melee Combat, SK:Unarmed Striking)
+#MergeTags in ST:Bite with skillused(SK:Melee Combat, SK:Unarmed Striking)
 #ReplaceTags in SK:Judo with parryat(@int(%level/2)+3), mode(Grappling),damagebasedon(ST:Lifting ST),damage(thr+@IF(SK:Judo >= ST:DX+10 THEN 2 * @basethdice(ST:Lifting ST) ELSEIF SK:Judo >= ST:DX+4 THEN @basethdice(ST:Lifting ST) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Judo, DX)
 #ReplaceTags in SK:Sumo Wrestling with parryat(@int(%level/2)+3),mode(Grappling|Slam),damage(@THR(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Sumo Wrestling >= ST:DX+7 THEN 2 * @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Sumo Wrestling >= ST:DX+2 THEN @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )|@THR(ST:ST+@IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0) )-2),damtype(control|cr),parry(0|),reach(C|C),skillused(SK:Sumo Wrestling, DX|SK:Sumo Wrestling, DX)
+#ReplaceTags in SK:Unarmed Grappling with parryat(@int(%level/2)+3),mode(Grappling),damage(@THR(ST:Lifting ST+@IF(SK:Unarmed Grappling >= ST:DX+2 THEN 2 ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Unarmed Grappling >= ST:DX+4 THEN 2 * @basethdice(ST:Lifting ST+@IF(SK:Unarmed Grappling >= ST:DX+2 THEN 2 ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN @basethdice(ST:Lifting ST+@IF(SK:Unarmed Grappling >= ST:DX+2 THEN 2 ELSEIF SK:Unarmed Grappling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Unarmed Grappling, DX)
 #ReplaceTags in SK:Wrestling with parryat(@int(%level/2)+3),mode(Grappling),damage(@THR(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Wrestling >= ST:DX+4 THEN 2 * @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Wrestling >= ST:DX+1 THEN @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Wrestling, DX)
 

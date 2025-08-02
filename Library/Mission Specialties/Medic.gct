@@ -4,68 +4,10 @@
 	"skills": [
 		{
 			"id": "Sg6cHKlY9VvGLkSqX",
-			"name": "Medical Doctor",
+			"name": "Medic",
 			"children": [
 				{
-					"id": "scooNO2WvTlUYBUM-",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "s4arfUoQ8xiikH5TB"
-					},
-					"name": "Biology",
-					"reference": "B180",
-					"tags": [
-						"Natural Science",
-						"Plant"
-					],
-					"specialization": "Biochemistry",
-					"difficulty": "iq/vh",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Naturalist",
-							"modifier": -6
-						}
-					],
-					"tech_level": "",
-					"points": 1
-				},
-				{
-					"id": "sfoTC1luWcd_nIgLq",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "scBFJWfsDYeIEsCQG"
-					},
-					"name": "Biology",
-					"reference": "B180",
-					"tags": [
-						"Natural Science",
-						"Plant"
-					],
-					"specialization": "Earthlike",
-					"difficulty": "iq/vh",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Naturalist",
-							"modifier": -6
-						}
-					],
-					"tech_level": "",
-					"points": 2
-				},
-				{
-					"id": "syFZRZ6yvoLORSkWt",
+					"id": "sswE1_WuHEZrtGhIE",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set/Basic Set Skills.skl",
@@ -99,10 +41,10 @@
 						}
 					],
 					"tech_level": "",
-					"points": 4
+					"points": 8
 				},
 				{
-					"id": "soLdIePfl8CTKkq0j",
+					"id": "s9POhTWczHzo1hiH-",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set/Basic Set Skills.skl",

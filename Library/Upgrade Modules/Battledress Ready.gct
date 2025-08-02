@@ -1,0 +1,235 @@
+{
+	"version": 5,
+	"id": "Bnr_QRNiGz8pL7at0",
+	"traits": [
+		{
+			"id": "TUy98OYJEfofXqwbf",
+			"name": "Battledress ready",
+			"children": [
+				{
+					"id": "tHjTg4QuVwAMGDK20",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tqha9GlDBU9P-Wg-6"
+					},
+					"name": "Increased Strength",
+					"reference": "B14",
+					"tags": [
+						"Advantage",
+						"Attribute",
+						"Physical"
+					],
+					"modifiers": [
+						{
+							"id": "mibixQW8dwRJ3rzcm",
+							"name": "No Fine Manipulators",
+							"reference": "B15",
+							"cost": -40,
+							"disabled": true
+						},
+						{
+							"id": "mWw2AT_ZTYzA3LviN",
+							"name": "Size",
+							"reference": "B15",
+							"cost": -10,
+							"levels": 1,
+							"disabled": true
+						},
+						{
+							"id": "mzGhhpd3Rel_Zfjgs",
+							"name": "Super-Effort",
+							"reference": "SU24",
+							"cost": 300,
+							"disabled": true
+						}
+					],
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "st",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "tLrRXgk7HBVJdIS2F",
+					"name": "Equipment Bond (Scout Expedition Dress)",
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tr9XUwv_V0q0O3A8L",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "thKwCUUe961nSwzVi"
+					},
+					"name": "Signature Gear (Scout Expedition Dress)",
+					"reference": "B85",
+					"tags": [
+						"Advantage",
+						"Social"
+					],
+					"points_per_level": 1,
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tuxBNPslqGHyHPteK",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Gun Fu/Gun Fu Traits.adq",
+						"id": "tCXJ6BoPq3eYH8qmc"
+					},
+					"name": "Tacticool",
+					"reference": "GF22",
+					"tags": [
+						"Cinematic",
+						"Perk",
+						"Physical"
+					],
+					"base_points": 1,
+					"calc": {
+						"points": 1
+					}
+				},
+				{
+					"id": "tvbpBkKm3F0SEDcoJ",
+					"name": "Trading Character Points for Money",
+					"local_notes": "$175K",
+					"base_points": 7,
+					"calc": {
+						"points": 7
+					}
+				}
+			],
+			"calc": {
+				"points": 15
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "SlodHoLQ0_EBtvceG",
+			"name": "Battledress Ready",
+			"children": [
+				{
+					"id": "sovmZu8ddp6t44TAt",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sku11uyd1oUdTaIPX"
+					},
+					"name": "Armoury",
+					"reference": "B178",
+					"tags": [
+						"Maintenance",
+						"Military",
+						"Repair"
+					],
+					"specialization": "Battlesuits",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Battlesuits",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "srBR8_zuqQKxaMWdV",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "siupVKFgi0pYYp4oa"
+					},
+					"name": "Battlesuit",
+					"reference": "B192",
+					"tags": [
+						"Military",
+						"Technical"
+					],
+					"difficulty": "dx/a",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Diving Suit",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Vacc Suit",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "NBC Suit",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 8
+				}
+			]
+		}
+	],
+	"equipment": [
+		{
+			"id": "exBuqxbZfdygyPmCN",
+			"description": "Scout Expedition Dress",
+			"tech_level": "11",
+			"legality_class": "4",
+			"base_value": "163000",
+			"base_weight": "500",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"all"
+					],
+					"amount": 60
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "st",
+					"amount": 20
+				}
+			],
+			"ignore_weight_for_skills": true,
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 163000,
+				"extended_value": 163000,
+				"weight": "500 lb",
+				"extended_weight": "500 lb",
+				"extended_weight_for_skills": "0 lb"
+			}
+		}
+	]
+}

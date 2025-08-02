@@ -69,7 +69,7 @@
 							},
 							"name": "Luck",
 							"reference": "B66,P59",
-							"notes": "Usable once per hour of play",
+							"local_notes": "Usable once per hour of play",
 							"tags": [
 								"Advantage",
 								"Mental"
@@ -86,7 +86,7 @@
 									"id": "mihIkb88Qm5z3tEMo",
 									"name": "Aspected",
 									"reference": "B66",
-									"notes": "@Aspect@",
+									"local_notes": "@Aspect@",
 									"cost": -20,
 									"disabled": true
 								},
@@ -108,7 +108,7 @@
 									"id": "mCj3FH97Lpp7uaz32",
 									"name": "Game Time",
 									"reference": "P108",
-									"notes": "Uses per game day equal to its maximum possible uses per real hour",
+									"local_notes": "Uses per game day equal to its maximum possible uses per real hour",
 									"disabled": true
 								}
 							],
@@ -142,14 +142,14 @@
 									"id": "mN3dN7QrykQb7F9X9",
 									"name": "Wishing",
 									"reference": "P73",
-									"notes": "For others only",
+									"local_notes": "For others only",
 									"disabled": true
 								},
 								{
 									"id": "m5vqAr4zHDxxx_BxS",
 									"name": "Game Time",
 									"reference": "P108",
-									"notes": "Uses per game week equal to its maximum possible uses per session",
+									"local_notes": "Uses per game week equal to its maximum possible uses per session",
 									"disabled": true
 								}
 							],
@@ -170,35 +170,6 @@
 					"name": "Attributes",
 					"container_type": "attributes",
 					"children": [
-						{
-							"id": "tUFzecPAulSSl90BO",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "tVt3SvdGWNchJ8z4o"
-							},
-							"name": "Increased Health",
-							"reference": "B14",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Physical"
-							],
-							"points_per_level": 10,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "ht",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 10
-							}
-						},
 						{
 							"id": "tY0Kg8SYnLXQ6DG6W",
 							"source": {
@@ -230,7 +201,7 @@
 						}
 					],
 					"calc": {
-						"points": 30
+						"points": 20
 					}
 				},
 				{
@@ -301,7 +272,7 @@
 							},
 							"name": "Code of Honor (Pirate's)",
 							"reference": "B127",
-							"notes": "Always avenge an insult, regardless of the danger; your buddy’s foe is your own; never attack a fellow crewman or buddy except in a fair, open duel.",
+							"local_notes": "Always avenge an insult, regardless of the danger; your buddy’s foe is your own; never attack a fellow crewman or buddy except in a fair, open duel.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -320,7 +291,7 @@
 							},
 							"name": "Light Sleeper",
 							"reference": "B142",
-							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"local_notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -339,7 +310,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -371,7 +342,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -421,7 +392,7 @@
 				}
 			],
 			"calc": {
-				"points": 60
+				"points": 50
 			}
 		}
 	],
@@ -460,40 +431,7 @@
 							"modifier": -5
 						}
 					],
-					"points": 2
-				},
-				{
-					"id": "sEVtNur1Xlr71ocQg",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "shtDdl5thrvKSnJHf"
-					},
-					"name": "Brawling",
-					"reference": "B182,MA55",
-					"tags": [
-						"Combat",
-						"Melee Combat",
-						"Weapon"
-					],
-					"difficulty": "dx/e",
-					"features": [
-						{
-							"type": "weapon_bonus",
-							"selection_type": "weapons_with_required_skill",
-							"name": {
-								"compare": "is",
-								"qualifier": "Brawling"
-							},
-							"level": {
-								"compare": "at_least",
-								"qualifier": 2
-							},
-							"amount": 1,
-							"per_die": true
-						}
-					],
-					"points": 1
+					"points": 8
 				},
 				{
 					"id": "sOaSad60fQq9PFkLV",
@@ -565,85 +503,78 @@
 							"modifier": -5
 						}
 					],
-					"points": 2
+					"points": 4
 				},
 				{
-					"id": "sjY1NGuErZNeC9MRj",
+					"id": "suP93-kt-x7f6lvTB",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sfWUh9TJBpQuwZBVo"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s8xJ9sNlYaXiyd-va"
 					},
-					"name": "Guns",
-					"reference": "B198",
+					"name": "Filch",
+					"reference": "B195",
 					"tags": [
-						"Combat",
-						"Ranged Combat",
-						"Weapon"
+						"Criminal",
+						"Spy",
+						"Street"
 					],
-					"specialization": "Pistol",
-					"difficulty": "dx/e",
+					"difficulty": "dx/a",
 					"defaults": [
 						{
 							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Pickpocket",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Guns",
-							"specialization": "Grenade Launcher",
+							"name": "Sleight of Hand",
 							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Gyroc",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Light Anti-Armor Weapon",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Light Machine Gun",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Musket",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Beam Weapons",
-							"specialization": "Pistol",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Rifle",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Shotgun",
-							"modifier": -2
-						},
-						{
-							"type": "skill",
-							"name": "Guns",
-							"specialization": "Submachine Gun",
-							"modifier": -2
 						}
 					],
-					"tech_level": "10",
+					"points": 1
+				},
+				{
+					"id": "s9sDR0Swx34lex8mZ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sxSlxLiSgB95HINP_"
+					},
+					"name": "Forced Entry",
+					"reference": "B196",
+					"tags": [
+						"Criminal",
+						"Police",
+						"Spy",
+						"Street"
+					],
+					"difficulty": "dx/e",
+					"points": 1
+				},
+				{
+					"id": "sN6NI1ilDUFOSCvpj",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sfZrwMVUibhbtdssl"
+					},
+					"name": "Housekeeping",
+					"reference": "B200",
+					"tags": [
+						"Everyman"
+					],
+					"difficulty": "iq/e",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						}
+					],
 					"points": 1
 				},
 				{
@@ -673,85 +604,65 @@
 					"points": 2
 				},
 				{
-					"id": "SiUxhJoMwwb8EMCH2",
-					"name": "Pick One",
-					"template_picker": {
-						"type": "count",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": 1
-						}
-					},
-					"children": [
-						{
-							"id": "sN_l46ZhVp0gc1AUx",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sqgUZNRy0qgmVDUXq"
-							},
-							"name": "Fast-Draw",
-							"reference": "B194,MA56",
-							"tags": [
-								"Combat",
-								"Melee Combat",
-								"Weapon"
-							],
-							"specialization": "Knife",
-							"difficulty": "dx/e",
-							"points": 1
-						},
-						{
-							"id": "sdN74ItlFjo83Vcp9",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "slFkOhWAAPF7DTJRe"
-							},
-							"name": "Fast-Draw",
-							"reference": "B194,MA56",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Pistol",
-							"difficulty": "dx/e",
-							"points": 1
-						},
-						{
-							"id": "s4ihcanYEbkUZ_Cgk",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "scP0IdjWrVEveSeDl"
-							},
-							"name": "Fast-Draw",
-							"reference": "B194,MA56",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Ammo",
-							"difficulty": "dx/e",
-							"tech_level": "10",
-							"points": 1
-						}
-					]
-				},
-				{
-					"id": "sU4heVccb5AfG0bOS",
+					"id": "sZ412pd3YmqOJ0KSp",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "swYZeCAKyU5w-2tzd"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ2Nj_TqMYKV7skUF"
 					},
-					"name": "Smuggling",
-					"reference": "B221",
+					"name": "Scrounging",
+					"reference": "B218",
 					"tags": [
 						"Criminal",
-						"Spy",
+						"Street"
+					],
+					"difficulty": "per/e",
+					"defaults": [
+						{
+							"type": "per",
+							"modifier": -4
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "siz8SVxtZM7nNm7wC",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sx30jF75AT-salBcj"
+					},
+					"name": "Sleight of Hand",
+					"reference": "B221",
+					"tags": [
+						"Arts",
+						"Criminal",
+						"Entertainment",
+						"Street"
+					],
+					"difficulty": "dx/h",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Filch",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sc0Pudhem6koRzrpP",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "smTUpMWJGqPeT1KER"
+					},
+					"name": "Streetwise",
+					"reference": "B223",
+					"tags": [
+						"Criminal",
+						"Police",
+						"Social",
 						"Street"
 					],
 					"difficulty": "iq/a",
@@ -762,23 +673,6 @@
 						}
 					],
 					"points": 4
-				},
-				{
-					"id": "srO0S0Iqg5KJek9Vc",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "s8parl7zgbXys0OF2"
-					},
-					"name": "Wrestling",
-					"reference": "B228,MA61",
-					"tags": [
-						"Combat",
-						"Melee Combat",
-						"Weapon"
-					],
-					"difficulty": "dx/a",
-					"points": 1
 				}
 			]
 		}

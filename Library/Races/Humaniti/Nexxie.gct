@@ -37,7 +37,7 @@
 					},
 					"name": "Cultural Familiarity (Imperial)",
 					"reference": "B23",
-					"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+					"local_notes": "Do not suffer the normal -3 penalty for unfamiliarity",
 					"tags": [
 						"Advantage",
 						"Mental"
@@ -88,15 +88,15 @@
 							"id": "mQOy1vOxEOh6Xvf-h",
 							"name": "Hardened",
 							"reference": "B47",
-							"levels": 1,
 							"cost": 20,
+							"levels": 1,
 							"disabled": true
 						},
 						{
 							"id": "mB28JbAsKEcoELGuq",
 							"name": "Absorption",
 							"reference": "B46",
-							"notes": "Enhances @Trait@",
+							"local_notes": "Enhances @Trait@",
 							"cost": 80,
 							"disabled": true
 						},
@@ -104,7 +104,7 @@
 							"id": "mSbs1JTxBeZ3S_nNO",
 							"name": "Absorption",
 							"reference": "B46",
-							"notes": "Healing only",
+							"local_notes": "Healing only",
 							"cost": 80,
 							"disabled": true
 						},
@@ -112,7 +112,7 @@
 							"id": "mF_qx9zCb5QlPPPdu",
 							"name": "Absorption",
 							"reference": "B46",
-							"notes": "Enhances any trait",
+							"local_notes": "Enhances any trait",
 							"cost": 100,
 							"disabled": true
 						},
@@ -127,7 +127,7 @@
 							"id": "mPkpDIuGcHd71cprV",
 							"name": "Bane",
 							"reference": "H14",
-							"notes": "@Rare@",
+							"local_notes": "@Rare@",
 							"cost": -1,
 							"cost_type": "points",
 							"disabled": true
@@ -136,7 +136,7 @@
 							"id": "mtGI5zAlgoXmSW1lh",
 							"name": "Bane",
 							"reference": "H14",
-							"notes": "@Occasional@",
+							"local_notes": "@Occasional@",
 							"cost": -5,
 							"disabled": true
 						},
@@ -144,7 +144,7 @@
 							"id": "m7-YVa07BUk1bg372",
 							"name": "Bane",
 							"reference": "H14",
-							"notes": "@Common@",
+							"local_notes": "@Common@",
 							"cost": -10,
 							"disabled": true
 						},
@@ -152,7 +152,7 @@
 							"id": "mRToHHcd9ewqew4c_",
 							"name": "Bane",
 							"reference": "H14",
-							"notes": "@Very Common@",
+							"local_notes": "@Very Common@",
 							"cost": -15,
 							"disabled": true
 						},
@@ -160,7 +160,7 @@
 							"id": "mWc4we7rfpj2Toy0A",
 							"name": "Directional",
 							"reference": "B47",
-							"notes": "Front",
+							"local_notes": "Front",
 							"cost": -20,
 							"disabled": true
 						},
@@ -175,7 +175,7 @@
 							"id": "mLmXY5tbOxd5SrCat",
 							"name": "Limited",
 							"reference": "B46",
-							"notes": "@Very Common Attack Form@",
+							"local_notes": "@Very Common Attack Form@",
 							"cost": -20,
 							"disabled": true
 						},
@@ -197,7 +197,7 @@
 							"id": "m0KFgU9ngAy8kO0UN",
 							"name": "Directional",
 							"reference": "B47",
-							"notes": "@Direction: Back, Right, Left, Top or Underside@",
+							"local_notes": "@Direction: Back, Right, Left, Top or Underside@",
 							"cost": -40,
 							"disabled": true
 						},
@@ -205,21 +205,21 @@
 							"id": "m8iHWXwGhitwgfMoz",
 							"name": "Limited",
 							"reference": "B46",
-							"notes": "@Common Attack Form@",
+							"local_notes": "@Common Attack Form@",
 							"cost": -40,
 							"disabled": true
 						},
 						{
 							"id": "meDJjhxlspnx30l2M",
 							"name": "Tough Skin",
-							"notes": "Effects that just require skin contact or a scratch ignore this DR",
+							"local_notes": "Effects that just require skin contact or a scratch ignore this DR",
 							"cost": -40
 						},
 						{
 							"id": "maYufJKDeNFmHQJqy",
 							"name": "Limited",
 							"reference": "B46",
-							"notes": "@Occasional Attack Form@",
+							"local_notes": "@Occasional Attack Form@",
 							"cost": -60,
 							"disabled": true
 						},
@@ -234,7 +234,7 @@
 							"id": "mClaCLUftiF-v7jrQ",
 							"name": "Limited",
 							"reference": "B46",
-							"notes": "@Rare Attack Form@",
+							"local_notes": "@Rare Attack Form@",
 							"cost": -80,
 							"disabled": true
 						},
@@ -412,7 +412,7 @@
 							"id": "mBz5kN17PwQq0YlTN",
 							"name": "Gills",
 							"reference": "B49",
-							"notes": "Suffocates in air",
+							"local_notes": "Suffocates in air",
 							"cost": -20,
 							"cost_type": "points",
 							"disabled": true
@@ -428,7 +428,7 @@
 							"id": "mJoY9JVhMB4SHIfZD",
 							"name": "Oxygen Storage",
 							"reference": "B49",
-							"notes": "Can hold breath 25 times as long as normal",
+							"local_notes": "Can hold breath 25 times as long as normal",
 							"cost": -50,
 							"disabled": true
 						},
@@ -436,7 +436,7 @@
 							"id": "m9z7ErxETH447Y5W8",
 							"name": "Oxygen Storage",
 							"reference": "B49",
-							"notes": "Can hold breath 50 times as long as normal",
+							"local_notes": "Can hold breath 50 times as long as normal",
 							"cost": -40,
 							"disabled": true
 						},
@@ -444,7 +444,7 @@
 							"id": "mlzyWpqmZ8bBi1ghG",
 							"name": "Oxygen Storage",
 							"reference": "B49",
-							"notes": "Can hold breath 100 times as long as normal",
+							"local_notes": "Can hold breath 100 times as long as normal",
 							"cost": -30,
 							"disabled": true
 						},
@@ -452,7 +452,7 @@
 							"id": "m5f-7mDx7274oX3Hc",
 							"name": "Oxygen Storage",
 							"reference": "B49",
-							"notes": "Can hold breath 200 times as long as normal",
+							"local_notes": "Can hold breath 200 times as long as normal",
 							"cost": -20,
 							"disabled": true
 						},
@@ -460,7 +460,7 @@
 							"id": "mbjJo9zO3R6bXZ8VM",
 							"name": "Oxygen Storage",
 							"reference": "B49",
-							"notes": "Can hold breath 300 times as long as normal",
+							"local_notes": "Can hold breath 300 times as long as normal",
 							"cost": -10,
 							"disabled": true
 						},
@@ -475,6 +475,48 @@
 					"base_points": 20,
 					"calc": {
 						"points": 10
+					}
+				},
+				{
+					"id": "tdfmGWViIKsUiFnVz",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tQa3EUrs4Hjt9gxK6"
+					},
+					"name": "Fearlessness",
+					"reference": "B55,MA44",
+					"tags": [
+						"Advantage",
+						"Mental"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": true,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Fearfulness"
+								}
+							}
+						]
+					},
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "attribute_bonus",
+							"attribute": "fright_check",
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 2
 					}
 				},
 				{
@@ -520,7 +562,7 @@
 							"id": "mDCuljXwREcVPUVig",
 							"name": "Spoken",
 							"reference": "B24",
-							"notes": "None",
+							"local_notes": "None",
 							"cost_type": "points",
 							"disabled": true
 						},
@@ -528,7 +570,7 @@
 							"id": "mtEuRlh8wk5o0EiCx",
 							"name": "Spoken",
 							"reference": "B24",
-							"notes": "Broken",
+							"local_notes": "Broken",
 							"cost": 1,
 							"cost_type": "points",
 							"disabled": true
@@ -537,7 +579,7 @@
 							"id": "mkzsp6O__0shsvHSg",
 							"name": "Spoken",
 							"reference": "B24",
-							"notes": "Accented",
+							"local_notes": "Accented",
 							"cost": 2,
 							"cost_type": "points",
 							"disabled": true
@@ -546,7 +588,7 @@
 							"id": "mXa7CKm0b3xNrEjZ1",
 							"name": "Spoken",
 							"reference": "B24",
-							"notes": "Native",
+							"local_notes": "Native",
 							"cost": 3,
 							"cost_type": "points"
 						},
@@ -554,7 +596,7 @@
 							"id": "mBuyN59kuQnT8Asb3",
 							"name": "Written",
 							"reference": "B24",
-							"notes": "None",
+							"local_notes": "None",
 							"cost_type": "points",
 							"disabled": true
 						},
@@ -562,7 +604,7 @@
 							"id": "mCfQN_FFcXcvKDVxe",
 							"name": "Written",
 							"reference": "B24",
-							"notes": "Broken",
+							"local_notes": "Broken",
 							"cost": 1,
 							"cost_type": "points",
 							"disabled": true
@@ -571,7 +613,7 @@
 							"id": "mtD25Kqd3LTSVst0y",
 							"name": "Written",
 							"reference": "B24",
-							"notes": "Accented",
+							"local_notes": "Accented",
 							"cost": 2,
 							"cost_type": "points",
 							"disabled": true
@@ -580,13 +622,47 @@
 							"id": "mm5QDMHJcM2bsFDST",
 							"name": "Written",
 							"reference": "B24",
-							"notes": "Native",
+							"local_notes": "Native",
 							"cost": 3,
 							"cost_type": "points"
 						}
 					],
 					"calc": {
 						"points": 0
+					}
+				},
+				{
+					"id": "tYBCc7iaX6if1VbK_",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Traits.adq",
+						"id": "tpwIBKlkbnSdcNrWd"
+					},
+					"name": "Racial Skill Bonus - Swimming",
+					"reference": "BX452",
+					"tags": [
+						"Advantage",
+						"Exotic",
+						"Mental",
+						"Talent"
+					],
+					"points_per_level": 2,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Swimming"
+							},
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 2,
+					"calc": {
+						"points": 4
 					}
 				},
 				{
@@ -889,7 +965,7 @@
 				}
 			],
 			"calc": {
-				"points": 24
+				"points": 30
 			}
 		}
 	],
@@ -917,37 +993,6 @@
 					"defaults": [
 						{
 							"type": "ht",
-							"modifier": -4
-						}
-					],
-					"points": 4
-				},
-				{
-					"id": "s8CoLkemLviTSe0Tj",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sb4cJ_wee2WvuSEP6"
-					},
-					"name": "Aquabatics",
-					"reference": "B174",
-					"tags": [
-						"Athletic"
-					],
-					"difficulty": "dx/h",
-					"defaults": [
-						{
-							"type": "dx",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Acrobatics",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Aerobatics",
 							"modifier": -4
 						}
 					],

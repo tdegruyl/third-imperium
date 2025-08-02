@@ -4,232 +4,8 @@
 	"traits": [
 		{
 			"id": "ThdVmiGcpZ7NM352y",
-			"name": "Comms and Nav Officer",
+			"name": "Operations Officer",
 			"children": [
-				{
-					"id": "TlR1YYY7KlTdIdjVq",
-					"name": "Advantages",
-					"children": [
-						{
-							"id": "taNJkEp7m2rOVj4Io",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "tMMQWflrKUPOkyIF9"
-							},
-							"name": "Charisma",
-							"reference": "B41",
-							"tags": [
-								"Advantage",
-								"Mental"
-							],
-							"points_per_level": 5,
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "fortune-telling"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "leadership"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "panhandling"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "public speaking"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "from sapient being with whom you actively interact (converse, lecture, etc.)",
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "to Influence rolls",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 2,
-							"calc": {
-								"points": 10
-							}
-						},
-						{
-							"id": "tHmHcTJZr4NaKlXZM",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Power Ups\\Power Ups Traits.adq",
-								"id": "t3msobZZ06J7dZ8xu"
-							},
-							"name": "Talent (Born Spacer)",
-							"reference": "PU3:7",
-							"tags": [
-								"Advantage",
-								"Mental",
-								"Talent"
-							],
-							"modifiers": [
-								{
-									"id": "mBWNCpZOXy3o6AJSs",
-									"name": "Alternative Cost",
-									"cost": 1,
-									"cost_type": "points",
-									"affects": "levels_only",
-									"disabled": true
-								}
-							],
-							"points_per_level": 5,
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Aerobatics"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Free Fall"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Navigation"
-									},
-									"specialization": {
-										"compare": "is",
-										"qualifier": "Space"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Piloting"
-									},
-									"specialization": {
-										"compare": "is",
-										"qualifier": "High-Performance Spacecraft"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Piloting"
-									},
-									"specialization": {
-										"compare": "is",
-										"qualifier": "Low-Performance Spacecraft"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Piloting"
-									},
-									"specialization": {
-										"compare": "is",
-										"qualifier": "Aerospace"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Spacer"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Vacc Suit"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "From professional Spacers.",
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "conditional_modifier",
-									"situation": "Bonus to ST for zero G push off.  Reduce penalty for unfamiliar spacecraft.",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 2,
-							"calc": {
-								"points": 10
-							}
-						}
-					],
-					"calc": {
-						"points": 20
-					}
-				},
 				{
 					"id": "TJmZ0Q0Rjl5orZLKO",
 					"name": "Attributes",
@@ -325,14 +101,14 @@
 								}
 							],
 							"can_level": true,
-							"levels": 2,
+							"levels": 1,
 							"calc": {
-								"points": 40
+								"points": 20
 							}
 						}
 					],
 					"calc": {
-						"points": 70
+						"points": 50
 					}
 				},
 				{
@@ -359,7 +135,7 @@
 									},
 									"name": "Agoraphobia (Open Spaces)",
 									"reference": "B150",
-									"notes": "You are uncomfortable whenever you are outside, and actually become frightened when there are no walls within 50 feet.",
+									"local_notes": "You are uncomfortable whenever you are outside, and actually become frightened when there are no walls within 50 feet.",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -470,7 +246,7 @@
 									},
 									"name": "Impulsiveness",
 									"reference": "B139",
-									"notes": "Make a self-control roll whenever it would be wise to wait and ponder. If you fail, you must act",
+									"local_notes": "Make a self-control roll whenever it would be wise to wait and ponder. If you fail, you must act",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -490,7 +266,7 @@
 									},
 									"name": "Lecherousness",
 									"reference": "B142",
-									"notes": "Make a self-control roll whenever you have more than the briefest contact with an appealing member of the sex you find attractive, at -5 if this person is Handsome/Beautiful, or at -10 if Very Handsome/Very Beautiful. If you fail, you must make a “pass” using whatever wiles and skills you can bring to bear.",
+									"local_notes": "Make a self-control roll whenever you have more than the briefest contact with an appealing member of the sex you find attractive, at -5 if this person is Handsome/Beautiful, or at -10 if Very Handsome/Very Beautiful. If you fail, you must make a “pass” using whatever wiles and skills you can bring to bear.",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -510,7 +286,7 @@
 									},
 									"name": "Overconfidence",
 									"reference": "B148",
-									"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+									"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -542,7 +318,7 @@
 									},
 									"name": "Pacifism: Reluctant Killer",
 									"reference": "B148",
-									"notes": "You are psychologically unprepared to kill people. Whenever you make a deadly attack (e.g., with a knife or a gun) against an obvious person whose face is visible to you, you are at -4 to hit and may not Aim. If you cannot see the foe’s face (due to a mask, darkness, or distance, or because you attacked from behind), the penalty is only -2, save in close combat. You have no penalty to attack a vehicle (even an occupied one), an opponent you do not believe is a person (including things with Horrific or Monstrous appearance), or a target you can’t actually see (e.g., a set of map coordinates or a blip on a radar screen). If you kill a recognizable person, the effect on you is the same as for Pacifism: Cannot Kill. You have no problem with your allies killing; you may even supply ammo, loaded weapons, and encouragement! You just can’t do the killing yourself.",
+									"local_notes": "You are psychologically unprepared to kill people. Whenever you make a deadly attack (e.g., with a knife or a gun) against an obvious person whose face is visible to you, you are at -4 to hit and may not Aim. If you cannot see the foe’s face (due to a mask, darkness, or distance, or because you attacked from behind), the penalty is only -2, save in close combat. You have no penalty to attack a vehicle (even an occupied one), an opponent you do not believe is a person (including things with Horrific or Monstrous appearance), or a target you can’t actually see (e.g., a set of map coordinates or a blip on a radar screen). If you kill a recognizable person, the effect on you is the same as for Pacifism: Cannot Kill. You have no problem with your allies killing; you may even supply ammo, loaded weapons, and encouragement! You just can’t do the killing yourself.",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -570,7 +346,7 @@
 									},
 									"name": "Pyrophobia (Fire)",
 									"reference": "B150",
-									"notes": "Even a burning cigarette bothers you if it comes within five yards.",
+									"local_notes": "Even a burning cigarette bothers you if it comes within five yards.",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -591,7 +367,7 @@
 									},
 									"name": "Selfish",
 									"reference": "B153",
-									"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+									"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -618,7 +394,7 @@
 									},
 									"name": "Selfless",
 									"reference": "B153",
-									"notes": "You must make a self-control roll to put your needs – even survival – before those of someone else.",
+									"local_notes": "You must make a self-control roll to put your needs – even survival – before those of someone else.",
 									"tags": [
 										"Disadvantage",
 										"Mental"
@@ -745,14 +521,14 @@
 				}
 			],
 			"calc": {
-				"points": -20
+				"points": -60
 			}
 		}
 	],
 	"skills": [
 		{
 			"id": "SCXc9IWGUnfRMhbuE",
-			"name": "Comms and Nav Officer",
+			"name": "Operations Officer",
 			"children": [
 				{
 					"id": "sMqoshG1yYeFbrFbx",
@@ -776,7 +552,77 @@
 						}
 					],
 					"tech_level": "10",
+					"points": 4
+				},
+				{
+					"id": "swAbuXLBIrVoCwk3u",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sBY-R7Xmf64T7WzZ4"
+					},
+					"name": "Computer Programming",
+					"reference": "B184",
+					"tags": [
+						"Design",
+						"Invention"
+					],
+					"difficulty": "iq/h",
+					"tech_level": "",
 					"points": 2
+				},
+				{
+					"id": "s2fmMoS9RuN-S0UI8",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sKEmDeUJja8G_ZlSV"
+					},
+					"name": "Cryptography",
+					"reference": "B186",
+					"tags": [
+						"Military",
+						"Spy"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Cryptology",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "sSw0jFYo_YaZD4HqW",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s8j6tcaNxXkF89Xbt"
+					},
+					"name": "Diplomacy",
+					"reference": "B187",
+					"tags": [
+						"Business",
+						"Police",
+						"Social"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Politics",
+							"modifier": -6
+						}
+					],
+					"points": 4
 				},
 				{
 					"id": "sCgrbGZ8f4slfVVv4",
@@ -816,48 +662,7 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 2
-				},
-				{
-					"id": "si0a9dq5UvsJwnsgb",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sKTF4zU6WcKytEDRW"
-					},
-					"name": "Electronics Operation",
-					"reference": "B189",
-					"tags": [
-						"Medical",
-						"Technical"
-					],
-					"specialization": "Medical",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Repair",
-							"specialization": "Medical",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Engineer",
-							"specialization": "Electronics",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Operation",
-							"modifier": -4
-						}
-					],
-					"tech_level": "10",
-					"points": 1
+					"points": 8
 				},
 				{
 					"id": "sEmEXnTmmq0aGtG2d",
@@ -897,6 +702,128 @@
 						}
 					],
 					"tech_level": "10",
+					"points": 8
+				},
+				{
+					"id": "sz3hlKDgVLpF8Zlo6",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "smQb4vkfHH6Aaczt2"
+					},
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Communications",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Communications",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "suIzZYR36NVtBy-NQ",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sqH7X8s6knQ9FmK-F"
+					},
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Computer",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Computer Operation",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sYYWjuzS4cIlmIE8k",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sfGjvfoOWTcgmqI06"
+					},
+					"name": "Electronics Repair",
+					"reference": "B190",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Sensors",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Operation",
+							"specialization": "Sensors",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "Electronics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Electronics Repair",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
 					"points": 2
 				},
 				{
@@ -920,43 +847,25 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 2
+					"points": 4
 				},
 				{
-					"id": "sCfot1wToeAmse_hv",
+					"id": "sGA4_Nca1YNQC8xJn",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "s9mV--3lpIfXO7N6Z"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "srkpvMJuu4TRxCcO7"
 					},
-					"name": "First Aid",
-					"reference": "B195",
+					"name": "Expert Skill",
+					"reference": "B193,MA56",
 					"tags": [
-						"Everyman",
-						"Medical"
+						"Knowledge",
+						"Scholarly",
+						"Spy"
 					],
-					"difficulty": "iq/e",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Esoteric Medicine"
-						},
-						{
-							"type": "skill",
-							"name": "Physician"
-						},
-						{
-							"type": "skill",
-							"name": "Veterinary",
-							"modifier": -4
-						}
-					],
-					"tech_level": "10",
-					"points": 1
+					"specialization": "Computer Security",
+					"difficulty": "iq/h",
+					"points": 2
 				},
 				{
 					"id": "s-WKVl4gNdZd13Oq0",
@@ -981,84 +890,23 @@
 							"modifier": -5
 						}
 					],
-					"points": 1
-				},
-				{
-					"id": "sz3YnmnnkrPtxapvg",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sVspKJvpEaYNHFmRo"
-					},
-					"name": "Freight Handling",
-					"reference": "B197",
-					"tags": [
-						"Technical",
-						"Vehicle"
-					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						}
-					],
-					"tech_level": "10",
-					"points": 1
-				},
-				{
-					"id": "sjK3L5ws46zxKBQkS",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sSxGnNPMXyZpZKoFZ"
-					},
-					"name": "Leadership",
-					"reference": "B204",
-					"tags": [
-						"Military",
-						"Social"
-					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						}
-					],
 					"points": 2
 				},
 				{
-					"id": "s3G8-ekjir4aE1AaT",
+					"id": "sI5v-sgDA22I5r_XT",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "shHyf3H441PtZMBlJ"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sgF2Eqa7ywSdRHR47"
 					},
-					"name": "Merchant",
-					"reference": "B209",
+					"name": "Linguistics",
+					"reference": "B205",
 					"tags": [
-						"Business",
-						"Social"
+						"Humanities",
+						"Social Sciences"
 					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Finance",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Market Analysis",
-							"modifier": -4
-						}
-					],
-					"points": 2
+					"difficulty": "iq/h",
+					"points": 8
 				},
 				{
 					"id": "sgr0awgaLSI8d2lGB",
@@ -1097,7 +945,7 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 4
+					"points": 8
 				},
 				{
 					"id": "sActur4qwCkA7ci7e",
@@ -1139,53 +987,16 @@
 					"points": 4
 				},
 				{
-					"id": "sQlMKL7V_D95tu4uS",
+					"id": "sNng_ipj08cu0xXRQ",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sOImlSqhRUrHhr-rZ"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "stFawUEv8gxldDoiC"
 					},
-					"name": "Piloting",
-					"reference": "B214",
+					"name": "Research",
+					"reference": "B217",
 					"tags": [
-						"Vehicle"
-					],
-					"specialization": "High-Performance Spacecraft",
-					"difficulty": "dx/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Piloting",
-							"specialization": "Aerospace",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Piloting",
-							"specialization": "Low-Performance Spacecraft",
-							"modifier": -2
-						}
-					],
-					"tech_level": "10",
-					"points": 1
-				},
-				{
-					"id": "sCEFmnoBxVkyqiykT",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sH-gwMqLTWQ337rzx"
-					},
-					"name": "Propaganda",
-					"reference": "B216",
-					"tags": [
-						"Business",
-						"Military",
-						"Social",
+						"Scholarly",
 						"Spy"
 					],
 					"difficulty": "iq/a",
@@ -1196,53 +1007,8 @@
 						},
 						{
 							"type": "skill",
-							"name": "Merchant",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Psychology",
-							"modifier": -4
-						}
-					],
-					"tech_level": "10",
-					"points": 1
-				},
-				{
-					"id": "sy2Za6cjXEzcYblZ6",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sR_M_d1acCzYenF_A"
-					},
-					"name": "Shiphandling",
-					"reference": "B220",
-					"tags": [
-						"Vehicle"
-					],
-					"specialization": "Starship",
-					"difficulty": "iq/h",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Spacer",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Piloting",
-							"specialization": "Low-Performance Spacecraft",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Piloting",
-							"specialization": "High-Performance Spacecraft",
-							"modifier": -5
+							"name": "Writing",
+							"modifier": -3
 						}
 					],
 					"prereqs": {
@@ -1250,36 +1016,72 @@
 						"all": true,
 						"prereqs": [
 							{
-								"type": "skill_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "spacer"
-								}
-							},
-							{
-								"type": "skill_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "navigation"
+								"type": "prereq_list",
+								"all": true,
+								"when_tl": {
+									"compare": "at_least",
+									"qualifier": 8
 								},
-								"specialization": {
-									"compare": "is",
-									"qualifier": "hyperspace"
-								}
+								"prereqs": [
+									{
+										"type": "skill_prereq",
+										"has": true,
+										"name": {
+											"compare": "is",
+											"qualifier": "Computer Operation"
+										}
+									}
+								]
 							},
 							{
-								"type": "skill_prereq",
-								"has": true,
-								"name": {
-									"compare": "is",
-									"qualifier": "leadership"
-								}
+								"type": "prereq_list",
+								"all": false,
+								"when_tl": {
+									"compare": "at_most",
+									"qualifier": 4
+								},
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Native"
+										}
+									},
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Accented)"
+										}
+									},
+									{
+										"type": "trait_prereq",
+										"has": true,
+										"name": {
+											"compare": "starts_with",
+											"qualifier": "Language"
+										},
+										"notes": {
+											"compare": "contains",
+											"qualifier": "Written (Broken)"
+										}
+									}
+								]
 							}
 						]
 					},
-					"tech_level": "10",
+					"tech_level": "",
 					"points": 2
 				},
 				{
@@ -1302,7 +1104,7 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 2
+					"points": 4
 				}
 			]
 		}

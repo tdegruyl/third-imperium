@@ -209,10 +209,10 @@
 							}
 						},
 						{
-							"id": "tissuCDIEGh2e1FaQ",
+							"id": "tIpbDqKRh2ioyXdUD",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
-								"path": "Power Ups\\Power Ups Traits.adq",
+								"path": "Power Ups/Power Ups Traits.adq",
 								"id": "t3msobZZ06J7dZ8xu"
 							},
 							"name": "Talent (Born Spacer)",
@@ -224,12 +224,60 @@
 							],
 							"modifiers": [
 								{
-									"id": "m-wjdYmHP0YH_IEJ-",
+									"id": "mwOX5_mfb0vXOUto0",
 									"name": "Alternative Cost",
 									"cost": 1,
 									"cost_type": "points",
 									"affects": "levels_only",
 									"disabled": true
+								},
+								{
+									"id": "M3cYs55enEykb_GEB",
+									"name": "Benefits",
+									"children": [
+										{
+											"id": "mBG2PjrTeIvcwHC5R",
+											"name": "Reaction Bonus",
+											"use_level_from_trait": true,
+											"features": [
+												{
+													"type": "reaction_bonus",
+													"situation": "From professional Spacers.",
+													"amount": 1,
+													"per_level": true
+												}
+											]
+										},
+										{
+											"id": "mlBqba6LiWGdl3BcA",
+											"name": "Bonus to pushing off",
+											"reference": "BX350",
+											"reference_highlight": "ST/2",
+											"use_level_from_trait": true,
+											"features": [
+												{
+													"type": "conditional_modifier",
+													"situation": "Bonus to ST for zero G push off",
+													"amount": 1,
+													"per_level": true
+												}
+											],
+											"disabled": true
+										},
+										{
+											"id": "mS-X-nI-EfCVrr2uI",
+											"name": "Spacecraft Familiarity",
+											"use_level_from_trait": true,
+											"features": [
+												{
+													"type": "conditional_modifier",
+													"situation": "Counteracts Familiarity for spacecraft.",
+													"amount": 1
+												}
+											],
+											"disabled": true
+										}
+									]
 								}
 							],
 							"points_per_level": 5,
@@ -329,18 +377,6 @@
 									},
 									"amount": 1,
 									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "From professional Spacers.",
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "conditional_modifier",
-									"situation": "Bonus to ST for zero G push off.  Reduce penalty for unfamiliar spacecraft.",
-									"amount": 1,
-									"per_level": true
 								}
 							],
 							"can_level": true,
@@ -352,45 +388,6 @@
 					],
 					"calc": {
 						"points": 30
-					}
-				},
-				{
-					"id": "TmMWlcMnjHb8-Ap-5",
-					"name": "Attributes",
-					"container_type": "attributes",
-					"children": [
-						{
-							"id": "ts5uPWKKiuacTJv83",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "t1w1RFcFceKR2T9_e"
-							},
-							"name": "Increased Intelligence",
-							"reference": "B15",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Mental"
-							],
-							"points_per_level": 20,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "iq",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 20
-							}
-						}
-					],
-					"calc": {
-						"points": 20
 					}
 				},
 				{
@@ -480,7 +477,7 @@
 							},
 							"name": "Confused",
 							"reference": "B129",
-							"notes": "In a strange place, or when there’s a commotion going on, you must make a self-control roll",
+							"local_notes": "In a strange place, or when there’s a commotion going on, you must make a self-control roll",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -500,7 +497,7 @@
 							},
 							"name": "Gluttony",
 							"reference": "B137",
-							"notes": "Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
+							"local_notes": "Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -520,7 +517,7 @@
 							},
 							"name": "Loner",
 							"reference": "B142",
-							"notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -559,7 +556,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -650,7 +647,7 @@
 				}
 			],
 			"calc": {
-				"points": -5
+				"points": -25
 			}
 		}
 	],
@@ -668,7 +665,7 @@
 					},
 					"name": "Area Knowledge",
 					"reference": "B176",
-					"notes": "Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 7+; and a general understanding of the economic and political situation",
+					"local_notes": "Location of its major cities and important sites; awareness of its major customs, ethnic groups, and languages (but not necessarily expertise); names of folk of Status 7+; and a general understanding of the economic and political situation",
 					"tags": [
 						"Everyman",
 						"Knowledge"
@@ -687,7 +684,7 @@
 							"modifier": -3
 						}
 					],
-					"points": 4
+					"points": 2
 				},
 				{
 					"id": "sbH0NX7t5IGs5pyeR",
@@ -712,7 +709,30 @@
 							"modifier": -5
 						}
 					],
-					"points": 1
+					"points": 8
+				},
+				{
+					"id": "sPJItlPP1mx5Kenm8",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sVspKJvpEaYNHFmRo"
+					},
+					"name": "Freight Handling",
+					"reference": "B197",
+					"tags": [
+						"Technical",
+						"Vehicle"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 2
 				},
 				{
 					"id": "sPsbPNoMBrp2ZXDp9",
@@ -746,45 +766,86 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 1
+					"points": 4
 				},
 				{
-					"id": "sdm7TYnCGWPP4Usqw",
+					"id": "sP55d4dLShmaXq3T0",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sZZ8IZK6yPuxwffjd"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sjiPOdZOS0Ve3xMhr"
 					},
-					"name": "Navigation",
-					"reference": "B211",
+					"name": "Mechanic",
+					"reference": "B207",
 					"tags": [
-						"Exploration",
-						"Outdoor",
-						"Technical",
-						"Vehicle"
+						"Maintenance",
+						"Repair"
 					],
-					"specialization": "Space",
+					"specialization": "Life Support",
 					"difficulty": "iq/a",
 					"defaults": [
 						{
-							"type": "skill",
-							"name": "Astronomy",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Mathematics",
-							"specialization": "Applied",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Navigation",
-							"specialization": "Hyperspace",
+							"type": "iq",
 							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "@Machine class@",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
 						}
 					],
-					"tech_level": "10",
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sieulf2Oq1ThKsgZC",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sjiPOdZOS0Ve3xMhr"
+					},
+					"name": "Mechanic",
+					"reference": "B207",
+					"tags": [
+						"Maintenance",
+						"Repair"
+					],
+					"specialization": "Reactionless Drives",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Engineer",
+							"specialization": "@Machine class@",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Machinist",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Mechanic",
+							"modifier": -4
+						}
+					],
+					"tech_level": "",
 					"points": 2
 				},
 				{
@@ -820,7 +881,7 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 1
+					"points": 2
 				},
 				{
 					"id": "sHX16Nl-ld7udUt_n",
@@ -848,7 +909,44 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 1
+					"points": 8
+				},
+				{
+					"id": "sS209DQhvyRb6yYM4",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sAmDzPjf0rKZ6I5G1"
+					},
+					"name": "Vacc Suit",
+					"reference": "B192",
+					"tags": [
+						"Technical"
+					],
+					"difficulty": "dx/a",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Diving Suit",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "NBC Suit",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Battlesuit",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 8
 				}
 			]
 		}

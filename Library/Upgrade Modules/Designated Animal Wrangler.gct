@@ -31,7 +31,7 @@
 							"id": "mxgz4o2V7L55gScCR",
 							"name": "Specialized",
 							"reference": "B87",
-							"notes": "All aquatic animals",
+							"local_notes": "All aquatic animals",
 							"cost": -40,
 							"disabled": true
 						},
@@ -39,7 +39,7 @@
 							"id": "mBLi8pjK2JhNCp_bu",
 							"name": "Specialized",
 							"reference": "B87",
-							"notes": "All land animals",
+							"local_notes": "All land animals",
 							"cost": -40,
 							"disabled": true
 						},
@@ -47,7 +47,7 @@
 							"id": "m_KkbQcR_ROuq1Gsm",
 							"name": "Specialized",
 							"reference": "B87",
-							"notes": "@One class: Mammals, Birds, etc.@",
+							"local_notes": "@One class: Mammals, Birds, etc.@",
 							"cost": -50,
 							"disabled": true
 						},
@@ -55,7 +55,7 @@
 							"id": "mt1_ZagU-FKqi1VQj",
 							"name": "Specialized",
 							"reference": "B87",
-							"notes": "@One family: Felines, Parrots, etc.@",
+							"local_notes": "@One family: Felines, Parrots, etc.@",
 							"cost": -60,
 							"disabled": true
 						},
@@ -63,7 +63,7 @@
 							"id": "mXmXpkic3ZL1h7NXy",
 							"name": "Specialized",
 							"reference": "B87",
-							"notes": "@One species: House Cats, Macaws, etc.@",
+							"local_notes": "@One species: House Cats, Macaws, etc.@",
 							"cost": -80,
 							"disabled": true
 						}
@@ -72,109 +72,10 @@
 					"calc": {
 						"points": 5
 					}
-				},
-				{
-					"id": "tbOemdEYhKD7fJCXV",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Traits.adq",
-						"id": "t7E-Evy7VZAbL_iQt"
-					},
-					"name": "Talent (Animal Friend)",
-					"reference": "B90,PU3:6",
-					"tags": [
-						"Advantage",
-						"Mental",
-						"Talent"
-					],
-					"modifiers": [
-						{
-							"id": "mkASNAO-1aIoG5LmC",
-							"name": "Alternative Cost",
-							"cost": 1,
-							"cost_type": "points",
-							"affects": "levels_only",
-							"disabled": true
-						}
-					],
-					"points_per_level": 5,
-					"features": [
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "contains",
-								"qualifier": "animal handling"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "is",
-								"qualifier": "falconry"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "contains",
-								"qualifier": "packing"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "contains",
-								"qualifier": "riding"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "contains",
-								"qualifier": "teamster"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "skill_bonus",
-							"selection_type": "skills_with_name",
-							"name": {
-								"compare": "contains",
-								"qualifier": "veterinary"
-							},
-							"amount": 1,
-							"per_level": true
-						},
-						{
-							"type": "reaction_bonus",
-							"situation": "from ordinary animals",
-							"amount": 1,
-							"per_level": true
-						}
-					],
-					"can_level": true,
-					"levels": 3,
-					"calc": {
-						"points": 15
-					}
 				}
 			],
 			"calc": {
-				"points": 20
+				"points": 5
 			}
 		}
 	],
@@ -184,29 +85,251 @@
 			"name": "Designated Animal Wrangler",
 			"children": [
 				{
-					"id": "s_ZOMBeBRlYrJezqQ",
+					"id": "sfXC8tQCNkQQ1MiaF",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "shun-iitiwyWbrGcF"
+						"id": "sQ9Hv-SvAISrf1vW8"
 					},
-					"name": "Intimidation",
-					"reference": "B202",
+					"name": "Animal Handling",
+					"reference": "B175",
 					"tags": [
-						"Criminal",
-						"Police",
-						"Social",
-						"Street"
+						"Animal"
 					],
-					"difficulty": "will/a",
+					"specialization": "Big Cats",
+					"difficulty": "iq/a",
 					"defaults": [
 						{
-							"type": "will",
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sdIlW-H0oS-_WgcDL",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ9Hv-SvAISrf1vW8"
+					},
+					"name": "Animal Handling",
+					"reference": "B175",
+					"tags": [
+						"Animal"
+					],
+					"specialization": "Cephalopods",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sIAVmqO-wCkCCTMPr",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ9Hv-SvAISrf1vW8"
+					},
+					"name": "Animal Handling",
+					"reference": "B175",
+					"tags": [
+						"Animal"
+					],
+					"specialization": "Dogs",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sViWCz43v8q77wru1",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ9Hv-SvAISrf1vW8"
+					},
+					"name": "Animal Handling",
+					"reference": "B175",
+					"tags": [
+						"Animal"
+					],
+					"specialization": "Equines",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sCW1WTWYhC-TJpYJ3",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ9Hv-SvAISrf1vW8"
+					},
+					"name": "Animal Handling",
+					"reference": "B175",
+					"tags": [
+						"Animal"
+					],
+					"specialization": "Primates",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "s8GMeiM1LuL4MgGLA",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ9Hv-SvAISrf1vW8"
+					},
+					"name": "Animal Handling",
+					"reference": "B175",
+					"tags": [
+						"Animal"
+					],
+					"specialization": "Raptors",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "skt6ADC0SpDCkwLGv",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "scBFJWfsDYeIEsCQG"
+					},
+					"name": "Biology",
+					"reference": "B180",
+					"tags": [
+						"Natural Science",
+						"Plant"
+					],
+					"specialization": "Earthlike",
+					"difficulty": "iq/vh",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Naturalist",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "s7prqg0CX4JfK8prU",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sM7zEW0oDYHNZZuWo"
+					},
+					"name": "Packing",
+					"reference": "B212",
+					"tags": [
+						"Animal"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
 							"modifier": -5
 						},
 						{
 							"type": "skill",
-							"name": "Acting",
+							"name": "Animal Handling",
+							"specialization": "Equines",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sBpNLS5ceYu9R1P6S",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "secK3UkDUOcuXpmed"
+					},
+					"name": "Pharmacy",
+					"reference": "B213",
+					"tags": [
+						"Design",
+						"Invention",
+						"Medical"
+					],
+					"specialization": "Synthetic",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Chemistry",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "spGsnKRpOUQEygk8Q",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sw6twMMqbSiWNaKtg"
+					},
+					"name": "Riding",
+					"reference": "B217",
+					"tags": [
+						"Animal"
+					],
+					"specialization": "Equines",
+					"difficulty": "dx/a",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Animal Handling",
+							"specialization": "Equines",
 							"modifier": -3
 						}
 					],
@@ -244,73 +367,7 @@
 						}
 					],
 					"tech_level": "",
-					"points": 1
-				},
-				{
-					"id": "sfXC8tQCNkQQ1MiaF",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "sQ9Hv-SvAISrf1vW8"
-					},
-					"name": "Animal Handling",
-					"reference": "B175",
-					"tags": [
-						"Animal"
-					],
-					"specialization": "@Specialty@",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						}
-					],
-					"points": 1
-				},
-				{
-					"id": "sdIlW-H0oS-_WgcDL",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "sQ9Hv-SvAISrf1vW8"
-					},
-					"name": "Animal Handling",
-					"reference": "B175",
-					"tags": [
-						"Animal"
-					],
-					"specialization": "@Specialty@",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						}
-					],
-					"points": 1
-				},
-				{
-					"id": "sIAVmqO-wCkCCTMPr",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "sQ9Hv-SvAISrf1vW8"
-					},
-					"name": "Animal Handling",
-					"reference": "B175",
-					"tags": [
-						"Animal"
-					],
-					"specialization": "@Specialty@",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						}
-					],
-					"points": 1
+					"points": 4
 				}
 			]
 		}

@@ -11,13 +11,6 @@
 					"name": "Advantages",
 					"children": [
 						{
-							"id": "TMF4degMceIbCpsEm",
-							"name": "20 points in Allies and/or Contacts",
-							"calc": {
-								"points": 0
-							}
-						},
-						{
 							"id": "tpNzaq1q_RGxrgztW",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
@@ -32,129 +25,41 @@
 							],
 							"modifiers": [
 								{
-									"id": "mxAZD6i3EztsaA4cO",
+									"id": "maZz0_0G-6K299cZx",
 									"name": "Xeno",
 									"cost": 10,
-									"cost_type": "points"
+									"cost_type": "points",
+									"disabled": true
 								}
 							],
 							"base_points": 10,
 							"calc": {
-								"points": 20
+								"points": 10
 							}
 						},
 						{
-							"id": "tBI-C_UO07fJTaz_d",
+							"id": "ta1mGg8ceo3NBCqo8",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "tubKfNxOX4CgpocBj"
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tdEOEbc8ltxyQNFJj"
 							},
-							"name": "Talent (Business Acumen)",
-							"reference": "B90",
+							"name": "Comfortable Wealth",
+							"reference": "B25",
+							"local_notes": "Starting wealth is twice normal",
 							"tags": [
 								"Advantage",
-								"Mental",
-								"Talent"
+								"Social",
+								"Wealth"
 							],
-							"points_per_level": 10,
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Accounting"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Administration"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Economics"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Finance"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Gambling"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Market Analysis"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Merchant"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Propaganda"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "from business partners",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
+							"base_points": 10,
 							"calc": {
 								"points": 10
 							}
 						}
 					],
 					"calc": {
-						"points": 30
+						"points": 20
 					}
 				},
 				{
@@ -207,7 +112,7 @@
 							},
 							"name": "Curious",
 							"reference": "B129",
-							"notes": "Make a self-control roll when presented with an interesting item or situation",
+							"local_notes": "Make a self-control roll when presented with an interesting item or situation",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -227,7 +132,7 @@
 							},
 							"name": "Gluttony",
 							"reference": "B137",
-							"notes": "Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
+							"local_notes": "Make a self-control roll when presented with a tempting morsel or good wine that, for some reason, you should resist. If you fail, you partake – regardless of the consequences.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -247,7 +152,7 @@
 							},
 							"name": "Greed",
 							"reference": "B137",
-							"notes": "Make a self-control roll any time riches are offered – as payment for fair work, gains from adventure, spoils of crime, or just bait. If you fail, you do whatever it takes to get the payoff.",
+							"local_notes": "Make a self-control roll any time riches are offered – as payment for fair work, gains from adventure, spoils of crime, or just bait. If you fail, you do whatever it takes to get the payoff.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -297,7 +202,7 @@
 							},
 							"name": "Miserliness",
 							"reference": "B144",
-							"notes": "Make a self-control roll any time you are called on to spend money. If the expenditure is large, this roll may be at -5 or worse (GM’s decision). If you fail, you refuse to spend the money.",
+							"local_notes": "Make a self-control roll any time you are called on to spend money. If the expenditure is large, this roll may be at -5 or worse (GM’s decision). If you fail, you refuse to spend the money.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -317,7 +222,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -349,7 +254,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -436,7 +341,7 @@
 				}
 			],
 			"calc": {
-				"points": -50
+				"points": -60
 			}
 		}
 	],
@@ -445,6 +350,102 @@
 			"id": "SkF-3ExBU_pxxOHnb",
 			"name": "Merchant",
 			"children": [
+				{
+					"id": "sNRNRO-K6QotdcxX4",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s67Roch7cMOY4VSj-"
+					},
+					"name": "Accounting",
+					"reference": "B174",
+					"tags": [
+						"Business"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Finance",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Statistics",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Merchant",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sXdH8_97gQotkFst5",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sQ7hn7pW3tIPfsU8Z"
+					},
+					"name": "Acting",
+					"reference": "B174",
+					"tags": [
+						"Social",
+						"Spy"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Performance",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Public Speaking",
+							"modifier": -5
+						}
+					],
+					"points": 4
+				},
+				{
+					"id": "sFj0cOxlL2i6j9PZa",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sn-AqOk3ggCs7fqIQ"
+					},
+					"name": "Administration",
+					"reference": "B174",
+					"tags": [
+						"Business",
+						"Social"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Merchant",
+							"modifier": -3
+						},
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 8
+				},
 				{
 					"id": "sNF5n--SOe0iQxM-q",
 					"source": {
@@ -471,7 +472,45 @@
 							"modifier": -6
 						}
 					],
-					"points": 2
+					"points": 4
+				},
+				{
+					"id": "sewFFshYdfpku02ed",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s5odcUEok8qKTgBoF"
+					},
+					"name": "Economics",
+					"reference": "B189",
+					"tags": [
+						"Business",
+						"Humanities",
+						"Social Sciences"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Finance",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Market Analysis",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Merchant",
+							"modifier": -6
+						}
+					],
+					"points": 4
 				},
 				{
 					"id": "s3AALZjYSX18SP0do",
@@ -500,29 +539,38 @@
 							"modifier": -5
 						}
 					],
-					"points": 2
+					"points": 8
 				},
 				{
-					"id": "sQz396WPOkoiobdlM",
+					"id": "sEz4fekAWmzdSYc9H",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sVspKJvpEaYNHFmRo"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sv_ljCvM4grkpYmGA"
 					},
-					"name": "Freight Handling",
-					"reference": "B197",
+					"name": "Finance",
+					"reference": "B195",
 					"tags": [
-						"Technical",
-						"Vehicle"
+						"Business"
 					],
-					"difficulty": "iq/a",
+					"difficulty": "iq/h",
 					"defaults": [
 						{
-							"type": "iq",
-							"modifier": -5
+							"type": "skill",
+							"name": "Accounting",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Economics",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Merchant",
+							"modifier": -6
 						}
 					],
-					"tech_level": "10",
 					"points": 1
 				},
 				{
@@ -555,7 +603,7 @@
 							"modifier": -4
 						}
 					],
-					"points": 4
+					"points": 8
 				},
 				{
 					"id": "smhqtQE-hB1RwoALs",
@@ -590,6 +638,34 @@
 						}
 					],
 					"tech_level": "10",
+					"points": 1
+				},
+				{
+					"id": "sNe7h9TQQRntzHtgr",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPNoFjMzWUsnwn7Pv"
+					},
+					"name": "Savoir-Faire",
+					"reference": "B218,MA59",
+					"tags": [
+						"Knowledge",
+						"Social"
+					],
+					"specialization": "@Social group@",
+					"difficulty": "iq/e",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Games",
+							"modifier": -3
+						}
+					],
 					"points": 1
 				}
 			]

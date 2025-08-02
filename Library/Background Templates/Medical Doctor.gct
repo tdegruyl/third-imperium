@@ -4,242 +4,8 @@
 	"traits": [
 		{
 			"id": "TsDB1lAAW1-84YLM2",
-			"name": "Medic",
+			"name": "Medical Doctor",
 			"children": [
-				{
-					"id": "TzxSO6I6W7VAX9MVk",
-					"name": "Advantages",
-					"children": [
-						{
-							"id": "tFFzh3rjFtFrCfsDm",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "tkHUmnt8UY7tbU5xM"
-							},
-							"name": "Talent (Healer)",
-							"reference": "B90,PU3:11",
-							"notes": "Modern",
-							"tags": [
-								"Advantage",
-								"Mental",
-								"Talent"
-							],
-							"prereqs": {
-								"type": "prereq_list",
-								"all": true,
-								"prereqs": [
-									{
-										"type": "trait_prereq",
-										"has": false,
-										"name": {
-											"compare": "is",
-											"qualifier": "Talent (Healer)"
-										},
-										"level": {
-											"compare": "at_least",
-											"qualifier": 1
-										},
-										"notes": {
-											"compare": "does_not_contain",
-											"qualifier": "Modern"
-										}
-									}
-								]
-							},
-							"modifiers": [
-								{
-									"id": "mq5Ul7PYw3yhIC0u3",
-									"name": "Alternate Benefit",
-									"notes": "Bonus to HT rolls for a specific patient and condition if treated full time.",
-									"disabled": true
-								},
-								{
-									"id": "mbOVKvjhpRH-EMCVY",
-									"name": "Alternative Cost",
-									"cost": 1,
-									"cost_type": "points",
-									"affects": "levels_only",
-									"disabled": true
-								}
-							],
-							"points_per_level": 10,
-							"features": [
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Diagnosis"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Esoteric Medicine"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "First Aid"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Pharmacy"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Physician"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Physiology"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Psychology"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Surgery"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Veterinary"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Electronics Operation"
-									},
-									"specialization": {
-										"compare": "is",
-										"qualifier": "Medical"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "skill_bonus",
-									"selection_type": "skills_with_name",
-									"name": {
-										"compare": "is",
-										"qualifier": "Expert Skill"
-									},
-									"specialization": {
-										"compare": "is",
-										"qualifier": "Epidemiology"
-									},
-									"amount": 1,
-									"per_level": true
-								},
-								{
-									"type": "reaction_bonus",
-									"situation": "from patients",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 10
-							}
-						}
-					],
-					"calc": {
-						"points": 10
-					}
-				},
-				{
-					"id": "TD7L1NGGiArqoUdkN",
-					"name": "Attributes",
-					"container_type": "attributes",
-					"children": [
-						{
-							"id": "tM-_zmTVXNQnOgL8N",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "t1w1RFcFceKR2T9_e"
-							},
-							"name": "Increased Intelligence",
-							"reference": "B15",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Mental"
-							],
-							"points_per_level": 20,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "iq",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 2,
-							"calc": {
-								"points": 40
-							}
-						}
-					],
-					"calc": {
-						"points": 40
-					}
-				},
 				{
 					"id": "TUQD5LSB9TOYSfz_A",
 					"name": "Disadvantages",
@@ -290,7 +56,7 @@
 							},
 							"name": "Curious",
 							"reference": "B129",
-							"notes": "Make a self-control roll when presented with an interesting item or situation",
+							"local_notes": "Make a self-control roll when presented with an interesting item or situation",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -328,7 +94,7 @@
 							},
 							"name": "Light Sleeper",
 							"reference": "B142",
-							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"local_notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -347,7 +113,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -379,7 +145,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -510,7 +276,7 @@
 							},
 							"name": "Vow",
 							"reference": "B161",
-							"notes": "Hippocratic Oath",
+							"local_notes": "Hippocratic Oath",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -569,14 +335,14 @@
 				}
 			],
 			"calc": {
-				"points": -5
+				"points": -55
 			}
 		}
 	],
 	"skills": [
 		{
 			"id": "SOAXg90iqQjzcB5n4",
-			"name": "Medic",
+			"name": "Medical Doctor",
 			"children": [
 				{
 					"id": "s99aV7ej34I-plxyX",
@@ -613,7 +379,7 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 2
+					"points": 12
 				},
 				{
 					"id": "sZTsovoqi3aeDqaKO",
@@ -654,7 +420,42 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 2
+					"points": 8
+				},
+				{
+					"id": "s8ss0SNzOtyoHC_2S",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "secK3UkDUOcuXpmed"
+					},
+					"name": "Pharmacy",
+					"reference": "B213",
+					"tags": [
+						"Design",
+						"Invention",
+						"Medical"
+					],
+					"specialization": "Synthetic",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Chemistry",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 8
 				},
 				{
 					"id": "sGsMTU3kgPjmd-R1p",
@@ -686,7 +487,46 @@
 						}
 					],
 					"tech_level": "10",
-					"points": 4
+					"points": 16
+				},
+				{
+					"id": "sJfQPZ-wjf_jPuquB",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPfyz7_V73fxlVXOS"
+					},
+					"name": "Physiology",
+					"reference": "B213",
+					"tags": [
+						"Medical",
+						"Natural Science"
+					],
+					"specialization": "@Specialty@",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Diagnosis",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Physician",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Surgery",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 8
 				},
 				{
 					"id": "sbXrv1KakCDUYjLw5",
@@ -746,7 +586,7 @@
 						]
 					},
 					"tech_level": "10",
-					"points": 2
+					"points": 8
 				}
 			]
 		}

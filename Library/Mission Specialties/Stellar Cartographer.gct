@@ -44,7 +44,7 @@
 						]
 					},
 					"tech_level": "",
-					"points": 4
+					"points": 8
 				},
 				{
 					"id": "s4ZcjLGMpTkxmZ--P",
@@ -125,109 +125,7 @@
 						}
 					],
 					"tech_level": "",
-					"points": 4
-				},
-				{
-					"id": "sad8vDReYgDYO_Gbn",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "sWwJi69T88FLejD8Q"
-					},
-					"name": "Geology",
-					"reference": "B198",
-					"tags": [
-						"Natural Science"
-					],
-					"specialization": "Earthlike",
-					"difficulty": "iq/h",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Geography",
-							"specialization": "Physical, Earthlike",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Prospecting",
-							"modifier": -5
-						}
-					],
-					"tech_level": "",
-					"points": 1
-				},
-				{
-					"id": "sYBMEZxEnmqelJO3j",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "sUFH00k6r9OtPXPNN"
-					},
-					"name": "Geology",
-					"reference": "B198",
-					"tags": [
-						"Natural Science"
-					],
-					"specialization": "Gas Giants",
-					"difficulty": "iq/h",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Geography",
-							"specialization": "Physical, Gas Giants",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Prospecting",
-							"modifier": -5
-						}
-					],
-					"tech_level": "",
 					"points": 2
-				},
-				{
-					"id": "sLW0H0kY3XoP-scGd",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "smA7Ihmr-JXza-sai"
-					},
-					"name": "Geology",
-					"reference": "B198",
-					"tags": [
-						"Natural Science"
-					],
-					"specialization": "Rock Worlds",
-					"difficulty": "iq/h",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -6
-						},
-						{
-							"type": "skill",
-							"name": "Geography",
-							"specialization": "Physical, Rock Worlds",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Prospecting",
-							"modifier": -5
-						}
-					],
-					"tech_level": "",
-					"points": 1
 				},
 				{
 					"id": "sCiExzTYQcV7plNo0",
@@ -261,6 +159,45 @@
 					],
 					"tech_level": "",
 					"points": 1
+				},
+				{
+					"id": "sONRMMZNeaEHhGbRE",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sZZ8IZK6yPuxwffjd"
+					},
+					"name": "Navigation",
+					"reference": "B211",
+					"tags": [
+						"Exploration",
+						"Outdoor",
+						"Technical",
+						"Vehicle"
+					],
+					"specialization": "Space",
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Astronomy",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Mathematics",
+							"specialization": "Applied",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Navigation",
+							"specialization": "Hyperspace",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 4
 				},
 				{
 					"id": "sbjEYrv-3aKJjNkdL",
@@ -301,7 +238,7 @@
 						]
 					},
 					"tech_level": "",
-					"points": 4
+					"points": 2
 				}
 			]
 		}

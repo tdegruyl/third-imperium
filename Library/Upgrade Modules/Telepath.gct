@@ -1,0 +1,572 @@
+{
+	"version": 5,
+	"id": "BqvqOcIcx-XiaiZm9",
+	"traits": [
+		{
+			"id": "TBbToo8DLgchzxNNw",
+			"name": "Telepath",
+			"children": [
+				{
+					"id": "taSDT_nAhH7GuKLdf",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Psionics/Psionics Traits.adq",
+						"id": "tBAEUyE1yVLSN9wnz"
+					},
+					"name": "Telepathy Talent",
+					"reference": "PSI19",
+					"tags": [
+						"Communication",
+						"Control",
+						"Mental",
+						"Offense",
+						"Power",
+						"Sense and Defense",
+						"Telepathy"
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Offense Talent"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Control Talent"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Sense and Defense Talent"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": false,
+								"name": {
+									"compare": "is",
+									"qualifier": "Communication Talent"
+								},
+								"level": {
+									"compare": "at_least",
+									"qualifier": 1
+								}
+							}
+						]
+					},
+					"points_per_level": 5,
+					"features": [
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Borrow Skill"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Emotion Sense"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Telereceive"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Telesend"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Aspect"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mental Surgery"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mind Swap"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mindwipe"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sensory Control"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Suggestion"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Telecontrol"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Instill Fear"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mental Blow"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mental Stab"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sleep (Telepathy)"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mind Clouding"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Mind Shield"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Telepathy Sense"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Telescan"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Crippling Blow"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Deafening Display"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Drugged Weapon"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Fatiguing Strike"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Project Blow"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Restorative Armor"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Stealthy Attack"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Stupefying Blow"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Subtle Defense"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Sudden Death"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						},
+						{
+							"type": "skill_bonus",
+							"selection_type": "skills_with_name",
+							"name": {
+								"compare": "is",
+								"qualifier": "Thunderous Defense"
+							},
+							"specialization": {
+								"compare": "contains",
+								"qualifier": "Telepathy"
+							},
+							"amount": 1,
+							"per_level": true
+						}
+					],
+					"can_level": true,
+					"levels": 1,
+					"calc": {
+						"points": 5
+					}
+				},
+				{
+					"id": "th0FNVTmC11GLdIL9",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Psionics/Psionics Traits.adq",
+						"id": "tb1gg1AyiSs4rFCey"
+					},
+					"name": "Telereceive (Shallow)",
+					"reference": "PSI58",
+					"local_notes": "Communication ability. You can read another person's surface thoughts. ",
+					"tags": [
+						"Communication",
+						"Mental",
+						"Psionics",
+						"Telepathy"
+					],
+					"modifiers": [
+						{
+							"id": "mxEFhmMz1WOQ5NbH2",
+							"name": "Telereceive_1",
+							"local_notes": "Skin-to-skin contact",
+							"cost": 9,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "mAuQwLYylQcB4Q6ZS",
+							"name": "Telereceive_2",
+							"local_notes": "Any touch will suffice",
+							"cost": 18,
+							"cost_type": "points"
+						},
+						{
+							"id": "m31xZB4e3sHxogBOQ",
+							"name": "Telereceive_3",
+							"local_notes": "Telereceive at range; -1 penalty/yard distance",
+							"cost": 24,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "mwyrAVu_c6UISlwpr",
+							"name": "Telereceive_4",
+							"reference": "BX550",
+							"local_notes": "Use range penalties p. B550",
+							"cost": 27,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "mZvUKgJ0FgizK2kRb",
+							"name": "Telereceive_5",
+							"reference": "B241",
+							"local_notes": "Use long-distance modifiers p. B241",
+							"cost": 42,
+							"cost_type": "points",
+							"disabled": true
+						},
+						{
+							"id": "mEgaZI1zdl9LwqW9U",
+							"name": "Telereceive_6",
+							"local_notes": "No penalty for range",
+							"cost": 57,
+							"cost_type": "points",
+							"disabled": true
+						}
+					],
+					"calc": {
+						"points": 18
+					}
+				}
+			],
+			"calc": {
+				"points": 23
+			}
+		}
+	],
+	"skills": [
+		{
+			"id": "S0G_ooQ307T3n8Ic4",
+			"name": "Telepath",
+			"children": [
+				{
+					"id": "sSc-a4T86WiBGUgJi",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Psionics/Psionics Skills.skl",
+						"id": "s9zIIqLVKKcCWpWsp"
+					},
+					"name": "Telereceive",
+					"reference": "PSI58",
+					"tags": [
+						"Communication",
+						"Psionics",
+						"Telepathy"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						}
+					],
+					"prereqs": {
+						"type": "prereq_list",
+						"all": false,
+						"prereqs": [
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Telereceive (Shallow)"
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "_"
+								}
+							},
+							{
+								"type": "trait_prereq",
+								"has": true,
+								"name": {
+									"compare": "is",
+									"qualifier": "Telereceive"
+								},
+								"notes": {
+									"compare": "contains",
+									"qualifier": "_"
+								}
+							}
+						]
+					},
+					"points": 2
+				}
+			]
+		}
+	]
+}

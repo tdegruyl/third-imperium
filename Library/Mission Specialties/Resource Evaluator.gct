@@ -81,6 +81,40 @@
 					"points": 4
 				},
 				{
+					"id": "skObbod2BDVP_me1n",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sqEz6kE8CxitXhzCe"
+					},
+					"name": "Geology",
+					"reference": "B198",
+					"tags": [
+						"Natural Science"
+					],
+					"specialization": "Ice Worlds",
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Geography",
+							"specialization": "Physical, Ice Worlds",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Prospecting",
+							"modifier": -5
+						}
+					],
+					"tech_level": "",
+					"points": 1
+				},
+				{
 					"id": "s7yAsChVsgXH8uPkH",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
@@ -113,41 +147,6 @@
 					],
 					"tech_level": "",
 					"points": 4
-				},
-				{
-					"id": "s715sYeYQKpXlOWRc",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set/Basic Set Skills.skl",
-						"id": "sH-gwMqLTWQ337rzx"
-					},
-					"name": "Propaganda",
-					"reference": "B216",
-					"tags": [
-						"Business",
-						"Military",
-						"Social",
-						"Spy"
-					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Merchant",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Psychology",
-							"modifier": -4
-						}
-					],
-					"tech_level": "",
-					"points": 1
 				},
 				{
 					"id": "svYUDnNhZS3omf4Yc",

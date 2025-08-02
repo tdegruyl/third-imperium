@@ -19,12 +19,11 @@
 							},
 							"name": "Combat Reflexes",
 							"reference": "B43",
-							"notes": "Never freeze",
+							"local_notes": "Never freeze",
 							"tags": [
 								"Advantage",
 								"Mental"
 							],
-							"base_points": 15,
 							"prereqs": {
 								"type": "prereq_list",
 								"all": true,
@@ -39,6 +38,7 @@
 									}
 								]
 							},
+							"base_points": 15,
 							"features": [
 								{
 									"type": "skill_bonus",
@@ -83,10 +83,18 @@
 							"calc": {
 								"points": 15
 							}
+						},
+						{
+							"id": "tnYyaPDTOVKPizGlJ",
+							"name": "Biomonitor Implant",
+							"base_points": 1,
+							"calc": {
+								"points": 1
+							}
 						}
 					],
 					"calc": {
-						"points": 15
+						"points": 16
 					}
 				},
 				{
@@ -116,7 +124,6 @@
 									"disabled": true
 								}
 							],
-							"levels": 1,
 							"points_per_level": 20,
 							"features": [
 								{
@@ -127,42 +134,14 @@
 								}
 							],
 							"can_level": true,
-							"calc": {
-								"points": 20
-							}
-						},
-						{
-							"id": "tdBytCqRj3455fDBF",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "t1w1RFcFceKR2T9_e"
-							},
-							"name": "Increased Intelligence",
-							"reference": "B15",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Mental"
-							],
 							"levels": 1,
-							"points_per_level": 20,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "iq",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
 							"calc": {
 								"points": 20
 							}
 						}
 					],
 					"calc": {
-						"points": 40
+						"points": 20
 					}
 				},
 				{
@@ -278,7 +257,7 @@
 							},
 							"name": "Light Sleeper",
 							"reference": "B142",
-							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"local_notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -297,13 +276,13 @@
 							},
 							"name": "Loner",
 							"reference": "B142",
-							"notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
 							],
-							"cr": 12,
 							"cr_adj": "reaction_penalty",
+							"cr": 12,
 							"base_points": -5,
 							"calc": {
 								"points": -5
@@ -343,7 +322,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -425,7 +404,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -493,7 +472,7 @@
 				}
 			],
 			"calc": {
-				"points": -30
+				"points": -49
 			}
 		}
 	],
@@ -502,10 +481,6 @@
 			"id": "SK2duO9o8kH4HOIwh",
 			"name": "Courier",
 			"children": [
-				{
-					"id": "SDs0LaKP3eHiR6plX",
-					"name": "7 points in combat skills"
-				},
 				{
 					"id": "sO0kaeBRIHl4jQ7Jd",
 					"source": {
@@ -521,7 +496,6 @@
 						"Spy"
 					],
 					"difficulty": "per/a",
-					"points": 4,
 					"defaults": [
 						{
 							"type": "skill",
@@ -533,40 +507,331 @@
 							"name": "Psychology",
 							"modifier": -4
 						}
-					]
+					],
+					"points": 1
 				},
 				{
-					"id": "sg7IkzVpPe6kXooc2",
+					"id": "sbwf-qTaBgZJ-Yleb",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sIegIM7jx4oMnRMm2"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sfWUh9TJBpQuwZBVo"
 					},
-					"name": "Detect Lies",
-					"reference": "B187",
+					"name": "Guns",
+					"reference": "B198",
 					"tags": [
-						"Police",
-						"Social",
-						"Spy"
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
 					],
-					"difficulty": "per/h",
-					"points": 4,
+					"specialization": "Pistol",
+					"difficulty": "dx/e",
 					"defaults": [
 						{
-							"type": "per",
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"specialization": "Pistol",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 4
+				},
+				{
+					"id": "sSwFBOWT1WNP8dNz-",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPyZ0zxFI-Kygrzie"
+					},
+					"name": "Intelligence Analysis",
+					"reference": "B201",
+					"tags": [
+						"Military",
+						"Police",
+						"Spy"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
 							"modifier": -6
 						},
 						{
 							"type": "skill",
-							"name": "Body Language",
+							"name": "Strategy",
+							"modifier": -6
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sFtCo-7m2nHQeKFQD",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sWVqswxT3hi7db0kD"
+					},
+					"name": "Judo",
+					"reference": "B203,MA57",
+					"local_notes": "Allows parrying two different attacks per turn, one with each hand.",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/h",
+					"encumbrance_penalty_multiplier": 1,
+					"points": 8
+				},
+				{
+					"id": "sJJ93y23Ti4kF5lxj",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sU4bjpp9TsvnRavPN"
+					},
+					"name": "Karate",
+					"reference": "B203,MA57",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/h",
+					"encumbrance_penalty_multiplier": 1,
+					"features": [
+						{
+							"type": "weapon_bonus",
+							"selection_type": "weapons_with_required_skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							},
+							"level": {
+								"compare": "at_least"
+							},
+							"amount": 1,
+							"per_die": true
+						},
+						{
+							"type": "weapon_bonus",
+							"selection_type": "weapons_with_required_skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
+							},
+							"level": {
+								"compare": "at_least",
+								"qualifier": 1
+							},
+							"amount": 1,
+							"per_die": true
+						}
+					],
+					"points": 8
+				},
+				{
+					"id": "sSv5pW9_Vkb-Fb8L7",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "slOONrK6jDHvcRoGx"
+					},
+					"name": "Knife",
+					"reference": "B208",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/e",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "dx",
+							"modifier": -4
+						}
+					],
+					"points": 4
+				},
+				{
+					"id": "sHPjatQ-wSBZlvUUi",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s6Yn2IClGb4i4LgOQ"
+					},
+					"name": "Observation",
+					"reference": "B211",
+					"tags": [
+						"Criminal",
+						"Military",
+						"Police",
+						"Spy",
+						"Street"
+					],
+					"difficulty": "per/a",
+					"defaults": [
+						{
+							"type": "per",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Shadowing",
+							"modifier": -5
+						}
+					],
+					"points": 4
+				},
+				{
+					"id": "s78-eTwcQRYcO5VMY",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPNoFjMzWUsnwn7Pv"
+					},
+					"name": "Savoir-Faire",
+					"reference": "B218,MA59",
+					"tags": [
+						"Knowledge",
+						"Social"
+					],
+					"specialization": "@Social group@",
+					"difficulty": "iq/e",
+					"defaults": [
+						{
+							"type": "iq",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Psychology",
-							"modifier": -4
+							"name": "Games",
+							"modifier": -3
 						}
-					]
+					],
+					"points": 1
+				},
+				{
+					"id": "sU1zE58gq7tow3aGE",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "svEm7OyeCu_9wJ8Kk"
+					},
+					"name": "Stealth",
+					"reference": "B222",
+					"tags": [
+						"Criminal",
+						"Police",
+						"Spy",
+						"Street"
+					],
+					"difficulty": "dx/a",
+					"encumbrance_penalty_multiplier": 1,
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						},
+						{
+							"type": "dx",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sBPUKoAs8SC9ZBfyl",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "smTUpMWJGqPeT1KER"
+					},
+					"name": "Streetwise",
+					"reference": "B223",
+					"tags": [
+						"Criminal",
+						"Police",
+						"Social",
+						"Street"
+					],
+					"difficulty": "iq/a",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -5
+						}
+					],
+					"points": 1
 				}
 			]
 		}

@@ -50,7 +50,6 @@
 									"id": "mdeX4TMAzri3C8K1I",
 									"name": "Clumsy",
 									"reference": "B88",
-									"levels": 1,
 									"cost": -20,
 									"features": [
 										{
@@ -64,6 +63,7 @@
 											"per_level": true
 										}
 									],
+									"levels": 1,
 									"disabled": true
 								}
 							],
@@ -105,7 +105,7 @@
 							},
 							"name": "Cultural Familiarity (Ael Yael)",
 							"reference": "B23",
-							"notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"local_notes": "Do not suffer the normal -3 penalty for unfamiliarity",
 							"tags": [
 								"Advantage",
 								"Mental"
@@ -131,10 +131,45 @@
 							}
 						},
 						{
+							"id": "tZ0vMhlmjMSNk1-XM",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "toXBQ8q4Nek5lsLPF"
+							},
+							"name": "Cultural Familiarity (Imperial)",
+							"reference": "B23",
+							"local_notes": "Do not suffer the normal -3 penalty for unfamiliarity",
+							"tags": [
+								"Advantage",
+								"Mental"
+							],
+							"modifiers": [
+								{
+									"id": "mm4PXPuOYjH0gawC0",
+									"name": "Alien",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m-Q-1h2haLpRAds8f",
+									"name": "Native",
+									"cost": -1,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"base_points": 1,
+							"calc": {
+								"points": 1
+							}
+						},
+						{
 							"id": "tP5LcNJT-gdv3y_CH",
 							"name": "Flight",
 							"reference": "B56",
-							"notes": "Air Move is Basic Speed x 2 (drop all fractions)",
+							"local_notes": "Air Move is Basic Speed x 2 (drop all fractions)",
 							"tags": [
 								"Advantage",
 								"Exotic",
@@ -186,7 +221,7 @@
 									"id": "mqTo6yLNQjCjYVhE_",
 									"name": "Low Ceiling",
 									"reference": "B56",
-									"notes": "30'",
+									"local_notes": "30'",
 									"cost": -10,
 									"disabled": true
 								},
@@ -194,7 +229,7 @@
 									"id": "mCu9N82AUC4SLIfK_",
 									"name": "Low Ceiling",
 									"reference": "B56",
-									"notes": "10'",
+									"local_notes": "10'",
 									"cost": -20,
 									"disabled": true
 								},
@@ -202,7 +237,7 @@
 									"id": "m8LU1JjC_KHa3Kf5H",
 									"name": "Low Ceiling",
 									"reference": "B56",
-									"notes": "5'",
+									"local_notes": "5'",
 									"cost": -25,
 									"disabled": true
 								},
@@ -243,7 +278,7 @@
 									"id": "mHvZnG4WCkrbpHftJ",
 									"name": "Slow",
 									"reference": "PSI14",
-									"notes": "Basic Speed",
+									"local_notes": "Basic Speed",
 									"cost": -25,
 									"disabled": true
 								},
@@ -380,7 +415,7 @@
 									"id": "m85zryxRl2hqSsK1P",
 									"name": "Spoken",
 									"reference": "B24",
-									"notes": "None",
+									"local_notes": "None",
 									"cost_type": "points",
 									"disabled": true
 								},
@@ -388,7 +423,7 @@
 									"id": "m8exxBaXUebVCik5q",
 									"name": "Spoken",
 									"reference": "B24",
-									"notes": "Broken",
+									"local_notes": "Broken",
 									"cost": 1,
 									"cost_type": "points",
 									"disabled": true
@@ -397,7 +432,7 @@
 									"id": "mQwcMPFX3XSIR6fa7",
 									"name": "Spoken",
 									"reference": "B24",
-									"notes": "Accented",
+									"local_notes": "Accented",
 									"cost": 2,
 									"cost_type": "points",
 									"disabled": true
@@ -406,7 +441,7 @@
 									"id": "meGtG0XUBhk9hAt5L",
 									"name": "Spoken",
 									"reference": "B24",
-									"notes": "Native",
+									"local_notes": "Native",
 									"cost": 3,
 									"cost_type": "points"
 								},
@@ -414,7 +449,7 @@
 									"id": "mEUkIe42lmFmQDijh",
 									"name": "Written",
 									"reference": "B24",
-									"notes": "None",
+									"local_notes": "None",
 									"cost_type": "points",
 									"disabled": true
 								},
@@ -422,7 +457,7 @@
 									"id": "mqxzlQV9CoFJdWh9W",
 									"name": "Written",
 									"reference": "B24",
-									"notes": "Broken",
+									"local_notes": "Broken",
 									"cost": 1,
 									"cost_type": "points",
 									"disabled": true
@@ -431,7 +466,7 @@
 									"id": "mL3wXWxXUELpCFPZL",
 									"name": "Written",
 									"reference": "B24",
-									"notes": "Accented",
+									"local_notes": "Accented",
 									"cost": 2,
 									"cost_type": "points",
 									"disabled": true
@@ -440,7 +475,7 @@
 									"id": "mp9HbqLgLPAEEa3DE",
 									"name": "Written",
 									"reference": "B24",
-									"notes": "Native",
+									"local_notes": "Native",
 									"cost": 3,
 									"cost_type": "points"
 								}
@@ -450,10 +485,123 @@
 							}
 						},
 						{
+							"id": "tbWUs-LmzvnqNm6SK",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "tw1Ad0oSMw2ATM4X1"
+							},
+							"name": "Language: Galanglic",
+							"reference": "B24",
+							"tags": [
+								"Advantage",
+								"Language",
+								"Mental"
+							],
+							"prereqs": {
+								"type": "prereq_list",
+								"all": true,
+								"prereqs": [
+									{
+										"type": "trait_prereq",
+										"has": false,
+										"name": {
+											"compare": "is",
+											"qualifier": "Language Talent"
+										},
+										"level": {
+											"compare": "at_least"
+										}
+									}
+								]
+							},
+							"modifiers": [
+								{
+									"id": "mg_cstIVZkcDBKgC3",
+									"name": "Native",
+									"reference": "B23",
+									"cost": -6,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mXKc424fFZkFjccAw",
+									"name": "Spoken",
+									"reference": "B24",
+									"local_notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "m_DtV648uXScJlEAB",
+									"name": "Spoken",
+									"reference": "B24",
+									"local_notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "myYefEAccQxRkZnu-",
+									"name": "Spoken",
+									"reference": "B24",
+									"local_notes": "Accented",
+									"cost": 2,
+									"cost_type": "points"
+								},
+								{
+									"id": "m6zrBUV6c3bcZKSKj",
+									"name": "Spoken",
+									"reference": "B24",
+									"local_notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mmGhZ41KwbPl-5Knb",
+									"name": "Written",
+									"reference": "B24",
+									"local_notes": "None",
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "mRstSScKCQoxWvo2X",
+									"name": "Written",
+									"reference": "B24",
+									"local_notes": "Broken",
+									"cost": 1,
+									"cost_type": "points",
+									"disabled": true
+								},
+								{
+									"id": "myJmNbAYUBWhtI8f4",
+									"name": "Written",
+									"reference": "B24",
+									"local_notes": "Accented",
+									"cost": 2,
+									"cost_type": "points"
+								},
+								{
+									"id": "mnuuAowJ4A7jH4P86",
+									"name": "Written",
+									"reference": "B24",
+									"local_notes": "Native",
+									"cost": 3,
+									"cost_type": "points",
+									"disabled": true
+								}
+							],
+							"calc": {
+								"points": 4
+							}
+						},
+						{
 							"id": "tj-Q5Pnx0YZi3nDfN",
 							"name": "Protected Sense (Vision)",
 							"reference": "B78",
-							"notes": "Polarised Sight",
+							"local_notes": "Polarised Sight",
 							"tags": [
 								"Advantage",
 								"Exotic",
@@ -540,7 +688,7 @@
 						}
 					],
 					"calc": {
-						"points": 61
+						"points": 66
 					}
 				},
 				{
@@ -551,7 +699,7 @@
 							"id": "tYHWLS8aYxDL4pSrt",
 							"name": "Bloodlust",
 							"reference": "B125",
-							"notes": "You must make a self-control roll whenever you need to accept a surrender, evade a sentry, take a prisoner, etc.",
+							"local_notes": "You must make a self-control roll whenever you need to accept a surrender, evade a sentry, take a prisoner, etc.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -723,7 +871,7 @@
 							"id": "tA8csnb1Fvf9BD-OM",
 							"name": "Vow",
 							"reference": "B161",
-							"notes": "Donate to Planetary Fund",
+							"local_notes": "Donate to Planetary Fund",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -768,7 +916,7 @@
 							],
 							"modifiers": [
 								{
-									"id": "mVOaEHPdCTlnUce2q",
+									"id": "mF8QxR0JFFURgPYUJ",
 									"name": "@Rare attack@",
 									"reference": "B161",
 									"cost": -5,
@@ -776,22 +924,22 @@
 									"disabled": true
 								},
 								{
-									"id": "mVQBYTdvIn62-2rzy",
+									"id": "mG7eA1Wnof-4eYg3b",
 									"name": "Crushing",
 									"reference": "B161",
 									"cost": -10,
-									"cost_type": "points"
-								},
-								{
-									"id": "md7e87MoPB0rg4NYd",
-									"name": "Crushing",
-									"reference": "B161",
-									"cost": -15,
 									"cost_type": "points",
 									"disabled": true
 								},
 								{
-									"id": "mIks_e9pXnlkU9uJV",
+									"id": "mioP1IpwuRm8CthRV",
+									"name": "Crushing",
+									"reference": "B161",
+									"cost": -15,
+									"cost_type": "points"
+								},
+								{
+									"id": "mwCf5iyCEJUx_jvaD",
 									"name": "@Very common attack@",
 									"reference": "B161",
 									"cost": -20,
@@ -799,14 +947,14 @@
 									"disabled": true
 								},
 								{
-									"id": "mgJ715Hs54YVjRxax",
+									"id": "mzyoVxJCzyJXuqTDY",
 									"name": "Wounding x2",
 									"reference": "B161",
 									"cost": 2,
 									"cost_type": "multiplier"
 								},
 								{
-									"id": "mopN0ndmNKTyaNAq2",
+									"id": "mqacR9KWewZ48ZGOR",
 									"name": "Wounding x3",
 									"reference": "B161",
 									"cost": 3,
@@ -814,7 +962,7 @@
 									"disabled": true
 								},
 								{
-									"id": "mscmLkaPnSpHS3aWM",
+									"id": "mldUdAMXonVY-RkeR",
 									"name": "Wounding x4",
 									"reference": "B161",
 									"cost": 4,
@@ -822,7 +970,7 @@
 									"disabled": true
 								},
 								{
-									"id": "mVk5eF0ijMwxs0u_L",
+									"id": "mmJX3UD13g4EW8ieK",
 									"name": "Fatigue Only",
 									"reference": "B161",
 									"cost": -50,
@@ -830,12 +978,12 @@
 								}
 							],
 							"calc": {
-								"points": -20
+								"points": -30
 							}
 						}
 					],
 					"calc": {
-						"points": -91
+						"points": -101
 					}
 				},
 				{
@@ -870,7 +1018,7 @@
 				}
 			],
 			"calc": {
-				"points": -35
+				"points": -40
 			}
 		}
 	]

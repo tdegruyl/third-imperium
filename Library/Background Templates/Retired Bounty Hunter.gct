@@ -19,7 +19,7 @@
 							},
 							"name": "Combat Reflexes",
 							"reference": "B43",
-							"notes": "Never freeze",
+							"local_notes": "Never freeze",
 							"tags": [
 								"Advantage",
 								"Mental"
@@ -83,10 +83,36 @@
 							"calc": {
 								"points": 15
 							}
+						},
+						{
+							"id": "tXKuRiG0VG6hU2p6D",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Traits.adq",
+								"id": "toTe273Ky82B6YdW5"
+							},
+							"name": "Fit",
+							"reference": "B55",
+							"local_notes": "Recover FP at twice the normal rate (but not FP spent for spells or psi powers)",
+							"tags": [
+								"Advantage",
+								"Physical"
+							],
+							"base_points": 5,
+							"features": [
+								{
+									"type": "conditional_modifier",
+									"situation": "to all HT rolls to stay conscious, avoid death, resist disease, or resist poison",
+									"amount": 1
+								}
+							],
+							"calc": {
+								"points": 5
+							}
 						}
 					],
 					"calc": {
-						"points": 15
+						"points": 20
 					}
 				},
 				{
@@ -147,29 +173,29 @@
 							],
 							"modifiers": [
 								{
-									"id": "mMMg0AscJH4DX1sUD",
+									"id": "mLds6mn6MTl7Mqhda",
 									"name": "No Fine Manipulators",
 									"reference": "B15",
 									"cost": -40,
 									"disabled": true
 								},
 								{
-									"id": "m2bXeAwA5IvKgFUOG",
+									"id": "mYhSYIy4TEG7BuRNd",
 									"name": "Size",
 									"reference": "B15",
-									"levels": 1,
 									"cost": -10,
+									"levels": 1,
 									"disabled": true
 								},
 								{
-									"id": "mluqsCMXTrgXIOjsD",
+									"id": "m4RM8aqGHcDrlF-gf",
 									"name": "Super-Effort",
 									"reference": "SU24",
 									"cost": 300,
 									"disabled": true
 								}
 							],
-							"points_per_level": 10,
+							"points_per_level": 5,
 							"features": [
 								{
 									"type": "attribute_bonus",
@@ -181,12 +207,12 @@
 							"can_level": true,
 							"levels": 1,
 							"calc": {
-								"points": 10
+								"points": 5
 							}
 						}
 					],
 					"calc": {
-						"points": 30
+						"points": 25
 					}
 				},
 				{
@@ -302,7 +328,7 @@
 							},
 							"name": "Light Sleeper",
 							"reference": "B142",
-							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"local_notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -321,7 +347,7 @@
 							},
 							"name": "Loner",
 							"reference": "B142",
-							"notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever anyone lingers nearby, watches over your shoulder, etc. If you fail, you lash out at that person just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -367,7 +393,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -399,7 +425,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -556,565 +582,206 @@
 			"name": "Retired Bounty Hunter",
 			"children": [
 				{
-					"id": "sB730zk7EgVNbvatj",
+					"id": "sec-r9AXh6RD_tisW",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sx_fhl-__9h3W-Sai"
+						"id": "sfWUh9TJBpQuwZBVo"
 					},
-					"name": "Area Knowledge",
-					"reference": "B176",
-					"notes": "General nature of its settlements and towns, political allegiances, leaders, and most citizens of Status 5+",
+					"name": "Guns",
+					"reference": "B198",
 					"tags": [
-						"Everyman",
-						"Knowledge"
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
 					],
-					"specialization": "Spinward Marches",
-					"difficulty": "iq/e",
+					"specialization": "Pistol",
+					"difficulty": "dx/e",
 					"defaults": [
 						{
-							"type": "iq",
+							"type": "dx",
 							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Geography",
-							"specialization": "@Specialty@",
-							"modifier": -3
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"specialization": "Pistol",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
 						}
 					],
-					"points": 4
+					"tech_level": "10",
+					"points": 2
 				},
 				{
-					"id": "sGprturpq8yUPyIG3",
+					"id": "staz_u-JCxBsYLrRS",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "shtDdl5thrvKSnJHf"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sWVqswxT3hi7db0kD"
 					},
-					"name": "Brawling",
-					"reference": "B182,MA55",
+					"name": "Judo",
+					"reference": "B203,MA57",
+					"local_notes": "Allows parrying two different attacks per turn, one with each hand.",
 					"tags": [
 						"Combat",
 						"Melee Combat",
 						"Weapon"
 					],
-					"difficulty": "dx/e",
+					"difficulty": "dx/h",
+					"encumbrance_penalty_multiplier": 1,
+					"points": 4
+				},
+				{
+					"id": "sra1Gl1NJKZ5iaX9Q",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sU4bjpp9TsvnRavPN"
+					},
+					"name": "Karate",
+					"reference": "B203,MA57",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/h",
+					"encumbrance_penalty_multiplier": 1,
 					"features": [
 						{
 							"type": "weapon_bonus",
 							"selection_type": "weapons_with_required_skill",
 							"name": {
 								"compare": "is",
-								"qualifier": "Brawling"
+								"qualifier": "Karate"
+							},
+							"level": {
+								"compare": "at_least"
+							},
+							"amount": 1,
+							"per_die": true
+						},
+						{
+							"type": "weapon_bonus",
+							"selection_type": "weapons_with_required_skill",
+							"name": {
+								"compare": "is",
+								"qualifier": "Karate"
 							},
 							"level": {
 								"compare": "at_least",
-								"qualifier": 2
+								"qualifier": 1
 							},
 							"amount": 1,
 							"per_die": true
 						}
 					],
-					"points": 1
+					"points": 4
 				},
 				{
-					"id": "sVAJVlfzUgJb8PK73",
+					"id": "slTxrOaeGzkLcmMUw",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sIegIM7jx4oMnRMm2"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s6Yn2IClGb4i4LgOQ"
 					},
-					"name": "Detect Lies",
-					"reference": "B187",
+					"name": "Observation",
+					"reference": "B211",
 					"tags": [
+						"Criminal",
+						"Military",
 						"Police",
-						"Social",
-						"Spy"
+						"Spy",
+						"Street"
 					],
-					"difficulty": "per/h",
+					"difficulty": "per/a",
 					"defaults": [
 						{
 							"type": "per",
+							"modifier": -5
+						},
+						{
+							"type": "skill",
+							"name": "Shadowing",
+							"modifier": -5
+						}
+					],
+					"points": 1
+				},
+				{
+					"id": "sr6J8BO-ct4Js45Yv",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sjU9kn3jTX-_5Q5p5"
+					},
+					"name": "Psychology",
+					"reference": "B216",
+					"tags": [
+						"Humanities",
+						"Social Sciences"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
 							"modifier": -6
 						},
 						{
 							"type": "skill",
-							"name": "Body Language",
-							"modifier": -4
-						},
-						{
-							"type": "skill",
-							"name": "Psychology",
+							"name": "Sociology",
 							"modifier": -4
 						}
 					],
-					"points": 2
-				},
-				{
-					"id": "sox2GW56JDZV4g38g",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "slXlqD4FNReNHmsov"
-					},
-					"name": "Electronics Operation",
-					"reference": "B189",
-					"tags": [
-						"Criminal",
-						"Spy",
-						"Street",
-						"Technical"
-					],
-					"specialization": "Security",
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Operation",
-							"specialization": "Security",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Engineer",
-							"specialization": "Electronics",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Operation",
-							"modifier": -4
-						}
-					],
-					"tech_level": "",
-					"points": 2
-				},
-				{
-					"id": "sX8EQRaTcHW9BybTd",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "sfB-d4kTee0C-BZv0"
-					},
-					"name": "Interrogation",
-					"reference": "B202",
-					"tags": [
-						"Military",
-						"Police",
-						"Spy"
-					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Intimidation",
-							"modifier": -3
-						},
-						{
-							"type": "skill",
-							"name": "Psychology",
-							"modifier": -4
-						}
-					],
-					"points": 2
-				},
-				{
-					"id": "SF1zlB8jeJY0c6GxQ",
-					"name": "Pick one",
-					"template_picker": {
-						"type": "count",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": 1
-						}
-					},
-					"children": [
-						{
-							"id": "sy8w4Tg2HpZNyTbX6",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sJ6jzn1OJ-knkk1Qc"
-							},
-							"name": "Beam Weapons",
-							"reference": "B179",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Pistol",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Beam Weapons",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Pistol",
-									"modifier": -4
-								}
-							],
-							"tech_level": "10",
-							"points": 1
-						},
-						{
-							"id": "sU99wLE1KvJXsUydo",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "siYt1EBnBE2eyvV2M"
-							},
-							"name": "Beam Weapons",
-							"reference": "B179",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Rifle",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Beam Weapons",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Rifle",
-									"modifier": -4
-								}
-							],
-							"tech_level": "10",
-							"points": 1
-						},
-						{
-							"id": "sec-r9AXh6RD_tisW",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sfWUh9TJBpQuwZBVo"
-							},
-							"name": "Guns",
-							"reference": "B198",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Pistol",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Grenade Launcher",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Gyroc",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Anti-Armor Weapon",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Machine Gun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Musket",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Beam Weapons",
-									"specialization": "Pistol",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Rifle",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Shotgun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Submachine Gun",
-									"modifier": -2
-								}
-							],
-							"tech_level": "10",
-							"points": 1
-						},
-						{
-							"id": "sS0PB36G0B4YXeGIm",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "s3hbw6Ngz9_5OFNcR"
-							},
-							"name": "Guns",
-							"reference": "B198",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Rifle",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Grenade Launcher",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Gyroc",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Anti-Armor Weapon",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Machine Gun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Musket",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Pistol",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Beam Weapons",
-									"specialization": "Rifle",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Shotgun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Submachine Gun",
-									"modifier": -2
-								}
-							],
-							"tech_level": "10",
-							"points": 1
-						},
-						{
-							"id": "sbOdDzdhhfT35tqTu",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sFv-HqFH4QW3yQGAF"
-							},
-							"name": "Guns",
-							"reference": "B198",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Shotgun",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Grenade Launcher",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Gyroc",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Anti-Armor Weapon",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Machine Gun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Musket",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Pistol",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Rifle",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Submachine Gun",
-									"modifier": -2
-								}
-							],
-							"tech_level": "10",
-							"points": 1
-						},
-						{
-							"id": "sSwVH-0WdJA8AU5K9",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sLe79aP8mpSWAoCLO"
-							},
-							"name": "Guns",
-							"reference": "B198",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Submachine Gun",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Grenade Launcher",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Gyroc",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Anti-Armor Weapon",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Machine Gun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Musket",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Pistol",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Rifle",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Shotgun",
-									"modifier": -2
-								}
-							],
-							"tech_level": "10",
-							"points": 1
-						}
-					]
+					"points": 1
 				},
 				{
 					"id": "sXPQnj2jFLOBC4N2f",
@@ -1148,30 +815,6 @@
 							"modifier": -4
 						}
 					],
-					"points": 2
-				},
-				{
-					"id": "sT3_QvtskSyCN03bq",
-					"source": {
-						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "smTUpMWJGqPeT1KER"
-					},
-					"name": "Streetwise",
-					"reference": "B223",
-					"tags": [
-						"Criminal",
-						"Police",
-						"Social",
-						"Street"
-					],
-					"difficulty": "iq/a",
-					"defaults": [
-						{
-							"type": "iq",
-							"modifier": -5
-						}
-					],
 					"points": 4
 				},
 				{
@@ -1199,7 +842,7 @@
 							"modifier": -5
 						}
 					],
-					"points": 2
+					"points": 4
 				}
 			]
 		}

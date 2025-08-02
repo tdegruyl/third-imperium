@@ -36,31 +36,6 @@
 							}
 						},
 						{
-							"id": "tK8zu_yCM3pY3ctGc",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "tO0G2kcresS1YZ_KE"
-							},
-							"name": "Daredevil",
-							"reference": "B47",
-							"tags": [
-								"Advantage",
-								"Mental"
-							],
-							"base_points": 15,
-							"features": [
-								{
-									"type": "conditional_modifier",
-									"situation": "to skill rolls any time you take an unnecessary risk (in the GM’s opinion)",
-									"amount": 1
-								}
-							],
-							"calc": {
-								"points": 15
-							}
-						},
-						{
 							"id": "tX0UrqYeH5Ce9Nd_Q",
 							"source": {
 								"library": "richardwilkes/gcs_master_library",
@@ -69,7 +44,7 @@
 							},
 							"name": "Luck",
 							"reference": "B66,P59",
-							"notes": "Usable once per hour of play",
+							"local_notes": "Usable once per hour of play",
 							"tags": [
 								"Advantage",
 								"Mental"
@@ -86,7 +61,7 @@
 									"id": "mg75jckxcEugj5gbC",
 									"name": "Aspected",
 									"reference": "B66",
-									"notes": "@Aspect@",
+									"local_notes": "@Aspect@",
 									"cost": -20,
 									"disabled": true
 								},
@@ -108,7 +83,7 @@
 									"id": "mK3BhHLShiCM9Y_5v",
 									"name": "Game Time",
 									"reference": "P108",
-									"notes": "Uses per game day equal to its maximum possible uses per real hour",
+									"local_notes": "Uses per game day equal to its maximum possible uses per real hour",
 									"disabled": true
 								}
 							],
@@ -142,14 +117,14 @@
 									"id": "mkJ14EvLBF5PIZKNc",
 									"name": "Wishing",
 									"reference": "P73",
-									"notes": "For others only",
+									"local_notes": "For others only",
 									"disabled": true
 								},
 								{
 									"id": "mhg_EuFKVlWxNRG2S",
 									"name": "Game Time",
 									"reference": "P108",
-									"notes": "Uses per game week equal to its maximum possible uses per session",
+									"local_notes": "Uses per game week equal to its maximum possible uses per session",
 									"disabled": true
 								}
 							],
@@ -162,75 +137,7 @@
 						}
 					],
 					"calc": {
-						"points": 60
-					}
-				},
-				{
-					"id": "T6TzI5WPME_f7N1yU",
-					"name": "Attributes",
-					"container_type": "attributes",
-					"children": [
-						{
-							"id": "twSYJUr3NF3u-wdEr",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "tVt3SvdGWNchJ8z4o"
-							},
-							"name": "Increased Health",
-							"reference": "B14",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Physical"
-							],
-							"points_per_level": 10,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "ht",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 10
-							}
-						},
-						{
-							"id": "tNhCJXjACzVM87ZWt",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Traits.adq",
-								"id": "t1w1RFcFceKR2T9_e"
-							},
-							"name": "Increased Intelligence",
-							"reference": "B15",
-							"tags": [
-								"Advantage",
-								"Attribute",
-								"Mental"
-							],
-							"points_per_level": 20,
-							"features": [
-								{
-									"type": "attribute_bonus",
-									"attribute": "iq",
-									"amount": 1,
-									"per_level": true
-								}
-							],
-							"can_level": true,
-							"levels": 1,
-							"calc": {
-								"points": 20
-							}
-						}
-					],
-					"calc": {
-						"points": 30
+						"points": 45
 					}
 				},
 				{
@@ -301,7 +208,7 @@
 							},
 							"name": "Light Sleeper",
 							"reference": "B142",
-							"notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
+							"local_notes": "Whenever you must sleep in an uncomfortable place, or whenever there is more than the slightest noise, you must make a HT roll in order to fall asleep. On a failure, you can try again after one hour, but you will suffer all the usual effects of one hour of missed sleep.",
 							"tags": [
 								"Disadvantage",
 								"Physical"
@@ -320,7 +227,7 @@
 							},
 							"name": "Overconfidence",
 							"reference": "B148",
-							"notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
+							"local_notes": "You must make a self-control roll any time the GM feels you show an unreasonable degree of caution. If you fail, you must go ahead as though you were able to handle the situation!",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -352,7 +259,7 @@
 							},
 							"name": "Selfish",
 							"reference": "B153",
-							"notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
+							"local_notes": "Make a self-control roll whenever you experience a clear social slight or “snub.” On a failure, you lash out at the offending party just as if you had Bad Temper.",
 							"tags": [
 								"Disadvantage",
 								"Mental"
@@ -402,7 +309,7 @@
 				}
 			],
 			"calc": {
-				"points": 65
+				"points": 20
 			}
 		}
 	],
@@ -441,50 +348,94 @@
 							"modifier": -5
 						}
 					],
-					"points": 4
+					"points": 12
 				},
 				{
-					"id": "s4qP9gscI3iqi3z9c",
+					"id": "s90nsdGdzbA4X94o2",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
-						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "slXlqD4FNReNHmsov"
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sJ6jzn1OJ-knkk1Qc"
 					},
-					"name": "Electronics Operation",
-					"reference": "B189",
+					"name": "Beam Weapons",
+					"reference": "B179",
 					"tags": [
-						"Criminal",
-						"Spy",
-						"Street",
-						"Technical"
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
 					],
-					"specialization": "Security",
-					"difficulty": "iq/a",
+					"specialization": "Pistol",
+					"difficulty": "dx/e",
 					"defaults": [
 						{
-							"type": "iq",
-							"modifier": -5
+							"type": "dx",
+							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Electronics Operation",
-							"specialization": "Security",
-							"modifier": -5
+							"name": "Beam Weapons",
+							"modifier": -4
 						},
 						{
 							"type": "skill",
-							"name": "Engineer",
-							"specialization": "Electronics",
-							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Electronics Operation",
+							"name": "Guns",
+							"specialization": "Pistol",
 							"modifier": -4
 						}
 					],
-					"tech_level": "10",
+					"tech_level": "",
 					"points": 2
+				},
+				{
+					"id": "sI6Vme7R3zTLxAQzS",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "si-upI7A5RgdO0cjC"
+					},
+					"name": "Carousing",
+					"reference": "B183",
+					"tags": [
+						"Criminal",
+						"Social",
+						"Street"
+					],
+					"difficulty": "ht/e",
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -4
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "sr0AKDcXn85U84mag",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "s8j6tcaNxXkF89Xbt"
+					},
+					"name": "Diplomacy",
+					"reference": "B187",
+					"tags": [
+						"Business",
+						"Police",
+						"Social"
+					],
+					"difficulty": "iq/h",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -6
+						},
+						{
+							"type": "skill",
+							"name": "Politics",
+							"modifier": -6
+						}
+					],
+					"points": 1
 				},
 				{
 					"id": "s_XzdHQopqtR-i6YW",
@@ -513,292 +464,197 @@
 							"modifier": -5
 						}
 					],
-					"points": 4
+					"points": 12
 				},
 				{
-					"id": "SJtMrNhvEuYn3fem9",
-					"name": "Pick One",
-					"template_picker": {
-						"type": "count",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": 1
-						}
-					},
-					"children": [
-						{
-							"id": "sI6Vme7R3zTLxAQzS",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "si-upI7A5RgdO0cjC"
-							},
-							"name": "Carousing",
-							"reference": "B183",
-							"tags": [
-								"Criminal",
-								"Social",
-								"Street"
-							],
-							"difficulty": "ht/e",
-							"defaults": [
-								{
-									"type": "ht",
-									"modifier": -4
-								}
-							],
-							"points": 1
-						},
-						{
-							"id": "sXKFTVvot_JQmpfib",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sLAU6vDBL4XaQNS0z"
-							},
-							"name": "Sex Appeal",
-							"reference": "B219",
-							"tags": [
-								"Social"
-							],
-							"difficulty": "ht/a",
-							"defaults": [
-								{
-									"type": "ht",
-									"modifier": -3
-								}
-							],
-							"points": 1
-						}
-					]
-				},
-				{
-					"id": "SGE_2G-0X_RWraM95",
-					"name": "Pick One",
-					"template_picker": {
-						"type": "count",
-						"qualifier": {
-							"compare": "is",
-							"qualifier": 1
-						}
-					},
-					"children": [
-						{
-							"id": "sAWO0R0DoO4Ixw82O",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "sfWUh9TJBpQuwZBVo"
-							},
-							"name": "Guns",
-							"reference": "B198",
-							"tags": [
-								"Combat",
-								"Ranged Combat",
-								"Weapon"
-							],
-							"specialization": "Pistol",
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "dx",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Grenade Launcher",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Gyroc",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Anti-Armor Weapon",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Light Machine Gun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Musket",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Beam Weapons",
-									"specialization": "Pistol",
-									"modifier": -4
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Rifle",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Shotgun",
-									"modifier": -2
-								},
-								{
-									"type": "skill",
-									"name": "Guns",
-									"specialization": "Submachine Gun",
-									"modifier": -2
-								}
-							],
-							"tech_level": "",
-							"points": 2
-						},
-						{
-							"id": "sqbm7Gk6aK6ACtNgl",
-							"source": {
-								"library": "richardwilkes/gcs_master_library",
-								"path": "Basic Set\\Basic Set Skills.skl",
-								"id": "slOONrK6jDHvcRoGx"
-							},
-							"name": "Knife",
-							"reference": "B208",
-							"tags": [
-								"Combat",
-								"Melee Combat",
-								"Weapon"
-							],
-							"difficulty": "dx/e",
-							"defaults": [
-								{
-									"type": "skill",
-									"name": "Force Sword",
-									"modifier": -3
-								},
-								{
-									"type": "skill",
-									"name": "Main-Gauche",
-									"modifier": -3
-								},
-								{
-									"type": "skill",
-									"name": "Shortsword",
-									"modifier": -3
-								},
-								{
-									"type": "dx",
-									"modifier": -4
-								}
-							],
-							"points": 2
-						}
-					]
-				},
-				{
-					"id": "sO08R0HUKaf-emo21",
+					"id": "sAWO0R0DoO4Ixw82O",
 					"source": {
 						"library": "richardwilkes/gcs_master_library",
 						"path": "Basic Set\\Basic Set Skills.skl",
-						"id": "stFawUEv8gxldDoiC"
+						"id": "sfWUh9TJBpQuwZBVo"
 					},
-					"name": "Research",
-					"reference": "B217",
+					"name": "Guns",
+					"reference": "B198",
 					"tags": [
-						"Scholarly",
-						"Spy"
+						"Combat",
+						"Ranged Combat",
+						"Weapon"
+					],
+					"specialization": "Pistol",
+					"difficulty": "dx/e",
+					"defaults": [
+						{
+							"type": "dx",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Grenade Launcher",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Gyroc",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Anti-Armor Weapon",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Light Machine Gun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Musket",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Beam Weapons",
+							"specialization": "Pistol",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Rifle",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Shotgun",
+							"modifier": -2
+						},
+						{
+							"type": "skill",
+							"name": "Guns",
+							"specialization": "Submachine Gun",
+							"modifier": -2
+						}
+					],
+					"tech_level": "",
+					"points": 2
+				},
+				{
+					"id": "sqbm7Gk6aK6ACtNgl",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "slOONrK6jDHvcRoGx"
+					},
+					"name": "Knife",
+					"reference": "B208",
+					"tags": [
+						"Combat",
+						"Melee Combat",
+						"Weapon"
+					],
+					"difficulty": "dx/e",
+					"defaults": [
+						{
+							"type": "skill",
+							"name": "Force Sword",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Main-Gauche",
+							"modifier": -3
+						},
+						{
+							"type": "skill",
+							"name": "Shortsword",
+							"modifier": -3
+						},
+						{
+							"type": "dx",
+							"modifier": -4
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "sey0rtNkdzim5Gtc6",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "sPNoFjMzWUsnwn7Pv"
+					},
+					"name": "Savoir-Faire",
+					"reference": "B218,MA59",
+					"tags": [
+						"Knowledge",
+						"Social"
+					],
+					"specialization": "@Social group@",
+					"difficulty": "iq/e",
+					"defaults": [
+						{
+							"type": "iq",
+							"modifier": -4
+						},
+						{
+							"type": "skill",
+							"name": "Games",
+							"modifier": -3
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "sXKFTVvot_JQmpfib",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set\\Basic Set Skills.skl",
+						"id": "sLAU6vDBL4XaQNS0z"
+					},
+					"name": "Sex Appeal",
+					"reference": "B219",
+					"tags": [
+						"Social"
+					],
+					"difficulty": "ht/a",
+					"defaults": [
+						{
+							"type": "ht",
+							"modifier": -3
+						}
+					],
+					"points": 2
+				},
+				{
+					"id": "sDNL1xPrsIQBNwGLw",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Basic Set/Basic Set Skills.skl",
+						"id": "smTUpMWJGqPeT1KER"
+					},
+					"name": "Streetwise",
+					"reference": "B223",
+					"tags": [
+						"Criminal",
+						"Police",
+						"Social",
+						"Street"
 					],
 					"difficulty": "iq/a",
 					"defaults": [
 						{
 							"type": "iq",
 							"modifier": -5
-						},
-						{
-							"type": "skill",
-							"name": "Writing",
-							"modifier": -3
 						}
 					],
-					"prereqs": {
-						"type": "prereq_list",
-						"all": true,
-						"prereqs": [
-							{
-								"type": "prereq_list",
-								"all": true,
-								"when_tl": {
-									"compare": "at_least",
-									"qualifier": 8
-								},
-								"prereqs": [
-									{
-										"type": "skill_prereq",
-										"has": true,
-										"name": {
-											"compare": "is",
-											"qualifier": "Computer Operation"
-										}
-									}
-								]
-							},
-							{
-								"type": "prereq_list",
-								"all": false,
-								"when_tl": {
-									"compare": "at_most",
-									"qualifier": 4
-								},
-								"prereqs": [
-									{
-										"type": "trait_prereq",
-										"has": true,
-										"name": {
-											"compare": "starts_with",
-											"qualifier": "Language"
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "Written (Native"
-										}
-									},
-									{
-										"type": "trait_prereq",
-										"has": true,
-										"name": {
-											"compare": "starts_with",
-											"qualifier": "Language"
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "Written (Accented)"
-										}
-									},
-									{
-										"type": "trait_prereq",
-										"has": true,
-										"name": {
-											"compare": "starts_with",
-											"qualifier": "Language"
-										},
-										"notes": {
-											"compare": "contains",
-											"qualifier": "Written (Broken)"
-										}
-									}
-								]
-							}
-						]
-					},
-					"tech_level": "10",
-					"points": 2
+					"points": 8
 				}
 			]
 		}
