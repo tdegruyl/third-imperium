@@ -1108,5 +1108,591 @@
 				}
 			]
 		}
+	],
+	"equipment": [
+		{
+			"id": "EBZ_FCxe0pAvmwDfP",
+			"description": "Issued Equipment",
+			"legality_class": "4",
+			"quantity": 1,
+			"equipped": true,
+			"children": [
+				{
+					"id": "EGT89C_Of1K9QAAHd",
+					"description": "Expedition Backpack",
+					"tech_level": "10",
+					"legality_class": "4",
+					"base_value": "350",
+					"base_weight": "5",
+					"quantity": 1,
+					"equipped": true,
+					"children": [
+						{
+							"id": "e-XaQVtr9O-kFejod",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eSWxdBUOo_VDA4EsN"
+							},
+							"description": "10mmCLP",
+							"reference": "UT139",
+							"tech_level": "9",
+							"legality_class": "3",
+							"tags": [
+								"Ammunition",
+								"Weaponry"
+							],
+							"base_value": "0.28",
+							"base_weight": "0.014 lb",
+							"quantity": 40,
+							"equipped": true,
+							"calc": {
+								"value": 0.28,
+								"extended_value": 11.2,
+								"weight": "0.014 lb",
+								"extended_weight": "0.56 lb"
+							}
+						},
+						{
+							"id": "eu3Pq83cdcifMtNuz",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eSWxdBUOo_VDA4EsN"
+							},
+							"description": "10mmCLP Tranq",
+							"reference": "UT139",
+							"tech_level": "9",
+							"legality_class": "3",
+							"tags": [
+								"Ammunition",
+								"Weaponry"
+							],
+							"base_value": "0.28",
+							"base_weight": "0.014 lb",
+							"quantity": 40,
+							"equipped": true,
+							"calc": {
+								"value": 0.28,
+								"extended_value": 11.2,
+								"weight": "0.014 lb",
+								"extended_weight": "0.56 lb"
+							}
+						},
+						{
+							"id": "efdyNnWiBarcf_05L",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Equipment.eqp",
+								"id": "e7CaEPMjB3Ma63F8m"
+							},
+							"description": "Cigarette Lighter",
+							"reference": "B288",
+							"tech_level": "6",
+							"tags": [
+								"Camping and Survival Gear"
+							],
+							"base_value": "10",
+							"base_weight": "0.01 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 10,
+								"extended_value": 10,
+								"weight": "0.01 lb",
+								"extended_weight": "0.01 lb"
+							}
+						},
+						{
+							"id": "erw-kFT9y1aZCaaAk",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "en3ky8jIp2VteORsI"
+							},
+							"description": "Electronics Repair (@Specialization@) Mini-Toolkit",
+							"reference": "UT82",
+							"local_notes": "-2 (quality). 5A/10hr.",
+							"tech_level": "9",
+							"tags": [
+								"Expedition Gear"
+							],
+							"base_value": "400",
+							"base_weight": "2 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 400,
+								"extended_value": 400,
+								"weight": "2 lb",
+								"extended_weight": "2 lb"
+							}
+						},
+						{
+							"id": "eEwTK4yTKXX0UvLIk",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eG-nbFdxlCBiNoOMD"
+							},
+							"description": "Envirobag",
+							"reference": "UT75",
+							"local_notes": "C/2wk.",
+							"tech_level": "12",
+							"tags": [
+								"Expedition Gear"
+							],
+							"base_value": "20",
+							"base_weight": "1 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 20,
+								"extended_value": 20,
+								"weight": "1 lb",
+								"extended_weight": "1 lb"
+							}
+						},
+						{
+							"id": "eOW5hC-EzbSeSIqcp",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eYnqYsOiIPeJ4eWhH"
+							},
+							"description": "Filtration Canteen",
+							"reference": "UT75",
+							"local_notes": "3lbs. full.",
+							"tech_level": "9",
+							"tags": [
+								"Expedition Gear"
+							],
+							"base_value": "180",
+							"base_weight": "1 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 180,
+								"extended_value": 180,
+								"weight": "1 lb",
+								"extended_weight": "1 lb"
+							}
+						},
+						{
+							"id": "ehSuQ8rkhi52wqR4m",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eFggKMtx9D-27k-tV"
+							},
+							"description": "First Aid Kit",
+							"reference": "UT198",
+							"tech_level": "9",
+							"tags": [
+								"Medical"
+							],
+							"base_value": "50",
+							"base_weight": "2 lb",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "First Aid"
+									},
+									"amount": 1
+								}
+							],
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 50,
+								"extended_value": 50,
+								"weight": "2 lb",
+								"extended_weight": "2 lb"
+							}
+						},
+						{
+							"id": "e2huAIdLUn3Sdbxw3",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eZYm5qb2A78neJwzX"
+							},
+							"description": "Food Tablets",
+							"reference": "UT73",
+							"local_notes": "One day's supply.",
+							"tech_level": "9",
+							"tags": [
+								"Housing and Food"
+							],
+							"base_value": "10",
+							"base_weight": "0.75 lb",
+							"quantity": 3,
+							"equipped": true,
+							"calc": {
+								"value": 10,
+								"extended_value": 30,
+								"weight": "0.75 lb",
+								"extended_weight": "2.25 lb"
+							}
+						},
+						{
+							"id": "eHk7yLCiYRXKlaE4x",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "e4mc_Vt5XqdsQ-gW2"
+							},
+							"description": "Homing Beacon",
+							"reference": "UT105",
+							"local_notes": "AA/100 hours - 1 year in \"sleeper\" mode",
+							"tech_level": "9",
+							"tags": [
+								"Surveillance and Tracking Devices"
+							],
+							"base_value": "40",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 40,
+								"extended_value": 40,
+								"weight": "0 lb",
+								"extended_weight": "0 lb"
+							}
+						},
+						{
+							"id": "eoELgyLfdpDmcNkvv",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "e_i5GdrpupUcERZMC"
+							},
+							"description": "Medscanner",
+							"reference": "UT200",
+							"local_notes": "B/10hr.",
+							"tech_level": "10^",
+							"tags": [
+								"Medical"
+							],
+							"base_value": "1000",
+							"base_weight": "0.25 lb",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Diagnosis"
+									},
+									"amount": 3
+								}
+							],
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 1000,
+								"extended_value": 1000,
+								"weight": "0.25 lb",
+								"extended_weight": "0.25 lb"
+							}
+						},
+						{
+							"id": "epBo5R4vHTgAtsqvq",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "ehxXxX5sSmcf8tx1P"
+							},
+							"description": "Mini Flashlight",
+							"reference": "UT74",
+							"local_notes": "15-yard beam. B/24hr.",
+							"tech_level": "9",
+							"tags": [
+								"Housing and Food"
+							],
+							"base_value": "10",
+							"base_weight": "0.25 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 10,
+								"extended_value": 10,
+								"weight": "0.25 lb",
+								"extended_weight": "0.25 lb"
+							}
+						},
+						{
+							"id": "eAOfTFWHaylbyEIs0",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "exhsz08QLJ2AJRxNL"
+							},
+							"description": "Small Computer",
+							"reference": "UT22",
+							"local_notes": "Complexity 6. 10PB. 2B/20hr.",
+							"tech_level": "10",
+							"tags": [
+								"Computers"
+							],
+							"base_value": "100",
+							"base_weight": "0.5 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 100,
+								"extended_value": 100,
+								"weight": "0.5 lb",
+								"extended_weight": "0.5 lb"
+							}
+						},
+						{
+							"id": "ehkyXynJ-moFoeQIj",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Basic Set/Basic Set Equipment.eqp",
+								"id": "ew2TvVbfCRin7PtHl"
+							},
+							"description": "Tent, 1-Man",
+							"reference": "B288",
+							"local_notes": "Includes ropes; no poles needed",
+							"tech_level": "0",
+							"tags": [
+								"Camping and Survival Gear"
+							],
+							"base_value": "50",
+							"base_weight": "5 lb",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 50,
+								"extended_value": 50,
+								"weight": "5 lb",
+								"extended_weight": "5 lb"
+							}
+						}
+					],
+					"calc": {
+						"value": 350,
+						"extended_value": 2262.4,
+						"weight": "5 lb",
+						"extended_weight": "20.38 lb"
+					}
+				},
+				{
+					"id": "eyCwczXyx75RwWI5m",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+						"id": "eQMcVy89jDzIvotgM"
+					},
+					"description": "Heavy Pistol, 10mmCLP",
+					"reference": "UT137",
+					"tech_level": "9",
+					"legality_class": "3",
+					"tags": [
+						"Missile Weapon",
+						"Weaponry"
+					],
+					"base_value": "540",
+					"base_weight": "2.5 lb",
+					"weapons": [
+						{
+							"id": "WZMavJBKIYhmcHV6J",
+							"damage": {
+								"type": "pi+",
+								"base": "3d"
+							},
+							"strength": "10",
+							"accuracy": "2",
+							"range": "180/2,000",
+							"rate_of_fire": "3",
+							"shots": "20+1(3)",
+							"bulk": "-2",
+							"recoil": "3",
+							"defaults": [
+								{
+									"type": "skill",
+									"name": "Guns",
+									"specialization": "Pistol"
+								},
+								{
+									"type": "dx",
+									"modifier": -4
+								},
+								{
+									"type": "skill",
+									"name": "Guns",
+									"modifier": -4
+								}
+							],
+							"calc": {
+								"damage": "3d pi+"
+							}
+						}
+					],
+					"quantity": 1,
+					"equipped": true,
+					"calc": {
+						"value": 540,
+						"extended_value": 540,
+						"weight": "2.5 lb",
+						"extended_weight": "2.5 lb"
+					}
+				},
+				{
+					"id": "ekWFLuSNCviF31AIL",
+					"description": "IISS Air Mask",
+					"local_notes": "includes 60 minutes of Air",
+					"tech_level": "10",
+					"legality_class": "4",
+					"base_value": "500",
+					"base_weight": "4",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"eye",
+								"face"
+							],
+							"amount": 10
+						}
+					],
+					"quantity": 1,
+					"equipped": true,
+					"calc": {
+						"value": 500,
+						"extended_value": 500,
+						"weight": "4 lb",
+						"extended_weight": "4 lb"
+					}
+				},
+				{
+					"id": "EjoRFpV43jtJ8mmHC",
+					"description": "IISS Uniform",
+					"tech_level": "11",
+					"legality_class": "4",
+					"base_value": "1100",
+					"base_weight": "4.2",
+					"features": [
+						{
+							"type": "dr_bonus",
+							"locations": [
+								"arm",
+								"foot",
+								"groin",
+								"hand",
+								"leg",
+								"neck",
+								"skull",
+								"torso",
+								"vitals"
+							],
+							"amount": 16
+						}
+					],
+					"quantity": 1,
+					"equipped": true,
+					"children": [
+						{
+							"id": "ecUKq5123a3v_fNO4",
+							"description": "Covert Action Communicator",
+							"tech_level": "10",
+							"legality_class": "4",
+							"base_value": "100",
+							"base_weight": "0",
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 100,
+								"extended_value": 100,
+								"weight": "0 lb",
+								"extended_weight": "0 lb"
+							}
+						},
+						{
+							"id": "eJJ9DSKG_sUXplB_C",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment.eqp",
+								"id": "eqFe5VSm0dMqdaYBO"
+							},
+							"description": "Inertial Compass",
+							"reference": "UT75",
+							"local_notes": "A/200hr.",
+							"tech_level": "10",
+							"tags": [
+								"Housing and Food"
+							],
+							"base_value": "60",
+							"base_weight": "0.1 lb",
+							"features": [
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Air"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Land"
+									},
+									"amount": 3
+								},
+								{
+									"type": "skill_bonus",
+									"selection_type": "skills_with_name",
+									"name": {
+										"compare": "is",
+										"qualifier": "Navigation"
+									},
+									"specialization": {
+										"compare": "is",
+										"qualifier": "Sea"
+									},
+									"amount": 3
+								}
+							],
+							"quantity": 1,
+							"equipped": true,
+							"calc": {
+								"value": 60,
+								"extended_value": 60,
+								"weight": "0.1 lb",
+								"extended_weight": "0.1 lb"
+							}
+						}
+					],
+					"calc": {
+						"value": 1100,
+						"extended_value": 1260,
+						"weight": "4.2 lb",
+						"extended_weight": "4.3 lb"
+					}
+				}
+			],
+			"calc": {
+				"value": 0,
+				"extended_value": 4562.4,
+				"weight": "0 lb",
+				"extended_weight": "31.18 lb"
+			}
+		}
 	]
 }

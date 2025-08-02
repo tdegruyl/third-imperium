@@ -41,7 +41,7 @@ LoadAfter="GURPS Ultra-Tech 4e.gdf"
 **************************************************************************
 
 [Settings]
-CampaignName=IISS
+CampaignName=IncogUlt IISS
 BasePoints=250
 DisadLimit=-50
 QuirkLimit=-5
@@ -2094,13 +2094,13 @@ Emergency Beacon, baseweight(2), basecost(1000), page(TFI27)
 
 <Traveller, Traveller - Miscellaneous - Survival>
 Envirobag, tl(10), baseweight(2), basecost(80), page(UT75)
-Expedition Backpack, displaycost(350), displayweight(110), techlevel(11), basecost(350), baseweight(5), isparent(yes), weightcapacity(100)
+Expedition Backpack, displaycost(350), displayweight(50), techlevel(11), basecost(350), baseweight(5), isparent(yes), weightcapacity(100)
 Filtration Canteen, baseweight(3), basecost(180), page(UT75)
 Food Tablets (1 day), baseweight(0.75), basecost(10), page(UT73)
 IISS Air Mask, baseweight(4), basecost(500), description(includes 60 minutes of air), page(GT112), dr(10), location(face,eye)
 
 <Traveller, Traveller - Armor>
-IISS Uniform, baseweight(1500), basecost(1100), dr(16), baseweight(4.2), location(torso, neck, skull, arms, legs, hands, feet, groin)
+IISS Uniform, basecost(1100), dr(16), baseweight(4.2), tl(11), location(torso, neck, skull, arms, legs, hands, feet, groin)
 
 <Traveller, Traveller - Miscellaneous - Tools>
 Medscanner,baseweight(0.5), basecost(750), page(TFI28)
