@@ -2102,7 +2102,7 @@ Emergency Beacon, baseweight(2), basecost(1000), page(TFI27)
 
 <Traveller, Traveller - Miscellaneous - Survival>
 Envirobag, tl(10), baseweight(2), basecost(80), page(UT75)
-Expedition Backpack, displaycost(350), displayweight(50), techlevel(11), basecost(350), baseweight(5), isparent(yes), weightcapacity(100)
+Expedition Backpack, displaycost(2350), displayweight(2.5), techlevel(11), basecost(2350), baseweight(2.5), isparent(yes), weightcapacity(100), gives(=*0.5 to me::childrenweights)
 Filtration Canteen, baseweight(3), basecost(180), page(UT75)
 Food Tablets (1 day), baseweight(0.75), basecost(10), page(UT73)
 IISS Air Mask, baseweight(4), basecost(500), description(includes 60 minutes of air), page(GT112), dr(10), location(face, eyes)
@@ -2241,7 +2241,6 @@ Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), ba
 			),_
         isparent(yes),_
 	damage(6d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6), rof(10), uses(83), shots(83(5)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
-
 
 <Ultra-Tech, Ultra-Tech - Weapons, Ultra-Tech - Weapons - Particle Beam, _Firearms, _Firearms - Ultra-Tech>
 Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(2200), baseweight(1.6), techlvl(11), mods(Equipment, Beams), lc(3),_
