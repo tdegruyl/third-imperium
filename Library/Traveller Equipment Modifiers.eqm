@@ -1,0 +1,1584 @@
+{
+	"version": 5,
+	"rows": [
+		{
+			"id": "Fs_AaVo61Qqd4xlDK",
+			"name": "Note",
+			"local_notes": "Both Cost Factor and Multiplicative Modifiers for equipment are provided here. Kromm recommends using Cost Factor which was introduced in Low-Tech, rather than the multiplicative cost modifiers. But some GMs may wish to use multiplicative."
+		},
+		{
+			"id": "FL5M2PunNG-hiU9p3",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+				"id": "F196Xi0bMeJr5p9kD"
+			},
+			"name": "Combination Gadgets",
+			"reference": "UT16",
+			"local_notes": "Put the constituent items inside an equipment container and apply cost modifiers to all but the most expensive, and weight modifiers to all but the heaviest",
+			"children": [
+				{
+					"id": "fWTlDbqVxExsdqxZT",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "fte-9FKj95fCsgBZP"
+					},
+					"name": "Combination Gadget cost, one works at a time",
+					"reference": "UT16",
+					"cost_type": "to_final_cost",
+					"cost": "x0.5"
+				},
+				{
+					"id": "flZkiTUo4Fl-BsUpN",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "fZK5VWsvzMBCRHwkA"
+					},
+					"name": "Combination Gadget cost, multiple work at a time",
+					"reference": "UT16",
+					"cost_type": "to_final_cost",
+					"cost": "x0.8"
+				},
+				{
+					"id": "fZSv2mxZ3Mg4C8_aR",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "f8HaZ0LuUFvHUnXtt"
+					},
+					"name": "Combination Gadget weight, one works at a time",
+					"reference": "UT16",
+					"weight_type": "to_final_weight",
+					"cost": "+0",
+					"weight": "x0.5"
+				},
+				{
+					"id": "fzq0oXNohyZrED2Nm",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "fbXG-SurLpMjqzf1Z"
+					},
+					"name": "Combination Gadget weight, multiple work at a time",
+					"reference": "UT16",
+					"weight_type": "to_final_weight",
+					"cost": "+0",
+					"weight": "x0.8"
+				}
+			]
+		},
+		{
+			"id": "FCHKBJJaeyFI0oQla",
+			"source": {
+				"library": "richardwilkes/gcs_master_library",
+				"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+				"id": "F1xIyPsraY6rcgj9x"
+			},
+			"name": "Optional Cost Factors",
+			"children": [
+				{
+					"id": "FF0FVrkf45Uqllnhf",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "FST4qfEqTzRE6-imZ"
+					},
+					"name": "Adjusting for SM",
+					"reference": "UT16",
+					"local_notes": "Cost Factor Conversion as of LT14",
+					"children": [
+						{
+							"id": "fIdWcTs1Ci8iZo7Xn",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fjKJBeSKHErN0wOM6"
+							},
+							"name": "SM +1",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+1 CF",
+							"weight": "x2"
+						},
+						{
+							"id": "fjkPl8YIEXFP63nio",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f-sABJzncBTrNx4B-"
+							},
+							"name": "SM +2",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+4 CF",
+							"weight": "x5"
+						},
+						{
+							"id": "fm_CFax84V7S5CoKl",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fABA1gUjVNhqtxezd"
+							},
+							"name": "SM +3",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+9 CF",
+							"weight": "x10"
+						},
+						{
+							"id": "fOCGnix_t1-kGd64Z",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "foM9EUmjY7cD3mNFC"
+							},
+							"name": "SM +4",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+19 CF",
+							"weight": "x20"
+						},
+						{
+							"id": "fb_oQlYCXn4wfwRvk",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fKCaEd1xMKRaQ8mAb"
+							},
+							"name": "SM +5",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+49 CF",
+							"weight": "x50"
+						},
+						{
+							"id": "fzQBvv4xbseMsTQXe",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fSJdr1qTQVxCwFHQi"
+							},
+							"name": "SM +6",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+99 CF",
+							"weight": "x100"
+						},
+						{
+							"id": "foOjM6XwMs6CB-Zso",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fo2JzwuUx7YY8VlbR"
+							},
+							"name": "SM +7",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+199 CF",
+							"weight": "x200"
+						},
+						{
+							"id": "f_wCbEx79uwb1VMIq",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fg_RWUFypmaCvrA1m"
+							},
+							"name": "SM +8",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+499 CF",
+							"weight": "x500"
+						},
+						{
+							"id": "fdIqqkMdVNHleylE9",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fnc8urqdS_CvTAKQW"
+							},
+							"name": "SM +9",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+999 CF",
+							"weight": "x1000"
+						},
+						{
+							"id": "f3NZnkvZlPlviBWgY",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f_PDh8Ugwk9u8A-d7"
+							},
+							"name": "SM +10",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "+1999 CF",
+							"weight": "x2000"
+						},
+						{
+							"id": "fU8AroPmnCfazY3rQ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fr4q_NM3bPLJ0M4o-"
+							},
+							"name": "SM -1",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "-0.5 CF",
+							"weight": "x1/2"
+						},
+						{
+							"id": "fZIvrgquGawaOM77-",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f4s7YVDGwaAMU3laF"
+							},
+							"name": "SM -2",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "-0.8 CF",
+							"weight": "x1/5"
+						},
+						{
+							"id": "fHHmH-fjwQa-Wx17a",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fxYZ9BDq99zJiyLh0"
+							},
+							"name": "SM -3",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "-0.9 CF",
+							"weight": "x1/10"
+						},
+						{
+							"id": "f5uPbyNCMZ_UKIpcq",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fBkgiUO0gWbiJUpm-"
+							},
+							"name": "SM -4",
+							"reference": "UT16",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_weight",
+							"cost": "-0.95 CF",
+							"weight": "x1/20"
+						}
+					]
+				},
+				{
+					"id": "FbO2YELXUsy2997sL",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "Fq05n9n5joTw-O6wj"
+					},
+					"name": "Clothing modifiers",
+					"children": [
+						{
+							"id": "fb5lC2CXLK7lOtrWM",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fS2hbj160gUr3w13C"
+							},
+							"name": "Varicloth",
+							"reference": "UT39",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+2 CF"
+						},
+						{
+							"id": "f9QYTqbAiSpq0VofU",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fEbpd-OaXfTJGsPWS"
+							},
+							"name": "Varicloth",
+							"reference": "UT39",
+							"local_notes": "with Responsive Fabric",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fVKu0RtBOUtqK0rq0",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "ffYgtFc-xzY7zhAQd"
+							},
+							"name": "Buzz Fabric",
+							"reference": "UT39",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fOoFQHGHs7HkI6PNZ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fhrWLwDhzzZxZeIjV"
+							},
+							"name": "Buzz Fabric",
+							"reference": "UT39",
+							"local_notes": "for bioplastic",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+0.2 CF"
+						},
+						{
+							"id": "f6Cy6Zo-XBsyk7Is7",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fLY2N6xYndg7V6SpV"
+							},
+							"name": "Responsive Fabric",
+							"reference": "UT39",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+2 CF"
+						}
+					]
+				},
+				{
+					"id": "FopgpEYXwyEPiPyMl",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "FVq_Q2gpmaogpbxo2"
+					},
+					"name": "Computer Hardware Modifiers",
+					"local_notes": "Cost Factor Conversion as of LT14",
+					"children": [
+						{
+							"id": "fBqeawkgqUVOr90fP",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fvamx4np-59rr96di"
+							},
+							"name": "Compact",
+							"reference": "UT23",
+							"local_notes": "Using multipliers",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "9",
+							"cost": "+1 CF",
+							"weight": "x0.5"
+						},
+						{
+							"id": "f5jhnEFdk-tQZjC_s",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fORPlSDsTOr2fk5Wz"
+							},
+							"name": "Fast (+1 Complexity)",
+							"reference": "UT23",
+							"local_notes": "Using multipliers",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "9",
+							"cost": "+19 CF",
+							"weight": "+0 lb"
+						},
+						{
+							"id": "fkiCB1emqJJw-r9XW",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fgR2We4I31YgNotD0"
+							},
+							"name": "FTL (+1 Complexity)",
+							"reference": "UT23",
+							"local_notes": "Using Mulitpliers, may require Quantum, -1 LC",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "11^",
+							"cost": "+99 CF",
+							"weight": "x2"
+						},
+						{
+							"id": "fnwFLoOzNE1qyhajP",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fOdqzWq5hDOqIdQ4O"
+							},
+							"name": "Hardened",
+							"reference": "UT23",
+							"local_notes": "Using multipliers, +3 HT vs. resist electronic pulses, microwaves, etc.",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "9",
+							"cost": "+1 CF",
+							"weight": "x2"
+						},
+						{
+							"id": "fW3F_VlTWEonwqDgh",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fRx_ReXkAdcqOxLce"
+							},
+							"name": "High-Capacity",
+							"reference": "UT23",
+							"local_notes": "Using multipliers, Run 50% more programs simultaneously.",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "9",
+							"cost": "+0.5 CF",
+							"weight": "+0 lb"
+						},
+						{
+							"id": "fx1EBokBdSmtOeMEx",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fV3DRKJenyjBaC_5S"
+							},
+							"name": "Genius (+2 Complexity)",
+							"reference": "UT23",
+							"local_notes": "Using Multipliers, -1 LC",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+499 CF"
+						},
+						{
+							"id": "f5UAEYoFbHYha38Cn",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fCGs6y2MHu5bT_3Rs"
+							},
+							"name": "Printed (-1 Complexity)",
+							"reference": "UT23",
+							"local_notes": "Using multipliers, -1 Complexity, divide data storage by 1,000",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "TL9",
+							"cost": "+0 CF",
+							"weight": "+0 lb"
+						},
+						{
+							"id": "fS206xW-qULH2YsUJ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "foC7Y-2pXgtU-FL2_"
+							},
+							"name": "Quantum",
+							"reference": "UT23",
+							"local_notes": "Using multipliers, -1 LC",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "9",
+							"cost": "+9 CF",
+							"weight": "x2"
+						},
+						{
+							"id": "fu598wyGn54neQMf7",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fJm4iwpibmE93_T75"
+							},
+							"name": "Slow (-1 Complexity)",
+							"local_notes": "Using multipliers, reduce storage by 1/10",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"tech_level": "9",
+							"cost": "-0.8 CF",
+							"weight": "+0 lb"
+						}
+					]
+				},
+				{
+					"id": "Fp0cHeMkDZa7U9KOz",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "FXmaHZ51MYexCZVwP"
+					},
+					"name": "Integrating and Modifying Equipment",
+					"reference": "UT15",
+					"local_notes": "Cost Factor Conversion as of LT14",
+					"children": [
+						{
+							"id": "f0uApIC-o8BYKCGTj",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fEjYp2jFYiYbU-hn8"
+							},
+							"name": "Cheap",
+							"reference": "UT15",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_final_base_weight",
+							"cost": "-0.5 CF",
+							"weight": "x1.5"
+						},
+						{
+							"id": "f4OTfcMXEInHQHlA4",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f6r-f2VMl3uurXbGR"
+							},
+							"name": "Disguised",
+							"reference": "UT15",
+							"local_notes": "Custom-built item",
+							"cost_type": "to_base_cost",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fEdgpy_eJ69qjCdKq",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fxnngBk5DdHLOLEKj"
+							},
+							"name": "Disguised",
+							"reference": "UT15",
+							"local_notes": "Mass Produced",
+							"cost_type": "to_base_cost",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fV3DGTaUUjvdgjTdj",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f3AMg_F7eHdJ-u_bX"
+							},
+							"name": "Expensive",
+							"reference": "UT15",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"cost": "+1 CF",
+							"weight": "x2/3"
+						},
+						{
+							"id": "fvGf5flVSzR5pMvy-",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "ftp3XhCDqI3Lan38o"
+							},
+							"name": "Rugged",
+							"reference": "UT15",
+							"cost_type": "to_base_cost",
+							"weight_type": "to_base_weight",
+							"cost": "+1 CF",
+							"weight": "x1.2"
+						}
+					]
+				},
+				{
+					"id": "Frdlia0qN_k-PHYaR",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "FShB2IW3Lhli7JA2D"
+					},
+					"name": "Melee and Thrown Weapons",
+					"reference": "UT162",
+					"local_notes": "Cost Factor Conversion as of LT14",
+					"children": [
+						{
+							"id": "fQCzTv1wiC36w5lpJ",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fpBV8FY8xWmRiIc2a"
+							},
+							"name": "Hyperdense Blade",
+							"reference": "UT164",
+							"local_notes": "Cost is higher of: 500x Weight in lb, or 10x normal cost.",
+							"cost_type": "to_base_cost",
+							"tech_level": "11",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "f-BCsXS9WX41Dm7G8",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f5j386Q3AIOYmmgm0"
+							},
+							"name": "Rocket Striker",
+							"reference": "UT163",
+							"cost_type": "to_final_base_cost",
+							"weight_type": "to_final_base_weight",
+							"tech_level": "9",
+							"cost": "+500",
+							"weight": "+1 lb"
+						},
+						{
+							"id": "fZoVHVTqCBekyIbA2",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fiKewmn9WzQFmgicu"
+							},
+							"name": "Superfine Blade",
+							"reference": "UT163",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+5 CF"
+						},
+						{
+							"id": "fIWEYEjNhWbeZJwSx",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f_rlPOIeUnZThPXJn"
+							},
+							"name": "Superfine Vibroblade",
+							"reference": "UT164",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+29 CF"
+						},
+						{
+							"id": "fVuLdfBAhTlKH0KRC",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fPuSSrcCaULrUj0tf"
+							},
+							"name": "Vibroblade",
+							"reference": "UT164",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+10 CF"
+						}
+					]
+				},
+				{
+					"id": "FQyEY9TlYaqtj3Ec3",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "FIpIP_bdd0Fk7Z-6a"
+					},
+					"name": "Tailoring Armor",
+					"reference": "UT174",
+					"local_notes": "Cost Factor Conversion as of LT14",
+					"children": [
+						{
+							"id": "FwhJkenXlqu2BCROq",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "FIvtD1Vq7AJI3RuOG"
+							},
+							"name": "Cut",
+							"children": [
+								{
+									"id": "fMFU8d2wDWIoPvIRg",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "fqbI9o_MAPf9QouwA"
+									},
+									"name": "Fashion Original",
+									"reference": "UT175",
+									"cost_type": "to_base_cost",
+									"cost": "+19 CF"
+								},
+								{
+									"id": "folf0VmeX86mm2Hqn",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "ftTIP1_K9WPCHFSrz"
+									},
+									"name": "Stylish",
+									"reference": "UT175",
+									"cost_type": "to_base_cost",
+									"cost": "+3 CF"
+								}
+							]
+						},
+						{
+							"id": "Fw-D8Z2XjS5M0Lwuy",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "FDzYnYRpDvPPcNA7z"
+							},
+							"name": "Style",
+							"reference": "UT175",
+							"children": [
+								{
+									"id": "fCQsBBAvoYUrD_MWx",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "ftFTJE6_mV3hr20Gb"
+									},
+									"name": "Diaphanous",
+									"reference": "UT175",
+									"local_notes": "Multiply DR by 0.5, Increase LC by 1",
+									"cost_type": "to_base_cost",
+									"weight_type": "to_base_weight",
+									"cost": "-0.5 CF",
+									"weight": "x0.5"
+								},
+								{
+									"id": "f-XP7dHj8MnAZbC1f",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "frbXvOS7xhPaWfXB8"
+									},
+									"name": "Heavy",
+									"reference": "UT175",
+									"local_notes": "Multiply DR by 1.5, Reduce LC by 1",
+									"cost_type": "to_base_cost",
+									"weight_type": "to_final_base_weight",
+									"cost": "+0.5 CF",
+									"weight": "x1.5"
+								},
+								{
+									"id": "f7cvkGQ8DevfQnLvu",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "fY9lwQ9KXH-agyZs1"
+									},
+									"name": "Light",
+									"reference": "UT175",
+									"local_notes": "Multiply DR by 2/3, Increase LC by 1",
+									"cost_type": "to_base_cost",
+									"weight_type": "to_final_base_weight",
+									"cost": "-0.33 CF",
+									"weight": "x2/3"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "FupPVbA12NgXOwUrs",
+					"source": {
+						"library": "richardwilkes/gcs_master_library",
+						"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+						"id": "FPaEc3M23bFHmAt48"
+					},
+					"name": "Warheads and Ammunition",
+					"reference": "UT152",
+					"local_notes": "Cost Factor Conversion as of LT14",
+					"children": [
+						{
+							"id": "FWAYbRUCU7lwKNMmY",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "FgtYc70rqVP1OkQZP"
+							},
+							"name": "Antimatter Warhead Antimatter Costs",
+							"reference": "UT157",
+							"children": [
+								{
+									"id": "fASGGeG3v3u3wA16I",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "fh2ySUk9B8xfspySJ"
+									},
+									"name": "Antimatter, 0.1 micrograms",
+									"reference": "UT157",
+									"cost_type": "to_final_cost",
+									"tech_level": "10",
+									"cost": "+250"
+								},
+								{
+									"id": "fgPM7CEYhy-xPuVmP",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "fTtLtERD7gc3A9GX4"
+									},
+									"name": "Antimatter, 0.1 micrograms",
+									"reference": "UT157",
+									"cost_type": "to_final_cost",
+									"tech_level": "11",
+									"cost": "+2.5"
+								},
+								{
+									"id": "fZegiG60rQ3JzX95f",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "fU64ANPsD0K4F0_8C"
+									},
+									"name": "Antimatter, 1 microgram",
+									"reference": "UT157",
+									"cost_type": "to_final_cost",
+									"tech_level": "10",
+									"cost": "+2500"
+								},
+								{
+									"id": "fR2cguS9dyqFPzZ90",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "ffgwTXXNNjk5Y-nIu"
+									},
+									"name": "Antimatter, 1 microgram",
+									"reference": "UT157",
+									"cost_type": "to_final_cost",
+									"tech_level": "11",
+									"cost": "+25"
+								},
+								{
+									"id": "fK3gZShi4R6HDtqK-",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "ftWFRPDkzmx0IPuxq"
+									},
+									"name": "Antimatter, 10 micrograms",
+									"reference": "UT157",
+									"cost_type": "to_final_cost",
+									"tech_level": "10",
+									"cost": "+25000"
+								},
+								{
+									"id": "fmFbudhE8NfQV_6Io",
+									"source": {
+										"library": "richardwilkes/gcs_master_library",
+										"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+										"id": "fXwILysXqOBWmhhfW"
+									},
+									"name": "Antimatter, 10 micrograms",
+									"reference": "UT157",
+									"cost_type": "to_final_cost",
+									"tech_level": "11",
+									"cost": "+250"
+								}
+							]
+						},
+						{
+							"id": "fZMFMbd4M6ShUJZap",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fR88kY1G7lzi6FH2z"
+							},
+							"name": "Infrared Homing",
+							"reference": "UT146",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+3 CF"
+						},
+						{
+							"id": "fNAlMxuF_FKVZ1qWS",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fGFx-j_to58M5HGUG"
+							},
+							"name": "Multi-Spectral Homing",
+							"reference": "UT146",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "fMlA92LeRv-FkyZIw",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fAEYesncPAHfsBZok"
+							},
+							"name": "Multiscanner Homing",
+							"reference": "UT146",
+							"cost_type": "to_base_cost",
+							"tech_level": "11^",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "fsfPrCzaqLZAUl7bw",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "feKx8zlor_bdGXGaY"
+							},
+							"name": "Armor Piercing Hyperdense Dart",
+							"reference": "UT156",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "fDmgyTqXPDWSPBz9a",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fkhKlBlHceqSmqywb"
+							},
+							"name": "Armor-Piercing Enhanced Penetrator",
+							"reference": "UT152",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "fdz6DK-jFd0_SRsk4",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fT24GvPc7taxw4Cb8"
+							},
+							"name": "Armor-Piercing Hardcore",
+							"reference": "UT152",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fQaDGHABKj7ULaFUp",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fOTot7kSnPbr0Wqf_"
+							},
+							"name": "Armor-Piercing Hardcore Explosive",
+							"reference": "UT152",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+3 CF"
+						},
+						{
+							"id": "fzCLUT9Qz1M8Yuw70",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fKtVH_SHC4e-tHTIe"
+							},
+							"name": "Biochemical Aerosol",
+							"reference": "UT153",
+							"local_notes": "Cost Plus Filler x # of Doses",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0 CF"
+						},
+						{
+							"id": "fG9Mp7U8tG-ESITJT",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fV-F3TM7LEclP9-tw"
+							},
+							"name": "Biochemical Liquid",
+							"reference": "UT153",
+							"local_notes": "Cost Plus Filler x # of Doses",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0 CF"
+						},
+						{
+							"id": "fQWEi-6OXDLeNIols",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fLAw_IdQM_ql9KP92"
+							},
+							"name": "Burrow Darts",
+							"reference": "UT155",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+2 CF"
+						},
+						{
+							"id": "faaUmUF_YD4rf1GgW",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fNyPCkbCRuc7-yfUL"
+							},
+							"name": "Electrothermal-Chemical",
+							"reference": "UT139",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fyUecZkimbyAwuWWo",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fYDtFMtvE5OnSZGdm"
+							},
+							"name": "EMP",
+							"reference": "UT157",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "f0yZP5OzqHDmAdKar",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fjFdIjQXkJqeYIbcv"
+							},
+							"name": "Expendable Jammer",
+							"reference": "UT157",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fmK7bIjanXvFA0Q5r",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fzshtVi54Td-hxUeE"
+							},
+							"name": "Flare",
+							"reference": "UT153",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "f0Wl4X9qfLtde9yot",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fmdVaOtzlPcqExuJw"
+							},
+							"name": "Force",
+							"reference": "UT158",
+							"cost_type": "to_base_cost",
+							"tech_level": "10^",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "f80jJoPrC5h-8LYtI",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f8-WHAud5Ij8A62XP"
+							},
+							"name": "High Explosive",
+							"reference": "UT153",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0 CF"
+						},
+						{
+							"id": "fY5f_oMElbgf0jlJ5",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fGM5aL9wWEDdtJubQ"
+							},
+							"name": "High Explosive Concussion",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0 CF"
+						},
+						{
+							"id": "fXCV-bBSSsBQrTzel",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f1MGV2HBzyMitgLke"
+							},
+							"name": "High Explosive Multi-Purpose",
+							"reference": "UT155",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fAQKOdCHxvF9ER0Vz",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fGbLKkZKrrikxigvJ"
+							},
+							"name": "Hollow-Point",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0 CF"
+						},
+						{
+							"id": "f4hvXX29FGSNus23m",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fNfVI1wTkUV-4p5sf"
+							},
+							"name": "Implosion",
+							"reference": "UT158",
+							"cost_type": "to_base_cost",
+							"tech_level": "11^",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fMmdJDAh-l2cBXQRj",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fkjwRB3xH7ISPxDSB"
+							},
+							"name": "Liquid Propellant",
+							"reference": "UT139",
+							"local_notes": "1.5x many shots per magazine",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0.5 CF"
+						},
+						{
+							"id": "f9xV8clhzeggYUzF9",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fh0XvovRo43MGPpZ1"
+							},
+							"name": "Memory Baton",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fA6ZrBp0K_7Zz8pyV",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fd8QIEQlIOBdl0uTd"
+							},
+							"name": "Micro-Antimatter Warhead",
+							"reference": "UT156",
+							"cost_type": "to_base_cost",
+							"tech_level": "10",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "fD-Z7V5xAVltHok_p",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fVCs0H1FbpVuYnwzd"
+							},
+							"name": "Mininuke",
+							"reference": "UT156",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+999 CF"
+						},
+						{
+							"id": "fkt6gPuQNAaztF2AN",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fgiRwCPCy7TvzAIv8"
+							},
+							"name": "Monochain",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9^",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fO_pP4aMI3A__Blpk",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fHLjSo6C3heKXRIZ4"
+							},
+							"name": "Plasma",
+							"reference": "UT158",
+							"cost_type": "to_base_cost",
+							"tech_level": "10^",
+							"cost": "+9 CF"
+						},
+						{
+							"id": "fU-WE_wT8igQCSKoe",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fuDr_1MPU58_JPqFV"
+							},
+							"name": "Shaped Charge",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fHBPM8wZbQxosMSD6",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fSK10hwa5fFa29n5l"
+							},
+							"name": "Shotshell",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+0 CF"
+						},
+						{
+							"id": "fR__kWbyroZlhPO54",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fzxtvfGsysSGWIV8i"
+							},
+							"name": "Smart Explosively Forged Projectile",
+							"reference": "UT154",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fJkUfeOqLNLdkSpj7",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "f6A1enhVC6cP73Y2x"
+							},
+							"name": "Stingray",
+							"reference": "UT156",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fz8ZSCfw2X_fjlO6M",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "flflyNAfdkDrccXbq"
+							},
+							"name": "Strobe",
+							"reference": "UT157",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+3 CF"
+						},
+						{
+							"id": "fBeqAix7VPBAYqRt6",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fu1j4ZfhXKHtcZAiD"
+							},
+							"name": "Swarm",
+							"reference": "UT156",
+							"local_notes": "Plus Cost of Swarm",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fAG2ZQvn4kSHUuvn_",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fQ_qI191B1O4XuDmX"
+							},
+							"name": "Tangler",
+							"reference": "UT155",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+1 CF"
+						},
+						{
+							"id": "fApAFhYxOUsS2hehC",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "fz2JxISYz6XocR-zC"
+							},
+							"name": "Thermobaric",
+							"reference": "UT155",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+4 CF"
+						},
+						{
+							"id": "fIG-3KEIDfqeOdGkj",
+							"source": {
+								"library": "richardwilkes/gcs_master_library",
+								"path": "Ultra Tech/Ultra Tech Equipment Modifiers.eqm",
+								"id": "ftPAGpWYgnmpSl-Ao"
+							},
+							"name": "Warbler",
+							"reference": "UT157",
+							"cost_type": "to_base_cost",
+							"tech_level": "9",
+							"cost": "+3 CF"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "FDANvC_SPzZBv58MW",
+			"name": "Cost Factors",
+			"children": [
+				{
+					"id": "FUw3L4JzLwhOit5yq",
+					"name": "Weapon Quality",
+					"children": [
+						{
+							"id": "F1Yutf8qmiB4JUGmZ",
+							"name": "Blowpipe, Bow \u0026 Crossbow Weapon Quality",
+							"reference": "B277",
+							"children": [
+								{
+									"id": "fadxEN8ZvwqeZu9kB",
+									"name": "Fine Quality",
+									"reference": "B277",
+									"local_notes": "Increase 1/2D and Max range by 20%",
+									"cost_type": "to_base_cost",
+									"cost": "+3 CF"
+								}
+							]
+						},
+						{
+							"id": "FtE2hhFA3Q5d6hzD2",
+							"name": "Firearm Weapon Quality",
+							"reference": "B280",
+							"children": [
+								{
+									"id": "fKVVvHu0-Mgu2jotm",
+									"name": "Fine Quality",
+									"reference": "B280",
+									"local_notes": "+1 to Malf",
+									"cost_type": "to_base_cost",
+									"cost": "+1 CF",
+									"features": [
+										{
+											"type": "weapon_acc_bonus",
+											"selection_type": "this_weapon",
+											"name": {
+												"compare": "is"
+											},
+											"level": {
+												"compare": "at_least"
+											},
+											"amount": 1
+										}
+									]
+								},
+								{
+									"id": "fjaaWYzkaqarrWCR2",
+									"name": "Very Fine Quality",
+									"reference": "B280",
+									"local_notes": "+1 to Malf",
+									"cost_type": "to_base_cost",
+									"cost": "+4 CF",
+									"features": [
+										{
+											"type": "weapon_acc_bonus",
+											"selection_type": "this_weapon",
+											"name": {
+												"compare": "is"
+											},
+											"level": {
+												"compare": "at_least"
+											},
+											"amount": 2
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "FaLEgmMJgyJynQBNl",
+							"name": "Melee, Thrown, Arrow \u0026 Bolt Weapon Quality",
+							"reference": "B274",
+							"local_notes": "Weapon damage is included in the modifiers",
+							"children": [
+								{
+									"id": "FtdAiVttb_hHXAYa_",
+									"name": "TL6 or less",
+									"reference": "B274",
+									"children": [
+										{
+											"id": "fC6UtJEgWjslIlED4",
+											"name": "Cheap Quality",
+											"reference": "B274",
+											"local_notes": "+2 to break, -1 Acc if thrown",
+											"cost_type": "to_base_cost",
+											"cost": "-0.6 CF"
+										},
+										{
+											"id": "fPmxE0ke6kchUC84A",
+											"name": "Fine Quality",
+											"reference": "B274",
+											"local_notes": "-1 to break; blades only",
+											"cost_type": "to_base_cost",
+											"cost": "+3 CF",
+											"features": [
+												{
+													"type": "weapon_bonus",
+													"selection_type": "this_weapon",
+													"amount": 1
+												}
+											]
+										},
+										{
+											"id": "fs0ew9zuO-PNEGdHP",
+											"name": "Fine Quality",
+											"reference": "B274",
+											"local_notes": "-1 to break; for non-blades that do only crushing or impaling damage",
+											"cost_type": "to_base_cost",
+											"cost": "+2 CF"
+										},
+										{
+											"id": "frPfYqmyQlcAaaVCf",
+											"name": "Fine Quality",
+											"reference": "B274",
+											"local_notes": "-1 to break; for non-blades that do cutting damage",
+											"cost_type": "to_base_cost",
+											"cost": "+9 CF",
+											"features": [
+												{
+													"type": "weapon_bonus",
+													"selection_type": "this_weapon",
+													"amount": 1
+												}
+											]
+										},
+										{
+											"id": "fCbMFiXY3hm6Nojd-",
+											"name": "Very Fine Quality",
+											"reference": "B274",
+											"local_notes": "-2 to break; for fencing weapons and swords only",
+											"cost_type": "to_base_cost",
+											"cost": "+19 CF",
+											"features": [
+												{
+													"type": "weapon_bonus",
+													"selection_type": "this_weapon",
+													"amount": 2
+												}
+											]
+										}
+									]
+								},
+								{
+									"id": "F8cjJsyWqNni5cgra",
+									"name": "TL7 or greater",
+									"reference": "B274",
+									"children": [
+										{
+											"id": "fEaq1BD3eDiKuqHHN",
+											"name": "Cheap Quality",
+											"reference": "B274",
+											"local_notes": "+2 to break, -1 Acc if thrown",
+											"cost_type": "to_base_cost",
+											"cost": "-0.8 CF"
+										},
+										{
+											"id": "f5lPy5Vb8ueyahaf2",
+											"name": "Good Quality",
+											"reference": "B274",
+											"cost_type": "to_base_cost",
+											"cost": "-0.6 CF"
+										},
+										{
+											"id": "fhxf7dunRNk0cjaGJ",
+											"name": "Fine Quality",
+											"reference": "B274",
+											"local_notes": "-1 to break; for blades that do cutting and impaling damage",
+											"features": [
+												{
+													"type": "weapon_bonus",
+													"selection_type": "this_weapon",
+													"amount": 1
+												}
+											]
+										},
+										{
+											"id": "fmxVg53yIwpwOaToZ",
+											"name": "Very Fine Quality",
+											"reference": "B274",
+											"local_notes": "-2 to break; +2 to cutting and impaling damage; for fencing weapons and swords only",
+											"cost_type": "to_base_cost",
+											"cost": "+3 CF",
+											"features": [
+												{
+													"type": "weapon_bonus",
+													"selection_type": "this_weapon",
+													"amount": 2
+												}
+											]
+										},
+										{
+											"id": "fq4oQaxOrTmD14fio",
+											"name": "Fine Quality",
+											"reference": "B274",
+											"local_notes": "-1 to break; for other weapons"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "fAYOLuyDMUPE0w1wn",
+					"name": "Silver",
+					"reference": "B275",
+					"local_notes": "+2 to break",
+					"cost_type": "to_base_cost",
+					"cost": "+19 CF"
+				},
+				{
+					"id": "f9vNV2i3wHTOEanvQ",
+					"name": "Silver-coated",
+					"reference": "B275",
+					"local_notes": "Reduced wounding multiplier to vulnerable targets: x2 becomes x1.5, x3 becomes x2, x4 becomes x3",
+					"cost_type": "to_base_cost",
+					"cost": "+2 CF"
+				},
+				{
+					"id": "fUu14FpHJ6f1lxTre",
+					"name": "Silver Bullets",
+					"reference": "B275",
+					"cost_type": "to_base_cost",
+					"cost": "+49 CF"
+				}
+			]
+		}
+	]
+}

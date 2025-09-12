@@ -1678,6 +1678,7 @@
 			"weapons": [
 				{
 					"id": "WmruLMoDRku6KWD4X",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "5d"
@@ -1739,6 +1740,7 @@
 			"weapons": [
 				{
 					"id": "WqLXSwb-UrGhPw9EM",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "4d",
@@ -1899,6 +1901,7 @@
 			"weapons": [
 				{
 					"id": "W2pZ-66vu6YwLom6V",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "8d"
@@ -2004,6 +2007,7 @@
 			"weapons": [
 				{
 					"id": "wl0EeO0AjX3vsOXbo",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw",
@@ -2349,6 +2353,7 @@
 			"weapons": [
 				{
 					"id": "w_Jg-HgglFAsCMnQv",
+					"sv": 1,
 					"damage": {
 						"type": "cr",
 						"st": "thr"
@@ -2547,7 +2552,8 @@
 			"base_weight": "6 lb",
 			"weapons": [
 				{
-					"id": "Wn2fRF1PjwJSsyxmA",
+					"id": "W8KY06HA8hNg91P4f",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d+4"
@@ -2572,7 +2578,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -2721,6 +2727,68 @@
 			}
 		},
 		{
+			"id": "eJja6Okzp0BnykCeN",
+			"description": "IISS Scout Service Vacc Suit",
+			"local_notes": "ST/HP: 10; Hnd/SR: +2/1; HT: 12; Move: 10/100 (05G); Load: 0.5; SM: 0; Occ: 1; DR: 30; Includes: Sm Radio Com with encryption, Sm Laser Comm, Inertial Compasslm PESA Visor, Sm Radscanner, Contragrav Unit, Life Support",
+			"tech_level": "10",
+			"legality_class": "4",
+			"base_value": "40630",
+			"base_weight": "36.5",
+			"features": [
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"all"
+					],
+					"amount": 30
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 40630,
+				"extended_value": 40630,
+				"weight": "36.5 lb",
+				"extended_weight": "36.5 lb"
+			}
+		},
+		{
+			"id": "eAFQUM6EHP49sk4Bz",
+			"description": "IISS Scout Expedition Battledress",
+			"local_notes": "ST/HP: 24; Hnd/SR: +2/1; HT: 12;  Move (Air/Space): 10/300 (4G); Lwt: 0.75; Load: 0.5; SM: 0; Occ: 1; DR: 60; Included Technologies: Sm Radio Comm, Med Laser Comm, Sm Genius Computer (C9) with Heads-Up Display, Universal Translator Program (C9), Inertial Compass, Tactical Sound Detector, PESA, Tactical Active Electromagnetic Sensor Array, Gravscanner, Biosniffer, Chemsniffer, Densitometer, Radscanner, Vacc suit (Contragrav Unit, Hydration and nutrition, Life support and waste recycling)",
+			"tech_level": "11",
+			"legality_class": "1",
+			"base_value": "163000",
+			"base_weight": "500",
+			"features": [
+				{
+					"type": "attribute_bonus",
+					"attribute": "basic_move",
+					"amount": 2
+				},
+				{
+					"type": "attribute_bonus",
+					"attribute": "st",
+					"amount": 20
+				},
+				{
+					"type": "dr_bonus",
+					"locations": [
+						"all"
+					],
+					"amount": 60
+				}
+			],
+			"quantity": 1,
+			"equipped": true,
+			"calc": {
+				"value": 163000,
+				"extended_value": 163000,
+				"weight": "500 lb",
+				"extended_weight": "500 lb"
+			}
+		},
+		{
 			"id": "eu46Xcb4gn6y054b6",
 			"source": {
 				"library": "richardwilkes/gcs_master_library",
@@ -2760,7 +2828,8 @@
 			"base_weight": "10 lb",
 			"weapons": [
 				{
-					"id": "W7yTMPAdtNUh7X30d",
+					"id": "WUT94zcOy2iQHdiZQ",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d+4"
@@ -2785,7 +2854,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -4184,6 +4253,7 @@
 			"weapons": [
 				{
 					"id": "Wo4Xog991iepQ6R6r",
+					"sv": 1,
 					"damage": {
 						"type": "HT-5 aff (3 yd)"
 					},
@@ -4569,6 +4639,7 @@
 			"weapons": [
 				{
 					"id": "WyHiPq3rITgbYSOC8",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "8d",
@@ -4637,6 +4708,7 @@
 			"weapons": [
 				{
 					"id": "W0kvLJiZiZkVOoxpL",
+					"sv": 1,
 					"damage": {
 						"type": "HT-6(5) aff"
 					},
@@ -4940,6 +5012,7 @@
 			"weapons": [
 				{
 					"id": "w4P1u4WuCLN9er4pu",
+					"sv": 1,
 					"damage": {
 						"type": "cr",
 						"st": "sw"
@@ -4999,6 +5072,7 @@
 				},
 				{
 					"id": "wxr0K4U6toeytf9nU",
+					"sv": 1,
 					"damage": {
 						"type": "cr",
 						"st": "thr"
@@ -5058,6 +5132,7 @@
 				},
 				{
 					"id": "wRPtKJwZGAiY8OpSu",
+					"sv": 1,
 					"damage": {
 						"type": "HT-5(0.5) aff"
 					},
@@ -5234,6 +5309,7 @@
 			"weapons": [
 				{
 					"id": "WLBg0k26l4HUp4xsY",
+					"sv": 1,
 					"damage": {
 						"type": "HT-4 (2) aff"
 					},
@@ -5272,6 +5348,7 @@
 				},
 				{
 					"id": "WtqGRunakSL6hBu4c",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "1d-3"
@@ -5310,6 +5387,7 @@
 			"weapons": [
 				{
 					"id": "WXSKUa7zWY0EE-nNg",
+					"sv": 1,
 					"damage": {
 						"type": "HT-4 (2) aff"
 					},
@@ -5348,6 +5426,7 @@
 				},
 				{
 					"id": "WqiFIypVhLbGCDrbT",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "1d-3"
@@ -5387,6 +5466,7 @@
 			"weapons": [
 				{
 					"id": "WQbBXwRxbgzskXb34",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6dx3"
@@ -5636,6 +5716,7 @@
 			"weapons": [
 				{
 					"id": "WH9EDM-9abKEPmvcf",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d"
@@ -5697,6 +5778,7 @@
 			"weapons": [
 				{
 					"id": "W2lGiUCJdXqoi8HcR",
+					"sv": 1,
 					"damage": {
 						"type": "HT-3 aff (1 yd)"
 					},
@@ -6348,7 +6430,8 @@
 			"base_weight": "4,000 lb",
 			"weapons": [
 				{
-					"id": "WHtFJ5DWp9NxImiMJ",
+					"id": "WpuotjLtIIMIFg246",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "5dx10",
@@ -6360,7 +6443,7 @@
 					"rate_of_fire": "1",
 					"shots": "20(5)",
 					"bulk": "-10",
-					"recoil": "1",
+					"recoil": "5",
 					"defaults": [
 						{
 							"type": "skill",
@@ -6410,7 +6493,8 @@
 			"base_weight": "4,000 lb",
 			"weapons": [
 				{
-					"id": "W6Pd-1Z5u_lUv0StA",
+					"id": "WwFM5d9HPsUoZ7R4Y",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "5dx20",
@@ -6422,7 +6506,7 @@
 					"rate_of_fire": "1",
 					"shots": "20(5)",
 					"bulk": "-10",
-					"recoil": "1",
+					"recoil": "4",
 					"defaults": [
 						{
 							"type": "skill",
@@ -6472,7 +6556,8 @@
 			"base_weight": "5.6 lb",
 			"weapons": [
 				{
-					"id": "WUc4_LaOvhrS4QS6d",
+					"id": "Wq8QniHJV2swZQooi",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "5d",
@@ -6484,7 +6569,7 @@
 					"rate_of_fire": "3",
 					"shots": "34(3)",
 					"bulk": "-3",
-					"recoil": "1",
+					"recoil": "3",
 					"defaults": [
 						{
 							"type": "skill",
@@ -6540,7 +6625,8 @@
 			"base_weight": "1.6 lb",
 			"weapons": [
 				{
-					"id": "WOzpWuWu3ZO7G4m5u",
+					"id": "WeWOFj16hjZmvJbke",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "3d",
@@ -6552,7 +6638,7 @@
 					"rate_of_fire": "3",
 					"shots": "80(3)",
 					"bulk": "-2",
-					"recoil": "1",
+					"recoil": "2",
 					"defaults": [
 						{
 							"type": "skill",
@@ -6608,7 +6694,8 @@
 			"base_weight": "10 lb",
 			"weapons": [
 				{
-					"id": "WWA-wTPdn9Xk9M9Q4",
+					"id": "WDHbugjmWrA6EiF-P",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "6d",
@@ -6620,7 +6707,7 @@
 					"rate_of_fire": "3",
 					"shots": "20(3)",
 					"bulk": "-4",
-					"recoil": "1",
+					"recoil": "3",
 					"defaults": [
 						{
 							"type": "skill",
@@ -6676,6 +6763,7 @@
 			"weapons": [
 				{
 					"id": "weyAgvu0A6-YXV8K-",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "8d+2",
@@ -6722,7 +6810,8 @@
 			"base_weight": "10 lb",
 			"weapons": [
 				{
-					"id": "We_HwRjL8mnJ7VSFp",
+					"id": "WzmXz5vUqiiJ0Tt7g",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "4d"
@@ -6747,7 +6836,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -6784,6 +6873,7 @@
 			"weapons": [
 				{
 					"id": "WcSBBHipjRm1BWGH8",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "6dx2",
@@ -6845,7 +6935,8 @@
 			"base_weight": "10 lb",
 			"weapons": [
 				{
-					"id": "WKU-CwxOdr-R9SUVu",
+					"id": "W7cD2easQCmUq2uoE",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "8d"
@@ -6870,7 +6961,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -6907,6 +6998,7 @@
 			"weapons": [
 				{
 					"id": "WJkY9Og-t9wRedSQI",
+					"sv": 1,
 					"damage": {
 						"type": "pi",
 						"base": "16d",
@@ -6968,7 +7060,8 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "WnY3Y84HBMkgmRxYR",
+					"id": "WqSg3xZ9mlykS49Nx",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "6d+2",
@@ -6994,7 +7087,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7030,7 +7123,8 @@
 			"base_weight": "3 lb",
 			"weapons": [
 				{
-					"id": "WU9kyFiijVJHt8IMl",
+					"id": "WUWfXlKNaQy6de9YH",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "3d",
@@ -7056,7 +7150,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7092,7 +7186,8 @@
 			"base_weight": "0.1 lb",
 			"weapons": [
 				{
-					"id": "WlHKnlNaxM9UCgLPH",
+					"id": "WKZ_Z2WxlDKo5-lrf",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "1d",
@@ -7118,7 +7213,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7153,6 +7248,7 @@
 			"weapons": [
 				{
 					"id": "WysUe5JrjqNbqxsWA",
+					"sv": 1,
 					"damage": {
 						"type": "pi",
 						"base": "1d+1",
@@ -7209,7 +7305,8 @@
 			"base_weight": "6 lb",
 			"weapons": [
 				{
-					"id": "WtyfzK3xIPOBWFRQG",
+					"id": "W793kldykWHsPVhTa",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "2d+1",
@@ -7235,7 +7332,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7271,7 +7368,8 @@
 			"base_weight": "2 lb",
 			"weapons": [
 				{
-					"id": "WiWIj2dGFlxgCJ1HF",
+					"id": "WB1hFeHKIuPs9mdGc",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "3d",
@@ -7297,7 +7395,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7333,7 +7431,8 @@
 			"base_weight": "8.5 lb",
 			"weapons": [
 				{
-					"id": "Wkp_TcRUTuHugd6LZ",
+					"id": "WF5TzLUlWXWumQalw",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "6d+2",
@@ -7359,7 +7458,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7395,7 +7494,8 @@
 			"base_weight": "3 lb",
 			"weapons": [
 				{
-					"id": "WiWDAcrZoDyHgdHxt",
+					"id": "WsdhwmMcxtC3QJldt",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "8d"
@@ -7420,7 +7520,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -7792,6 +7892,7 @@
 			"weapons": [
 				{
 					"id": "WSwttooTuItVg0mhO",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6d"
@@ -7852,6 +7953,7 @@
 			"weapons": [
 				{
 					"id": "WDXGDimZt_Uq6UQGU",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6d"
@@ -7912,6 +8014,7 @@
 			"weapons": [
 				{
 					"id": "WYPE_YXa9MkNUnsF7",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6d"
@@ -7972,6 +8075,7 @@
 			"weapons": [
 				{
 					"id": "WyIDe6l0nnGRmCK92",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6d"
@@ -8057,6 +8161,7 @@
 			"weapons": [
 				{
 					"id": "WdgfK9GOqgrf6xAhv",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "4d"
@@ -8116,6 +8221,7 @@
 			"weapons": [
 				{
 					"id": "wuGjxTeA9i1xGAS5R",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw"
@@ -8150,6 +8256,7 @@
 				},
 				{
 					"id": "WuG0oS3iO9ZB3HJ3j",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw"
@@ -8568,6 +8675,7 @@
 			"weapons": [
 				{
 					"id": "WFEcn9rwDgZOGEO84",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "15d"
@@ -8670,6 +8778,7 @@
 			"weapons": [
 				{
 					"id": "WefDxbmexgPd9kZRB",
+					"sv": 1,
 					"damage": {
 						"type": "HT-6 (2) aff"
 					},
@@ -8708,6 +8817,7 @@
 				},
 				{
 					"id": "W1-VZlcv8w50R9J_t",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "1d-3"
@@ -8787,6 +8897,7 @@
 			"weapons": [
 				{
 					"id": "WbymkULoSWxV46R9_",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "8d"
@@ -8847,6 +8958,7 @@
 			"weapons": [
 				{
 					"id": "wipSzBYkdM92IyXEf",
+					"sv": 1,
 					"damage": {
 						"type": "cr",
 						"st": "sw"
@@ -8910,6 +9022,7 @@
 				},
 				{
 					"id": "w_xz7qc1HTTJexGso",
+					"sv": 1,
 					"damage": {
 						"type": "cr",
 						"st": "thr"
@@ -9000,7 +9113,8 @@
 			"base_weight": "3.3 lb",
 			"weapons": [
 				{
-					"id": "W_7Nfy86k1oZoPrmD",
+					"id": "W74jieWVX_5onBk6l",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "4d",
@@ -9012,7 +9126,7 @@
 					"rate_of_fire": "3",
 					"shots": "33(3)",
 					"bulk": "-3",
-					"recoil": "1",
+					"recoil": "3",
 					"defaults": [
 						{
 							"type": "skill",
@@ -9068,7 +9182,8 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "WHE_pITYY8kSmLsxa",
+					"id": "WzgPbyPmTAsPnl4Yt",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "8d",
@@ -9080,7 +9195,7 @@
 					"rate_of_fire": "3",
 					"shots": "15(5)",
 					"bulk": "-6",
-					"recoil": "1",
+					"recoil": "3",
 					"defaults": [
 						{
 							"type": "skill",
@@ -9137,6 +9252,7 @@
 			"weapons": [
 				{
 					"id": "WwncxSot88Zw5pcRd",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "4d",
@@ -9204,6 +9320,7 @@
 			"weapons": [
 				{
 					"id": "wKf2sX6D0WDTn8tTm",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "4d",
@@ -9250,7 +9367,8 @@
 			"base_weight": "2.5 lb",
 			"weapons": [
 				{
-					"id": "W3n_csklOq0z9iL9-",
+					"id": "Wo93n1NCK8ernlDB_",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "3d"
@@ -9275,7 +9393,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -9312,6 +9430,7 @@
 			"weapons": [
 				{
 					"id": "WePiSsrwK2ALn-ye_",
+					"sv": 1,
 					"damage": {
 						"type": "burn ex",
 						"base": "3dx5",
@@ -9379,6 +9498,7 @@
 			"weapons": [
 				{
 					"id": "wxj9f42-vtO-0EO44",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "4d+1",
@@ -9701,6 +9821,7 @@
 			"weapons": [
 				{
 					"id": "WuFazfISpXiWtHZP7",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6d"
@@ -9759,7 +9880,8 @@
 			"base_weight": "1 lb",
 			"weapons": [
 				{
-					"id": "WQ-u1tZbShmuqeP5G",
+					"id": "W2J2PnCcUxeK_DE4R",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "2d"
@@ -9784,7 +9906,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -10025,7 +10147,8 @@
 			"base_weight": "7 lb",
 			"weapons": [
 				{
-					"id": "Wl-MWs3zcjvo41fde",
+					"id": "WHv69R0wEYB9M1YQ1",
+					"sv": 1,
 					"damage": {
 						"type": "pi",
 						"base": "6d+1"
@@ -10050,7 +10173,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -10256,7 +10379,8 @@
 			"base_weight": "1 lb",
 			"weapons": [
 				{
-					"id": "WxTB35A5IXvfJHI2B",
+					"id": "WkNKfe6nttsxHkxZm",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "1d-1",
@@ -10282,7 +10406,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -10509,6 +10633,7 @@
 			"weapons": [
 				{
 					"id": "WDl3f61AjmJfg2bSz",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6dx5"
@@ -10619,6 +10744,7 @@
 			"weapons": [
 				{
 					"id": "wAkWWNcg4waA-Ix-n",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"base": "4d",
@@ -11222,6 +11348,7 @@
 			"weapons": [
 				{
 					"id": "w4NNNQdaLth4lxvy5",
+					"sv": 1,
 					"damage": {
 						"type": "cr",
 						"st": "thr"
@@ -11375,6 +11502,7 @@
 			"weapons": [
 				{
 					"id": "wkDTWnNvYkzOVmqqE",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw",
@@ -11419,6 +11547,7 @@
 				},
 				{
 					"id": "w69FCKa_hMFlWqb1M",
+					"sv": 1,
 					"damage": {
 						"type": "imp",
 						"st": "thr"
@@ -11462,6 +11591,7 @@
 				},
 				{
 					"id": "W7buXRAKTUzdO0_WB",
+					"sv": 1,
 					"damage": {
 						"type": "imp",
 						"st": "thr"
@@ -11685,6 +11815,7 @@
 			"weapons": [
 				{
 					"id": "WPA0uIcWflv8uDIrW",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "5d",
@@ -11753,6 +11884,7 @@
 			"weapons": [
 				{
 					"id": "WkNDs4Hriojm_EOY0",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "3d",
@@ -11821,6 +11953,7 @@
 			"weapons": [
 				{
 					"id": "WXJmI1K9BvWGxIMx9",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "6d",
@@ -11889,6 +12022,7 @@
 			"weapons": [
 				{
 					"id": "WmSQYtE4ZluecY-CG",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "5d",
@@ -12134,7 +12268,8 @@
 			"base_weight": "15 lb",
 			"weapons": [
 				{
-					"id": "Wr6uPhGEhL6AYEkUb",
+					"id": "WgxeCflNkc7jh6ECD",
+					"sv": 1,
 					"damage": {
 						"type": "pi",
 						"base": "6d"
@@ -12159,7 +12294,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -12259,7 +12394,8 @@
 			"base_weight": "3 lb",
 			"weapons": [
 				{
-					"id": "WXk0ngjyMhgzgxKEL",
+					"id": "W9gTxMQlzBEYjpejI",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "3d"
@@ -12284,7 +12420,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -12439,7 +12575,8 @@
 			"base_weight": "1 lb",
 			"weapons": [
 				{
-					"id": "WPUCHz0qO2PJK7wTx",
+					"id": "W5qFu4f80orj6n1PP",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d+1"
@@ -12464,7 +12601,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -12992,7 +13129,8 @@
 			"base_weight": "2 lb",
 			"weapons": [
 				{
-					"id": "WIyZAGejUaVObNSfN",
+					"id": "WA88RvXyCp0wpctZ7",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "2d+2"
@@ -13017,7 +13155,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -13601,6 +13739,7 @@
 			"weapons": [
 				{
 					"id": "wMozXy86TtS35muJ2",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "1d+2",
@@ -13697,6 +13836,7 @@
 			"weapons": [
 				{
 					"id": "WiN3NmbI7P2YPp8hh",
+					"sv": 1,
 					"damage": {
 						"type": "pi",
 						"base": "6d"
@@ -13757,6 +13897,7 @@
 			"weapons": [
 				{
 					"id": "Wm7AFJ51dyT2Ez1rY",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6dx5"
@@ -13959,6 +14100,7 @@
 			"weapons": [
 				{
 					"id": "WP13MEntlj2g7gyIN",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "1d"
@@ -14014,6 +14156,7 @@
 			"weapons": [
 				{
 					"id": "WSU3Z8MuEvMsxi_Ye",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6dx2"
@@ -14259,6 +14402,7 @@
 			"weapons": [
 				{
 					"id": "W4YTDNQpVnFBxTkEn",
+					"sv": 1,
 					"damage": {
 						"type": "HT-4 aff (1 yd)"
 					},
@@ -14318,6 +14462,7 @@
 			"weapons": [
 				{
 					"id": "W9EirBJK01ACwoF2b",
+					"sv": 1,
 					"damage": {
 						"type": "HT-3 aff (1 yd)"
 					},
@@ -14397,7 +14542,8 @@
 			"base_weight": "5 lb",
 			"weapons": [
 				{
-					"id": "WM2UilOKUda17d3hY",
+					"id": "W3pFNahAVkpjAFKVC",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "2d"
@@ -14422,7 +14568,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -14457,7 +14603,8 @@
 			"base_weight": "1 lb",
 			"weapons": [
 				{
-					"id": "Wq4BZaxJjcoKFTmFk",
+					"id": "Wvsa3N1fuGBhrZtxr",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "1d+2"
@@ -14482,7 +14629,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -14713,6 +14860,7 @@
 			"weapons": [
 				{
 					"id": "WT57kdjU7I_GRqU8l",
+					"sv": 1,
 					"damage": {
 						"type": "Special"
 					},
@@ -14862,7 +15010,8 @@
 			"base_weight": "4 lb",
 			"weapons": [
 				{
-					"id": "Wmz5wTDe7mbC5a0f_",
+					"id": "W62XrrSjGFWFMvI0v",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "1d-4"
@@ -14887,7 +15036,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -14921,7 +15070,8 @@
 			"base_weight": "1 lb",
 			"weapons": [
 				{
-					"id": "W6_L_CL3G1SG_ocWT",
+					"id": "WQgj1tDDAm27DXxuE",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "1d-4"
@@ -14946,7 +15096,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -15004,7 +15154,8 @@
 			"base_weight": "12 lb",
 			"weapons": [
 				{
-					"id": "WmslK1b7jgyrLMfMz",
+					"id": "WdY7Z4_4pWgx1vcs6",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "2d"
@@ -15029,7 +15180,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -15064,7 +15215,8 @@
 			"base_weight": "38 lb",
 			"weapons": [
 				{
-					"id": "Wa0ic7ftdXg4HhxrZ",
+					"id": "WRsiVIrmv0RV90e97",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "10d"
@@ -15089,7 +15241,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -15196,7 +15348,8 @@
 			"base_weight": "4.5 lb",
 			"weapons": [
 				{
-					"id": "WBSm37d1yHqNV-Enz",
+					"id": "WMFIlLNRSWSl7lNpx",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "4d"
@@ -15221,7 +15374,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -15464,6 +15617,7 @@
 			"weapons": [
 				{
 					"id": "W04e5FT9fHYs5_oe2",
+					"sv": 1,
 					"damage": {
 						"type": "burn ex",
 						"base": "6dx25",
@@ -15550,6 +15704,7 @@
 			"weapons": [
 				{
 					"id": "wnxzPI2MDpsiDGk30",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "2d",
@@ -15644,6 +15799,7 @@
 			"weapons": [
 				{
 					"id": "wKo-OswKt-WkhOtrl",
+					"sv": 1,
 					"damage": {
 						"type": "Spec"
 					},
@@ -15714,6 +15870,7 @@
 			"weapons": [
 				{
 					"id": "WCsf-8CJs0L5Kg9VT",
+					"sv": 1,
 					"damage": {
 						"type": "spec."
 					},
@@ -15986,6 +16143,7 @@
 			"weapons": [
 				{
 					"id": "WPE5kx4hDYqeuiSy6",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "3dx5",
@@ -16073,6 +16231,7 @@
 			"weapons": [
 				{
 					"id": "WLEnVCl49GT_T3Nz7",
+					"sv": 1,
 					"damage": {
 						"type": "HT-3 aff (1 yd)"
 					},
@@ -16132,6 +16291,7 @@
 			"weapons": [
 				{
 					"id": "WbSSPPkeFQ_LxI6rc",
+					"sv": 1,
 					"damage": {
 						"type": "Special"
 					},
@@ -16187,7 +16347,8 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "WikvK6AIxIm1W9VLE",
+					"id": "WLCpD8qt2qJ9AQleW",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "5dx3",
@@ -16213,7 +16374,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -17037,6 +17198,7 @@
 			"weapons": [
 				{
 					"id": "WEllS-Kuc1-GYZvAB",
+					"sv": 1,
 					"damage": {
 						"type": "HT-4 aff (1 yd)"
 					},
@@ -17192,6 +17354,7 @@
 			"weapons": [
 				{
 					"id": "WC9YyamlTqErRTtgK",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6dx25",
@@ -18379,6 +18542,7 @@
 			"weapons": [
 				{
 					"id": "WLDOWL-VygAnqq3ZX",
+					"sv": 1,
 					"damage": {
 						"type": "cr ex",
 						"base": "2d",
@@ -18661,6 +18825,7 @@
 			"weapons": [
 				{
 					"id": "WFsDlSfssi88x34IK",
+					"sv": 1,
 					"damage": {
 						"type": "HT-2 aff (1 yd)"
 					},
@@ -18720,6 +18885,7 @@
 			"weapons": [
 				{
 					"id": "WvXg2_Vysis9GDmkJ",
+					"sv": 1,
 					"damage": {
 						"type": "cor (1yd)",
 						"base": "4d"
@@ -18780,6 +18946,7 @@
 			"weapons": [
 				{
 					"id": "WE3OcZ1sv87JQpyDB",
+					"sv": 1,
 					"damage": {
 						"type": "cor (1yd)",
 						"base": "3d"
@@ -18841,6 +19008,7 @@
 			"weapons": [
 				{
 					"id": "WFzxE5xVhXTsJ3pK8",
+					"sv": 1,
 					"damage": {
 						"type": "HT-8 (2) aff"
 					},
@@ -18879,6 +19047,7 @@
 				},
 				{
 					"id": "Wcx0504F2zDCe4Q9c",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "1d-3"
@@ -18918,6 +19087,7 @@
 			"weapons": [
 				{
 					"id": "WXXJDuVAe0BCTbMlp",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "6dx3"
@@ -18978,7 +19148,8 @@
 			"base_weight": "70 lb",
 			"weapons": [
 				{
-					"id": "WRmBPjJTyl56lBCkX",
+					"id": "W3w3Ey8GdA1tvIYoE",
+					"sv": 1,
 					"damage": {
 						"type": "burn, sur",
 						"base": "6dx2",
@@ -18990,7 +19161,7 @@
 					"rate_of_fire": "3",
 					"shots": "20(5)",
 					"bulk": "-10",
-					"recoil": "1",
+					"recoil": "3",
 					"defaults": [
 						{
 							"type": "skill",
@@ -19089,6 +19260,7 @@
 			"weapons": [
 				{
 					"id": "W7UoqFjb21t6kN9hj",
+					"sv": 1,
 					"damage": {
 						"type": "burn ex",
 						"base": "20d",
@@ -19365,7 +19537,8 @@
 			"base_weight": "4 lb",
 			"weapons": [
 				{
-					"id": "WN9OJEsrETXYx7gjK",
+					"id": "WTW-J_xgbmWpxeKj6",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d"
@@ -19390,7 +19563,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -19715,6 +19888,7 @@
 			"weapons": [
 				{
 					"id": "wK8YZNM5ZbUtliofs",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw",
@@ -19759,6 +19933,7 @@
 				},
 				{
 					"id": "wW9UeVyHjRWqQi6lD",
+					"sv": 1,
 					"damage": {
 						"type": "imp",
 						"st": "thr",
@@ -19803,6 +19978,7 @@
 				},
 				{
 					"id": "WTniTg0Tayl-fmoUR",
+					"sv": 1,
 					"damage": {
 						"type": "imp",
 						"st": "thr",
@@ -20173,6 +20349,7 @@
 			"weapons": [
 				{
 					"id": "W4K9WYuLAUouoQANF",
+					"sv": 1,
 					"damage": {
 						"type": "pi",
 						"base": "6dx2",
@@ -20354,6 +20531,7 @@
 			"weapons": [
 				{
 					"id": "WTH2O33InRSmtyXXz",
+					"sv": 1,
 					"damage": {
 						"type": "HT-1(5) aff"
 					},
@@ -20419,6 +20597,7 @@
 			"weapons": [
 				{
 					"id": "WfTLbaxc6C8Qrb0Vy",
+					"sv": 1,
 					"damage": {
 						"type": "HT-8(5) aff"
 					},
@@ -20478,6 +20657,7 @@
 			"weapons": [
 				{
 					"id": "WxWF4TBS17Di4F5Gb",
+					"sv": 1,
 					"damage": {
 						"type": "HT-3(5) aff"
 					},
@@ -20543,6 +20723,7 @@
 			"weapons": [
 				{
 					"id": "WJWfcUqBnt83q8vyT",
+					"sv": 1,
 					"damage": {
 						"type": "HT-4(5) aff"
 					},
@@ -20608,6 +20789,7 @@
 			"weapons": [
 				{
 					"id": "W2eYcebbYgwbQI8Ad",
+					"sv": 1,
 					"damage": {
 						"type": "HT-2(5) aff"
 					},
@@ -20962,6 +21144,7 @@
 			"weapons": [
 				{
 					"id": "WgTYPCaErr_5xfWBs",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "3d+2"
@@ -21044,6 +21227,7 @@
 			"weapons": [
 				{
 					"id": "WCp9-x0oMWS59lf9u",
+					"sv": 1,
 					"damage": {
 						"type": "spec. (1 yd.)"
 					},
@@ -21097,6 +21281,7 @@
 			"weapons": [
 				{
 					"id": "Wkpf-uU1rTQvzWw1N",
+					"sv": 1,
 					"damage": {
 						"type": "spec. (1 yd.)"
 					},
@@ -21199,7 +21384,8 @@
 			"base_weight": "8 lb",
 			"weapons": [
 				{
-					"id": "WuDe52IAnieYLB8Nc",
+					"id": "WuD9exZcu4Lm7rZMq",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "7d"
@@ -21224,7 +21410,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -21259,7 +21445,8 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "W8eXxv5UxY9WvI0sa",
+					"id": "WdtGljbRpzEf4rJ9I",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "9d"
@@ -21284,7 +21471,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -21319,7 +21506,8 @@
 			"base_weight": "10 lb",
 			"weapons": [
 				{
-					"id": "WETO-RkvT207Z7QHn",
+					"id": "WKHMi2xmiScNl55jE",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "9d"
@@ -21344,7 +21532,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -21381,6 +21569,7 @@
 			"weapons": [
 				{
 					"id": "W3mYz7k-9Wpeq8yIn",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "6dx5",
@@ -21816,7 +22005,8 @@
 			"base_weight": "5 lb",
 			"weapons": [
 				{
-					"id": "W3zEn6ZBU0q9pfi5R",
+					"id": "WMQH8q5rTkmju5oeC",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "1d"
@@ -21841,7 +22031,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -21875,7 +22065,8 @@
 			"base_weight": "2 lb",
 			"weapons": [
 				{
-					"id": "WpHOoZ4ilaX3WaTwv",
+					"id": "WFuiSmfDJcXADpMT4",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "1d"
@@ -21900,7 +22091,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -22106,6 +22297,7 @@
 			"weapons": [
 				{
 					"id": "wt1oc-a23FWnQtFcn",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw",
@@ -22141,6 +22333,7 @@
 				},
 				{
 					"id": "WCrhAud90OfeVFHzq",
+					"sv": 1,
 					"damage": {
 						"type": "cut",
 						"st": "sw",
@@ -22293,6 +22486,7 @@
 			"weapons": [
 				{
 					"id": "WAW5U1oy3ZI7PntT9",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6dx50"
@@ -22607,6 +22801,7 @@
 			"weapons": [
 				{
 					"id": "WQA6VjV7t_xfTpeXr",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d"
@@ -22667,6 +22862,7 @@
 			"weapons": [
 				{
 					"id": "W9NnStbYQgH__A6wO",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d"
@@ -22727,6 +22923,7 @@
 			"weapons": [
 				{
 					"id": "WUZjIbTunWeNBPYvk",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "1d"
@@ -22787,6 +22984,7 @@
 			"weapons": [
 				{
 					"id": "W7yB0b3Ld7nX3D0De",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "6d"
@@ -22846,7 +23044,8 @@
 			"base_weight": "4 lb",
 			"weapons": [
 				{
-					"id": "WFeGh8kM7FXWJq9eZ",
+					"id": "WTcLzZkBkbxsaqLgq",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d"
@@ -22870,7 +23069,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -22905,7 +23104,8 @@
 			"base_weight": "8 lb",
 			"weapons": [
 				{
-					"id": "WEYQHmvQ4VLPhSwxz",
+					"id": "W3dbKy1UW9E3-nSbw",
+					"sv": 1,
 					"damage": {
 						"type": "pi+",
 						"base": "3d"
@@ -22931,7 +23131,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -22939,7 +23139,8 @@
 					}
 				},
 				{
-					"id": "WKD_MPvClLtkbRxkn",
+					"id": "WEyrXAKL9pJ6TOxDg",
+					"sv": 1,
 					"damage": {
 						"type": "pi++",
 						"base": "4d+4"
@@ -22965,7 +23166,7 @@
 						{
 							"type": "skill",
 							"name": "Guns",
-							"modifier": -4
+							"modifier": -2
 						}
 					],
 					"calc": {
@@ -23322,6 +23523,7 @@
 			"weapons": [
 				{
 					"id": "W1gwNLlXA1r0idwe5",
+					"sv": 1,
 					"damage": {
 						"type": "pi-",
 						"base": "1d-2"
@@ -23406,6 +23608,7 @@
 			"weapons": [
 				{
 					"id": "wjxw4bryMuFzXWi-Y",
+					"sv": 1,
 					"damage": {
 						"type": "HT-6(2) aff"
 					},
@@ -23435,6 +23638,7 @@
 				},
 				{
 					"id": "wady4nit1K50Rfhdi",
+					"sv": 1,
 					"damage": {
 						"type": "burn",
 						"base": "2d"

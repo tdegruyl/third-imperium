@@ -373,6 +373,12 @@ Zhodani (Native), 0, cat(Cultural Familiarity, Social Background), gives(+1 to S
 #ReplaceTags in "AD:Trading Character Points for Money" with gives(+25000 to ST:Money, +25000 to ST:Remaining Funds)
 Signature Gear ([Gear]), 1, cat(Mundane, Social, Perks, Mundane Social)
 
+Weapon Bond, 1, 
+	cat(Mundane, Mental, Mundane Mental, Perks),
+	page(DFRPG:A54), 
+	x(_
+		#message("Note: You will need to add the '_Perk: Weapon Bond' modifier to the specific weapon which receives a bonus from Weapon Bond in order for the skill level to be increased on the Weapon Table." )_
+	)
 <Mundane Mental>
 //  Talents
 Born Tactician, 10/20, upto(4), gives(+1 to GR:Born Tactician), conditional(+1 to ST:Reaction), page(T:IW135), cat(Talents),_
@@ -418,6 +424,8 @@ Mechanic (Starship), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (S
 Mechanic (Jump Drive), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Jump Drive)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 Mechanic (Reactionless Drive), IQ/A, tl(9-12), page(B207), default(IQ - 5, "SK:Engineer (Reactionless Drive)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
 Mechanic (Contragravity), IQ/A, tl(10-12), page(B207), default(IQ - 5, "SK:Engineer (Reactionless Drive)" - 4, SK:Machinist - 5, SK:Mechanic - 4), cat(_General, Repair/Maintenance)
+
+#ReplaceTags in "SK:Brawling" with description()
 
 
 [TEMPLATES]
@@ -2097,17 +2105,26 @@ Envirobag, tl(10), baseweight(2), basecost(80), page(UT75)
 Expedition Backpack, displaycost(350), displayweight(50), techlevel(11), basecost(350), baseweight(5), isparent(yes), weightcapacity(100)
 Filtration Canteen, baseweight(3), basecost(180), page(UT75)
 Food Tablets (1 day), baseweight(0.75), basecost(10), page(UT73)
-IISS Air Mask, baseweight(4), basecost(500), description(includes 60 minutes of air), page(GT112), dr(10), location(face,eye)
+IISS Air Mask, baseweight(4), basecost(500), description(includes 60 minutes of air), page(GT112), dr(10), location(face, eyes)
 
 <Traveller, Traveller - Armor>
 IISS Uniform, basecost(1100), dr(16), baseweight(4.2), tl(11), location(torso, neck, skull, arms, legs, hands, feet, groin)
+IISS Vacc Suit, basecost(40630), dr(30), location(All)
 
 <Traveller, Traveller - Miscellaneous - Tools>
 Medscanner,baseweight(0.5), basecost(750), page(TFI28)
 Mini-Toolkit, baseweight(4), basecost(200), page (UT82)
-Small Computer, baseweight(0.5), basecost(100), page(UT22), description(Complexity 4, 10TB) 
-Compact Personal Computer, baseweight(2.5), basecost(2000), page(UT22), description(Complexity 7, 100PB) 
+Small Computer, baseweight(0.5), basecost(100), page(UT22), tl(11), description(Complexity 7, 10 exabyte storage), isparent(yes)
+Small Genius Computer, baseweight(0.5), basecost(50000), page(UT22), tl(11), description(Complexity 9, 10 exabyte storage), isparent(yes) 
+Compact Personal Computer, baseweight(2.5), basecost(2000), page(UT22), description(Complexity 7, 100PB), tl(10), isparent(yes) 
+
+<Traveller, Traveller - Miscellaneous, Traveller - Software>
 Universal Translator Program, tl(11), basecost(2000), description(Dedicated AI program, C9)
+Targeting Program (Beam - Rifle), tl(10), basecost(150), description(Complexity 4), gives(+2 to SK:Beam Weapoins (Rifle)), tl(9)
+Targeting Program (Beam - Pistol), tl(10), basecost(150), description(Complexity 4), gives(+2 to SK:Beam Weapons (Pistol)), tl(9)
+Targeting Program (Guns - Rifle), tl(10), basecost(150), description(Complexity 4), gives(+2 to SK:Guns (Rifle)), tl(9)
+Targeting Program (Guns - Pistol), tl(10), basecost(150), description(Complexity 4), gives(+2 to SK:Guns (Pistol)), tl(9)
+
 <Traveller,Traveller - Miscellaneous, Traveller - Miscellaneous - Survival>
 Air-Tank, page(T112), baseweight(10), techlevel(9), basecost(100)
 Advanced Rebreather, page(T112), baseweight(1), techlevel(10), basecost(200)
@@ -2181,7 +2198,6 @@ Heavy Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT1
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:10 LC:3 Ammo:Dp Damage:4d (2) burn Acc:6 Range:300/900 RoF:10 Shots:(33) ST:6 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
 	damage(4d), armordivisor(2), damtype(burn), minst(6), rangehalfdam(300), rangemax(900), acc(4), rof(10), uses(33), shots(33(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), basecost(1100), baseweight(1.5), techlvl(10), mods(Equipment, Beams, Laser), lc(3),_
 	itemnotes(_
@@ -2189,7 +2205,6 @@ Laser Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT115), b
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:10 LC:3 Ammo:Dp Damage:3d (2) burn Acc:6 Range:200/600 RoF:10 Shots:66(3) ST:4 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
 	damage(3d), armordivisor(2), damtype(burn), minst(4), rangehalfdam(200), rangemax(600), acc(6), rof(10), uses(66), shots(66(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Assault Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(10000), baseweight(10), techlvl(9), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
@@ -2197,7 +2212,6 @@ Assault Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), 
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:9 LC:2 Ammo:Ep Damage:4d (2) burn Acc:6+1 Range:700/2100 RoF:1 Shots:80(5) ST:7†  Bulk:-5 Rcl:1 Skill:Beam Weapons (Rifle)),_
 	damage(4d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+1), rof(1), uses(80), shots(80(5)), rcl(1), bulk(-5), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Sniper Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(20000), baseweight(20), techlvl(9), mods(Equipment, Beams, Laser), lc(1),_
 	itemnotes(_
@@ -2205,7 +2219,6 @@ Laser Sniper Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT1
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:9 LC:1 Ammo:Ep Damage:5d (2) burn Acc:8+2 Range:1100/3300 RoF:1 Shots:200(5) ST:10†  Bulk:-8 Rcl:1 Skill:Beam Weapons (Rifle)),_
 	damage(5d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1100), rangemax(3300), acc(8+2), rof(1), uses(40), shots(40(5)), rcl(1), bulk(-8), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Dinosaur Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116), basecost(19000), baseweight(19), techlvl(10), mods(Equipment, Beams, Laser), lc(1),_
 	itemnotes(_
@@ -2213,7 +2226,6 @@ Dinosaur Laser, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT116),
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:10 LC:1 Ammo:Ep Damage:8d (2) burn Acc:6 Range:1300/3900 RoF:1 Shots:35(5) ST:10†  Bulk:-5 Rcl:1 Skill:Beam Weapons (Rifle)),_
 	damage(8d), armordivisor(2), damtype(burn), minst(10† ), rangehalfdam(1300), rangemax(3900), acc(6), rof(1), uses(70), shots(70(5)), rcl(1), bulk(-5), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), basecost(4600), baseweight(5.6), techlvl(10), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
@@ -2221,7 +2233,6 @@ Laser Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), 
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:10 LC:2 Ammo:2Dp Damage:5d (2) burn Acc:6 Range:500/1500 RoF:10 Shots:56(3) ST:5†  Bulk:-3 Rcl:1 Skill:Beam Weapons (Rifle)),_
 	damage(5d), armordivisor(2), damtype(burn), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5), rof(10), uses(56), shots(56(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), basecost(8000), baseweight(8), techlvl(10), mods(Equipment, Beams, Laser), lc(2),_
 	itemnotes(_
@@ -2229,7 +2240,6 @@ Laser Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT116), ba
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:10 LC:2 Ammo:Dp Damage:6d (2) burn Acc:6 Range:700/2100 RoF:10 Shots:83(5) ST:7†  Bulk:-4 Rcl:1 Skill:Beam Weapons (Rifle)),_
 	damage(6d), armordivisor(2), damtype(burn), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6), rof(10), uses(83), shots(83(5)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 
 
@@ -2240,64 +2250,56 @@ Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), 
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:3 Ammo:Dp Damage:3d (5) burn sur Acc:5 Range:300/900 RoF:3 Shots:80(3) ST:4 Bulk:-2 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(3d), armordivisor(5), damtype(burn sur), minst(4), rangehalfdam(300), rangemax(900), acc(5), rof(3), uses(80), shots(80(3)), rcl(1), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(3d), armordivisor(5), damtype(burn sur), minst(4), rangehalfdam(300), rangemax(900), acc(5), rof(3), uses(80), shots(80(3)), rcl(2), bulk(-2), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Heavy Fusion Pistol, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(2Dp), page(UT123), basecost(5600), baseweight(3.3), techlvl(11), mods(Equipment, Beams), lc(3),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:3 Ammo:2Dp Damage:4d (5) burn sur Acc:5 Range:500/1500 RoF:3 Shots:66(3) ST:6 Bulk:-3 Rcl:1 Skill:Beam Weapons (Pistol)),_
-	damage(4d), armordivisor(5), damtype(burn sur), minst(6), rangehalfdam(500), rangemax(1500), acc(5), rof(3), uses(66), shots(66(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
+	damage(4d), armordivisor(5), damtype(burn sur), minst(6), rangehalfdam(500), rangemax(1500), acc(5), rof(3), uses(66), shots(66(3)), rcl(3), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Pistol), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Pistol)-4)
 Fusion Carbine, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(9200), baseweight(5.6), techlvl(11), mods(Equipment, Beams), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:2 Ammo:Dp Damage:5d (5) burn sur Acc:5+1 Range:500/1500 RoF:3 Shots:34(3) ST:5†  Bulk:-3 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(5d), armordivisor(5), damtype(burn sur), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5+1), rof(3), uses(34), shots(34(3)), rcl(1), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(5d), armordivisor(5), damtype(burn sur), minst(5† ), rangehalfdam(500), rangemax(1500), acc(5+1), rof(3), uses(34), shots(34(3)), rcl(3), bulk(-3), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(18000), baseweight(10), techlvl(11), mods(Equipment, Beams), lc(2),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:2 Ammo:Dp Damage:6d (5) burn sur Acc:6+2 Range:700/2100 RoF:3 Shots:20(3) ST:7†  Bulk:-4 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(6d), armordivisor(5), damtype(burn sur), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+2), rof(3), uses(20), shots(20(3)), rcl(1), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(6d), armordivisor(5), damtype(burn sur), minst(7† ), rangehalfdam(700), rangemax(2100), acc(6+2), rof(3), uses(20), shots(20(3)), rcl(3), bulk(-4), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Heavy Fusion Rifle, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Dp), page(UT123), basecost(40000), baseweight(20), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:1 Ammo:Dp Damage:8d (5) burn sur Acc:6+4 Range:1200/3600 RoF:3 Shots:15(5) ST:10†  Bulk:-6 Rcl:1 Skill:Beam Weapons (Rifle)),_
-	damage(8d), armordivisor(5), damtype(burn sur), minst(10† ), rangehalfdam(1200), rangemax(3600), acc(6+4), rof(3), uses(15), shots(15(5)), rcl(1), bulk(-6), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
+	damage(8d), armordivisor(5), damtype(burn sur), minst(10† ), rangehalfdam(1200), rangemax(3600), acc(6+4), rof(3), uses(15), shots(15(5)), rcl(3), bulk(-6), skillused(SK:Gun!, SK:Beam Weapons (Rifle), ST:DX-4, SK:Beam Weapons (Pistol)-4, SK:Beam Weapons (Projector)-4, SK:Beam Weapons (Rifle)-4, SK:Guns (Rifle)-4)
 Fusion Cannon (TL10), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page(UT123), basecost(2000000), baseweight(4000), techlvl(10), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:10 LC:1 Ammo:10Fp Damage:5dx10 (5) burn sur Acc:15 Range:30000/90000 RoF:1 Shots:20(5) ST:160M Bulk:-10 Rcl:1 Skill:Gunner (Beams)),_
-	damage(5dx10), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(30000), rangemax(90000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(5dx10), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(30000), rangemax(90000), acc(15), rof(1), uses(20), shots(20(5)), rcl(4), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 Fusion Cannon (TL11), cat(Ultra-Tech, Ultra-Tech - Weapons), battery(10Fp), page(UT123), basecost(2000000), baseweight(4000), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:1 Ammo:10Fp Damage:5dx20 (5) burn sur Acc:15 Range:120000/360000 RoF:1 Shots:20(5) ST:160M Bulk:-10 Rcl:1 Skill:Gunner (Beams)),_
-	damage(5dx20), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(120000), rangemax(360000), acc(15), rof(1), uses(20), shots(20(5)), rcl(1), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(5dx20), armordivisor(5), damtype(burn sur), minst(160M), rangehalfdam(120000), rangemax(360000), acc(15), rof(1), uses(20), shots(20(5)), rcl(5), bulk(-10), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), page(UT123), basecost(140000), baseweight(70), techlvl(11), mods(Equipment, Beams), lc(1),_
 	itemnotes(_
 				{Power cell is worn as a separate belt or backpack, and that its weight is not included.},_
 				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).}_
 			),_
         isparent(yes),_
-	description(TL:11 LC:1 Ammo:Ep Damage:6dx2 (5) burn sur Acc:15 Range:2800/8400 RoF:3 Shots:50(5) ST:18M Bulk:-8 Rcl:1 Skill:Gunner (Beams)),_
-	damage(6dx2), armordivisor(5), damtype(burn sur), minst(18M), rangehalfdam(2800), rangemax(8400), acc(15), rof(3), uses(50), shots(50(5)), rcl(1), bulk(-8), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
+	damage(6dx2), armordivisor(5), damtype(burn sur), minst(18M), rangehalfdam(2800), rangemax(8400), acc(15), rof(3), uses(50), shots(50(5)), rcl(3), bulk(-8), skillused(SK:Gun!, SK:Gunner (Beams), ST:DX-4, SK:Gunner (Beams)-4, SK:Gunner (Cannon)-4, SK:Gunner (Catapult)-4, SK:Gunner (Machine Gun)-4, SK:Gunner (Rockets)-4)
 
 
 #ReplaceTags in AD:Arm ST with _
@@ -2307,7 +2309,17 @@ Semi-Portable Fusion Gun, cat(Ultra-Tech, Ultra-Tech - Weapons), battery(Ep), pa
     parry(0), 
     damage( $if(@hasmod(One Arm) THEN @thr(ST:One Arm Striking ST::score) ELSE $if(@hasmod(Two Arms) THEN @thr(ST:Two Arm Striking ST::score) ELSE $if(@hasmod(Three Arms) THEN @thr(ST:Three Arm Striking ST::score) ELSE 0)))-1 + @if("AD:Claws (Blunt Claws)::level" = 1 then @basethdice(ST:Punch) else @if("AD:Claws (Long Talons)::level" = 1 then @basethdice(ST:Punch) else 0)) + @max( @if("SK:Brawling::level" > ST:DX+1 then @basethdice(ST:Punch) ELSE 0), @if("SK:Boxing::level" = ST:DX+1 then @basethdice(ST:Punch) ELSE @if("SK:Boxing::level" > ST:DX+1 then 2 * @basethdice(ST:Punch) ELSE 0)), @if("SK:Karate::level" = ST:DX then @basethdice(ST:Punch) ELSE @if("SK:Karate::level" > ST:DX then 2 * @basethdice(ST:Punch) ELSE 0)))),_
     damtype( $if("AD:Claws (Sharp Claws)::level" = 1 THEN "cut" ELSE $if("AD:Claws (Talons)::level" = 1 THEN "cut/imp" ELSE $if("AD:Claws (Long Talons)::level" = 1 THEN "cut/imp" ELSE "cr"))))
-#ReplaceTags in SK:Judo with parryat(@int(%level/2)+3), mode(Grappling),damagebasedon(ST:Lifting ST),damage(thr+@IF(SK:Judo >= ST:DX+10 THEN 2 * @basethdice(ST:Lifting ST) ELSEIF SK:Judo >= ST:DX+4 THEN @basethdice(ST:Lifting ST) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Judo, DX)
-#ReplaceTags in SK:Sumo Wrestling with parryat(@int(%level/2)+3),mode(Grappling|Slam),damage(@THR(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Sumo Wrestling >= ST:DX+7 THEN 2 * @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Sumo Wrestling >= ST:DX+2 THEN @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )|@THR(ST:ST+@IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0) )-2),damtype(control|cr),parry(0|),reach(C|C),skillused(SK:Sumo Wrestling, DX|SK:Sumo Wrestling, DX)
-#ReplaceTags in SK:Wrestling with parryat(@int(%level/2)+3),mode(Grappling),damage(@THR(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Wrestling >= ST:DX+4 THEN 2 * @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Wrestling >= ST:DX+1 THEN @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )),damtype(control),parry(0),reach(C),skillused(SK:Wrestling, DX)
+#ReplaceTags in SK:Judo with parryat(@int(%level/2)+3), mode(Grappling),damagebasedon(ST:Lifting ST),damage(thr+@IF(SK:Judo >= ST:DX+10 THEN 2 * @basethdice(ST:Lifting ST) ELSEIF SK:Judo >= ST:DX+4 THEN @basethdice(ST:Lifting ST) ELSE 0 )),damtype(ctrl),parry(0),reach(C),skillused(SK:Judo, DX)
+#ReplaceTags in SK:Sumo Wrestling with parryat(@int(%level/2)+3),mode(Grappling|Slam),damage(@THR(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Sumo Wrestling >= ST:DX+7 THEN 2 * @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Sumo Wrestling >= ST:DX+2 THEN @basethdice(ST:Lifting ST + @IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )|@THR(ST:ST+@IF(SK:Sumo Wrestling >= ST:DX+1 THEN 1 ELSE 0) )-2),damtype(ctrl|cr),parry(0|),reach(C|C),skillused(SK:Sumo Wrestling, DX|SK:Sumo Wrestling, DX)
+#ReplaceTags in SK:Wrestling with parryat(@int(%level/2)+3),mode(Grappling),damage(@THR(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) + @IF(SK:Wrestling >= ST:DX+4 THEN 2 * @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSEIF SK:Wrestling >= ST:DX+1 THEN @basethdice(ST:Lifting ST+@IF(SK:Wrestling >= ST:DX+2 THEN 2 ELSEIF SK:Wrestling >= ST:DX+1 THEN 1 ELSE 0)) ELSE 0 )),damtype(ctrl),parry(0),reach(C),skillused(SK:Wrestling, DX)
+
+[MODIFIERS]
+<Melee Quality>
+Balanced, +4 CF, gives(=+1 to owner::skillscore), page(DF1:26), group(Melee Quality), shortname(Balanced)
+_Perk: Weapon Bond, +0, gives(+1 to owner::skillscore), group(Melee Quality), page(F132, HT250, MA53, PU2:9, DF1:14), shortname(Weapon Bond)
+
+<Equipment>
+Gravfield Generator, +2000/+10000, shortname(Contragrav),_
+	gives(=-(owner::baseweight*(@indexedvalue(me::level,1,2) * 1/4)) to owner::baseweight),_
+	upto(2)
 
