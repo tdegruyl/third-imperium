@@ -50,8 +50,12 @@ ShowLC=yes
 DefaultTL=10
 
 [Attributes]
-Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000),page(PU5:17)
+#ReplaceTags in ST:Hit Points with hide(yes)
+Robustness Threshold, basevalue(@int(@IndexedValue(ST:Hit Points,-2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,10,10,10,10,10,10, 10,10,10,10,10,10,10,10,10,10, 10,10,10,10,10,10,10,10,10,10, 10,10,10,10,10,10,10,10,10,10, 11,11,11,11,11,11,11,11,11,11))), display(yes), mainwin(20), symbol(RT)
+Impulse Points, basevalue(3), step(1), up(10), down(-10), display(yes), minscore(0), maxscore(1000000),page(PU5:17),mainwin(21)
 #ReplaceTags in ST:ST with up(5), down(-5)
+#ReplaceTags in ST:Will with basevalue(10)
+#ReplaceTags in ST:Perception with basevalue(10)
 #Delete ST:Chip Slots
 
 [BODY]
@@ -141,7 +145,6 @@ name(Full Suit), group(Full Suit, Skin, All)
 name(Tail), group(Skin, All)
 name(Skin), group(Skin, All)
 name(All), group(All)
-
 
 [HitTables]
 
@@ -1301,7 +1304,7 @@ Floriani (Feskal),cat(Human Races),
 
 Geonee,cat(Human Races), 
     cost(0),
-    displaycost(19),
+    displaycost(21),
     race(Human (Geonee)),
     adds(_
         CU:Geonee (Native),
@@ -1313,7 +1316,7 @@ Geonee,cat(Human Races),
         {"QU:Strong group identity", -1},
         {"DI:Odious Racial Habit (Treats women as property)", -5, page (B22), gives(-1 to ST:Reaction)},
         {"DI:Delusion (We are the ancients)", -10, page(B130), gives(-2 to ST:Reaction)},
-        {"AD:Geonee Attribute Mods",26,gives(-2 to ST:Hit Points,+2 to ST:ST, +1 to ST:DX),hide(yes)}_
+        {"AD:Geonee Attribute Mods",28,gives(-2 to ST:Hit Points,+2 to ST:ST, +1 to ST:DX),hide(yes)}_
     ),
     noresync(no),
     page(TH68),owns(yes)
@@ -1578,7 +1581,7 @@ Ael Yael, cat(Non-human Races), cost(0), displaycost(-40), race(Ael Yael),
     noresync(no),page(TAR4:5),
     owns(yes)
 
-Aslan, cat(Non-human Races), cost(0), displaycost(3), race(Aslan), 
+Aslan, cat(Non-human Races), cost(0), displaycost(5), race(Aslan), 
     adds(_	
         AD:Acute Hearing = 3, 
         AD:Acute Taste and Smell = 3, 
@@ -1597,7 +1600,7 @@ Aslan, cat(Non-human Races), cost(0), displaycost(3), race(Aslan),
     ),
     creates(_
         {FE:Fur, 0},
-        {DI:Aslan Attribute Mods, -13, gives(+1 to ST:ST, -1 to ST:DX, +1 to ST:Hit Points),hide(yes)},
+        {DI:Aslan Attribute Mods, -11, gives(+1 to ST:ST, -1 to ST:DX, +2 to ST:Hit Points),hide(yes)},
         {DI:Code of Honor (Fteir), -15},
         {DI:Intolerance (Non-Aslan), -10},
         {DI:Obsession (Own Land), -10}_
@@ -1708,7 +1711,7 @@ Hlanssai, cat(Non-human Races), cost(0), displaycost(47), race(Hlanssai),
     noresync(no),page(TAR4:76),
     owns(yes)
 
-K'kree, cat(Non-human Races), cost(0), displaycost(-17), race(K'kree), 
+K'kree, cat(Non-human Races), cost(0), displaycost(-15), race(K'kree), 
     BodyType(Centaur),
     HitTable(Centaur),
     adds(_	
@@ -1727,7 +1730,7 @@ K'kree, cat(Non-human Races), cost(0), displaycost(-17), race(K'kree),
         LA:K'kree=3 with "Native Language, -6, gives(=+1 to ST:Native Languages)"_
     ),
     creates(_
-        {AD:K'kree Attribute Mods, 32, gives(+2 to ST:Size Modifier, +2 to ST:ST, -2 to ST:IQ, +6 to ST:Hit Points, -2 to Dodge, +20 to ST:Lifting ST, +10 to ST:Kick),hide(yes)},
+        {AD:K'kree Attribute Mods, 34, gives(+2 to ST:Size Modifier, +2 to ST:ST, -2 to ST:IQ, +7 to ST:Hit Points, -2 to Dodge, +20 to ST:Lifting ST, +10 to ST:Kick),hide(yes)},
         {DI:Fanaticism (Exterminate predators/carnivores), -15},
         {DI:Intolerance (all non-K'kree), -10},
         {DI:Severe Claustrophobia, -30},
@@ -1752,7 +1755,7 @@ K'kree (female), cat(Non-human Races), cost(0), displaycost(-47), race(K'kree),
     noresync(no),page(TAR2:64),
     owns(yes)
 
-Shrieker, cat(Non-human Races), cost(0), displaycost(-9), race(Shrieker), 
+Shrieker, cat(Non-human Races), cost(0), displaycost(-2), race(Shrieker), 
     adds(_	
         AD:Acute Vision=2,
         AD:Extra Legs (6 legs),
@@ -1769,7 +1772,7 @@ Shrieker, cat(Non-human Races), cost(0), displaycost(-9), race(Shrieker),
     ),
     creates(_
         {"DI:Poor Sense of Smell/Taste", -2, gives(-5 to ST:Taste/Smell)},
-        {"AD:Shrieker Attribute Mods", 30, gives( -3 to ST:Basic Move,+4 to ST:ST, +2 to ST:HT, +2 to ST:Hit Points),conditional(+2 to SK:Camouflage when "in tall grass"),hide(yes)},
+        {"AD:Shrieker Attribute Mods", 30, gives( -3 to ST:Basic Move,+5 to ST:ST, +2 to ST:HT, +3 to ST:Hit Points),conditional(+2 to SK:Camouflage when "in tall grass"),hide(yes)},
     ),
     noresync(no),page(TAR4:107),
     owns(yes)
@@ -2092,6 +2095,30 @@ _Basic Kit,
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Meta-Traits"
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Meta-Traits - Biomorphic Lenses"
 #DeleteByTag Templates, Text IgnoreEmpty, cat hasinlist "Racial Templates - Ultra-Tech"
+
+#ReplaceTags in "EQ:Gauss CAW, 18.5mm" with damage(10d), armordivisor(), damtype(pi++), description()
+#ReplaceTags in "EQ:Gauss HMG, 7mm" with damage(20d), armordivisor(), damtype(pi), description()
+#ReplaceTags in "EQ:Gauss LSW, 4mm" with damage(8d+2), armordivisor(), damtype(pi), description()
+#ReplaceTags in "EQ:Gauss Machine Pistol, 4mm" with damage(4d), armordivisor(), damtype(pi), description()
+#ReplaceTags in "EQ:Gauss Minigun, 4mm" with damage(13d), armordivisor(), damtype(pi), description()
+#ReplaceTags in "EQ:Gauss Minineedler, 3mm" with damage(2d), armordivisor(), damtype(pi-), description()
+#ReplaceTags in "EQ:Gauss Needle Rifle, 3mm" with damage(3d+1), armordivisor(), damtype(pi-), description()
+#ReplaceTags in "EQ:Gauss Pistol, 4mm" with damage(4d), armordivisor(), damtype(pi), description()
+#ReplaceTags in "EQ:Gauss Shotgun Pistol, 18.5mm" with damage(10d), armordivisor(), damtype(pi++), description()
+#ReplaceTags in "EQ:Portable Railgun, 10mm" with damage(5dx4), armordivisor(), damtype(pi+), description()
+#ReplaceTags in "EQ:Railgun, 40mm" with damage(6dx32), armordivisor(), damtype(pi++), description()
+#ReplaceTags in "EQ:Sniper Railgun, 7mm" with damage(6dx3), armordivisor(), damtype(pi), description()
+
+"Gauss Rifle, 4mm", cat(Ultra-Tech, Ultra-Tech - Weapons), page(UT142), basecost(7100), baseweight(8.5), techlvl(10), mods(Equipment, Guns), lc(2),_
+	itemnotes(_
+				{Includes ''smartgun'' electronics (see p. B278 and Ultra-Tech p. 149).},_
+				{Powered by a C cell.}_
+			),_
+	damage(8d+2), armordivisor(1), damtype(pi), minst(10† ), rangehalfdam(1200), rangemax(4800), acc(7), scopeacc(2), rof(12), uses(60), shots(60(3)), rcl(2), bulk(-4), notes([3]), skillused(SK:Gun!, SK:Guns (Rifle), ST:DX-4, SK:Guns (Grenade Launcher)-4, SK:Guns (Gyroc)-4, SK:Guns (Light Anti-Armor Weapon)-4, SK:Guns (Light Machine Gun)-2, SK:Guns (Musket)-2, SK:Guns (Pistol)-2, SK:Guns (Rifle)-2, SK:Guns (Shotgun)-2, SK:Guns (Submachine Gun)-2)
+
+
+<Traveller - Melee Weapons >
+Imperial Marines Tomahawk,cat(Traveller - Muscle-Powered Ranged Weapons, Traveller - Melee Weapons),tl(10),cost(600),weight(4),basecost(60),baseweight(4),baseweightunconverted(4),baseweightconverted(4),page(B271, B276),mods(Equipment, Melee Quality, Cutting Class Quality),techlvl(0),load(Combat, Travel),calcrange(yes),mode(Axe|Thrown|Spike|Hook),notes([1]||[1]|),itemnotes({Can be thrown}||{Can get stuck}|),damageistext(|||),minstbasedon(|||),damagebasedon(|||),reachbasedon(|||),lc(4|4|4|4),acc(|2||),armordivisor(10|10||),break(0|0|0|0),damage(sw+4|sw+4|sw+2|sw+2),dmg(sw|sw|sw|sw),damtype(cut|cut|imp|ctrl),minst(11|11|11|11),parry(0||0|0),radius(|||),rangehalfdam(|ST*1||),rangemax(|ST*1.5||),reach(1||1|1),rcl(|||),rof(|1||),shots(|T(1)||),skillused(SK:Axe/Mace, ST:DX-5, SK:Flail-4, SK:Two-Handed Axe/Mace-3|SK:Thrown Weapon (Axe/Mace), ST:DX-4|SK:Axe/Mace, ST:DX-5, SK:Flail-4, SK:Two-Handed Axe/Mace-3|SK:Axe/Mace, ST:DX-5, SK:Flail-4, SK:Two-Handed Axe/Mace-3),charradius(|||),bulk(|-3||),stcap(|||),scopeacc(|||),charscopeacc(|||),uses(|||),uses_sections(|||),uses_settings(|||),uses_used(|||),charskillusedkey(k49351|k49392|k49351|k49351),malf(|||),charmalf(|||),charblockscore(|||),vttmodenotes(|||),rollto(|||),rolltophrase(|||),minimode_damage(sw+4|sw+4|sw+2|sw+2),minimode_damtype(cut|cut|imp|ctrl),minimode_armordivisor(10|10||),minimode_radius(|||),initmods({{Monowire Blade, +9 CF,group(Equipment),level(1),gives(+0 to owner::baseweight),x(,,)} | {Weapon Quality: Fine, *1/*10,group(Cutting Class Quality),formula(@if(@ownerhasmod(Weapon Quality: Cheap) + @ownerhasmod(Weapon Quality: Good) + @ownerhasmod(Weapon Quality: Very Fine) > 0 then 0.0001 ELSE @if(ST:Tech Level::basevalue < 7 THEN 10 ELSE 1 ))),forceformula(yes),level(1),gives(=+@if(@hasmod(Composition: Stone - TL0+) + @hasmod(Composition: Bronze - TL1+) + @hasmod(Composition: Iron - TL2+) > 0 THEN 0 ELSE 1) * @textindexedvalue( $modetag(damtype), ("cut", 1), ("imp", 1) ) to owner::damage$ listAs "+1 to cut/imp damage from Fine Quality",-1 to owner::break),shortname(Fine Quality),page(B274),upto(1),levelnames(,)})
 
 <Traveller, Traveller - Ammunition>
 10mmCLP Tranquilizer Ammunition, baseweight(0.014), basecost(0.84) 

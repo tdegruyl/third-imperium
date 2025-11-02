@@ -6935,11 +6935,11 @@
 			"base_weight": "10 lb",
 			"weapons": [
 				{
-					"id": "W7cD2easQCmUq2uoE",
+					"id": "WTnyz5MdaRufXFoMq",
 					"sv": 1,
 					"damage": {
 						"type": "pi++",
-						"base": "8d"
+						"base": "10d"
 					},
 					"strength": "10†",
 					"accuracy": "4",
@@ -6965,7 +6965,7 @@
 						}
 					],
 					"calc": {
-						"damage": "8d pi++"
+						"damage": "10d pi++"
 					}
 				}
 			],
@@ -6997,12 +6997,11 @@
 			"base_weight": "64 lb",
 			"weapons": [
 				{
-					"id": "WJkY9Og-t9wRedSQI",
+					"id": "WfTQBXvOE6o3310bB",
 					"sv": 1,
 					"damage": {
 						"type": "pi",
-						"base": "16d",
-						"armor_divisor": 3
+						"base": "20d"
 					},
 					"strength": "20M",
 					"accuracy": "8",
@@ -7028,7 +7027,7 @@
 						}
 					],
 					"calc": {
-						"damage": "16d(3) pi"
+						"damage": "20d pi"
 					}
 				}
 			],
@@ -7060,12 +7059,11 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "WqSg3xZ9mlykS49Nx",
+					"id": "WIezfF4i45-axcxOP",
 					"sv": 1,
 					"damage": {
-						"type": "pi-",
-						"base": "6d+2",
-						"armor_divisor": 3
+						"type": "pi",
+						"base": "8d+2"
 					},
 					"strength": "12B†",
 					"accuracy": "7+2",
@@ -7091,7 +7089,7 @@
 						}
 					],
 					"calc": {
-						"damage": "6d+2(3) pi-"
+						"damage": "8d+2 pi"
 					}
 				}
 			],
@@ -7110,7 +7108,7 @@
 				"path": "Ultra Tech\\Ultra Tech Equipment.eqp",
 				"id": "eCOQaE4DsVSKPPPGQ"
 			},
-			"description": "Gauss Machine Pistol",
+			"description": "Gauss Machine Pistol, 4mm",
 			"reference": "UT142",
 			"local_notes": "2B/40 shots.",
 			"tech_level": "10",
@@ -7123,12 +7121,11 @@
 			"base_weight": "3 lb",
 			"weapons": [
 				{
-					"id": "WUWfXlKNaQy6de9YH",
+					"id": "WPp5xWy6uWlzhc1py",
 					"sv": 1,
 					"damage": {
-						"type": "pi-",
-						"base": "3d",
-						"armor_divisor": 3
+						"type": "pi",
+						"base": "4d"
 					},
 					"strength": "9",
 					"accuracy": "3",
@@ -7154,7 +7151,7 @@
 						}
 					],
 					"calc": {
-						"damage": "3d(3) pi-"
+						"damage": "4d pi"
 					}
 				}
 			],
@@ -7186,12 +7183,11 @@
 			"base_weight": "0.1 lb",
 			"weapons": [
 				{
-					"id": "WKZ_Z2WxlDKo5-lrf",
+					"id": "WdBUVS7DAFKOsaPiR",
 					"sv": 1,
 					"damage": {
 						"type": "pi-",
-						"base": "1d",
-						"armor_divisor": 3
+						"base": "2d"
 					},
 					"strength": "3",
 					"accuracy": "1",
@@ -7217,7 +7213,7 @@
 						}
 					],
 					"calc": {
-						"damage": "1d(3) pi-"
+						"damage": "2d pi-"
 					}
 				}
 			],
@@ -7305,12 +7301,11 @@
 			"base_weight": "6 lb",
 			"weapons": [
 				{
-					"id": "W793kldykWHsPVhTa",
+					"id": "Wo1wBL4Y_c3F5jJMQ",
 					"sv": 1,
 					"damage": {
 						"type": "pi-",
-						"base": "2d+1",
-						"armor_divisor": 3
+						"base": "3d+1"
 					},
 					"strength": "8†",
 					"accuracy": "4",
@@ -7336,7 +7331,7 @@
 						}
 					],
 					"calc": {
-						"damage": "2d+1(3) pi-"
+						"damage": "3d+1 pi-"
 					}
 				}
 			],
@@ -7368,12 +7363,11 @@
 			"base_weight": "2 lb",
 			"weapons": [
 				{
-					"id": "WB1hFeHKIuPs9mdGc",
+					"id": "W45gJsPsO9_hn12Qg",
 					"sv": 1,
 					"damage": {
-						"type": "pi-",
-						"base": "3d",
-						"armor_divisor": 3
+						"type": "pi",
+						"base": "4d"
 					},
 					"strength": "9",
 					"accuracy": "3",
@@ -7399,7 +7393,7 @@
 						}
 					],
 					"calc": {
-						"damage": "3d(3) pi-"
+						"damage": "4d pi"
 					}
 				}
 			],
@@ -7431,12 +7425,11 @@
 			"base_weight": "8.5 lb",
 			"weapons": [
 				{
-					"id": "WF5TzLUlWXWumQalw",
+					"id": "W9k9xw0l5BNAv4T0h",
 					"sv": 1,
 					"damage": {
-						"type": "pi-",
-						"base": "6d+2",
-						"armor_divisor": 3
+						"type": "pi",
+						"base": "8d+2"
 					},
 					"strength": "10†",
 					"accuracy": "7+2",
@@ -7462,7 +7455,7 @@
 						}
 					],
 					"calc": {
-						"damage": "6d+2(3) pi-"
+						"damage": "8d+2 pi"
 					}
 				}
 			],
@@ -7494,11 +7487,11 @@
 			"base_weight": "3 lb",
 			"weapons": [
 				{
-					"id": "WsdhwmMcxtC3QJldt",
+					"id": "WrBepf5ojQZwYXjn6",
 					"sv": 1,
 					"damage": {
 						"type": "pi++",
-						"base": "8d"
+						"base": "10d"
 					},
 					"strength": "10",
 					"accuracy": "2",
@@ -7524,7 +7517,7 @@
 						}
 					],
 					"calc": {
-						"damage": "8d pi++"
+						"damage": "10d pi++"
 					}
 				}
 			],
@@ -16347,12 +16340,11 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "WLCpD8qt2qJ9AQleW",
+					"id": "WKx6SgaRc4BcbWhja",
 					"sv": 1,
 					"damage": {
 						"type": "pi+",
-						"base": "5dx3",
-						"armor_divisor": 3
+						"base": "5dx4"
 					},
 					"strength": "10†",
 					"accuracy": "4",
@@ -16378,7 +16370,7 @@
 						}
 					],
 					"calc": {
-						"damage": "5dx3(3) pi+"
+						"damage": "5dx4 pi+"
 					}
 				}
 			],
@@ -17353,12 +17345,11 @@
 			"base_weight": "4,000 lb",
 			"weapons": [
 				{
-					"id": "WC9YyamlTqErRTtgK",
+					"id": "WXUTnV8tMHnT271h5",
 					"sv": 1,
 					"damage": {
 						"type": "pi++",
-						"base": "6dx25",
-						"armor_divisor": 3
+						"base": "6dx32"
 					},
 					"strength": "57M",
 					"accuracy": "8",
@@ -17384,7 +17375,7 @@
 						}
 					],
 					"calc": {
-						"damage": "6dx25(3) pi++"
+						"damage": "6dx32 pi++"
 					}
 				}
 			],
@@ -20348,12 +20339,11 @@
 			"base_weight": "20 lb",
 			"weapons": [
 				{
-					"id": "W4K9WYuLAUouoQANF",
+					"id": "WjIMIL1Pef0K-Exg_",
 					"sv": 1,
 					"damage": {
 						"type": "pi",
-						"base": "6dx2",
-						"armor_divisor": 3
+						"base": "6dx3"
 					},
 					"strength": "11B†",
 					"accuracy": "7+3",
@@ -20379,7 +20369,7 @@
 						}
 					],
 					"calc": {
-						"damage": "6dx2(3) pi"
+						"damage": "6dx3 pi"
 					}
 				}
 			],
