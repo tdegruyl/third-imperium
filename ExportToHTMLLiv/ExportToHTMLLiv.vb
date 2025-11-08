@@ -71,44 +71,26 @@ Public Class ExportToHTMLLiv
         ok = Options.AddOption(newOption)
 
         '******************************
-        '* Characters 
-        '******************************
-        newOption = New GCA5Engine.SheetOption
-        newOption.Name = "Header_Characters"
-        newOption.Type = GCA5Engine.OptionType.Header
-        newOption.UserPrompt = "Printing Characters"
-        ok = Options.AddOption(newOption)
-
-        'NOTE: Because List is now a 0-based Array, the number of the 
-        'DefaultValue and the selected Value is 0-based!
-        newOption = New GCA5Engine.SheetOption
-        newOption.Name = "OutputCharacters"
-        newOption.Type = GCA5Engine.OptionType.ListNumber
-        newOption.UserPrompt = "When exporting, how do you want to handle exporting when multiple Characters are loaded?"
-        newOption.DefaultValue = 0 'first item
-        newOption.List = {"Export just the current Character", "Export all the Characters to the file", "Always ask me what to do"}
-        ok = Options.AddOption(newOption)
-        AlwaysAskMe = 2
-
-        'NOTE: Because List is now a 0-based Array, the number of the 
-        'DefaultValue and the selected Value is 0-based!
-        newOption = New GCA5Engine.SheetOption
-        newOption.Name = "CharacterSeparator"
-        newOption.Type = GCA5Engine.OptionType.ListNumber
-        newOption.UserPrompt = "Please select how you'd like to mark the break between Characters when printing multiple Characters to the file."
-        newOption.DefaultValue = 1 'second item
-        newOption.List = {"Do nothing", "Print a line of *", "Print a line of =", "Print a line of -", "Use HTML to indicate a horizontal rule"}
-        ok = Options.AddOption(newOption)
-
-
-
-        '******************************
         '* Included Sections 
         '******************************
         newOption = New GCA5Engine.SheetOption
         newOption.Name = "Header_Traits"
         newOption.Type = GCA5Engine.OptionType.Header
         newOption.UserPrompt = "Traits"
+        ok = Options.AddOption(newOption)
+
+        newOption = New GCA5Engine.SheetOption
+        newOption.Name = "Primary_Attributes"
+        newOption.Type = GCA5Engine.OptionType.Text
+        newOption.UserPrompt = "Primary Attributes to Include"
+        newOption.DefaultValue = "ST,DX,IQ,HT"
+        ok = Options.AddOption(newOption)
+
+        newOption = New GCA5Engine.SheetOption
+        newOption.Name = "IncludeThrustSwing"
+        newOption.Type = GCA5Engine.OptionType.YesNo
+        newOption.UserPrompt = "Include Thrust and Swing?"
+        newOption.DefaultValue = true
         ok = Options.AddOption(newOption)
 
         newOption = New GCA5Engine.SheetOption
@@ -126,6 +108,12 @@ Public Class ExportToHTMLLiv
         ok = Options.AddOption(newOption)
 
         newOption = New GCA5Engine.SheetOption
+        newOption.Name = "Header_Injury"
+        newOption.Type = GCA5Engine.OptionType.Header
+        newOption.UserPrompt = "Injury and Control"
+        ok = Options.AddOption(newOption)
+
+        newOption = New GCA5Engine.SheetOption
         newOption.Name = "UseHPOrConditionalInjury"
         newOption.Type = GCA5Engine.OptionType.ListNumber
         newOption.UserPrompt = "How do you want to track injury?"
@@ -133,11 +121,6 @@ Public Class ExportToHTMLLiv
         newOption.List = {"Use HP", "Use Conditional Injury (Pyramid 3-120)", "Use Conditional Injury (Mission X)"}
         ok = Options.AddOption(newOption)
 
-        newOption = New GCA5Engine.SheetOption
-        newOption.Name = "Header_Injury"
-        newOption.Type = GCA5Engine.OptionType.Header
-        newOption.UserPrompt = "Injury and Control"
-        ok = Options.AddOption(newOption)
 
         newOption = New GCA5Engine.SheetOption
         newOption.Name = "UseHPOrConditionalInjury"
@@ -155,18 +138,18 @@ Public Class ExportToHTMLLiv
         newOption.List = {"Do Nothing", "Use Control Points (Fantastic Dungeon Grappling)", "Use Control Severity (Mission X)"}
         ok = Options.AddOption(newOption)
         
-        ' newOption = New GCA5Engine.SheetOption
-        ' newOption.Name = "Header_ItemNotes"
-        ' newOption.Type = GCA5Engine.OptionType.Header
-        ' newOption.UserPrompt = "Item Notes"
-        ' ok = Options.AddOption(newOption)
+        newOption = New GCA5Engine.SheetOption
+        newOption.Name = "Header_ItemNotes"
+        newOption.Type = GCA5Engine.OptionType.Header
+        newOption.UserPrompt = "Item Notes"
+        ok = Options.AddOption(newOption)
 
-        ' newOption = New GCA5Engine.SheetOption
-        ' newOption.Name = "NotesIncludeDescription"
-        ' newOption.Type = GCA5Engine.OptionType.YesNo
-        ' newOption.UserPrompt = "Include a trait's Description in the User Notes and VTT Notes block."
-        ' newOption.DefaultValue = True
-        ' ok = Options.AddOption(newOption)
+        newOption = New GCA5Engine.SheetOption
+        newOption.Name = "NotesIncludeDescription"
+        newOption.Type = GCA5Engine.OptionType.YesNo
+        newOption.UserPrompt = "Include a trait's Description in the User Notes and VTT Notes block."
+        newOption.DefaultValue = True
+        ok = Options.AddOption(newOption)
 
     End Sub
 
@@ -208,120 +191,20 @@ Public Class ExportToHTMLLiv
     End Function
 
     Public Function GenerateExport(Party As GCA5Engine.Party, TargetFilename As String, Options As GCA5Engine.SheetOptionsManager) As Boolean Implements GCA5.Interfaces.IExportSheet.GenerateExport
-        Dim PrintMults As Boolean = False
-
-        'This creates the export file on disk.
-        'Notify("This is a test", Priority.Red)
-        'MsgBox("This is a test")
-
-        'Set our Options to the stored values we've just been given
-        MyOptions = Options
-
-        'set our default PrintMults
-        'newOption.List = {"Export just the current Character", "Export all the Characters to the file", "Always ask me what to do"}
-        If MyOptions.Value("OutputCharacters") = 1 Then
-            PrintMults = True
-        End If
-
-        'Here, if you needed it, you'd create the RunSpecificOptions that you need the user to set,
-        'and then you'd raise the event to get those options from the user.
-        'Dim RunSpecificOptions As New GCA5Engine.SheetOptionsManager("RunSpecificOptions For " & Name)
-        'RaiseEvent RequestRunSpecificOptions(RunSpecificOptions)
-
-        'if there are multiple Characters...
-        If Party.Characters.Count > 1 Then
-            '... and if we're supposed to ask what to do...
-            If MyOptions.Value("OutputCharacters") = AlwaysAskMe Then
-                '... ask what to do.
-
-                'In this case, this would actually be better served with a message box, and that's what's commented out below this block,
-                'but this shows the idea behind using the RunSpecificOptions.
-
-                '*****
-                '* We need to get more options
-                '*****
-                Dim ok As Boolean
-                Dim newOption As GCA5Engine.SheetOption
-                Dim RunSpecificOptions As New GCA5Engine.SheetOptionsManager("RunSpecificOptions For " & PluginName())
-
-                'Create the options
-                newOption = New GCA5Engine.SheetOption
-                newOption.Name = "Header_Characters"
-                newOption.Type = GCA5Engine.OptionType.Header
-                newOption.UserPrompt = "Printing Characters"
-                ok = RunSpecificOptions.AddOption(newOption)
-
-                newOption = New GCA5Engine.SheetOption
-                newOption.Name = "OutputCharacters"
-                newOption.Type = GCA5Engine.OptionType.ListNumber
-                newOption.UserPrompt = "When exporting, how do you want to handle exporting when multiple Characters are loaded?"
-                newOption.DefaultValue = 0 'first item
-                newOption.List = {"Export just the current Character", "Export all the Characters to the file"}
-                ok = RunSpecificOptions.AddOption(newOption)
-
-                'Create the event object that will carry our options and tell us later if the dialog was canceled
-                Dim e As New GCA5.Interfaces.DialogOptions_RequestedOptions
-                e.RunSpecificOptions = RunSpecificOptions
-
-                'Raise the event to get the user input
-                RaiseEvent RequestRunSpecificOptions(Me, e)
-
-                'If user canceled, we abort
-                If e.Canceled Then
-                    Return False
-                End If
-
-                If RunSpecificOptions.Value("OutputCharacters") = 1 Then
-                    'print just one Character
-                    PrintMults = True
-                End If
-
-            End If
-        Else
-            PrintMults = False
-        End If
-
-
-        'This is defined in GCA5Engine, and is a text file writer that outputs UTF-8 text files.
         Dim fw As New FileWriter
-
-        'Creates a string buffer for the file, but doesn't actually open and write it until FileClose is called.
+        MyOptions = Options
+        ' Creates a string buffer for the file, but doesn't actually open and
+        ' write it until FileClose is called.
         fw.FileOpen(TargetFilename)
-
-        ' Print the curent Character only reguardless of option set. ~Stevil
-        PrintMults = False
-
-        If PrintMults Then
-            'Export every Character to this file
-            For Each CurChar As GCACharacter In Party.Characters
-                ExportToHTMLLiv(CurChar, fw)
-
-                'newOption.List = {"Do nothing", "Print a line of *", "Print a line of =", "Print a line of -", "Use HTML to indicate a horizontal rule"}
-                Select Case MyOptions.Value("CharacterSeparator")
-                    Case 1 'line of *
-                        fw.Paragraph(StrDup(60, "*"))
-                    Case 2 'line of =
-                        fw.Paragraph(StrDup(60, "="))
-                    Case 3 'line of -
-                        fw.Paragraph(StrDup(60, "-"))
-                    Case 4 'html
-                        fw.Paragraph("<hr />")
-                    Case Else 'do nothing
-                End Select
-                fw.Paragraph("")
-            Next
-        Else
-            'just print Current Character
-            ExportToHTMLLiv(Party.Current, fw)
-        End If
-
+        ExportToHTMLLiv(Party.Current, fw)
 
         'Save all we've written to the file and quit.
         Try
             fw.FileClose()
         Catch ex As Exception
             'problem encountered
-            Notify(PluginName() & ": " & Err.Number & ": " & ex.Message & vbCrLf & "Stack Trace: " & vbCrLf & ex.StackTrace, Priority.Red)
+            Notify(PluginName() & ": " & Err.Number & ": " & ex.Message & _
+                vbCrLf & "Stack Trace: " & vbCrLf & ex.StackTrace, Priority.Red)
             Return False
         End Try
 
@@ -484,7 +367,8 @@ Public Class ExportToHTMLLiv
         fw.Paragraph("          ""ancestry ancestry-field tl tl-field size size-field unspent-points unspent-points-field """)
         fw.Paragraph("          ""appearance appearance-field appearance-field appearance-field appearance-field appearance-field appearance-field appearance-field""")
         fw.Paragraph("}")
-        fw.Paragraph(".char-portrait-field { grid-area: char-portrait-field; font-size: 20pt; text-align: center;}")
+        fw.Paragraph(".char-portrait-field {grid-area: char-portrait-field; font-size: 20pt; text-align: center;}")
+        fw.Paragraph(".portrait {max-width: 250px;}")
         fw.Paragraph(".char-name-field { grid-area: char-name-field; font-size: 24pt; text-align: center;}")
         fw.Paragraph(".player-field { grid-area: player-field;  }")
         fw.Paragraph(".player { grid-area: player;}")
@@ -642,6 +526,7 @@ Public Class ExportToHTMLLiv
         Dim tmp As String
         Dim relLevel As String
         Dim work As String
+        Dim out As String
 
         fw.Paragraph("            <div class=""skills"">")
         fw.Paragraph("                <h1 class=""section-title"">Skills</h1>")
@@ -681,14 +566,21 @@ Public Class ExportToHTMLLiv
                 Else
                     relLevel = relLevel & "?+?"
                 End If
-                fw.Paragraph("<div class=""field hanging"">" )
-                fw.Paragraph("    " & UpdateEscapeChars(tmp) & " (" & relLevel & ")-" & CurChar.Items(i).Level)
-                fw.Paragraph("     <span class=""points"">[" & CurChar.Items(i).TagItem("points") & "]</span></div>")
+                out = "<div class=""field hanging"""
+                If UserVTTNotes(CurChar.Items(i)) <> "" Then
+                    out = out & " title=""" & UpdateEscapeChars(tmp) & _
+                        "-" & CurChar.Items(i).Level & _
+                        ": " & UserVTTNotes(CurChar.Items(i)) & """"
+                End If 
+                out = out & ">" & UpdateEscapeChars(tmp) & " (" & relLevel & ")-" & _ 
+                    CurChar.Items(i).Level & "<span class=""points"">[" & _
+                    CurChar.Items(i).TagItem("points") & "]</span></div>"
+                fw.Paragraph(out)
 
             End If
         Next
-        fw.Paragraph("                </div>")
-        fw.Paragraph("            </div>")
+        fw.Paragraph("</div>")
+        fw.Paragraph("</div>")
 
     End Sub
 
@@ -704,9 +596,8 @@ Public Class ExportToHTMLLiv
         Dim out As String
 
 
-        out = "<div class=""spells"">" & _ 
-                "<h1 class=""section-title"">Spells</h1>" & _
-                "<div class=""spells-list"">"
+        fw.Paragraph("<div class=""spells""><h1 class=""section-title"">Spells</h1>" & _
+                "<div class=""spells-list"">")
         For i = 1 To CurChar.Items.Count
 
             If CurChar.Items(i).ItemType = Spells And CurChar.Items(i).TagItem("hide") = "" Then
@@ -742,56 +633,48 @@ Public Class ExportToHTMLLiv
                 Else
                     relLevel = relLevel & "?+?"
                 End If
-                out = out & "<div class=""field hanging"">" & _
-                      UpdateEscapeChars(tmp) & " (" & relLevel & ")-" & _
-                      CurChar.Items(i).Level & _
-                      "<span class=""points"">[" & CurChar.Items(i).TagItem("points") & _
-                      "]</span></div>"
+                out = "<div class=""field hanging"""
+                If UserVTTNotes(CurChar.Items(i)) <> "" Then
+                    out = out & " title=""" & UpdateEscapeChars(tmp) & _
+                        "-" & CurChar.Items(i).Level & _
+                        ": " & UserVTTNotes(CurChar.Items(i)) & """"
+                End If 
+                out = out & ">" & UpdateEscapeChars(tmp) & " (" & relLevel & ")-" & _ 
+                    CurChar.Items(i).Level & "<span class=""points"">[" & _
+                    CurChar.Items(i).TagItem("points") & "]</span></div>"
+                fw.Paragraph(out)
             End If
         Next
-        out = out & "</div></div>"
-        'If spells_index > 0 Then
-            fw.Paragraph(out)
-        'End If
+        fw.Paragraph("</div></div>")
     End Sub
 
 
     Private Sub ExportPrimaryAttributes(CurChar As GCACharacter, fw As FileWriter)
-
         Dim ListLoc As Integer
+        Dim primAttrOption = MyOptions.value("Primary_Attributes")
+        Dim includeThrustSwing = MyOptions.value("IncludeThrustSwing")
+        Dim primaryOptions() As String =primAttrOption.split(","c)
+        Dim primaryAttributes As New List(Of String)
+        For i As Integer = 0 To primaryOptions.Length -1
+            primaryAttributes.Add(primaryOptions(i).Trim)
+        Next
 
         fw.Paragraph("<div class=""primary-attributes"">")
         fw.Paragraph("    <table>")
-        ListLoc = CurChar.ItemPositionByNameAndExt("ST", Stats)
-        If ListLoc > 0 Then
-            fw.Paragraph("        <tr><td class=""title"">ST</td>" & _
-                "<td class=""box field"">" &  CurChar.Items(ListLoc).TagItem("score") & "</td>" & _
-                "<td></td><td class=""points"">[" & CurChar.Items(ListLoc).TagItem("points") & "]</td></tr>")
-        End If
+        For Each primAttr As String In primaryAttributes
+            ListLoc = CurChar.ItemPositionByNameAndExt(primAttr, Stats)
+            If ListLoc > 0 Then
+                fw.Paragraph("        <tr><td class=""title"">" & primAttr & "</td>" & _
+                    "<td class=""box field"">" &  CurChar.Items(ListLoc).TagItem("score") & "</td>" & _
+                    "<td></td><td class=""points"">[" & CurChar.Items(ListLoc).TagItem("points") & "]</td></tr>")
+            End If
+        Next
 
-        ListLoc = CurChar.ItemPositionByNameAndExt("DX", Stats)
-        If ListLoc > 0 Then
-            fw.Paragraph("        <tr><td class=""title"">DX</td>" & _
-                "<td class=""box field"">" &  CurChar.Items(ListLoc).TagItem("score") & "</td>" & _
-                "<td></td><td class=""points"">[" & CurChar.Items(ListLoc).TagItem("points") & "]</td></tr>")
+        If includeThrustSwing = true Then
+            fw.Paragraph("        <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>")
+            fw.Paragraph("        <tr><td class=""title"">Thrust</td><td class=""field"">" & CurChar.BaseTH & "</td><td></td><td></td></tr>")
+            fw.Paragraph("        <tr><td class=""title"">Swing</td><td class=""field"">"  & CurChar.BaseSW & "</td><td></td><td></td></tr>")
         End If
-
-        ListLoc = CurChar.ItemPositionByNameAndExt("IQ", Stats)
-        If ListLoc > 0 Then
-            fw.Paragraph("        <tr><td class=""title"">IQ</td>" & _
-                "<td class=""box field"">" &  CurChar.Items(ListLoc).TagItem("score") & "</td>" & _
-                "<td></td><td class=""points"">[" & CurChar.Items(ListLoc).TagItem("points") & "]</td></tr>")
-        End If
-
-        ListLoc = CurChar.ItemPositionByNameAndExt("HT", Stats)
-        If ListLoc > 0 Then
-            fw.Paragraph("        <tr><td class=""title"">HT</td>" & _
-                "<td class=""box field"">" &  CurChar.Items(ListLoc).TagItem("score") & "</td>" & _
-                "<td></td><td class=""points"">[" & CurChar.Items(ListLoc).TagItem("points") & "]</td></tr>")
-        End If
-        fw.Paragraph("        <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>")
-        fw.Paragraph("        <tr><td class=""title"">Thrust</td><td class=""field"">" & CurChar.BaseTH & "</td><td></td><td></td></tr>")
-        fw.Paragraph("        <tr><td class=""title"">Swing</td><td class=""field"">"  & CurChar.BaseSW & "</td><td></td><td></td></tr>")
         fw.Paragraph("    </table>")
         fw.Paragraph("</div>")
 
@@ -1475,6 +1358,7 @@ Public Class ExportToHTMLLiv
         Dim tmp As String
         Dim work As String
         Dim mods_text as String
+        Dim out As String
         Dim types_list() as Double = {Packages, Ads, Perks, Disads, Quirks}
 
         fw.Paragraph("<div class=""traits"">")
@@ -1507,10 +1391,16 @@ Public Class ExportToHTMLLiv
                         work = work - CInt(CurChar.Items(i).TagItem("childpoints"))
                     End If
 
-                    fw.Paragraph("<div class=""field hanging " & CurChar.Items(i).ItemType & """>" & _
-                        UpdateEscapeChars(tmp) & _
+                    out = "<div class=""field hanging " & CurChar.Items(i).ItemType & _
+                        """"
+                    If UserVTTNotes(CurChar.Items(i)) <> "" Then
+                        out = out & " title=""" & UpdateEscapeChars(tmp) & ": " & _
+                        UserVTTNotes(CurChar.Items(i)) & """"
+                    End If 
+                    out = out & " >" & UpdateEscapeChars(tmp) & _
                         "<span class=""points"">[" & UpdateEscapeChars(work) & "]</span>" & _
-                        "</div>")
+                        "</div>"
+                    fw.Paragraph(out)
                 End If
             Next
 
@@ -1622,13 +1512,31 @@ Public Class ExportToHTMLLiv
     End Sub
 
     Private Sub ExportReactionModifiers(CurChar As GCACharacter, fw As FileWriter)
-        Dim l1 As Integer
-        Dim reaction_types() As String = {"Appealing", "Unappealing", "Status", "Reaction"}
-        
+        Dim l1, l2 As Integer
+        Dim appearance_types() As String = {"Appealing", "Unappealing"} 
+        Dim reaction_types() As String = {"Status", "Reaction"}
+        Dim appearance_mod As String = ""
 
         fw.Paragraph("<div class=""reactions"">")
         fw.Paragraph("<h1 class=""section-title"">Reaction Modifiers</h1>")
         fw.Paragraph("<table>")
+        fw.Paragraph("<tr><td class=""title"">Appearance</td><td class=""field"">")
+
+        l1 = CurChar.ItemPositionByNameAndExt(appearance_types(0), Stats)
+        l2 = CurChar.ItemPositionByNameAndExt(appearance_types(1), Stats)
+        
+        If l1 > 0 Then
+            appearance_mod = appearance_mod & CurChar.Items(l1).TagItem("bonuslist")
+        End If
+        If l1 > 0 And l2 > 0 And _
+            CurChar.Items(l1).TagItem("bonuslist") <> "" And _
+            CurChar.Items(l2).TagItem("bonuslist") <> "" And _
+            CurChar.Items(l1).TagItem("bonuslist") <> _
+                CurChar.Items(l2).TagItem("bonuslist") Then
+            appearance_mod = appearance_mod & " / " & CurChar.Items(l2).TagItem("bonuslist")
+        End If
+        fw.Paragraph(appearance_mod & "</td></tr>")
+
         For Each rType As String In reaction_types 
             l1 = CurChar.ItemPositionByNameAndExt(rType, Stats)
             If l1 > 0 Then
@@ -1656,16 +1564,22 @@ Public Class ExportToHTMLLiv
 
     Private sub ExportEquipmentItem (CurChar As GCACharacter, fw as FileWriter, theItem As GCATrait, level as Integer)
         Dim qty : qty = 1 
+        Dim out As String
 
         If StrToLng(theItem.tagitem("count")) <> 0 Then
             qty = StrToLng(theItem.tagitem("count"))
         End If
-        fw.Paragraph("<div class =""field"" style=""padding-left:" & ((level * 20) + 4 ) & "px;"">" & _
-            UpdateEscapeChars(theItem.FullNameTL) & _
+        out = "<div class =""field"" style=""padding-left:" & ((level * 20) + 4 ) & "px;""" 
+        If UserVTTNotes(theItem) <> "" Then
+            out = out & " title=""" & UpdateEscapeChars(theItem.FullNameTL) & _
+                ": " & UserVTTNotes(theItem) & """"
+        End If 
+        out = out & ">" & UpdateEscapeChars(theItem.FullNameTL) & _
             "<span class=""qty" & theItem.tagitem("count") & """> (" & _
             theItem.tagitem("count") & ")</span> (" & _
             theItem.tagitem("weight") & "; " & _
-            Format(theItem.tagitem("cost"), "Currency") & ")</div>")
+            Format(theItem.tagitem("cost"), "Currency") & ")</div>"
+        fw.Paragraph(out)
     End Sub
 
     Private sub ExportEquipmentItemWithChildren (CurChar As GCACharacter, fw as FileWriter, theItem As GCATrait, level as Integer)
@@ -1738,7 +1652,8 @@ Public Class ExportToHTMLLiv
                 mimeType = "image/jpeg"
             End If
 
-            fw.Paragraph("<img src=""data:" & mimeType & ";base64, " & Convert.ToBase64String(portImgData) & """ >")
+            fw.Paragraph("<img class=""portrait"" src=""data:" & mimeType & ";base64, " & _
+                Convert.ToBase64String(portImgData) & """ >")
         End If
         fw.Paragraph("</div>")
         fw.Paragraph("  <div class=""charinfo"">")
@@ -1975,15 +1890,15 @@ Public Class ExportToHTMLLiv
 '* Convenient way to get UserNotes and VTTNotes combined
 '* ~ ADS
 '****************************************
-    Function UserVTTNotes(CurChar as GCACharacter, Index As Integer) As String
+    Function UserVTTNotes(theItem as GCATrait) As String
         Dim ret As String = ""
-        dim desc as string = RTFtoPlainText(CurChar.Items(Index).TagItem("description")).Trim
-		Dim user As String = RTFtoPlainText(CurChar.Items(Index).TagItem("usernotes")).Trim
-        Dim vtt As String = CurChar.Items(Index).TagItem("vttnotes").Trim
+        Dim desc as string = RTFtoPlainText(theItem.TagItem("description")).Trim
+        Dim user As String = RTFtoPlainText(theItem.TagItem("usernotes")).Trim
+        Dim vtt As String = theItem.TagItem("vttnotes").Trim
 
-		'If MyOptions.Value("NotesIncludeDescription") = True Then
-		'	If desc <> "" Then ret = desc
-		'End If
+        If MyOptions.Value("NotesIncludeDescription") = True Then
+        	If desc <> "" Then ret = desc
+        End If
 
         If user <> "" Then
             If ret = "" Then
