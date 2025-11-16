@@ -250,25 +250,69 @@ Public Class ExportToHTMLLiv
 '****************************************
     Private Sub ExportToHTMLLiv(CurChar As GCACharacter, fw As FileWriter)
         ExportHTMLHead(CurChar, fw)
+        ExportCharinfoCard(CurChar, fw)
+        ExportAttributesCard(CurChar, fw)
+        fw.Paragraph("<div class=""navigation"">")
+        fw.Paragraph("<button class=""tablinks"" onclick=""openTab(event,'skills-tab')"">Traits and Skills</button>")
+        fw.Paragraph("<button class=""tablinks"" onclick=""openTab(event,'combat-tab')"">Combat</button>")
+        fw.Paragraph("<button class=""tablinks"" onclick=""openTab(event,'equipment-tab')"">Equipment</button>")
+        fw.Paragraph("<button class=""tablinks"" onclick=""openTab(event,'social-tab')"">Social</button>")
+        fw.Paragraph("</div>")
+        ExportSkillsTab(CurChar, fw)
+        ExportEquipmentTab(CurChar, fw)
+        ExportCombatTab(CurChar, fw)
+        ExportSocialTab(CurChar, fw)
+
+        ExportHTMLFoot(CurChar,fw)
+    End Sub
+
+    Private Sub ExportCharinfoCard(CurChar as GCACharacter, fw as FileWriter)
+        fw.Paragraph("<div class=""charinfo-card"">")
         ExportDescription(CurChar, fw)
+        ExportPointSummary(CurChar, fw)
+        fw.Paragraph("</div>")
+    End Sub
+
+    Private Sub ExportAttributesCard(CurChar as GCACharacter, fw as FileWriter)
+        fw.Paragraph("<div class=""attributes-card"">")
         ExportAttributes(CurChar, fw)
-        ExportLift(CurChar, fw)
-        ExportEncumbrance(CurChar, fw)
+        fw.Paragraph("</div>")
+    End Sub
+
+    Private Sub ExportSkillsTab(CurChar as GCACharacter, fw as FileWriter)
+        fw.Paragraph("<div id=""skills-tab"" class=""tab"">")
         ExportSkills(CurChar, fw)
         ExportTraits(CurChar, fw)
         ExportSpells(CurChar, fw)
+        fw.Paragraph("</div>")
+    End Sub
+
+    Private Sub ExportSocialTab(CurChar as GCACharacter, fw as FileWriter)
+        fw.Paragraph("<div id=""social-tab"" class=""tab"">")
         ExportLanguages(CurChar, fw)
-        ExportEquipment(CurChar, fw)
-        ExportMeleeAttacks(CurChar, fw)
-        ExportRangedAttacks(CurChar, fw)
-        ExportProtection(CurChar, fw)
         ExportCulturalFamiliarity(CurChar, fw)
         ExportReactionModifiers(CurChar, fw)
         ExportNotes(CurChar, fw)
-        ExportPointSummary(CurChar, fw)
-        ExportSSRT(CurChar,fw)
-        ExportHTMLFoot(CurChar,fw)
+        fw.Paragraph("</div>")
     End Sub
+
+    Private Sub ExportCombatTab(CurChar as GCACharacter, fw as FileWriter)
+        fw.Paragraph("<div id=""combat-tab"" class=""tab"">")
+        ExportMeleeAttacks(CurChar, fw)
+        ExportRangedAttacks(CurChar, fw)
+        ExportProtection(CurChar, fw)
+        ExportSSRT(CurChar,fw)
+        fw.Paragraph("</div>")
+    End Sub
+
+    Private Sub ExportEquipmentTab(CurChar as GCACharacter, fw as FileWriter)
+        fw.Paragraph("<div id=""equipment-tab"" class=""tab"">")
+        ExportEquipment(CurChar, fw)
+        ExportLift(CurChar, fw)
+        ExportEncumbrance(CurChar, fw)
+        fw.Paragraph("</div>")
+    End Sub
+
 
     Private Sub ExportHTMLHead(CurChar as GCACharacter, fw as FileWriter)
         fw.Paragraph("<!DOCTYPE html>")
@@ -281,6 +325,10 @@ Public Class ExportToHTMLLiv
         fw.Paragraph("<link href=""https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"" rel=""stylesheet"">")
         fw.Paragraph("<meta name=""viewport"" content=""width=device-width, initial-scale=1"" />")
         fw.Paragraph("<style>")
+        fw.Paragraph(".navigation { grid-area: navigation; border: thin solid #ccc; background-color:#f1f1f1;}")
+        fw.Paragraph(".navigation button { background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; }")
+        fw.Paragraph(".navigation button:hover { background-color: #ddd; }")
+        fw.Paragraph(".navigation button.active { background-color: #ccc; }" )
         fw.Paragraph(".qty1 { /* visibility: hidden; */ }")
         fw.Paragraph(".title { ")
         fw.Paragraph("    font-weight: bold;")
@@ -305,71 +353,128 @@ Public Class ExportToHTMLLiv
         fw.Paragraph("    text-decoration: underline;")
         fw.Paragraph("    font-weight:bold;")
         fw.Paragraph("}")
-        fw.Paragraph("div {")
+        fw.Paragraph(".tab { display: none; animation: fadeEffect 1s;}")
+        fw.Paragraph(".tab div {")
         fw.Paragraph("    box-decoration-break: clone;")
         fw.Paragraph("    -webkit-box-decoration-break: clone;")
         fw.Paragraph("    break-inside: avoid;")
         fw.Paragraph("}")
-        fw.Paragraph("body {")
-        fw.Paragraph("    padding: 1em;")
-        fw.Paragraph("    display: grid;")
-        fw.Paragraph("    width: 1200px; ")
-        fw.Paragraph("    font-size:12pt;")
-        fw.Paragraph("    font-family: verdana;")
-        fw.Paragraph("    grid-template-columns: 25% 25% 25% 25%;")
+
+        fw.Paragraph("#equipment-tab {")
+        fw.Paragraph("    display:grid;")
+        fw.Paragraph("    grid-area: equipment-tab;")
+        fw.Paragraph("    grid-template-columns: 70% 30%;")
         fw.Paragraph("    grid-template-rows: auto;")
         fw.Paragraph("    gap: 3px 3px;")
         fw.Paragraph("    grid-auto-flow: column;")
         fw.Paragraph("    grid-template-areas:")
-        fw.Paragraph("        ""char-portrait-field charinfo charinfo charinfo""")
-        fw.Paragraph("        ""attributes attributes attributes attributes""")
-        fw.Paragraph("        ""traits traits skills skills""")
+        fw.Paragraph("      ""carried-equipment lift""")
+        fw.Paragraph("      ""carried-equipment encumbrance"";")
+        fw.Paragraph("}")
+
+        fw.Paragraph("#combat-tab {")
+        fw.Paragraph("    display:grid;")
+        fw.Paragraph("    grid-template-rows: auto;")
+        fw.Paragraph("    gap: 3px 3px;")
+        fw.Paragraph("    grid-auto-flow: column;")
+        fw.Paragraph("    grid-area: combat-tab;")
+        fw.Paragraph("    grid-template-columns: 75% 25%;")
+        fw.Paragraph("    grid-template-areas:")
+        fw.Paragraph("      ""melee hit-locations""")
+        fw.Paragraph("      ""ranged hit-locations""")
+        fw.Paragraph("      ""ssrt ssrt"";")
+        fw.Paragraph("}")
+
+        fw.Paragraph("#social-tab {")
+        fw.Paragraph("    display:grid;")
+        fw.Paragraph("    grid-template-rows: auto;")
+        fw.Paragraph("    gap: 3px 3px;")
+        fw.Paragraph("    grid-auto-flow: column;")
+        fw.Paragraph("    grid-area: social-tab;")
+        fw.Paragraph("    grid-template-columns: 25% 50% 25%;")
+        fw.Paragraph("    grid-template-areas:")
+        fw.Paragraph("      ""languages notes reactions""")
+        fw.Paragraph("      ""cultures notes reactions"";")
+        fw.Paragraph("}")
+
+        fw.Paragraph(".attributes-card {")
+        fw.Paragraph("    grid-area: attributes-card;")
+        fw.Paragraph("}")
+
+        fw.Paragraph(".charinfo-card {")
+        fw.Paragraph("    display:grid;")
+        fw.Paragraph("    grid-area: charinfo-card;")
+        fw.Paragraph("    grid-template-columns: 2fr 3fr 1fr;")
+        fw.Paragraph("    grid-template-rows: auto;")
+        fw.Paragraph("    gap: 3px 3px;")
+        fw.Paragraph("    grid-auto-flow: column;")
+        fw.Paragraph("    grid-template-areas:")
+        fw.Paragraph("      ""char-portrait-field charinfo point-summary"";")
+        fw.Paragraph("}")
+
+        fw.Paragraph("#skills-tab {")
+        fw.Paragraph("    display:grid;")
+        fw.Paragraph("    grid-template-rows: auto;")
+        fw.Paragraph("    gap: 3px 3px;")
+        fw.Paragraph("    grid-auto-flow: column;")
+        fw.Paragraph("    grid-area: skills-tab;")
+        fw.Paragraph("    grid-template-columns: 50% 50%;")
+        fw.Paragraph("    grid-template-areas:")
+        fw.Paragraph("      ""traits skills""")
         If CurChar.Count(Spells) <> 0 Then
-            fw.Paragraph("        ""melee melee melee spells""")
-            fw.Paragraph("        ""ranged ranged ranged spells""")
-        Else
-            fw.Paragraph("        ""melee melee ranged ranged""")
+            fw.Paragraph("      ""traits spells""")
         End If
-        fw.Paragraph("        ""ssrt ssrt ssrt ssrt""")
-        fw.Paragraph("        ""carried-equipment carried-equipment carried-equipment languages""")
-        fw.Paragraph("        ""carried-equipment carried-equipment carried-equipment cultures""")
-        fw.Paragraph("        ""encumbrance lift hit-locations reactions""")
-        fw.Paragraph("        ""point-summary notes notes reactions"";")
+        fw.Paragraph("      ;")
+        fw.Paragraph("}")
+
+        fw.Paragraph("body {")
+        fw.Paragraph("    padding: 1em;")
+        fw.Paragraph("    display: grid;")
+        fw.Paragraph("    min-width: 700px; ")
+        fw.Paragraph("    font-size:10pt;")
+        fw.Paragraph("    font-family: verdana;")
+        fw.Paragraph("    grid-template-columns: 100%;")
+        fw.Paragraph("    grid-template-rows: auto;")
+        fw.Paragraph("    gap: 3px 3px;")
+        fw.Paragraph("    grid-auto-flow: column;")
+        fw.Paragraph("    grid-template-areas:")
+        fw.Paragraph("        ""charinfo-card""")
+        fw.Paragraph("        ""attributes-card""")
+        fw.Paragraph("        ""navigation""")
+        fw.Paragraph("        ""skills-tab""")
+        fw.Paragraph("        ""combat-tab""")
+        fw.Paragraph("        ""equipment-tab""")
+        fw.Paragraph("        ""social-tab"";")
         fw.Paragraph("}")
         If CurChar.Count(Spells) = 0 Then
             fw.Paragraph(".spells {display:none; visibility:hidden;}")
         End If
         fw.Paragraph(".attributes {  ")
         fw.Paragraph("    grid-area: attributes;")
-        fw.Paragraph("    padding: 1em;")
-        fw.Paragraph("    border: thick solid black;")
         fw.Paragraph("    display: grid;")
-        fw.Paragraph("    grid-template-columns: 25% 25% 25% 25%; ")
+        fw.Paragraph("    grid-template-columns: 2fr 3fr 4fr 2fr; ")
         fw.Paragraph("    grid-template-rows: auto;")
-        fw.Paragraph("    gap: 3px 3px;")
         fw.Paragraph("    grid-auto-flow: column;")
         fw.Paragraph("    grid-template-areas:")
         fw.Paragraph("        ""primary-attributes secondary-attributes pools defense""")
         fw.Paragraph("}")
         fw.Paragraph(".charinfo {  ")
         fw.Paragraph("    grid-area: charinfo;")
-        fw.Paragraph("    padding: 1em;")
-        fw.Paragraph("    font-size: 120%;")
-        fw.Paragraph("    border: thick solid black;")
+        fw.Paragraph("    font-size: 100%;")
         fw.Paragraph("    display: grid;")
-        fw.Paragraph("    grid-template-columns: 1fr 3fr 1fr 3fr 1fr 3fr 1fr 1fr; ")
+        fw.Paragraph("    grid-template-columns: 1fr 3fr 1fr 3fr 1fr 3fr; ")
         fw.Paragraph("    grid-template-rows: auto;")
-        fw.Paragraph("    gap: 3px 3px;")
+        fw.Paragraph("    gap: 1px 1px;")
         fw.Paragraph("    grid-auto-flow: column;")
         fw.Paragraph("    grid-template-areas:")
-        fw.Paragraph("          ""char-name-field char-name-field char-name-field char-name-field player player-field player-field player-field""")
-        fw.Paragraph("          ""height height-field weight weight-field age age-field total-points total-points-field""")
-        fw.Paragraph("          ""ancestry ancestry-field tl tl-field size size-field unspent-points unspent-points-field """)
-        fw.Paragraph("          ""appearance appearance-field appearance-field appearance-field appearance-field appearance-field appearance-field appearance-field""")
+        fw.Paragraph("          ""char-name-field char-name-field char-name-field player player-field player-field""")
+        fw.Paragraph("          ""height height-field weight weight-field age age-field""")
+        fw.Paragraph("          ""ancestry ancestry-field tl tl-field size size-field """)
+        fw.Paragraph("          ""appearance appearance-field appearance-field appearance-field appearance-field appearance-field""")
         fw.Paragraph("}")
         fw.Paragraph(".char-portrait-field {grid-area: char-portrait-field; font-size: 20pt; text-align: center;}")
-        fw.Paragraph(".portrait {max-width: 250px;}")
-        fw.Paragraph(".char-name-field { grid-area: char-name-field; font-size: 24pt; text-align: center;}")
+        fw.Paragraph(".portrait {max-height: 200px;}")
+        fw.Paragraph(".char-name-field { grid-area: char-name-field; font-size: 200%; text-align: center;}")
         fw.Paragraph(".player-field { grid-area: player-field;  }")
         fw.Paragraph(".player { grid-area: player;}")
         fw.Paragraph(".char-title { grid-area: char-title; }")
@@ -378,16 +483,12 @@ Public Class ExportToHTMLLiv
         fw.Paragraph(".org {grid-area: org; }")
         fw.Paragraph(".ancestry-field { grid-area: ancestry-field; }")
         fw.Paragraph(".ancestry { grid-area: ancestry; }")
-        fw.Paragraph(".total-points-field { grid-area: total-points-field;  font-size:20pt;}")
-        fw.Paragraph(".total-points { grid-area: total-points; }")
         fw.Paragraph(".height { grid-area: height; }")
         fw.Paragraph(".height-field { grid-area: height-field;  }")
         fw.Paragraph(".weight { grid-area: weight; }")
         fw.Paragraph(".weight-field { grid-area: weight-field;  }")
         fw.Paragraph(".hair { grid-area: hair; }")
         fw.Paragraph(".hair-field { grid-area: hair-field; }")
-        fw.Paragraph(".unspent-points { grid-area: unspent-points; }")
-        fw.Paragraph(".unspent-points-field { grid-area: unspent-points-field; height: 100%; font-size:16pt}")
         fw.Paragraph(".age-field { grid-area: age-field;  }")
         fw.Paragraph(".age { grid-area: age; }")
         fw.Paragraph(".birthday-field { grid-area: birthday-field; }")
@@ -407,20 +508,14 @@ Public Class ExportToHTMLLiv
         fw.Paragraph(".tl {grid-area: tl; }")
         fw.Paragraph(".religion {grid-area: religion; }")
         fw.Paragraph(".religion-field {grid-area: religion-field; }")
-        fw.Paragraph(".point-summary {grid-area:point-summary; border: thick solid black;}")
-        fw.Paragraph(".primary-attributes {grid-area: primary-attributes; width:100%; font-size: 100%;}")
-        fw.Paragraph(".primary-attributes .box {font-size: 130%; height: 50px; width:50px; }")
-        fw.Paragraph(".primary-attributes .title {font-size: 150%; vertical-align: middle; }")
-        fw.Paragraph(".box {border: thick solid black; padding: 3px; min-width:3em; text-align:center;}")
-        fw.Paragraph(".secondary-attributes {grid-area: secondary-attributes; font-size: 110%;  }")
-        fw.Paragraph(".pools {grid-area: pools;secondary-attributes font-size: 110%;  }")
-        fw.Paragraph(".pools .box {font-size: 150%;  height: 50px; min-width:50px;}")
-        fw.Paragraph(".pools .title {font-size: 130%; vertical-align: middle; }")
-        fw.Paragraph(".secondary-attributes .box {font-size: 150%;  height: 50px; width:50px;}")
-        fw.Paragraph(".secondary-attributes .title {font-size: 150%; vertical-align: middle; }")
-        fw.Paragraph(".defense {grid-area: defense; font-size: 110%;}")
-        fw.Paragraph(".defense .title { font-size: 150%;}")
-        fw.Paragraph(".defense .box {font-size: 150%; height:50px; width:50px; }")
+        fw.Paragraph(".point-summary {grid-area:point-summary;}")
+        fw.Paragraph(".primary-attributes {grid-area: primary-attributes; width:100%; font-size: 120%;}")
+        fw.Paragraph(".secondary-attributes {grid-area: secondary-attributes; font-size: 120%;  }")
+        fw.Paragraph(".pools {grid-area: pools; font-size: 120%;  }")
+        fw.Paragraph(".defense {grid-area: defense; font-size: 120%;}")
+        fw.Paragraph(".title {vertical-align:middle; }")
+        fw.Paragraph(".box {border: 1.5px solid black; padding: 1px;text-align:center; vertical-align: middle;}")
+        fw.Paragraph("td.right {text-align:right; vertical-align: middle;}")
         fw.Paragraph(".melee {grid-area: melee;  border: thick solid black; }")
         fw.Paragraph(".ranged {grid-area: ranged;  border: thick solid black;}")
         fw.Paragraph(".carried-equipment { grid-area: carried-equipment;  border: thick solid black;}")
@@ -433,7 +528,7 @@ Public Class ExportToHTMLLiv
         fw.Paragraph(".spells {grid-area: spells; min-width: 2.5in; border: thick solid black;}")
         fw.Paragraph(".spells-list { column-count:1; column-gap: 6px; column-rule: 2px solid black; }")
         fw.Paragraph(".encumbrance {grid-area: encumbrance; font-size: 90%;   border: thick solid black;}")
-        fw.Paragraph(".lift {grid-area: lift; min-width: 2.5in; font-size: 90%;   border: thick solid black;}")
+        fw.Paragraph(".lift {grid-area: lift; font-size: 90%;   border: thick solid black;}")
         fw.Paragraph(".points {font-size:70%; padding-left: 3px; /*display:none;visibility:hidden;*/}")
         fw.Paragraph(".equipment { width: 100%; padding: 1em; border: thick solid black;}")
         fw.Paragraph(".equipment-list { column-count:2; column-gap: 6px; column-rule: 2px solid black; }")
@@ -461,19 +556,39 @@ Public Class ExportToHTMLLiv
         fw.Paragraph("#notifications {")
         fw.Paragraph("    color: red;")
         fw.Paragraph("}")
-        fw.Paragraph("#vision, #hearing, #taste_smell, #touch, #fright_check {")
-        fw.Paragraph("    display: none;")
-        fw.Paragraph("}")
+        fw.Paragraph("@keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;}}")
         fw.Paragraph("</style>")
         fw.Paragraph("<style media=""print"" type=""text/css"">")
         fw.Paragraph("        select { display: none !important;}")
         fw.Paragraph("        input { display: none !important;}")
+        fw.Paragraph("        .navigation {display: none !important;}")
+        fw.Paragraph("        .tab {display: grid !important;break-inside:avoid !important;}")
         fw.Paragraph("</style>")
+        fw.Paragraph(" <script>")
+        fw.Paragraph(" function openTab(evt, tabName) {")
+        fw.Paragraph("   var i, tabcontent, tablinks;")
+        fw.Paragraph("   tabcontent = document.getElementsByClassName(""tab"");")
+        fw.Paragraph("   for (i = 0; i < tabcontent.length; i++) {")
+        fw.Paragraph("     tabcontent[i].style.display = ""none"";")
+        fw.Paragraph("   }")
+        fw.Paragraph("   tablinks = document.getElementsByClassName(""tablinks"");")
+        fw.Paragraph("   for (i = 0; i < tablinks.length; i++) {")
+        fw.Paragraph("     tablinks[i].className = tablinks[i].className.replace("" active"", """");")
+        fw.Paragraph("   }")
+        fw.Paragraph("   document.getElementById(tabName).style.display = ""grid"";")
+        fw.Paragraph("   evt.currentTarget.className += "" active"";")
+        fw.Paragraph("} ")
+        fw.Paragraph("for (i = 1; i < tabcontent.length; i++) {")
+        fw.Paragraph("  tabcontent[i].style.display = ""none"";")
+        fw.Paragraph("}")
+        fw.Paragraph("</script>")
+        fw.Paragraph("</head>")
+        fw.Paragraph("<body onload=""poolConditionNotifications();openTab(null, 'skills-tab');"">")
+
     End Sub
 
     private Sub ExportHTMLFoot(CurChar as GCACharacter, fw as FileWriter)
-        fw.Paragraph("</head>")
-        fw.Paragraph("<body onload=""poolConditionNotifications()"">")
+        fw.Paragraph("</body></html>")
     End Sub
 
     Private Sub ExportSSRT(CurChar as GCACharacter, fw as FileWriter)
@@ -510,7 +625,7 @@ Public Class ExportToHTMLLiv
             ListLoc = CurChar.ItemPositionByNameAndExt(lift_type, Stats)
             If ListLoc > 0 Then
                 fw.Paragraph("<tr><td class=""title"">" & lift_type & _
-                    "</td><td class=""field"">" & _
+                    "</td><td class=""field right"">" & _
                     CurChar.Items(ListLoc).TagItem("score") & "</td></tr>")
             End If
         Next
@@ -567,10 +682,18 @@ Public Class ExportToHTMLLiv
                     relLevel = relLevel & "?+?"
                 End If
                 out = "<div class=""field hanging"""
-                If UserVTTNotes(CurChar.Items(i)) <> "" Then
+                If UserVTTNotes(CurChar.Items(i)) <> "" Or _
+                        CurChar.Items(i).TagItem("page") <> "" Then
+                    Dim pageTag = CurChar.Items(i).TagItem("page")
+                    Dim page As String 
+                    If pageTag <> "" Then 
+                        page = String.Format(" p. {0}", pageTag)
+                    Else
+                        page = ""
+                    End If
                     out = out & " title=""" & UpdateEscapeChars(tmp) & _
                         "-" & CurChar.Items(i).Level & _
-                        ": " & UserVTTNotes(CurChar.Items(i)) & """"
+                        ": " & UserVTTNotes(CurChar.Items(i)) & page & """"
                 End If 
                 out = out & ">" & UpdateEscapeChars(tmp) & " (" & relLevel & ")-" & _ 
                     CurChar.Items(i).Level & "<span class=""points"">[" & _
@@ -634,10 +757,18 @@ Public Class ExportToHTMLLiv
                     relLevel = relLevel & "?+?"
                 End If
                 out = "<div class=""field hanging"""
-                If UserVTTNotes(CurChar.Items(i)) <> "" Then
+                If UserVTTNotes(CurChar.Items(i)) <> "" Or _
+                        CurChar.Items(i).TagItem("page") <> "" Then
+                    Dim pageTag = CurChar.Items(i).TagItem("page")
+                    Dim page As String 
+                    If pageTag <> "" Then 
+                        page = String.Format(" p. {0}", pageTag)
+                    Else
+                        page = ""
+                    End If
                     out = out & " title=""" & UpdateEscapeChars(tmp) & _
                         "-" & CurChar.Items(i).Level & _
-                        ": " & UserVTTNotes(CurChar.Items(i)) & """"
+                        ": " & UserVTTNotes(CurChar.Items(i)) & page & """"
                 End If 
                 out = out & ">" & UpdateEscapeChars(tmp) & " (" & relLevel & ")-" & _ 
                     CurChar.Items(i).Level & "<span class=""points"">[" & _
@@ -1304,7 +1435,7 @@ Public Class ExportToHTMLLiv
 
                 fw.Paragraph("<tr>" & _
                     "<td class=""title"">" & CurChar.Body.Item(i).Name & "</td>" & _
-                    "<td class=""field"">" & locDR & "</td>" & _
+                    "<td class=""field right"">" & locDR & "</td>" & _
                     "</tr>")
             End If
         Next
@@ -1327,7 +1458,7 @@ Public Class ExportToHTMLLiv
             ListLoc = CurChar.ItemPositionByNameAndExt(eLevel, Stats)
             If ListLoc > 0 Then
                 fw.Paragraph("<tr><td class=""title"">" & _
-                    eLevel & "</td><td class=""field"">" & _
+                    eLevel & "</td><td class=""field right"">" & _
                     CurChar.Items(ListLoc).TagItem("score") & "</td></tr>")
             End If
         Next
@@ -1393,9 +1524,17 @@ Public Class ExportToHTMLLiv
 
                     out = "<div class=""field hanging " & CurChar.Items(i).ItemType & _
                         """"
-                    If UserVTTNotes(CurChar.Items(i)) <> "" Then
+                    If UserVTTNotes(CurChar.Items(i)) <> "" Or _
+                            CurChar.Items(i).TagItem("page") <> "" Then
+                        Dim pageTag = CurChar.Items(i).TagItem("page")
+                        Dim page As String 
+                        If pageTag <> "" Then 
+                            page = String.Format(" p. {0}", pageTag)
+                        Else
+                            page = ""
+                        End If
                         out = out & " title=""" & UpdateEscapeChars(tmp) & ": " & _
-                        UserVTTNotes(CurChar.Items(i)) & """"
+                            UserVTTNotes(CurChar.Items(i)) & page & """"
                     End If 
                     out = out & " >" & UpdateEscapeChars(tmp) & _
                         "<span class=""points"">[" & UpdateEscapeChars(work) & "]</span>" & _
@@ -1437,13 +1576,6 @@ Public Class ExportToHTMLLiv
     Private Sub ExportLanguages(CurChar As GCACharacter, fw As FileWriter)
 
         Dim i As Integer
-        Dim item_index As Integer
-        Dim CurrName As String
-        Dim NextName As String
-        Dim spoken As String
-        Dim written As String
-        Dim native As String
-        Dim points As Integer
 '
         fw.Paragraph("<div class=""languages"">")
         fw.Paragraph("<h1 class=""section-title"">Languages</h1>")
@@ -1451,46 +1583,18 @@ Public Class ExportToHTMLLiv
         For i = 1 To CurChar.Items.Count
             If CurChar.Items(i).ItemType = Languages Then
                 If CurChar.Items(i).TagItem("hide") = "" Then 'not hidden
-                    spoken = "none"
-                    written = "none"
-                    native = ""
-                    points = CurChar.Items(i).TagItem("points")
-
-                    item_index = item_index + 1
-
-                    CurrName = LCase(Trim(CurChar.Items(i).Name))
-                    NextName = LCase(Trim(CurChar.Items(i + 1).Name))
+                    Dim langName = CurChar.Items(i).FullName
+                    Dim levelName = CurChar.Items(i).LevelName
+                    Dim native = ""
+                    Dim points = CurChar.Items(i).TagItem("points")
 
                     If IsNativeLang(CurChar, i) Then
-                        native = " (native)"
+                        native = "*"
                     End If
 
-                    Select Case LCase(Trim(CurChar.Items(i).nameext))
-                        Case "spoken"
-                            spoken = CurChar.Items(i).LevelName 
-                        Case "written"
-                            written = CurChar.Items(i).LevelName 
-                        Case Else
-                            ' this is a full language
-                            spoken = CurChar.Items(i).LevelName 
-                            written = CurChar.Items(i).LevelName 
-                    End Select
-
-                    ' print the second extension if there are both spoken and written versions
-                    If CurrName = NextName Then
-                        If LCase(Trim(CurChar.Items(i + 1).nameext)) = "spoken" Then
-                            spoken = CurChar.Items(i+1).LevelName 
-                        Else
-                            written = CurChar.Items(i+1).LevelName 
-                        End If
-                        ' and increment i so that we skip the second character item 
-                        i = i + 1
-                        points = points + CurChar.Items(i+1).TagItem("points")
-                    End If
-
-                    fw.Paragraph("<div class=""field"">" & CurChar.Items(i).Name & _
-                        " (" & spoken & "/" & written & ")" & native & _
-                        "<span class=""points"">[" & points & "]</span></div>")
+                    fw.Paragraph("<div class=""field"">" & langName & _
+                        " (" & levelName & ")" &  _
+                        "<span class=""points"">[" & points & native & "]</span></div>")
                 End If
             End If
         Next
@@ -1570,9 +1674,17 @@ Public Class ExportToHTMLLiv
             qty = StrToLng(theItem.tagitem("count"))
         End If
         out = "<div class =""field"" style=""padding-left:" & ((level * 20) + 4 ) & "px;""" 
-        If UserVTTNotes(theItem) <> "" Then
-            out = out & " title=""" & UpdateEscapeChars(theItem.FullNameTL) & _
-                ": " & UserVTTNotes(theItem) & """"
+        If UserVTTNotes(theItem) <> "" Or _
+                theItem.TagItem("page") <> "" Then
+            Dim pageTag = theItem.TagItem("page")
+            Dim page As String 
+            If pageTag <> "" Then 
+                page = String.Format(" p. {0}", theItem)
+            Else
+                page = ""
+            End If
+            out = out & " title=""" & UpdateEscapeChars(theItem.FullNameTL) & ": " & _
+                UserVTTNotes(theItem) & page & """"
         End If 
         out = out & ">" & UpdateEscapeChars(theItem.FullNameTL) & _
             "<span class=""qty" & theItem.tagitem("count") & """> (" & _
@@ -1662,14 +1774,10 @@ Public Class ExportToHTMLLiv
         fw.Paragraph("  <div class=""player-field field"">" & CurChar.Player & "</div>")
         fw.Paragraph("  <div class=""ancestry title"">Race</div>")
         fw.Paragraph("  <div class=""ancestry-field field underlined"">" & CurChar.Race & "</div>")
-        fw.Paragraph("  <div class=""total-points-field field underlined"">" & CurChar.TotalPoints & "</div>")
-        fw.Paragraph("  <div class=""total-points title"">Points</div>")
         fw.Paragraph("  <div class=""height title"">Height</div>")
         fw.Paragraph("  <div class=""height-field field underlined"">" & CurChar.Height & "</div>")
         fw.Paragraph("  <div class=""weight title"">Weight</div>")
         fw.Paragraph("  <div class=""weight-field field underlined"">" & CurChar.Weight & "</div>")
-        fw.Paragraph("  <div class=""unspent-points title"">Unspent</div>")
-        fw.Paragraph("  <div class=""unspent-points-field field underlined"">" & CurChar.UnspentPoints & "</div>")
         fw.Paragraph("  <div class=""tl title"">TL</div>")
         fw.Paragraph("  <div class=""tl-field field underlined"">" & TechLevel(CurChar) & "</div>")
         fw.Paragraph("  <div class=""age title"">Age</div>")
@@ -1701,27 +1809,28 @@ Public Class ExportToHTMLLiv
 '****************************************
     Private Sub ExportPointSummary(CurChar As GCACharacter, fw As FileWriter)
         fw.Paragraph("<div class=""point-summary"">")
-        fw.Paragraph("<h1 class=""section-title"">Point Summary</h1>")
         fw.Paragraph("<table>")
         
 
-        fw.Paragraph("<tr><td class=""title"">Stats</td><td class=""field"">" & _
+        fw.Paragraph("<tr><td class=""title"">Total</td><td class=""field box right"">" & _
+            CurChar.TotalPoints & "</td></tr>")
+        fw.Paragraph("<tr><td class=""title"">Unspent</td><td class=""field right"">" & _
+            CurChar.UnspentPoints & "</td></tr>")
+        fw.Paragraph("<tr><td class=""title"">Stats</td><td class=""field right"">" & _
             CurChar.Cost(Stats) & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Advantages</td><td class=""field"">" & _
+        fw.Paragraph("<tr><td class=""title"">Advantages</td><td class=""field right"">" & _
             CStr(CInt(CurChar.Cost(Ads)) + CInt(CurChar.Cost(Packages)) + _
             CInt(CurChar.Cost(Cultures)) + CInt(CurChar.Cost(Languages))) & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Disadvantages</td><td class=""field"">" & _
+        fw.Paragraph("<tr><td class=""title"">Disadvantages</td><td class=""field right"">" & _
             CurChar.Cost(Disads) & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Quirks</td><td class=""field"">" & _
+        fw.Paragraph("<tr><td class=""title"">Quirks</td><td class=""field right"">" & _
             CurChar.Cost(Quirks) & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Skills</td><td class=""field"">" & _
+        fw.Paragraph("<tr><td class=""title"">Skills</td><td class=""field right"">" & _
             CurChar.Cost(Skills) & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Spells</td><td class=""field"">" & _
-            CurChar.Cost(Spells) & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Total</td><td class=""field"">" & _
-            CurChar.TotalPoints & "</td></tr>")
-        fw.Paragraph("<tr><td class=""title"">Unspent</td><td class=""field"">" & _
-            CurChar.UnspentPoints & "</td></tr>")
+        If CurChar.Count(Spells) <> 0 Then
+            fw.Paragraph("<tr><td class=""title"">Spells</td><td class=""field right"">" & _
+                CurChar.Cost(Spells) & "</td></tr>")
+        End If
         fw.Paragraph("</table></div>")
     End Sub
 
